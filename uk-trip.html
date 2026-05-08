@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London & UK Adventure 2026 | 英国伦敦之旅</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --uk-red: #cc0000;
+            --uk-blue: #00247d;
+            --uk-gold: #cf9b1f;
+            --deep-slate: #0f172a;
+            --slate: #334155;
+            --light-slate: #f8fafc;
+            --white: #ffffff;
+            --shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', 'Noto Sans SC', sans-serif;
+            background-color: var(--light-slate);
+            color: var(--deep-slate);
+            line-height: 1.6;
+        }
+
+        .lang-switch {
+            position: fixed; top: 20px; right: 20px; z-index: 1000;
+            background: var(--white); padding: 5px; border-radius: 30px;
+            box-shadow: var(--shadow); display: flex; gap: 5px;
+        }
+
+        .lang-btn {
+            border: none; background: none; padding: 8px 15px;
+            border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.875rem;
+        }
+
+        .lang-btn.active { background: var(--uk-red); color: var(--white); }
+
+        header {
+            height: 60vh; position: relative; display: flex;
+            align-items: center; justify-content: center; color: var(--white);
+            text-align: center; background: var(--uk-blue);
+        }
+
+        .hero-img {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover; opacity: 0.4; z-index: 1;
+        }
+
+        .hero-content { position: relative; z-index: 2; padding: 2rem; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 4rem; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        .trip-summary {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem; margin-top: -5rem; position: relative; z-index: 10;
+        }
+
+        .summary-card {
+            background: var(--white); padding: 1.5rem; border-radius: 1rem;
+            box-shadow: var(--shadow); border-top: 5px solid var(--uk-red);
+        }
+
+        .day-node {
+            background: var(--white); border-radius: 1.5rem; margin-bottom: 3rem;
+            overflow: hidden; box-shadow: var(--shadow); display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 850px) {
+            .day-node { grid-template-columns: 1fr; }
+            h1 { font-size: 2.5rem; }
+        }
+
+        .node-images {
+            display: grid; grid-template-columns: 1fr 1fr;
+            grid-template-rows: 200px 200px; gap: 4px;
+        }
+
+        .node-images img { width: 100%; height: 100%; object-fit: cover; }
+
+        .node-content { padding: 2rem; }
+        .day-label { color: var(--uk-red); font-weight: 800; font-size: 1.25rem; }
+
+        .activity-list { list-style: none; margin-top: 1rem; }
+        .activity-list li {
+            padding-left: 1.5rem; position: relative; margin-bottom: 0.75rem;
+        }
+
+        .activity-list li::before { content: '🇬🇧'; position: absolute; left: 0; }
+
+        .budget-banner {
+            background: var(--uk-blue); color: var(--white); padding: 3rem;
+            border-radius: 1.5rem; margin: 4rem 0; text-align: center;
+        }
+
+        .budget-val { font-size: 2.5rem; font-weight: 800; color: var(--uk-gold); }
+
+        [data-lang="zh"] { display: none; }
+        body.lang-zh [data-lang="en"] { display: none; }
+        body.lang-zh [data-lang="zh"] { display: block; }
+    </style>
+</head>
+<body class="lang-en">
+
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('zh')">中文</button>
+    </div>
+
+    <header>
+        <img src="https://loremflickr.com/1920/1080/london,city,bigben" alt="Hero" class="hero-img">
+        <div class="hero-content">
+            <h1>
+                <span data-lang="en">London & UK Adventure</span>
+                <span data-lang="zh">英国 · 伦敦之旅</span>
+            </h1>
+            <p>
+                <span data-lang="en">10 Days of History, Football, and Magic</span>
+                <span data-lang="zh">10天深度游：历史探秘、英超足球与魔法世界</span>
+            </p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="trip-summary">
+            <div class="summary-card">
+                <h3 data-lang="en">🏨 Stay</h3>
+                <h3 data-lang="zh">🏨 住宿推荐</h3>
+                <p data-lang="en"><strong>London:</strong> Staycity Aparthotel or Citadines (Central Zones).</p>
+                <p data-lang="zh"><strong>伦敦:</strong> Staycity 公寓式酒店或馨乐庭 (市中心1-2区)。</p>
+            </div>
+            <div class="summary-card">
+                <h3 data-lang="en">⚽ Football Focus</h3>
+                <h3 data-lang="zh">⚽ 足球亮点</h3>
+                <p data-lang="en">Stadium tours at <strong>Spurs, Arsenal, or Chelsea</strong>. F1 Karting at Spurs.</p>
+                <p data-lang="zh">参观 <strong>热刺、阿森纳或切尔西</strong> 球场。热刺球场提供F1卡丁车体验。</p>
+            </div>
+            <div class="summary-card">
+                <h3 data-lang="en">🎟️ Must Book</h3>
+                <h3 data-lang="zh">🎟️ 提前预订</h3>
+                <p data-lang="en">Harry Potter Studio Tour & Football matches 4-6 months early.</p>
+                <p data-lang="zh">哈利波特影城与足球比赛建议提前4-6个月预订。</p>
+            </div>
+        </section>
+
+        <div class="budget-banner">
+            <h2 data-lang="en">Estimated Budget</h2>
+            <h2 data-lang="zh">预计总预算</h2>
+            <div class="budget-val">SGD 18,500</div>
+            <p data-lang="en">Covers Flights, Mid-range Hotel, Dining & Activities for 4 People</p>
+            <p data-lang="zh">包含4人的中端往返机票、酒店、餐饮及活动费用</p>
+        </div>
+
+        <!-- Day 1 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/london,eye,night" alt="London Eye">
+                <img src="https://loremflickr.com/400/300/thames,river" alt="Thames">
+                <img src="https://loremflickr.com/400/300/southbank" alt="Southbank">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 01</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Arrival & Southbank</span>
+                    <span data-lang="zh">抵达与南岸漫步</span>
+                </h2>
+                <p class="node-desc">
+                    <span data-lang="en">Arrive at Heathrow and settle into your Central London apartment.</span>
+                    <span data-lang="zh">抵达希思罗机场并入住伦敦市中心公寓。</span>
+                </p>
+                <ul class="activity-list">
+                    <li data-lang="en">London Eye - Panoramic views of the city.</li>
+                    <li data-lang="zh">伦敦眼 - 俯瞰全城美景。</li>
+                    <li data-lang="en">Southbank Stroll - Street food and river views.</li>
+                    <li data-lang="zh">南岸漫步 - 街头美食与泰晤士河景。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/tower,london,crown" alt="Tower of London">
+                <img src="https://loremflickr.com/400/300/tower,bridge" alt="Tower Bridge">
+                <img src="https://loremflickr.com/400/300/borough,market" alt="Borough Market">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 02</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Royal History & Food</span>
+                    <span data-lang="zh">皇室历史与美食</span>
+                </h2>
+                <p class="node-desc">
+                    <span data-lang="en">Explore the dark history of the Tower and the flavors of London's oldest market.</span>
+                    <span data-lang="zh">探索伦敦塔的悠久历史与伦敦最古老市场的地道风味。</span>
+                </p>
+                <ul class="activity-list">
+                    <li data-lang="en">Tower of London - See the Crown Jewels.</li>
+                    <li data-lang="zh">伦敦塔 - 参观女王皇冠与珍宝。</li>
+                    <li data-lang="en">Borough Market - A foodie paradise for lunch.</li>
+                    <li data-lang="zh">波罗市场 - 享用午餐的美食天堂。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/harrypotter,studio,london" alt="Harry Potter">
+                <img src="https://loremflickr.com/400/300/hogwarts,express" alt="Hogwarts">
+                <img src="https://loremflickr.com/400/300/butterbeer" alt="Butterbeer">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 03</span>
+                <h2 class="node-title">
+                    <span data-lang="en">The Magic of Harry Potter</span>
+                    <span data-lang="zh">哈利波特的魔法世界</span>
+                </h2>
+                <p class="node-desc">
+                    <span data-lang="en">A full day at Warner Bros. Studio Tour London.</span>
+                    <span data-lang="zh">全天参观华纳兄弟伦敦影城。</span>
+                </p>
+                <ul class="activity-list">
+                    <li data-lang="en">The Great Hall & Diagon Alley - Walk the actual sets.</li>
+                    <li data-lang="zh">大礼堂与对角巷 - 走入真实的拍摄场景。</li>
+                    <li data-lang="en">Platform 9¾ - Take a photo with the Hogwarts Express.</li>
+                    <li data-lang="zh">9¾ 站台 - 与霍格沃茨特快列车合影。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/stadium,football,london" alt="Football">
+                <img src="https://loremflickr.com/400/300/karting,f1" alt="Karting">
+                <img src="https://loremflickr.com/400/300/football,shop" alt="Shop">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 04</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Football & Adrenaline</span>
+                    <span data-lang="zh">足球与速度</span>
+                </h2>
+                <p class="node-desc">
+                    <span data-lang="en">Choose your stadium and feel the spirit of the Premier League.</span>
+                    <span data-lang="zh">选择您心仪的球场，感受英超联赛的精神。</span>
+                </p>
+                <ul class="activity-list">
+                    <li data-lang="en">Spurs Stadium Tour - Incl. F1 Karting & Skywalk options.</li>
+                    <li data-lang="zh">热刺球场导览 - 可选F1卡丁车与空中步道。</li>
+                    <li data-lang="en">Arsenal or Chelsea - Modern high-tech museum tours.</li>
+                    <li data-lang="zh">阿森纳或切尔西 - 现代化的高科技博物馆参观。</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p data-lang="en">&copy; 2026 Family Trip Planner - UK Adventure</p>
+            <p data-lang="zh">&copy; 2026 家庭旅行计划 - 英国之旅</p>
+        </footer>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.body.className = 'lang-' + lang;
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.innerText.toLowerCase() === lang);
+            });
+        }
+    </script>
+</body>
+</html>
