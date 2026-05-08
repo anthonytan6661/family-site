@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Germany Football & Engineering 2026 | 德国足球与工业之旅</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --de-black: #000000;
+            --de-red: #dd0000;
+            --de-gold: #ffce00;
+            --deep-slate: #0f172a;
+            --slate: #334155;
+            --light-slate: #f8fafc;
+            --white: #ffffff;
+            --shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', 'Noto Sans SC', sans-serif;
+            background-color: var(--light-slate);
+            color: var(--deep-slate);
+            line-height: 1.6;
+        }
+
+        .lang-switch {
+            position: fixed; top: 20px; right: 20px; z-index: 1000;
+            background: var(--white); padding: 5px; border-radius: 30px;
+            box-shadow: var(--shadow); display: flex; gap: 5px;
+        }
+
+        .lang-btn {
+            border: none; background: none; padding: 8px 15px;
+            border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.875rem;
+        }
+
+        .lang-btn.active { background: var(--de-red); color: var(--white); }
+
+        header {
+            height: 60vh; position: relative; display: flex;
+            align-items: center; justify-content: center; color: var(--white);
+            text-align: center; background: var(--de-black);
+        }
+
+        .hero-img {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover; opacity: 0.5; z-index: 1;
+        }
+
+        .hero-content { position: relative; z-index: 2; padding: 2rem; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 4rem; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        .trip-summary {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem; margin-top: -5rem; position: relative; z-index: 10;
+        }
+
+        .summary-card {
+            background: var(--white); padding: 1.5rem; border-radius: 1rem;
+            box-shadow: var(--shadow); border-top: 5px solid var(--de-red);
+        }
+
+        .day-node {
+            background: var(--white); border-radius: 1.5rem; margin-bottom: 3rem;
+            overflow: hidden; box-shadow: var(--shadow); display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 850px) {
+            .day-node { grid-template-columns: 1fr; }
+            .node-images { grid-template-rows: 150px 150px !important; }
+            h1 { font-size: 2.5rem; }
+        }
+
+        .node-images {
+            display: grid; 
+            grid-template-columns: 1.2fr 1fr;
+            grid-template-rows: 200px 200px; 
+            gap: 4px; 
+            background: #eee;
+        }
+
+        .node-images img { width: 100%; height: 100%; object-fit: cover; }
+        .node-images img:first-child { grid-row: span 2; }
+
+        .node-content { padding: 2rem; }
+        .day-label { color: var(--de-red); font-weight: 800; font-size: 1.25rem; }
+
+        .activity-list { list-style: none; margin-top: 1rem; }
+        .activity-list li {
+            padding-left: 1.5rem; position: relative; margin-bottom: 0.75rem;
+        }
+
+        .activity-list li::before { content: '🇩🇪'; position: absolute; left: 0; }
+
+        .budget-banner {
+            background: var(--de-black); color: var(--white); padding: 3rem;
+            border-radius: 1.5rem; margin: 4rem 0; text-align: center;
+        }
+
+        .budget-val { font-size: 2.5rem; font-weight: 800; color: var(--de-gold); }
+
+        [data-lang="zh"] { display: none; }
+        body.lang-zh [data-lang="en"] { display: none; }
+        body.lang-zh [data-lang="zh"] { display: block; }
+    </style>
+</head>
+<body class="lang-en">
+
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('zh')">中文</button>
+    </div>
+
+    <header>
+        <img src="https://loremflickr.com/1920/1080/germany,stadium,city" alt="Germany" class="hero-img">
+        <div class="hero-content">
+            <h1>
+                <span data-lang="en">Germany Adventure</span>
+                <span data-lang="zh">德国 · 工业与足球之旅</span>
+            </h1>
+            <p>
+                <span data-lang="en">10 Days of Engineering Marvels and Football Passion</span>
+                <span data-lang="zh">10天深度游：机械奇迹与狂热足球</span>
+            </p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="trip-summary">
+            <div class="summary-card">
+                <h3 data-lang="en">🏨 Stay</h3>
+                <h3 data-lang="zh">🏨 住宿推荐</h3>
+                <p data-lang="en"><strong>Munich & Wolfsburg:</strong> High-end business hotels near hubs.</p>
+                <p data-lang="zh"><strong>慕尼黑 & 沃尔夫斯堡:</strong> 交通枢纽附近的高端商务酒店。</p>
+            </div>
+            <div class="summary-card">
+                <h3 data-lang="en">⚽ Stadium Icons</h3>
+                <h3 data-lang="zh">⚽ 足球朝圣</h3>
+                <p data-lang="en">Allianz Arena (Munich) & Signal Iduna Park (Dortmund).</p>
+                <p data-lang="zh">拜仁安联球场 & 多特蒙德大黄蜂主场。</p>
+            </div>
+            <div class="summary-card">
+                <h3 data-lang="en">🚗 Car Tech</h3>
+                <h3 data-lang="zh">🚗 汽车科技</h3>
+                <p data-lang="en">BMW, Mercedes-Benz, Porsche, and Volkswagen Autostadt.</p>
+                <p data-lang="zh">宝马、奔驰、保时捷及大众汽车城工厂巡礼。</p>
+            </div>
+        </section>
+
+        <div class="budget-banner">
+            <h2 data-lang="en">Estimated Budget</h2>
+            <h2 data-lang="zh">预计总预算</h2>
+            <div class="budget-val">SGD 19,000</div>
+            <p data-lang="en">Covers Flights, Hotels, Food, and Factory Tours for 4 People</p>
+            <p data-lang="zh">包含4人的往返机票、酒店、餐饮及工厂导览费用</p>
+        </div>
+
+        <!-- Day 1 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/munich,city" alt="Munich">
+                <img src="https://loremflickr.com/400/300/bmw,museum" alt="BMW">
+                <img src="https://loremflickr.com/400/300/marienplatz" alt="Marienplatz">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 01</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Arrival & Munich Hub</span>
+                    <span data-lang="zh">抵达慕尼黑</span>
+                </h2>
+                <p data-lang="en">Arrive in Munich. Explore the historic Marienplatz and the BMW Welt.</p>
+                <p data-lang="zh">抵达慕尼黑。探索历史悠久的玛利亚广场和宝马世界。</p>
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/allianz,arena" alt="Allianz Arena">
+                <img src="https://loremflickr.com/400/300/fcbayern" alt="FC Bayern">
+                <img src="https://loremflickr.com/400/300/football,museum" alt="Football">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 02</span>
+                <h2 class="node-title">
+                    <span data-lang="en">The Allianz Arena</span>
+                    <span data-lang="zh">安联球场朝圣</span>
+                </h2>
+                <p data-lang="en">Full tour of the Allianz Arena and the FC Bayern Museum.</p>
+                <p data-lang="zh">安联球场全境导览及拜仁慕尼黑博物馆参观。</p>
+            </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/deutsches,museum" alt="Deutsches Museum">
+                <img src="https://loremflickr.com/400/300/robotics,lab" alt="Robotics">
+                <img src="https://loremflickr.com/400/300/engineering" alt="Engineering">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 03</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Engineering Marvels</span>
+                    <span data-lang="zh">工程奇迹</span>
+                </h2>
+                <p data-lang="en">Deutsches Museum: The world's largest science and tech museum.</p>
+                <p data-lang="zh">参观德意志博物馆：世界最大的科技博物馆。</p>
+            </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/stuttgart,mercedes" alt="Mercedes">
+                <img src="https://loremflickr.com/400/300/porsche,museum" alt="Porsche">
+                <img src="https://loremflickr.com/400/300/car,factory" alt="Factory">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 04</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Stuttgart: Car Capital</span>
+                    <span data-lang="zh">斯图加特：汽车之都</span>
+                </h2>
+                <p data-lang="en">Visit the Mercedes-Benz and Porsche museums in Stuttgart.</p>
+                <p data-lang="zh">参观斯图加特的梅赛德斯-奔驰和保时捷博物馆。</p>
+            </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/dortmund,stadium" alt="Dortmund">
+                <img src="https://loremflickr.com/400/300/yellow,wall" alt="Yellow Wall">
+                <img src="https://loremflickr.com/400/300/bvb,shop" alt="BVB">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 05</span>
+                <h2 class="node-title">
+                    <span data-lang="en">The Yellow Wall</span>
+                    <span data-lang="zh">黄黑蜂巢：多特蒙德</span>
+                </h2>
+                <p data-lang="en">Tour the Signal Iduna Park and the German Football Museum.</p>
+                <p data-lang="zh">参观西格纳伊度纳公园球场（多特主场）和德国足球博物馆。</p>
+            </div>
+        </div>
+
+        <!-- Day 6-10 (Simplified for content summary) -->
+        <!-- Day 6 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/cologne,cathedral" alt="Cologne">
+                <img src="https://loremflickr.com/400/300/river,rhine" alt="Rhine">
+                <img src="https://loremflickr.com/400/300/chocolate,museum" alt="Chocolate">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 06</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Cologne Cathedral</span>
+                    <span data-lang="zh">科隆大教堂</span>
+                </h2>
+                <p data-lang="en">Visit the Gothic cathedral and the Chocolate Museum on the Rhine.</p>
+                <p data-lang="zh">参观哥特式大教堂和莱茵河畔的巧克力博物馆。</p>
+            </div>
+        </div>
+
+        <!-- Day 7 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/wolfsburg,autostadt" alt="Autostadt">
+                <img src="https://loremflickr.com/400/300/car,tower" alt="Car Tower">
+                <img src="https://loremflickr.com/400/300/volkswagen" alt="VW">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 07</span>
+                <h2 class="node-title">
+                    <span data-lang="en">VW Autostadt</span>
+                    <span data-lang="zh">大众汽车城</span>
+                </h2>
+                <p data-lang="en">Explore the Car Towers and VW's mobility theme park.</p>
+                <p data-lang="zh">探索 20 层高的汽车塔和大众汽车移动主题公园。</p>
+            </div>
+        </div>
+
+        <!-- Day 8 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/berlin,wall" alt="Berlin">
+                <img src="https://loremflickr.com/400/300/brandenburg,gate" alt="Brandenburg">
+                <img src="https://loremflickr.com/400/300/berlin,night" alt="Berlin Night">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 08</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Berlin Arrival</span>
+                    <span data-lang="zh">抵达柏林</span>
+                </h2>
+                <p data-lang="en">Travel to Berlin. Visit the Brandenburg Gate and historic Reichstag.</p>
+                <p data-lang="zh">前往柏林。参观勃兰登堡门和历史悠久的国会大厦。</p>
+            </div>
+        </div>
+
+        <!-- Day 9 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/berlin,gaming" alt="Gaming">
+                <img src="https://loremflickr.com/400/300/future,museum" alt="Futurium">
+                <img src="https://loremflickr.com/400/300/berlin,shopping" alt="Berlin Shopping">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 09</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Futurium & Gaming</span>
+                    <span data-lang="zh">未来博物馆与电竞</span>
+                </h2>
+                <p data-lang="en">Visit the Futurium and the Game Science Center (Boys' Budget Day!).</p>
+                <p data-lang="zh">参观未来博物馆和游戏科学中心（男孩们的购物日！）。</p>
+            </div>
+        </div>
+
+        <!-- Day 10 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/berlin,airport" alt="Berlin Airport">
+                <img src="https://loremflickr.com/400/300/plane,germany" alt="Flying Home">
+                <img src="https://loremflickr.com/400/300/berlin,bye" alt="Goodbye">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 10</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Farewell Germany</span>
+                    <span data-lang="zh">告别德国</span>
+                </h2>
+                <p data-lang="en">Final souvenirs at Kurfürstendamm before airport departure.</p>
+                <p data-lang="zh">在选帝侯大街购买最后的纪念品后前往机场。</p>
+            </div>
+        </div>
+
+        <footer>
+            <p data-lang="en">&copy; 2026 Family Trip Planner - Germany Adventure</p>
+            <p data-lang="zh">&copy; 2026 家庭旅行计划 - 德国之旅</p>
+        </footer>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.body.className = 'lang-' + lang;
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.innerText.toLowerCase() === lang);
+            });
+        }
+    </script>
+</body>
+</html>
