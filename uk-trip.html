@@ -78,12 +78,29 @@
             h1 { font-size: 2.5rem; }
         }
 
-        .node-images {
-            display: grid; grid-template-columns: 1fr 1fr;
-            grid-template-rows: 200px 200px; gap: 4px;
+        @media (max-width: 850px) {
+            .day-node { grid-template-columns: 1fr; }
+            .node-images { grid-template-rows: 150px 150px !important; }
+            h1 { font-size: 2.5rem; }
         }
 
-        .node-images img { width: 100%; height: 100%; object-fit: cover; }
+        .node-images {
+            display: grid; 
+            grid-template-columns: 1.2fr 1fr;
+            grid-template-rows: 200px 200px; 
+            gap: 4px; 
+            background: #eee;
+        }
+
+        .node-images img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
+
+        .node-images img:first-child {
+            grid-row: span 2;
+        }
 
         .node-content { padding: 2rem; }
         .day-label { color: var(--uk-red); font-weight: 800; font-size: 1.25rem; }
