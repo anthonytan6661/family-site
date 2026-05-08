@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Korea Tech & Sports 2026 | 韩国科技与运动之旅</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --kr-blue: #0047a0;
+            --kr-red: #cd2e3a;
+            --kr-gold: #ffb800;
+            --deep-slate: #0f172a;
+            --slate: #334155;
+            --light-slate: #f8fafc;
+            --white: #ffffff;
+            --shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', 'Noto Sans SC', sans-serif;
+            background-color: var(--light-slate);
+            color: var(--deep-slate);
+            line-height: 1.6;
+        }
+
+        .lang-switch {
+            position: fixed; top: 20px; right: 20px; z-index: 1000;
+            background: var(--white); padding: 5px; border-radius: 30px;
+            box-shadow: var(--shadow); display: flex; gap: 5px;
+        }
+
+        .lang-btn {
+            border: none; background: none; padding: 8px 15px;
+            border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.875rem;
+        }
+
+        .lang-btn.active { background: var(--kr-blue); color: var(--white); }
+
+        header {
+            height: 60vh; position: relative; display: flex;
+            align-items: center; justify-content: center; color: var(--white);
+            text-align: center; background: var(--kr-blue);
+        }
+
+        .hero-img {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover; opacity: 0.4; z-index: 1;
+        }
+
+        .hero-content { position: relative; z-index: 2; padding: 2rem; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 4rem; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        .trip-summary {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem; margin-top: -5rem; position: relative; z-index: 10;
+        }
+
+        .summary-card {
+            background: var(--white); padding: 1.5rem; border-radius: 1rem;
+            box-shadow: var(--shadow); border-top: 5px solid var(--kr-red);
+        }
+
+        .day-node {
+            background: var(--white); border-radius: 1.5rem; margin-bottom: 3rem;
+            overflow: hidden; box-shadow: var(--shadow); display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 850px) {
+            .day-node { grid-template-columns: 1fr; }
+            .node-images { grid-template-rows: 150px 150px !important; }
+            h1 { font-size: 2.5rem; }
+        }
+
+        .node-images {
+            display: grid; 
+            grid-template-columns: 1.2fr 1fr;
+            grid-template-rows: 200px 200px; 
+            gap: 4px; 
+            background: #eee;
+        }
+
+        .node-images img { width: 100%; height: 100%; object-fit: cover; }
+        .node-images img:first-child { grid-row: span 2; }
+
+        .node-content { padding: 2rem; }
+        .day-label { color: var(--kr-red); font-weight: 800; font-size: 1.25rem; }
+
+        .activity-list { list-style: none; margin-top: 1rem; }
+        .activity-list li {
+            padding-left: 1.5rem; position: relative; margin-bottom: 0.75rem;
+        }
+
+        .activity-list li::before { content: '🇰🇷'; position: absolute; left: 0; }
+
+        .budget-banner {
+            background: var(--kr-blue); color: var(--white); padding: 3rem;
+            border-radius: 1.5rem; margin: 4rem 0; text-align: center;
+        }
+
+        .budget-val { font-size: 2.5rem; font-weight: 800; color: var(--kr-gold); }
+
+        [data-lang="zh"] { display: none; }
+        body.lang-zh [data-lang="en"] { display: none; }
+        body.lang-zh [data-lang="zh"] { display: block; }
+    </style>
+</head>
+<body class="lang-en">
+
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('zh')">中文</button>
+    </div>
+
+    <header>
+        <img src="https://loremflickr.com/1920/1080/seoul,city,palace" alt="Hero" class="hero-img">
+        <div class="hero-content">
+            <h1>
+                <span data-lang="en">South Korea Adventure</span>
+                <span data-lang="zh">韩国 · 科技之旅</span>
+            </h1>
+            <p>
+                <span data-lang="en">10 Days of E-Sports, Tech, and Elite Badminton</span>
+                <span data-lang="zh">10天深度游：电竞巅峰、未来科技与顶级羽毛球</span>
+            </p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="trip-summary">
+            <div class="summary-card">
+                <h3 data-lang="en">🏨 Stay</h3>
+                <h3 data-lang="zh">🏨 住宿推荐</h3>
+                <p data-lang="en"><strong>Seoul:</strong> Hongdae (Teen-friendly gaming district).</p>
+                <p data-lang="zh"><strong>首尔:</strong> 弘大 (年轻人最爱的电竞与潮流街区)。</p>
+            </div>
+            <div class="summary-card">
+                <h3 data-lang="en">🏸 Badminton Elite</h3>
+                <h3 data-lang="zh">🏸 羽毛球亮点</h3>
+                <p data-lang="en">Yonex Academy Seoul & Dongdaemun "Badminton Street".</p>
+                <p data-lang="zh">首尔尤尼克斯学院 & 东大门“羽毛球一条街”。</p>
+            </div>
+            <div class="summary-card">
+                <h3 data-lang="en">🎮 E-Sports Mecca</h3>
+                <h3 data-lang="zh">🎮 电竞圣地</h3>
+                <p data-lang="en">T1 Base Camp (Faker's home) & LoL Park LCK Arena.</p>
+                <p data-lang="zh">T1 基地 (大魔王 Faker 的主场) & LoL Park LCK 场馆。</p>
+            </div>
+        </section>
+
+        <div class="budget-banner">
+            <h2 data-lang="en">Estimated Budget</h2>
+            <h2 data-lang="zh">预计总预算</h2>
+            <div class="budget-val">SGD 12,000</div>
+            <p data-lang="en">Covers Flights, Hotel, Food, and Activities for 4 People</p>
+            <p data-lang="zh">包含4人的往返机票、酒店、餐饮及活动费用</p>
+        </div>
+
+        <!-- Day 1 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/hongdae,night" alt="Hongdae">
+                <img src="https://loremflickr.com/400/300/pcbang,korea" alt="PC Bang">
+                <img src="https://loremflickr.com/400/300/korean,streetfood" alt="Food">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 01</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Arrival & E-Sports Hub</span>
+                    <span data-lang="zh">抵达与电竞体验</span>
+                </h2>
+                <p class="node-desc">
+                    <span data-lang="en">Arrive in Seoul and dive into the world of professional gaming in Hongdae.</span>
+                    <span data-lang="zh">抵达首尔并前往弘大，立即开启专业级的电竞体验。</span>
+                </p>
+                <ul class="activity-list">
+                    <li data-lang="en">T1 Base Camp - Play on pro-level gaming rigs.</li>
+                    <li data-lang="zh">T1 基地 - 在专业级电竞设备上尽情游戏。</li>
+                    <li data-lang="en">Hongdae Street - VR arcades and late-night shopping.</li>
+                    <li data-lang="zh">弘大步行街 - VR 游乐场与深夜购物。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/badminton,court,korea" alt="Badminton">
+                <img src="https://loremflickr.com/400/300/yonex,korea" alt="Yonex">
+                <img src="https://loremflickr.com/400/300/dongdaemun" alt="Dongdaemun">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 02</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Pro Badminton Focus</span>
+                    <span data-lang="zh">专业羽毛球之日</span>
+                </h2>
+                <p class="node-desc">
+                    <span data-lang="en">A dedicated day for high-end gear and coaching.</span>
+                    <span data-lang="zh">专属的一天，用于升级顶级装备与接受专业指导。</span>
+                </p>
+                <ul class="activity-list">
+                    <li data-lang="en">Yonex Academy Seoul - Training with top Korean coaches.</li>
+                    <li data-lang="zh">首尔尤尼克斯学院 - 接受韩国顶级教练的指导。</li>
+                    <li data-lang="en">Badminton Street - Shop for Korea-exclusive gear.</li>
+                    <li data-lang="zh">东大门羽毛球街 - 选购韩国限定款运动装备。</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p data-lang="en">&copy; 2026 Family Trip Planner - Korea Adventure</p>
+            <p data-lang="zh">&copy; 2026 家庭旅行计划 - 韩国之旅</p>
+        </footer>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.body.className = 'lang-' + lang;
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.innerText.toLowerCase() === lang);
+            });
+        }
+    </script>
+</body>
+</html>
