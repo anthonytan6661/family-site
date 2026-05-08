@@ -57,25 +57,10 @@
 
         .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
 
-        .trip-summary {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem; margin-top: -5rem; position: relative; z-index: 10;
-        }
-
-        .summary-card {
-            background: var(--white); padding: 1.5rem; border-radius: 1rem;
-            box-shadow: var(--shadow); border-top: 5px solid var(--uk-red);
-        }
-
         .day-node {
             background: var(--white); border-radius: 1.5rem; margin-bottom: 3rem;
             overflow: hidden; box-shadow: var(--shadow); display: grid;
             grid-template-columns: 1fr 1fr;
-        }
-
-        @media (max-width: 850px) {
-            .day-node { grid-template-columns: 1fr; }
-            h1 { font-size: 2.5rem; }
         }
 
         @media (max-width: 850px) {
@@ -92,15 +77,8 @@
             background: #eee;
         }
 
-        .node-images img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-        }
-
-        .node-images img:first-child {
-            grid-row: span 2;
-        }
+        .node-images img { width: 100%; height: 100%; object-fit: cover; }
+        .node-images img:first-child { grid-row: span 2; }
 
         .node-content { padding: 2rem; }
         .day-label { color: var(--uk-red); font-weight: 800; font-size: 1.25rem; }
@@ -112,12 +90,7 @@
 
         .activity-list li::before { content: '🇬🇧'; position: absolute; left: 0; }
 
-        .budget-banner {
-            background: var(--uk-blue); color: var(--white); padding: 3rem;
-            border-radius: 1.5rem; margin: 4rem 0; text-align: center;
-        }
-
-        .budget-val { font-size: 2.5rem; font-weight: 800; color: var(--uk-gold); }
+        footer { text-align: center; padding: 4rem 0; color: var(--slate); opacity: 0.7; }
 
         [data-lang="zh"] { display: none; }
         body.lang-zh [data-lang="en"] { display: none; }
@@ -138,43 +111,10 @@
                 <span data-lang="en">London & UK Adventure</span>
                 <span data-lang="zh">英国 · 伦敦之旅</span>
             </h1>
-            <p>
-                <span data-lang="en">10 Days of History, Football, and Magic</span>
-                <span data-lang="zh">10天深度游：历史探秘、英超足球与魔法世界</span>
-            </p>
         </div>
     </header>
 
     <div class="container">
-        <section class="trip-summary">
-            <div class="summary-card">
-                <h3 data-lang="en">🏨 Stay</h3>
-                <h3 data-lang="zh">🏨 住宿推荐</h3>
-                <p data-lang="en"><strong>London:</strong> Staycity Aparthotel or Citadines (Central Zones).</p>
-                <p data-lang="zh"><strong>伦敦:</strong> Staycity 公寓式酒店或馨乐庭 (市中心1-2区)。</p>
-            </div>
-            <div class="summary-card">
-                <h3 data-lang="en">⚽ Football Focus</h3>
-                <h3 data-lang="zh">⚽ 足球亮点</h3>
-                <p data-lang="en">Stadium tours at <strong>Spurs, Arsenal, or Chelsea</strong>. F1 Karting at Spurs.</p>
-                <p data-lang="zh">参观 <strong>热刺、阿森纳或切尔西</strong> 球场。热刺球场提供F1卡丁车体验。</p>
-            </div>
-            <div class="summary-card">
-                <h3 data-lang="en">🎟️ Must Book</h3>
-                <h3 data-lang="zh">🎟️ 提前预订</h3>
-                <p data-lang="en">Harry Potter Studio Tour & Football matches 4-6 months early.</p>
-                <p data-lang="zh">哈利波特影城与足球比赛建议提前4-6个月预订。</p>
-            </div>
-        </section>
-
-        <div class="budget-banner">
-            <h2 data-lang="en">Estimated Budget</h2>
-            <h2 data-lang="zh">预计总预算</h2>
-            <div class="budget-val">SGD 18,500</div>
-            <p data-lang="en">Covers Flights, Mid-range Hotel, Dining & Activities for 4 People</p>
-            <p data-lang="zh">包含4人的中端往返机票、酒店、餐饮及活动费用</p>
-        </div>
-
         <!-- Day 1 -->
         <div class="day-node">
             <div class="node-images">
@@ -188,16 +128,8 @@
                     <span data-lang="en">Arrival & Southbank</span>
                     <span data-lang="zh">抵达与南岸漫步</span>
                 </h2>
-                <p class="node-desc">
-                    <span data-lang="en">Arrive at Heathrow and settle into your Central London apartment.</span>
-                    <span data-lang="zh">抵达希思罗机场并入住伦敦市中心公寓。</span>
-                </p>
-                <ul class="activity-list">
-                    <li data-lang="en">London Eye - Panoramic views of the city.</li>
-                    <li data-lang="zh">伦敦眼 - 俯瞰全城美景。</li>
-                    <li data-lang="en">Southbank Stroll - Street food and river views.</li>
-                    <li data-lang="zh">南岸漫步 - 街头美食与泰晤士河景。</li>
-                </ul>
+                <p data-lang="en">Arrive at Heathrow and settle into your Central London apartment.</p>
+                <p data-lang="zh">抵达希思罗机场并入住伦敦市中心公寓。</p>
             </div>
         </div>
 
@@ -214,16 +146,8 @@
                     <span data-lang="en">Royal History & Food</span>
                     <span data-lang="zh">皇室历史与美食</span>
                 </h2>
-                <p class="node-desc">
-                    <span data-lang="en">Explore the dark history of the Tower and the flavors of London's oldest market.</span>
-                    <span data-lang="zh">探索伦敦塔的悠久历史与伦敦最古老市场的地道风味。</span>
-                </p>
-                <ul class="activity-list">
-                    <li data-lang="en">Tower of London - See the Crown Jewels.</li>
-                    <li data-lang="zh">伦敦塔 - 参观女王皇冠与珍宝。</li>
-                    <li data-lang="en">Borough Market - A foodie paradise for lunch.</li>
-                    <li data-lang="zh">波罗市场 - 享用午餐的美食天堂。</li>
-                </ul>
+                <p data-lang="en">Tower of London morning. See the Crown Jewels. Afternoon at Borough Market.</p>
+                <p data-lang="zh">早晨参观伦敦塔。参观女王皇冠与珍宝。下午前往波罗市场。</p>
             </div>
         </div>
 
@@ -240,16 +164,8 @@
                     <span data-lang="en">The Magic of Harry Potter</span>
                     <span data-lang="zh">哈利波特的魔法世界</span>
                 </h2>
-                <p class="node-desc">
-                    <span data-lang="en">A full day at Warner Bros. Studio Tour London.</span>
-                    <span data-lang="zh">全天参观华纳兄弟伦敦影城。</span>
-                </p>
-                <ul class="activity-list">
-                    <li data-lang="en">The Great Hall & Diagon Alley - Walk the actual sets.</li>
-                    <li data-lang="zh">大礼堂与对角巷 - 走入真实的拍摄场景。</li>
-                    <li data-lang="en">Platform 9¾ - Take a photo with the Hogwarts Express.</li>
-                    <li data-lang="zh">9¾ 站台 - 与霍格沃茨特快列车合影。</li>
-                </ul>
+                <p data-lang="en">Full day at Warner Bros. Studio Tour London.</p>
+                <p data-lang="zh">全天参观华纳兄弟伦敦影城。</p>
             </div>
         </div>
 
@@ -266,16 +182,116 @@
                     <span data-lang="en">Football & Adrenaline</span>
                     <span data-lang="zh">足球与速度</span>
                 </h2>
-                <p class="node-desc">
-                    <span data-lang="en">Choose your stadium and feel the spirit of the Premier League.</span>
-                    <span data-lang="zh">选择您心仪的球场，感受英超联赛的精神。</span>
-                </p>
-                <ul class="activity-list">
-                    <li data-lang="en">Spurs Stadium Tour - Incl. F1 Karting & Skywalk options.</li>
-                    <li data-lang="zh">热刺球场导览 - 可选F1卡丁车与空中步道。</li>
-                    <li data-lang="en">Arsenal or Chelsea - Modern high-tech museum tours.</li>
-                    <li data-lang="zh">阿森纳或切尔西 - 现代化的高科技博物馆参观。</li>
-                </ul>
+                <p data-lang="en">Spurs Stadium Tour (Skywalk & F1 Karting).</p>
+                <p data-lang="zh">热刺球场导览（可选空中步道与F1卡丁车）。</p>
+            </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/british,museum" alt="Museum">
+                <img src="https://loremflickr.com/400/300/covent,garden" alt="Garden">
+                <img src="https://loremflickr.com/400/300/afternoon,tea" alt="Tea">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 05</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Culture & Covent Garden</span>
+                    <span data-lang="zh">文化与科文特花园</span>
+                </h2>
+                <p data-lang="en">British Museum morning. Street performers and shopping at Covent Garden.</p>
+                <p data-lang="zh">早晨参观大英博物馆。随后前往科文特花园观看街头表演并购物。</p>
+            </div>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/oxford,city" alt="Oxford">
+                <img src="https://loremflickr.com/400/300/university,library" alt="Library">
+                <img src="https://loremflickr.com/400/300/punting,river" alt="Punting">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 06</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Oxford Day Trip</span>
+                    <span data-lang="zh">牛津一日游</span>
+                </h2>
+                <p data-lang="en">Visit the historic University of Oxford and try punting on the river.</p>
+                <p data-lang="zh">参观历史悠久的牛津大学，并尝试撑篙游河。</p>
+            </div>
+        </div>
+
+        <!-- Day 7 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/edinburgh,castle" alt="Edinburgh">
+                <img src="https://loremflickr.com/400/300/train,scotland" alt="Train">
+                <img src="https://loremflickr.com/400/300/royal,mile" alt="Royal Mile">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 07</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Travel to Scotland</span>
+                    <span data-lang="zh">前往苏格兰</span>
+                </h2>
+                <p data-lang="en">Scenic train to Edinburgh. Explore the Royal Mile in the evening.</p>
+                <p data-lang="zh">乘坐景观火车前往爱丁堡。傍晚探索皇家一英里。</p>
+            </div>
+        </div>
+
+        <!-- Day 8 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/highlands,scotland" alt="Highlands">
+                <img src="https://loremflickr.com/400/300/lochness" alt="Loch Ness">
+                <img src="https://loremflickr.com/400/300/glencoe" alt="Glencoe">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 08</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Highlands & Loch Ness</span>
+                    <span data-lang="zh">高地与尼斯湖</span>
+                </h2>
+                <p data-lang="en">Full day tour of the Scottish Highlands and a boat trip on Loch Ness.</p>
+                <p data-lang="zh">苏格兰高地全天游，并在尼斯湖上乘船。 </p>
+            </div>
+        </div>
+
+        <!-- Day 9 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/shopping,london" alt="Shopping">
+                <img src="https://loremflickr.com/400/300/harrods" alt="Harrods">
+                <img src="https://loremflickr.com/400/300/toyshop,hamleys" alt="Hamleys">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 09</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Return & Last Shopping</span>
+                    <span data-lang="zh">返回与最后购物</span>
+                </h2>
+                <p data-lang="en">Return to London. Shopping at Hamleys and Harrods (Boys' Budget Day!).</p>
+                <p data-lang="zh">返回伦敦。在哈姆雷斯和哈罗德百货购物（男孩们的购物日！）。</p>
+            </div>
+        </div>
+
+        <!-- Day 10 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/buckingham,palace" alt="Palace">
+                <img src="https://loremflickr.com/400/300/changing,guard" alt="Guard">
+                <img src="https://loremflickr.com/400/300/airplane,takeoff" alt="Farewell">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 10</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Farewell London</span>
+                    <span data-lang="zh">告别伦敦</span>
+                </h2>
+                <p data-lang="en">Changing of the Guard at Buckingham Palace. Afternoon flight departure.</p>
+                <p data-lang="zh">观看白金汉宫卫兵交接仪式。下午启程回国。</p>
             </div>
         </div>
 

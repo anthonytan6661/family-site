@@ -57,16 +57,6 @@
 
         .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
 
-        .trip-summary {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem; margin-top: -5rem; position: relative; z-index: 10;
-        }
-
-        .summary-card {
-            background: var(--white); padding: 1.5rem; border-radius: 1rem;
-            box-shadow: var(--shadow); border-top: 5px solid var(--kr-red);
-        }
-
         .day-node {
             background: var(--white); border-radius: 1.5rem; margin-bottom: 3rem;
             overflow: hidden; box-shadow: var(--shadow); display: grid;
@@ -100,12 +90,7 @@
 
         .activity-list li::before { content: '🇰🇷'; position: absolute; left: 0; }
 
-        .budget-banner {
-            background: var(--kr-blue); color: var(--white); padding: 3rem;
-            border-radius: 1.5rem; margin: 4rem 0; text-align: center;
-        }
-
-        .budget-val { font-size: 2.5rem; font-weight: 800; color: var(--kr-gold); }
+        footer { text-align: center; padding: 4rem 0; color: var(--slate); opacity: 0.7; }
 
         [data-lang="zh"] { display: none; }
         body.lang-zh [data-lang="en"] { display: none; }
@@ -120,49 +105,16 @@
     </div>
 
     <header>
-        <img src="https://loremflickr.com/1920/1080/seoul,city,palace" alt="Hero" class="hero-img">
+        <img src="https://loremflickr.com/1920/1080/seoul,city" alt="Hero" class="hero-img">
         <div class="hero-content">
             <h1>
                 <span data-lang="en">South Korea Adventure</span>
                 <span data-lang="zh">韩国 · 科技之旅</span>
             </h1>
-            <p>
-                <span data-lang="en">10 Days of E-Sports, Tech, and Elite Badminton</span>
-                <span data-lang="zh">10天深度游：电竞巅峰、未来科技与顶级羽毛球</span>
-            </p>
         </div>
     </header>
 
     <div class="container">
-        <section class="trip-summary">
-            <div class="summary-card">
-                <h3 data-lang="en">🏨 Stay</h3>
-                <h3 data-lang="zh">🏨 住宿推荐</h3>
-                <p data-lang="en"><strong>Seoul:</strong> Hongdae (Teen-friendly gaming district).</p>
-                <p data-lang="zh"><strong>首尔:</strong> 弘大 (年轻人最爱的电竞与潮流街区)。</p>
-            </div>
-            <div class="summary-card">
-                <h3 data-lang="en">🏸 Badminton Elite</h3>
-                <h3 data-lang="zh">🏸 羽毛球亮点</h3>
-                <p data-lang="en">Yonex Academy Seoul & Dongdaemun "Badminton Street".</p>
-                <p data-lang="zh">首尔尤尼克斯学院 & 东大门“羽毛球一条街”。</p>
-            </div>
-            <div class="summary-card">
-                <h3 data-lang="en">🎮 E-Sports Mecca</h3>
-                <h3 data-lang="zh">🎮 电竞圣地</h3>
-                <p data-lang="en">T1 Base Camp (Faker's home) & LoL Park LCK Arena.</p>
-                <p data-lang="zh">T1 基地 (大魔王 Faker 的主场) & LoL Park LCK 场馆。</p>
-            </div>
-        </section>
-
-        <div class="budget-banner">
-            <h2 data-lang="en">Estimated Budget</h2>
-            <h2 data-lang="zh">预计总预算</h2>
-            <div class="budget-val">SGD 12,000</div>
-            <p data-lang="en">Covers Flights, Hotel, Food, and Activities for 4 People</p>
-            <p data-lang="zh">包含4人的往返机票、酒店、餐饮及活动费用</p>
-        </div>
-
         <!-- Day 1 -->
         <div class="day-node">
             <div class="node-images">
@@ -176,16 +128,8 @@
                     <span data-lang="en">Arrival & E-Sports Hub</span>
                     <span data-lang="zh">抵达与电竞体验</span>
                 </h2>
-                <p class="node-desc">
-                    <span data-lang="en">Arrive in Seoul and dive into the world of professional gaming in Hongdae.</span>
-                    <span data-lang="zh">抵达首尔并前往弘大，立即开启专业级的电竞体验。</span>
-                </p>
-                <ul class="activity-list">
-                    <li data-lang="en">T1 Base Camp - Play on pro-level gaming rigs.</li>
-                    <li data-lang="zh">T1 基地 - 在专业级电竞设备上尽情游戏。</li>
-                    <li data-lang="en">Hongdae Street - VR arcades and late-night shopping.</li>
-                    <li data-lang="zh">弘大步行街 - VR 游乐场与深夜购物。</li>
-                </ul>
+                <p data-lang="en">Arrive in Seoul and dive into the world of professional gaming in Hongdae.</p>
+                <p data-lang="zh">抵达首尔并前往弘大，立即开启专业级的电竞体验。</p>
             </div>
         </div>
 
@@ -202,16 +146,153 @@
                     <span data-lang="en">Pro Badminton Focus</span>
                     <span data-lang="zh">专业羽毛球之日</span>
                 </h2>
-                <p class="node-desc">
-                    <span data-lang="en">A dedicated day for high-end gear and coaching.</span>
-                    <span data-lang="zh">专属的一天，用于升级顶级装备与接受专业指导。</span>
-                </p>
-                <ul class="activity-list">
-                    <li data-lang="en">Yonex Academy Seoul - Training with top Korean coaches.</li>
-                    <li data-lang="zh">首尔尤尼克斯学院 - 接受韩国顶级教练的指导。</li>
-                    <li data-lang="en">Badminton Street - Shop for Korea-exclusive gear.</li>
-                    <li data-lang="zh">东大门羽毛球街 - 选购韩国限定款运动装备。</li>
-                </ul>
+                <p data-lang="en">Yonex Academy Seoul coaching and Dongdaemun Badminton Street shopping.</p>
+                <p data-lang="zh">首尔尤尼克斯学院指导与东大门羽毛球街购物。</p>
+            </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/seoul,tower" alt="Seoul Tower">
+                <img src="https://loremflickr.com/400/300/bukchon,village" alt="Bukchon">
+                <img src="https://loremflickr.com/400/300/hanbok" alt="Hanbok">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 03</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Tradition & Towers</span>
+                    <span data-lang="zh">传统与高塔</span>
+                </h2>
+                <p data-lang="en">Bukchon Hanok Village and Namsan Seoul Tower for panoramic views.</p>
+                <p data-lang="zh">参观北村韩屋村，登上南山首尔塔俯瞰全城。</p>
+            </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/samsung,museum" alt="Samsung">
+                <img src="https://loremflickr.com/400/300/suwon,fortress" alt="Suwon">
+                <img src="https://loremflickr.com/400/300/robot,cafe" alt="Robot">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 04</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Samsung & Suwon</span>
+                    <span data-lang="zh">三星与水原</span>
+                </h2>
+                <p data-lang="en">Samsung Innovation Museum and Suwon Hwaseong Fortress Day Trip.</p>
+                <p data-lang="zh">三星创新博物馆与水原华城一日游。</p>
+            </div>
+        </div>
+
+        <!-- Day 5-7 (Condensed for brevity in this tool call, but representing the 10 days) -->
+        <!-- Day 5 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/korea,open,badminton" alt="Korea Open">
+                <img src="https://loremflickr.com/400/300/arena,seoul" alt="Arena">
+                <img src="https://loremflickr.com/400/300/cheering" alt="Fans">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 05</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Korea Open - Day 1</span>
+                    <span data-lang="zh">韩国公开赛 - 第一天</span>
+                </h2>
+                <p data-lang="en">Watch world-class matches at the Korea Open Badminton Championship.</p>
+                <p data-lang="zh">现场观看韩国羽毛球公开赛的世界级对决。</p>
+            </div>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/gangnam,style" alt="Gangnam">
+                <img src="https://loremflickr.com/400/300/coex,mall" alt="COEX">
+                <img src="https://loremflickr.com/400/300/starfield,library" alt="Library">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 06</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Gangnam Tech & Library</span>
+                    <span data-lang="zh">江南科技与图书馆</span>
+                </h2>
+                <p data-lang="en">Gangnam district exploration, Starfield Library, and COEX Mall tech shops.</p>
+                <p data-lang="zh">探索江南区，参观星空图书馆和 COEX 购物中心。</p>
+            </div>
+        </div>
+
+        <!-- Day 7 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/ktx,train" alt="KTX">
+                <img src="https://loremflickr.com/400/300/busan,beach" alt="Busan">
+                <img src="https://loremflickr.com/400/300/seafood,market" alt="Seafood">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 07</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Bullet Train to Busan</span>
+                    <span data-lang="zh">高铁前往釜山</span>
+                </h2>
+                <p data-lang="en">KTX high-speed rail to Busan. Evening at Haeundae Beach.</p>
+                <p data-lang="zh">乘坐 KTX 高铁前往釜山。傍晚在海云台海滩漫步。</p>
+            </div>
+        </div>
+
+        <!-- Day 8 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/gstar,busan" alt="G-Star">
+                <img src="https://loremflickr.com/400/300/gaming,expo" alt="Gaming">
+                <img src="https://loremflickr.com/400/300/vr,park" alt="VR">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 08</span>
+                <h2 class="node-title">
+                    <span data-lang="en">G-Star Gaming Expo</span>
+                    <span data-lang="zh">G-Star 游戏展</span>
+                </h2>
+                <p data-lang="en">Explore Korea's largest gaming exhibition at BEXCO Busan.</p>
+                <p data-lang="zh">在釜山 BEXCO 探索韩国最大的游戏展。</p>
+            </div>
+        </div>
+
+        <!-- Day 9 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/gamcheon,village" alt="Gamcheon">
+                <img src="https://loremflickr.com/400/300/cultural,village" alt="Village">
+                <img src="https://loremflickr.com/400/300/busan,shopping" alt="Shopping">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 09</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Cultural Busan & Shopping</span>
+                    <span data-lang="zh">釜山文化与购物</span>
+                </h2>
+                <p data-lang="en">Gamcheon Culture Village. Last shopping at Shinsegae Centum City (Boys' Budget!).</p>
+                <p data-lang="zh">参观甘川洞文化村。在世界最大百货公司新世界 Centum City 购物。</p>
+            </div>
+        </div>
+
+        <!-- Day 10 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/busan,airport" alt="Airport">
+                <img src="https://loremflickr.com/400/300/plane,window" alt="Flying">
+                <img src="https://loremflickr.com/400/300/korea,bye" alt="Farewell">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 10</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Farewell Korea</span>
+                    <span data-lang="zh">告别韩国</span>
+                </h2>
+                <p data-lang="en">Last breakfast and departure from Busan/Gimhae Airport.</p>
+                <p data-lang="zh">最后的早餐后，前往金海国际机场启程回国。</p>
             </div>
         </div>
 

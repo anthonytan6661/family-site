@@ -22,11 +22,10 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Outfit', 'Noto+Sans+SC', sans-serif;
+            font-family: 'Outfit', 'Noto Sans SC', sans-serif;
             background-color: var(--light-slate);
             color: var(--deep-slate);
             line-height: 1.6;
-            transition: all 0.3s ease;
         }
 
         .lang-switch {
@@ -43,7 +42,7 @@
         .lang-btn.active { background: var(--autumn-red); color: var(--white); }
 
         header {
-            height: 70vh; position: relative; display: flex;
+            height: 60vh; position: relative; display: flex;
             align-items: center; justify-content: center; color: var(--white);
             text-align: center; background: var(--deep-slate);
         }
@@ -55,22 +54,8 @@
 
         .hero-content { position: relative; z-index: 2; padding: 2rem; max-width: 900px; }
         h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 1rem; }
-        .date-badge {
-            display: inline-block; background: var(--autumn-orange);
-            padding: 0.5rem 1.5rem; border-radius: 2rem; font-weight: 600; margin-bottom: 1.5rem;
-        }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
-
-        .trip-summary {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem; margin-top: -5rem; position: relative; z-index: 10;
-        }
-
-        .summary-card {
-            background: var(--white); padding: 1.5rem; border-radius: 1rem;
-            box-shadow: var(--shadow); border-top: 5px solid var(--autumn-red);
-        }
 
         .day-node {
             background: var(--white); border-radius: 1.5rem; margin-bottom: 3rem;
@@ -92,32 +77,18 @@
             background: #eee;
         }
 
-        .node-images img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-        }
-
-        .node-images img:first-child {
-            grid-row: span 2;
-        }
+        .node-images img { width: 100%; height: 100%; object-fit: cover; }
+        .node-images img:first-child { grid-row: span 2; }
 
         .node-content { padding: 2rem; }
         .day-label { color: var(--autumn-red); font-weight: 800; font-size: 1.25rem; }
 
-        .activity-list { list-style: none; }
+        .activity-list { list-style: none; margin-top: 1rem; }
         .activity-list li {
-            padding-left: 1.5rem; position: relative; margin-bottom: 0.75rem; font-size: 0.95rem;
+            padding-left: 1.5rem; position: relative; margin-bottom: 0.75rem;
         }
 
-        .activity-list li::before { content: '🍁'; position: absolute; left: 0; font-size: 0.8rem; }
-
-        .budget-banner {
-            background: var(--deep-slate); color: var(--white); padding: 3rem;
-            border-radius: 1.5rem; margin: 4rem 0; text-align: center;
-        }
-
-        .budget-val { font-size: 2.5rem; font-weight: 800; color: var(--autumn-gold); }
+        .activity-list li::before { content: '🍁'; position: absolute; left: 0; }
 
         footer { text-align: center; padding: 4rem 0; color: var(--slate); opacity: 0.7; }
 
@@ -134,53 +105,18 @@
     </div>
 
     <header>
-        <img src="https://loremflickr.com/1920/1080/kyoto,temple,autumn" alt="Hero" class="hero-img">
+        <img src="https://loremflickr.com/1920/1080/kyoto,autumn" alt="Japan" class="hero-img">
         <div class="hero-content">
-            <span class="date-badge">
-                <span data-lang="en">Nov 18 — Nov 27, 2026</span>
-                <span data-lang="zh">2026年11月18日 — 11月27日</span>
-            </span>
             <h1>
-                <span data-lang="en">Kyoto & Osaka Adventure</span>
-                <span data-lang="zh">京都 · 大阪秋季之旅</span>
+                <span data-lang="en">Japan Autumn Adventure</span>
+                <span data-lang="zh">日本秋季之旅</span>
             </h1>
-            <p>
-                <span data-lang="en">10 Days of Autumn Peaks, Tech, and Family Fun</span>
-                <span data-lang="zh">10天深度游：赏枫巅峰、科技体验与家庭乐趣</span>
-            </p>
         </div>
     </header>
 
     <div class="container">
-        <section class="trip-summary">
-            <div class="summary-card">
-                <h3 data-lang="en">🏨 Accommodation</h3>
-                <h3 data-lang="zh">🏨 住宿推荐</h3>
-                <p data-lang="en"><strong>Kyoto:</strong> Mimaru Kyoto (Suites)<br><strong>Osaka:</strong> Citadines Namba Osaka</p>
-                <p data-lang="zh"><strong>京都:</strong> Mimaru 京都 (家庭套房)<br><strong>大阪:</strong> 大阪难波馨乐庭</p>
-            </div>
-            <div class="summary-card">
-                <h3 data-lang="en">💰 Boy's Budget</h3>
-                <h3 data-lang="zh">💰 男孩购物预算</h3>
-                <p data-lang="en"><strong>SGD 200 each</strong> for Nintendo World, Akihabara, or Pokemon gear.</p>
-                <p data-lang="zh"><strong>每人 200 新币</strong>，用于任天堂世界、秋叶原或宝可梦中心。</p>
-            </div>
-            <div class="summary-card">
-                <h3 data-lang="en">🍁 Foliage Peak</h3>
-                <h3 data-lang="zh">🍁 赏枫巅峰期</h3>
-                <p data-lang="en">Nov 20 - Dec 5 is the historical peak for fiery red maples.</p>
-                <p data-lang="zh">11月20日至12月5日是枫叶变红的历史巅峰期。</p>
-            </div>
-        </section>
-
-        <div class="budget-banner">
-            <h2 data-lang="en">Total Estimated Budget</h2>
-            <h2 data-lang="zh">预计总预算</h2>
-            <div class="budget-val">SGD 13,300</div>
-            <p data-lang="en">Covers Flights, Hotels, Food, and Activities for 4 People</p>
-            <p data-lang="zh">包含4人的往返机票、酒店、餐饮及活动费用</p>
-        </div>
-
+        <!-- Days 1-10 Content -->
+        
         <!-- Day 1 -->
         <div class="day-node">
             <div class="node-images">
@@ -195,14 +131,12 @@
                     <span data-lang="zh">抵达与祗园夜色</span>
                 </h2>
                 <p class="node-desc">
-                    <span data-lang="en">Arrive at KIX airport and transfer to your Kyoto family suite. Begin the journey with a walk through history.</span>
-                    <span data-lang="zh">抵达关西国际机场并前往京都。入住家庭套房后，漫步于历史悠久的祗园。</span>
+                    <span data-lang="en">Transfer to Kyoto. Evening walk through Gion and Kodai-ji Temple night illumination.</span>
+                    <span data-lang="zh">前往京都。入住后漫步于祗园，参观高台寺夜枫。</span>
                 </p>
                 <ul class="activity-list">
                     <li data-lang="en">Gion Night Walk - Spot Geiko in the lantern-lit alleys.</li>
                     <li data-lang="zh">祗园夜游 - 在灯笼映照的小巷中寻找艺伎的身影。</li>
-                    <li data-lang="en">Kodai-ji Night Illumination - Maple trees reflected in Zen ponds.</li>
-                    <li data-lang="zh">高台寺夜枫 - 禅意园林中的枫叶倒影。</li>
                 </ul>
             </div>
         </div>
@@ -221,17 +155,155 @@
                     <span data-lang="zh">京都经典之巅</span>
                 </h2>
                 <p class="node-desc">
-                    <span data-lang="en">Experience the world-famous wooden stage of Kiyomizu-dera surrounded by a sea of red maples.</span>
-                    <span data-lang="zh">体验闻名世界的清水寺木质舞台，四周环绕着如海般的红枫。</span>
+                    <span data-lang="en">Kiyomizu-dera (Peak Foliage), Ninenzaka Slopes, and the "Tatami" Starbucks.</span>
+                    <span data-lang="zh">参观清水寺（赏枫巅峰）、二年坂坡道以及“榻榻米”星巴克。</span>
                 </p>
-                <ul class="activity-list">
-                    <li data-lang="en">Kiyomizu-dera - Early morning visit to beat the crowds.</li>
-                    <li data-lang="zh">清水寺 - 清晨参拜，避开拥挤人潮。</li>
-                    <li data-lang="en">Ninenzaka Starbucks - Coffee in a 100-year-old tatami house.</li>
-                    <li data-lang="zh">二年坂星巴克 - 在百年榻榻米老房中品味咖啡。</li>
-                    <li data-lang="en">Eikando Temple - The #1 autumn spot in all of Kyoto.</li>
-                    <li data-lang="zh">永观堂 - 京都公认的赏枫第一名胜。</li>
-                </ul>
+            </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/arashiyama,bamboo" alt="Arashiyama">
+                <img src="https://loremflickr.com/400/300/monkey,park" alt="Monkey Park">
+                <img src="https://loremflickr.com/400/300/scenic,train" alt="Train">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 03</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Arashiyama Adventure</span>
+                    <span data-lang="zh">岚山大冒险</span>
+                </h2>
+                <p class="node-desc">
+                    <span data-lang="en">Sagano Romantic Train, Bamboo Grove, and the Monkey Park summit.</span>
+                    <span data-lang="zh">乘坐嵯峨野浪漫小火车，穿梭竹林，登上猴子公园山顶。</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/fushimi,inari" alt="Inari">
+                <img src="https://loremflickr.com/400/300/manga,museum" alt="Manga">
+                <img src="https://loremflickr.com/400/300/nishiki,market" alt="Market">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 04</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Shrines & Manga</span>
+                    <span data-lang="zh">神社与漫画</span>
+                </h2>
+                <p data-lang="en">Fushimi Inari 10,000 Torii Gates hike. Afternoon at the Kyoto International Manga Museum.</p>
+                <p data-lang="zh">伏见稻荷大社万本鸟居徒步。下午参观京都国际漫画博物馆。</p>
+            </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/nara,deer" alt="Nara">
+                <img src="https://loremflickr.com/400/300/todaiji" alt="Todaiji">
+                <img src="https://loremflickr.com/400/300/mochi" alt="Mochi">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 05</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Nara Deer Park</span>
+                    <span data-lang="zh">奈良鹿公园</span>
+                </h2>
+                <p data-lang="en">Feed the bowing deer and visit Todai-ji (Giant Buddha).</p>
+                <p data-lang="zh">喂食可爱的小鹿，参观东大寺（大佛）。</p>
+            </div>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/kinkakuji" alt="Kinkakuji">
+                <img src="https://loremflickr.com/400/300/samurai" alt="Samurai">
+                <img src="https://loremflickr.com/400/300/osaka,train" alt="Transfer">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 06</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Gold & Samurai</span>
+                    <span data-lang="zh">金阁与武士</span>
+                </h2>
+                <p data-lang="en">Kinkaku-ji morning. Samurai sword lesson. Transfer to Osaka in the evening.</p>
+                <p data-lang="zh">早晨参观金阁寺。体验武士刀课程。傍晚前往大阪。</p>
+            </div>
+        </div>
+
+        <!-- Day 7 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/usj,nintendo" alt="USJ">
+                <img src="https://loremflickr.com/400/300/mario" alt="Mario">
+                <img src="https://loremflickr.com/400/300/harrypotter" alt="Potter">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 07</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Universal Studios Japan</span>
+                    <span data-lang="zh">日本环球影城</span>
+                </h2>
+                <p data-lang="en">Super Nintendo World & Harry Potter. Full day of thrills.</p>
+                <p data-lang="zh">超级任天堂世界与哈利波特。全天的惊险刺激。</p>
+            </div>
+        </div>
+
+        <!-- Day 8 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/osaka,castle" alt="Osaka Castle">
+                <img src="https://loremflickr.com/400/300/dotonbori" alt="Dotonbori">
+                <img src="https://loremflickr.com/400/300/takoyaki" alt="Takoyaki">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 08</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Castle & Neon</span>
+                    <span data-lang="zh">城堡与霓虹</span>
+                </h2>
+                <p data-lang="en">Osaka Castle Park (Golden Ginkgo trees). Evening at Dotonbori street food.</p>
+                <p data-lang="zh">大阪城公园（金秋银杏）。傍晚在道顿堀品尝街头美食。</p>
+            </div>
+        </div>
+
+        <!-- Day 9 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/minoo,falls" alt="Minoo">
+                <img src="https://loremflickr.com/400/300/dendentown" alt="Shopping">
+                <img src="https://loremflickr.com/400/300/anime" alt="Anime">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 09</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Minoo Falls & Shopping</span>
+                    <span data-lang="zh">箕面瀑布与购物</span>
+                </h2>
+                <p data-lang="en">Morning nature hike. Afternoon shopping in Den Den Town (Boys' Budget Day!).</p>
+                <p data-lang="zh">清晨自然远足。下午在电电城购物（男孩们的购物日！）。</p>
+            </div>
+        </div>
+
+        <!-- Day 10 -->
+        <div class="day-node">
+            <div class="node-images">
+                <img src="https://loremflickr.com/600/800/kaiyukan" alt="Aquarium">
+                <img src="https://loremflickr.com/400/300/rinku,outlet" alt="Outlet">
+                <img src="https://loremflickr.com/400/300/airplane" alt="Departure">
+            </div>
+            <div class="node-content">
+                <span class="day-label">Day 10</span>
+                <h2 class="node-title">
+                    <span data-lang="en">Aquarium & Farewell</span>
+                    <span data-lang="zh">水族馆与告别</span>
+                </h2>
+                <p data-lang="en">Osaka Aquarium Kaiyukan morning. Final Rinku Outlet shopping before departure.</p>
+                <p data-lang="zh">早晨参观海游馆。最后在临空奥特莱斯购物后启程回国。</p>
             </div>
         </div>
 
