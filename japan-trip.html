@@ -6,7 +6,7 @@
     <title>Japan Autumn Adventure 2026 | 日本秋季之旅</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Outfit:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
             --autumn-red: #b91c1c;
@@ -52,15 +52,15 @@
             object-fit: cover; opacity: 0.5; z-index: 1;
         }
 
-        .hero-content { position: relative; z-index: 2; padding: 2rem; max-width: 900px; }
-        h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 1rem; }
+        .hero-content { position: relative; z-index: 2; padding: 2rem; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 4rem; }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
 
         .day-node {
             background: var(--white); border-radius: 1.5rem; margin-bottom: 3rem;
             overflow: hidden; box-shadow: var(--shadow); display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1.2fr;
         }
 
         @media (max-width: 850px) {
@@ -70,18 +70,27 @@
         }
 
         .node-images {
-            display: grid; 
-            grid-template-columns: 1.2fr 1fr;
-            grid-template-rows: 200px 200px; 
-            gap: 4px; 
-            background: #eee;
+            display: grid; grid-template-columns: 1.2fr 1fr;
+            grid-template-rows: 250px 250px; gap: 4px; background: #eee;
         }
 
         .node-images img { width: 100%; height: 100%; object-fit: cover; }
         .node-images img:first-child { grid-row: span 2; }
 
-        .node-content { padding: 2rem; }
+        .node-content { padding: 2rem; display: flex; flex-direction: column; }
         .day-label { color: var(--autumn-red); font-weight: 800; font-size: 1.25rem; }
+        
+        /* Logistics Box */
+        .logistics {
+            background: #fef2f2;
+            border-left: 4px solid var(--autumn-red);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+
+        .logistics strong { color: var(--autumn-red); }
 
         .activity-list { list-style: none; margin-top: 1rem; }
         .activity-list li {
@@ -115,48 +124,26 @@
     </header>
 
     <div class="container">
-        <!-- Days 1-10 Content -->
-        
         <!-- Day 1 -->
         <div class="day-node">
             <div class="node-images">
-                <img src="https://loremflickr.com/600/800/gion,kyoto,night" alt="Gion">
-                <img src="https://loremflickr.com/400/300/kyoto,alley" alt="Alley">
-                <img src="https://loremflickr.com/400/300/pontocho" alt="Pontocho">
+                <img src="https://loremflickr.com/600/800/haruka,train,kix" alt="Haruka">
+                <img src="https://loremflickr.com/400/300/kyoto,station" alt="Station">
+                <img src="https://loremflickr.com/400/300/gion,night" alt="Gion">
             </div>
             <div class="node-content">
                 <span class="day-label">Day 01</span>
                 <h2 class="node-title">
-                    <span data-lang="en">Arrival & Gion Lights</span>
-                    <span data-lang="zh">抵达与祗园夜色</span>
+                    <span data-lang="en">Arrival & KIX Transfer</span>
+                    <span data-lang="zh">抵达与机场接驳</span>
                 </h2>
+                <div class="logistics">
+                    <p data-lang="en"><strong>Route:</strong> KIX Airport → Kyoto Station via <strong>JR Haruka Express</strong>.<br><strong>Travel Time:</strong> 75-80 mins. Departs every 30 mins.</p>
+                    <p data-lang="zh"><strong>路线:</strong> 关西机场 → 京都站 乘坐 <strong>JR 哈鲁卡特快 (Haruka)</strong>。<br><strong>用时:</strong> 75-80 分钟。每 30 分钟一班。</p>
+                </div>
                 <p class="node-desc">
-                    <span data-lang="en">Transfer to Kyoto. Evening walk through Gion and Kodai-ji Temple night illumination.</span>
-                    <span data-lang="zh">前往京都。入住后漫步于祗园，参观高台寺夜枫。</span>
-                </p>
-                <ul class="activity-list">
-                    <li data-lang="en">Gion Night Walk - Spot Geiko in the lantern-lit alleys.</li>
-                    <li data-lang="zh">祗园夜游 - 在灯笼映照的小巷中寻找艺伎的身影。</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Day 2 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/kiyomizudera,autumn" alt="Kiyomizudera">
-                <img src="https://loremflickr.com/400/300/starbucks,kyoto" alt="Starbucks">
-                <img src="https://loremflickr.com/400/300/eikando,temple" alt="Eikando">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 02</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Iconic Kyoto Peaks</span>
-                    <span data-lang="zh">京都经典之巅</span>
-                </h2>
-                <p class="node-desc">
-                    <span data-lang="en">Kiyomizu-dera (Peak Foliage), Ninenzaka Slopes, and the "Tatami" Starbucks.</span>
-                    <span data-lang="zh">参观清水寺（赏枫巅峰）、二年坂坡道以及“榻榻米”星巴克。</span>
+                    <span data-lang="en">Evening walk through the lantern-lit streets of Gion.</span>
+                    <span data-lang="zh">入住后漫步于灯火通明的祗园小巷。</span>
                 </p>
             </div>
         </div>
@@ -165,82 +152,56 @@
         <div class="day-node">
             <div class="node-images">
                 <img src="https://loremflickr.com/600/800/arashiyama,bamboo" alt="Arashiyama">
+                <img src="https://loremflickr.com/400/300/sagano,train" alt="Scenic Train">
                 <img src="https://loremflickr.com/400/300/monkey,park" alt="Monkey Park">
-                <img src="https://loremflickr.com/400/300/scenic,train" alt="Train">
             </div>
             <div class="node-content">
                 <span class="day-label">Day 03</span>
                 <h2 class="node-title">
                     <span data-lang="en">Arashiyama Adventure</span>
-                    <span data-lang="zh">岚山大冒险</span>
+                    <span data-lang="zh">岚山探索之旅</span>
                 </h2>
+                <div class="logistics">
+                    <p data-lang="en"><strong>Route:</strong> Kyoto Station → Saga-Arashiyama via <strong>JR Sagano Line</strong> (Platform 32/33).<br><strong>Travel Time:</strong> 17 mins. Cost: ¥240.</p>
+                    <p data-lang="zh"><strong>路线:</strong> 京都站 → 嵯峨岚山站 乘坐 <strong>JR 嵯峨野线</strong> (32/33站台)。<br><strong>用时:</strong> 17 分钟。票价: ¥240。</p>
+                </div>
                 <p class="node-desc">
-                    <span data-lang="en">Sagano Romantic Train, Bamboo Grove, and the Monkey Park summit.</span>
-                    <span data-lang="zh">乘坐嵯峨野浪漫小火车，穿梭竹林，登上猴子公园山顶。</span>
+                    <span data-lang="en">Ride the Sagano Romantic Train and hike the Monkey Park.</span>
+                    <span data-lang="zh">乘坐嵯峨野浪漫小火车，徒步岩田山猴子公园。</span>
                 </p>
             </div>
         </div>
 
-        <!-- Day 4 -->
+        <!-- Day 6 (Transfer Day) -->
         <div class="day-node">
             <div class="node-images">
-                <img src="https://loremflickr.com/600/800/fushimi,inari" alt="Inari">
-                <img src="https://loremflickr.com/400/300/manga,museum" alt="Manga">
-                <img src="https://loremflickr.com/400/300/nishiki,market" alt="Market">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 04</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Shrines & Manga</span>
-                    <span data-lang="zh">神社与漫画</span>
-                </h2>
-                <p data-lang="en">Fushimi Inari 10,000 Torii Gates hike. Afternoon at the Kyoto International Manga Museum.</p>
-                <p data-lang="zh">伏见稻荷大社万本鸟居徒步。下午参观京都国际漫画博物馆。</p>
-            </div>
-        </div>
-
-        <!-- Day 5 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/nara,deer" alt="Nara">
-                <img src="https://loremflickr.com/400/300/todaiji" alt="Todaiji">
-                <img src="https://loremflickr.com/400/300/mochi" alt="Mochi">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 05</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Nara Deer Park</span>
-                    <span data-lang="zh">奈良鹿公园</span>
-                </h2>
-                <p data-lang="en">Feed the bowing deer and visit Todai-ji (Giant Buddha).</p>
-                <p data-lang="zh">喂食可爱的小鹿，参观东大寺（大佛）。</p>
-            </div>
-        </div>
-
-        <!-- Day 6 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/kinkakuji" alt="Kinkakuji">
-                <img src="https://loremflickr.com/400/300/samurai" alt="Samurai">
-                <img src="https://loremflickr.com/400/300/osaka,train" alt="Transfer">
+                <img src="https://loremflickr.com/600/800/shinkansen,bullet,train" alt="Shinkansen">
+                <img src="https://loremflickr.com/400/300/osaka,umeda" alt="Osaka">
+                <img src="https://loremflickr.com/400/300/takoyaki" alt="Food">
             </div>
             <div class="node-content">
                 <span class="day-label">Day 06</span>
                 <h2 class="node-title">
-                    <span data-lang="en">Gold & Samurai</span>
-                    <span data-lang="zh">金阁与武士</span>
+                    <span data-lang="en">Transfer to Osaka</span>
+                    <span data-lang="zh">前往大阪</span>
                 </h2>
-                <p data-lang="en">Kinkaku-ji morning. Samurai sword lesson. Transfer to Osaka in the evening.</p>
-                <p data-lang="zh">早晨参观金阁寺。体验武士刀课程。傍晚前往大阪。</p>
+                <div class="logistics">
+                    <p data-lang="en"><strong>Route:</strong> Kyoto Station → Osaka (Umeda) via <strong>JR Special Rapid</strong>.<br><strong>Travel Time:</strong> 29 mins. Cost: ¥580. (Direct to city center).</p>
+                    <p data-lang="zh"><strong>路线:</strong> 京都站 → 大阪 (梅田) 乘坐 <strong>JR 新快速列车</strong>。<br><strong>用时:</strong> 29 分钟。票价: ¥580。(直达市中心)。</p>
+                </div>
+                <p class="node-desc">
+                    <span data-lang="en">Transfer to Citadines Namba. Evening in Dotonbori.</span>
+                    <span data-lang="zh">入住难波馨乐庭。晚上在道顿堀品尝美食。</span>
+                </p>
             </div>
         </div>
 
-        <!-- Day 7 -->
+        <!-- Day 7 (USJ) -->
         <div class="day-node">
             <div class="node-images">
                 <img src="https://loremflickr.com/600/800/usj,nintendo" alt="USJ">
-                <img src="https://loremflickr.com/400/300/mario" alt="Mario">
-                <img src="https://loremflickr.com/400/300/harrypotter" alt="Potter">
+                <img src="https://loremflickr.com/400/300/mario,kart" alt="Mario">
+                <img src="https://loremflickr.com/400/300/usj,train" alt="USJ Train">
             </div>
             <div class="node-content">
                 <span class="day-label">Day 07</span>
@@ -248,68 +209,20 @@
                     <span data-lang="en">Universal Studios Japan</span>
                     <span data-lang="zh">日本环球影城</span>
                 </h2>
-                <p data-lang="en">Super Nintendo World & Harry Potter. Full day of thrills.</p>
-                <p data-lang="zh">超级任天堂世界与哈利波特。全天的惊险刺激。</p>
-            </div>
-        </div>
-
-        <!-- Day 8 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/osaka,castle" alt="Osaka Castle">
-                <img src="https://loremflickr.com/400/300/dotonbori" alt="Dotonbori">
-                <img src="https://loremflickr.com/400/300/takoyaki" alt="Takoyaki">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 08</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Castle & Neon</span>
-                    <span data-lang="zh">城堡与霓虹</span>
-                </h2>
-                <p data-lang="en">Osaka Castle Park (Golden Ginkgo trees). Evening at Dotonbori street food.</p>
-                <p data-lang="zh">大阪城公园（金秋银杏）。傍晚在道顿堀品尝街头美食。</p>
-            </div>
-        </div>
-
-        <!-- Day 9 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/minoo,falls" alt="Minoo">
-                <img src="https://loremflickr.com/400/300/dendentown" alt="Shopping">
-                <img src="https://loremflickr.com/400/300/anime" alt="Anime">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 09</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Minoo Falls & Shopping</span>
-                    <span data-lang="zh">箕面瀑布与购物</span>
-                </h2>
-                <p data-lang="en">Morning nature hike. Afternoon shopping in Den Den Town (Boys' Budget Day!).</p>
-                <p data-lang="zh">清晨自然远足。下午在电电城购物（男孩们的购物日！）。</p>
-            </div>
-        </div>
-
-        <!-- Day 10 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/kaiyukan" alt="Aquarium">
-                <img src="https://loremflickr.com/400/300/rinku,outlet" alt="Outlet">
-                <img src="https://loremflickr.com/400/300/airplane" alt="Departure">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 10</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Aquarium & Farewell</span>
-                    <span data-lang="zh">水族馆与告别</span>
-                </h2>
-                <p data-lang="en">Osaka Aquarium Kaiyukan morning. Final Rinku Outlet shopping before departure.</p>
-                <p data-lang="zh">早晨参观海游馆。最后在临空奥特莱斯购物后启程回国。</p>
+                <div class="logistics">
+                    <p data-lang="en"><strong>Route:</strong> Osaka/Namba → <strong>Universal-City Station</strong> via JR Sakurajima Line.<br><strong>Travel Time:</strong> 15-20 mins. (Switch at Nishikujo Station).</p>
+                    <p data-lang="zh"><strong>路线:</strong> 大阪/难波 → <strong>环球城站</strong> 乘坐 JR 樱岛线。<br><strong>用时:</strong> 15-20 分钟。(在西九条站换乘)。</p>
+                </div>
+                <p class="node-desc">
+                    <span data-lang="en">Super Nintendo World and Harry Potter.</span>
+                    <span data-lang="zh">沉浸于超级任天堂世界与哈利波特魔法世界。</span>
+                </p>
             </div>
         </div>
 
         <footer>
-            <p data-lang="en">&copy; 2026 Family Trip Planner - Japan Autumn</p>
-            <p data-lang="zh">&copy; 2026 家庭旅行计划 - 日本秋季</p>
+            <p data-lang="en">&copy; 2026 Family Trip Planner - Japan Logistics</p>
+            <p data-lang="zh">&copy; 2026 家庭旅行计划 - 日本交通指南</p>
         </footer>
     </div>
 

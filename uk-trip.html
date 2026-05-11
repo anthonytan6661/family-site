@@ -60,7 +60,7 @@
         .day-node {
             background: var(--white); border-radius: 1.5rem; margin-bottom: 3rem;
             overflow: hidden; box-shadow: var(--shadow); display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1.2fr;
         }
 
         @media (max-width: 850px) {
@@ -70,18 +70,23 @@
         }
 
         .node-images {
-            display: grid; 
-            grid-template-columns: 1.2fr 1fr;
-            grid-template-rows: 200px 200px; 
-            gap: 4px; 
-            background: #eee;
+            display: grid; grid-template-columns: 1.2fr 1fr;
+            grid-template-rows: 250px 250px; gap: 4px; background: #eee;
         }
 
         .node-images img { width: 100%; height: 100%; object-fit: cover; }
         .node-images img:first-child { grid-row: span 2; }
 
-        .node-content { padding: 2rem; }
+        .node-content { padding: 2rem; display: flex; flex-direction: column; }
         .day-label { color: var(--uk-red); font-weight: 800; font-size: 1.25rem; }
+
+        .logistics {
+            background: #f0f4ff; border-left: 4px solid var(--uk-blue);
+            padding: 1rem; margin: 1.5rem 0; font-size: 0.9rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+
+        .logistics strong { color: var(--uk-blue); }
 
         .activity-list { list-style: none; margin-top: 1rem; }
         .activity-list li {
@@ -89,8 +94,6 @@
         }
 
         .activity-list li::before { content: '🇬🇧'; position: absolute; left: 0; }
-
-        footer { text-align: center; padding: 4rem 0; color: var(--slate); opacity: 0.7; }
 
         [data-lang="zh"] { display: none; }
         body.lang-zh [data-lang="en"] { display: none; }
@@ -118,186 +121,50 @@
         <!-- Day 1 -->
         <div class="day-node">
             <div class="node-images">
-                <img src="https://loremflickr.com/600/800/london,eye,night" alt="London Eye">
-                <img src="https://loremflickr.com/400/300/thames,river" alt="Thames">
-                <img src="https://loremflickr.com/400/300/southbank" alt="Southbank">
+                <img src="https://loremflickr.com/600/800/heathrow,express" alt="Heathrow">
+                <img src="https://loremflickr.com/400/300/london,tube" alt="Tube">
+                <img src="https://loremflickr.com/400/300/london,eye" alt="London Eye">
             </div>
             <div class="node-content">
                 <span class="day-label">Day 01</span>
                 <h2 class="node-title">
-                    <span data-lang="en">Arrival & Southbank</span>
-                    <span data-lang="zh">抵达与南岸漫步</span>
+                    <span data-lang="en">Arrival & Tube Stroll</span>
+                    <span data-lang="zh">抵达与伦敦地铁体验</span>
                 </h2>
-                <p data-lang="en">Arrive at Heathrow and settle into your Central London apartment.</p>
-                <p data-lang="zh">抵达希思罗机场并入住伦敦市中心公寓。</p>
+                <div class="logistics">
+                    <p data-lang="en"><strong>Route:</strong> Heathrow Airport → Central London via <strong>Elizabeth Line</strong> or <strong>Heathrow Express</strong>.<br><strong>Travel Time:</strong> 15-45 mins depending on line.</p>
+                    <p data-lang="zh"><strong>路线:</strong> 希思罗机场 → 伦敦市中心 乘坐 <strong>伊丽莎白线</strong> 或 <strong>希思罗特快</strong>。<br><strong>用时:</strong> 15-45 分钟（取决于线路）。</p>
+                </div>
+                <p data-lang="en">Check into your apartment and take a sunset ride on the London Eye.</p>
+                <p data-lang="zh">入住公寓后，在伦敦眼上欣赏落日余晖。</p>
             </div>
         </div>
 
-        <!-- Day 2 -->
+        <!-- Day 7 (Travel to Scotland) -->
         <div class="day-node">
             <div class="node-images">
-                <img src="https://loremflickr.com/600/800/tower,london,crown" alt="Tower of London">
-                <img src="https://loremflickr.com/400/300/tower,bridge" alt="Tower Bridge">
-                <img src="https://loremflickr.com/400/300/borough,market" alt="Borough Market">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 02</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Royal History & Food</span>
-                    <span data-lang="zh">皇室历史与美食</span>
-                </h2>
-                <p data-lang="en">Tower of London morning. See the Crown Jewels. Afternoon at Borough Market.</p>
-                <p data-lang="zh">早晨参观伦敦塔。参观女王皇冠与珍宝。下午前往波罗市场。</p>
-            </div>
-        </div>
-
-        <!-- Day 3 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/harrypotter,studio,london" alt="Harry Potter">
-                <img src="https://loremflickr.com/400/300/hogwarts,express" alt="Hogwarts">
-                <img src="https://loremflickr.com/400/300/butterbeer" alt="Butterbeer">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 03</span>
-                <h2 class="node-title">
-                    <span data-lang="en">The Magic of Harry Potter</span>
-                    <span data-lang="zh">哈利波特的魔法世界</span>
-                </h2>
-                <p data-lang="en">Full day at Warner Bros. Studio Tour London.</p>
-                <p data-lang="zh">全天参观华纳兄弟伦敦影城。</p>
-            </div>
-        </div>
-
-        <!-- Day 4 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/stadium,football,london" alt="Football">
-                <img src="https://loremflickr.com/400/300/karting,f1" alt="Karting">
-                <img src="https://loremflickr.com/400/300/football,shop" alt="Shop">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 04</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Football & Adrenaline</span>
-                    <span data-lang="zh">足球与速度</span>
-                </h2>
-                <p data-lang="en">Spurs Stadium Tour (Skywalk & F1 Karting).</p>
-                <p data-lang="zh">热刺球场导览（可选空中步道与F1卡丁车）。</p>
-            </div>
-        </div>
-
-        <!-- Day 5 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/british,museum" alt="Museum">
-                <img src="https://loremflickr.com/400/300/covent,garden" alt="Garden">
-                <img src="https://loremflickr.com/400/300/afternoon,tea" alt="Tea">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 05</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Culture & Covent Garden</span>
-                    <span data-lang="zh">文化与科文特花园</span>
-                </h2>
-                <p data-lang="en">British Museum morning. Street performers and shopping at Covent Garden.</p>
-                <p data-lang="zh">早晨参观大英博物馆。随后前往科文特花园观看街头表演并购物。</p>
-            </div>
-        </div>
-
-        <!-- Day 6 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/oxford,city" alt="Oxford">
-                <img src="https://loremflickr.com/400/300/university,library" alt="Library">
-                <img src="https://loremflickr.com/400/300/punting,river" alt="Punting">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 06</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Oxford Day Trip</span>
-                    <span data-lang="zh">牛津一日游</span>
-                </h2>
-                <p data-lang="en">Visit the historic University of Oxford and try punting on the river.</p>
-                <p data-lang="zh">参观历史悠久的牛津大学，并尝试撑篙游河。</p>
-            </div>
-        </div>
-
-        <!-- Day 7 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/edinburgh,castle" alt="Edinburgh">
-                <img src="https://loremflickr.com/400/300/train,scotland" alt="Train">
-                <img src="https://loremflickr.com/400/300/royal,mile" alt="Royal Mile">
+                <img src="https://loremflickr.com/600/800/lner,train" alt="LNER">
+                <img src="https://loremflickr.com/400/300/kingscross,station" alt="Kings Cross">
+                <img src="https://loremflickr.com/400/300/edinburgh,waverley" alt="Edinburgh">
             </div>
             <div class="node-content">
                 <span class="day-label">Day 07</span>
                 <h2 class="node-title">
-                    <span data-lang="en">Travel to Scotland</span>
-                    <span data-lang="zh">前往苏格兰</span>
+                    <span data-lang="en">The Flying Scotsman Route</span>
+                    <span data-lang="zh">前往苏格兰的铁路线</span>
                 </h2>
-                <p data-lang="en">Scenic train to Edinburgh. Explore the Royal Mile in the evening.</p>
-                <p data-lang="zh">乘坐景观火车前往爱丁堡。傍晚探索皇家一英里。</p>
-            </div>
-        </div>
-
-        <!-- Day 8 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/highlands,scotland" alt="Highlands">
-                <img src="https://loremflickr.com/400/300/lochness" alt="Loch Ness">
-                <img src="https://loremflickr.com/400/300/glencoe" alt="Glencoe">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 08</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Highlands & Loch Ness</span>
-                    <span data-lang="zh">高地与尼斯湖</span>
-                </h2>
-                <p data-lang="en">Full day tour of the Scottish Highlands and a boat trip on Loch Ness.</p>
-                <p data-lang="zh">苏格兰高地全天游，并在尼斯湖上乘船。 </p>
-            </div>
-        </div>
-
-        <!-- Day 9 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/shopping,london" alt="Shopping">
-                <img src="https://loremflickr.com/400/300/harrods" alt="Harrods">
-                <img src="https://loremflickr.com/400/300/toyshop,hamleys" alt="Hamleys">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 09</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Return & Last Shopping</span>
-                    <span data-lang="zh">返回与最后购物</span>
-                </h2>
-                <p data-lang="en">Return to London. Shopping at Hamleys and Harrods (Boys' Budget Day!).</p>
-                <p data-lang="zh">返回伦敦。在哈姆雷斯和哈罗德百货购物（男孩们的购物日！）。</p>
-            </div>
-        </div>
-
-        <!-- Day 10 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/buckingham,palace" alt="Palace">
-                <img src="https://loremflickr.com/400/300/changing,guard" alt="Guard">
-                <img src="https://loremflickr.com/400/300/airplane,takeoff" alt="Farewell">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 10</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Farewell London</span>
-                    <span data-lang="zh">告别伦敦</span>
-                </h2>
-                <p data-lang="en">Changing of the Guard at Buckingham Palace. Afternoon flight departure.</p>
-                <p data-lang="zh">观看白金汉宫卫兵交接仪式。下午启程回国。</p>
+                <div class="logistics">
+                    <p data-lang="en"><strong>Route:</strong> London King's Cross → Edinburgh Waverley via <strong>LNER Azuma</strong>.<br><strong>Travel Time:</strong> 4h 20m. Book right-side window seats for sea views!</p>
+                    <p data-lang="zh"><strong>路线:</strong> 伦敦国王十字站 → 爱丁堡威瓦利站 乘坐 <strong>LNER Azuma 特快</strong>。<br><strong>用时:</strong> 4小时20分钟。预订右侧窗位可欣赏海景！</p>
+                </div>
+                <p data-lang="en">Cross the border into Scotland and explore the Royal Mile.</p>
+                <p data-lang="zh">跨越边界进入苏格兰，探索皇家一英里。</p>
             </div>
         </div>
 
         <footer>
-            <p data-lang="en">&copy; 2026 Family Trip Planner - UK Adventure</p>
-            <p data-lang="zh">&copy; 2026 家庭旅行计划 - 英国之旅</p>
+            <p data-lang="en">&copy; 2026 Family Trip Planner - UK Logistics</p>
+            <p data-lang="zh">&copy; 2026 家庭旅行计划 - 英国交通指南</p>
         </footer>
     </div>
 
