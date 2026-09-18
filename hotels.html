@@ -837,10 +837,10 @@
             <div class="filter-group">
                 <span class="filter-label"><span data-lang="zh">币种显示：</span><span data-lang="en">Currency:</span></span>
                 <div class="currency-switch">
-                    <button class="cur-btn active" onclick="setCurrency('CNY')">CNY (¥)</button>
-                    <button class="cur-btn" onclick="setCurrency('JPY')">JPY (円)</button>
-                    <button class="cur-btn" onclick="setCurrency('SGD')">SGD ($)</button>
-                    <button class="cur-btn" onclick="setCurrency('USD')">USD ($)</button>
+                    <button class="cur-btn active" id="cur-sgd" onclick="setCurrency('SGD')">SGD (S$)</button>
+                    <button class="cur-btn" id="cur-jpy" onclick="setCurrency('JPY')">JPY (円)</button>
+                    <button class="cur-btn" id="cur-cny" onclick="setCurrency('CNY')">CNY (¥)</button>
+                    <button class="cur-btn" id="cur-usd" onclick="setCurrency('USD')">USD ($)</button>
                 </div>
             </div>
         </div>
@@ -907,7 +907,7 @@
 
                         <!-- Price & Link -->
                         <div class="card-footer-action">
-                            <div class="price-display">
+                            <div class="price-display" data-hotel-id="h1-1">
                                 <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
                                 <span class="price-amount" data-cny="1250" data-jpy="26000" data-sgd="235" data-usd="175">¥1,250</span>
                                 <span class="price-unit"><span data-lang="zh">4晚约 ¥5,000 (约26,000円/晚)</span><span data-lang="en">~26,000 JPY / night</span></span>
@@ -967,7 +967,7 @@
 
                         <!-- Price & Link -->
                         <div class="card-footer-action">
-                            <div class="price-display">
+                            <div class="price-display" data-hotel-id="h1-2">
                                 <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
                                 <span class="price-amount" data-cny="1850" data-jpy="38000" data-sgd="345" data-usd="255">¥1,850</span>
                                 <span class="price-unit"><span data-lang="zh">4晚约 ¥7,400 (约38,000円/晚)</span><span data-lang="en">~38,000 JPY / night</span></span>
@@ -1023,7 +1023,7 @@
 
                         <!-- Price & Link -->
                         <div class="card-footer-action">
-                            <div class="price-display">
+                            <div class="price-display" data-hotel-id="h1-3">
                                 <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
                                 <span class="price-amount" data-cny="1050" data-jpy="22000" data-sgd="195" data-usd="145">¥1,050</span>
                                 <span class="price-unit"><span data-lang="zh">4晚约 ¥4,200 (约22,000円/晚)</span><span data-lang="en">~22,000 JPY / night</span></span>
@@ -1099,7 +1099,7 @@
 
                         <!-- Price & Link -->
                         <div class="card-footer-action">
-                            <div class="price-display">
+                            <div class="price-display" data-hotel-id="h2-1">
                                 <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
                                 <span class="price-amount" data-cny="1200" data-jpy="25000" data-sgd="225" data-usd="165">¥1,200</span>
                                 <span class="price-unit"><span data-lang="zh">4晚约 ¥4,800 (约25,000円/晚)</span><span data-lang="en">~25,000 JPY / night</span></span>
@@ -1155,7 +1155,7 @@
 
                         <!-- Price & Link -->
                         <div class="card-footer-action">
-                            <div class="price-display">
+                            <div class="price-display" data-hotel-id="h2-2">
                                 <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
                                 <span class="price-amount" data-cny="1550" data-jpy="32000" data-sgd="290" data-usd="215">¥1,550</span>
                                 <span class="price-unit"><span data-lang="zh">4晚约 ¥6,200 (约32,000円/晚)</span><span data-lang="en">~32,000 JPY / night</span></span>
@@ -1211,7 +1211,7 @@
 
                         <!-- Price & Link -->
                         <div class="card-footer-action">
-                            <div class="price-display">
+                            <div class="price-display" data-hotel-id="h2-3">
                                 <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
                                 <span class="price-amount" data-cny="1650" data-jpy="34000" data-sgd="310" data-usd="230">¥1,650</span>
                                 <span class="price-unit"><span data-lang="zh">4晚约 ¥6,600 (约34,000円/晚)</span><span data-lang="en">~34,000 JPY / night</span></span>
@@ -1287,7 +1287,7 @@
 
                         <!-- Price & Link -->
                         <div class="card-footer-action">
-                            <div class="price-display">
+                            <div class="price-display" data-hotel-id="h3-1">
                                 <span class="price-label"><span data-lang="zh">4人一泊二食总价（含早晚餐）</span><span data-lang="en">4-Pax Total (Dinner & Bfast)</span></span>
                                 <span class="price-amount" data-cny="3800" data-jpy="78000" data-sgd="710" data-usd="525">¥3,800</span>
                                 <span class="price-unit"><span data-lang="zh">4人含双餐总价 (约78,000円)</span><span data-lang="en">Total for 4 pax with Kaiseki</span></span>
@@ -1343,7 +1343,7 @@
 
                         <!-- Price & Link -->
                         <div class="card-footer-action">
-                            <div class="price-display">
+                            <div class="price-display" data-hotel-id="h3-2">
                                 <span class="price-label"><span data-lang="zh">4人一泊二食总价（含早晚餐）</span><span data-lang="en">4-Pax Total (Dinner & Bfast)</span></span>
                                 <span class="price-amount" data-cny="3300" data-jpy="68000" data-sgd="620" data-usd="460">¥3,300</span>
                                 <span class="price-unit"><span data-lang="zh">4人含双餐总价 (约68,000円)</span><span data-lang="en">Total for 4 pax with Kaiseki</span></span>
@@ -1415,7 +1415,7 @@
 
                         <!-- Price & Link -->
                         <div class="card-footer-action">
-                            <div class="price-display">
+                            <div class="price-display" data-hotel-id="h4-1">
                                 <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
                                 <span class="price-amount" data-cny="1300" data-jpy="27000" data-sgd="245" data-usd="180">¥1,300</span>
                                 <span class="price-unit"><span data-lang="zh">3晚约 ¥3,900 (约27,000円/晚)</span><span data-lang="en">~27,000 JPY / night</span></span>
@@ -1471,7 +1471,7 @@
 
                         <!-- Price & Link -->
                         <div class="card-footer-action">
-                            <div class="price-display">
+                            <div class="price-display" data-hotel-id="h4-2">
                                 <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
                                 <span class="price-amount" data-cny="1650" data-jpy="34000" data-sgd="310" data-usd="230">¥1,650</span>
                                 <span class="price-unit"><span data-lang="zh">3晚约 ¥4,950 (约34,000円/晚)</span><span data-lang="en">~34,000 JPY / night</span></span>
@@ -1527,7 +1527,7 @@
 
                         <!-- Price & Link -->
                         <div class="card-footer-action">
-                            <div class="price-display">
+                            <div class="price-display" data-hotel-id="h4-3">
                                 <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
                                 <span class="price-amount" data-cny="2500" data-jpy="52000" data-sgd="470" data-usd="350">¥2,500</span>
                                 <span class="price-unit"><span data-lang="zh">3晚约 ¥7,500 (约52,000円/晚)</span><span data-lang="en">~52,000 JPY / night</span></span>
@@ -1567,99 +1567,99 @@
                     </thead>
                     <tbody>
                         <!-- P1 -->
-                        <tr style="background: #f0fdf4;">
+                        <tr data-hotel-id="h1-1" style="background: #f0fdf4;">
                             <td><strong>阶段一：名古屋 (4晚)</strong><br><span style="font-size:0.75rem; color:#64748b;">11/26 - 11/30</span></td>
                             <td><strong>GOLD STAY 名古屋大须</strong><br><span style="font-size:0.75rem; color:#047857;">★ 最推荐亲子家庭</span></td>
                             <td><strong style="color:#15803d;">🌟 房内独立洗烘机</strong> (免费含洗剂)</td>
                             <td>45-50㎡ 4床套房 + 全套厨房</td>
-                            <td><strong>26,000 円</strong> / S$215</td>
-                            <td><strong style="color:#047857;">104,000 円</strong><br><span style="font-weight:700; color:#0369a1;">S$855</span></td>
+                            <td><strong class="tbl-nightly">S$ 214</strong></td>
+                            <td><strong class="tbl-total" style="color:#047857;">S$ 856</strong></td>
                         </tr>
-                        <tr>
+                        <tr data-hotel-id="h1-2">
                             <td>阶段一：名古屋 (4晚)</td>
                             <td>名古屋 JR Gate Tower 饭店</td>
                             <td>🔄 20层 24小时投币机 (电视查空位)</td>
                             <td>名驿直连高空双房 / 加床</td>
-                            <td><strong>38,000 円</strong> / S$314</td>
-                            <td>152,000 円<br><span style="color:#64748b;">S$1,250</span></td>
+                            <td><strong class="tbl-nightly">S$ 313</strong></td>
+                            <td><strong class="tbl-total" style="color:#64748b;">S$ 1,251</strong></td>
                         </tr>
-                        <tr>
+                        <tr data-hotel-id="h1-3">
                             <td>阶段一：名古屋 (4晚)</td>
                             <td>大和 Roynet 名古屋太阁通口</td>
                             <td>🔄 馆内投币洗衣机房</td>
                             <td>新干线口1分钟 / 双床加床</td>
-                            <td><strong>22,000 円</strong> / S$182</td>
-                            <td>88,000 円<br><span style="color:#64748b;">S$725</span></td>
+                            <td><strong class="tbl-nightly">S$ 181</strong></td>
+                            <td><strong class="tbl-total" style="color:#64748b;">S$ 724</strong></td>
                         </tr>
 
                         <!-- P2 -->
-                        <tr style="background: #f0fdf4;">
+                        <tr data-hotel-id="h2-1" style="background: #f0fdf4;">
                             <td><strong>阶段二：高山 (4晚)</strong><br><span style="font-size:0.75rem; color:#64748b;">11/30 - 12/04</span></td>
                             <td><strong>高山车站公寓式酒店</strong><br><span style="font-size:0.75rem; color:#047857;">★ 最推荐亲子家庭</span></td>
                             <td><strong style="color:#15803d;">🌟 全房型独立洗烘机</strong> (含洗粉)</td>
                             <td>超大豪华套房 + 全厨房 + 赠免费温泉</td>
-                            <td><strong>25,000 円</strong> / S$207</td>
-                            <td><strong style="color:#047857;">100,000 円</strong><br><span style="font-weight:700; color:#0369a1;">S$825</span></td>
+                            <td><strong class="tbl-nightly">S$ 206</strong></td>
+                            <td><strong class="tbl-total" style="color:#047857;">S$ 823</strong></td>
                         </tr>
-                        <tr>
+                        <tr data-hotel-id="h2-2">
                             <td>阶段二：高山 (4晚)</td>
                             <td>东急 STAY 飞驒高山 结之汤</td>
                             <td><strong style="color:#15803d;">🌟 房内独立洗烘机</strong> + 微波炉</td>
                             <td>现代和风4人房 + 馆内天然温泉</td>
-                            <td><strong>32,000 円</strong> / S$264</td>
-                            <td>128,000 円<br><span style="color:#64748b;">S$1,055</span></td>
+                            <td><strong class="tbl-nightly">S$ 263</strong></td>
+                            <td><strong class="tbl-total" style="color:#64748b;">S$ 1,053</strong></td>
                         </tr>
-                        <tr>
+                        <tr data-hotel-id="h2-3">
                             <td>阶段二：高山 (4晚)</td>
                             <td>飞驒高山温泉 高山樱庵</td>
                             <td>🔄 馆内自助投币洗衣机</td>
                             <td>全馆榻榻米和室 + 顶楼露天风吕</td>
-                            <td><strong>34,000 円</strong> / S$281</td>
-                            <td>136,000 円<br><span style="color:#64748b;">S$1,120</span></td>
+                            <td><strong class="tbl-nightly">S$ 280</strong></td>
+                            <td><strong class="tbl-total" style="color:#64748b;">S$ 1,119</strong></td>
                         </tr>
 
                         <!-- P3 -->
-                        <tr style="background: #fffbeb;">
+                        <tr data-hotel-id="h3-1" style="background: #fffbeb;">
                             <td><strong>阶段三：下吕名汤 (1晚)</strong><br><span style="font-size:0.75rem; color:#64748b;">12/04 - 12/05</span></td>
                             <td><strong>下吕温泉 水明馆</strong><br><span style="font-size:0.75rem; color:#b45309;">★ 传统名宿中罕见带洗衣房</span></td>
                             <td><strong style="color:#0369a1;">🔄 馆内自设客人投币洗衣房</strong></td>
                             <td>日式和室榻榻米 + 4人飞驒牛晚宴+早餐</td>
-                            <td>一泊二食包早晚两餐</td>
-                            <td><strong style="color:#b45309;">78,000 円</strong><br><span style="font-weight:700; color:#0369a1;">S$645 (全包)</span></td>
+                            <td><span style="font-size:0.8rem; color:#64748b;">一泊二食早晚两餐</span></td>
+                            <td><strong class="tbl-total" style="color:#b45309;">S$ 642 (全包)</strong></td>
                         </tr>
-                        <tr>
+                        <tr data-hotel-id="h3-2">
                             <td>阶段三：下吕名汤 (1晚)</td>
                             <td>下吕温泉 小川屋</td>
                             <td>⚠️ 馆内无自助洗衣机</td>
                             <td>100叠榻榻米防滑池 + 会席早晚餐</td>
-                            <td>一泊二食包早晚两餐</td>
-                            <td>68,000 円<br><span style="color:#64748b;">S$560 (全包)</span></td>
+                            <td><span style="font-size:0.8rem; color:#64748b;">一泊二食早晚两餐</span></td>
+                            <td><strong class="tbl-total" style="color:#64748b;">S$ 560 (全包)</strong></td>
                         </tr>
 
                         <!-- P4 -->
-                        <tr style="background: #f0fdf4;">
+                        <tr data-hotel-id="h4-1" style="background: #f0fdf4;">
                             <td><strong>阶段四：都会采买 (3晚)</strong><br><span style="font-size:0.75rem; color:#64748b;">12/05 - 12/08</span></td>
                             <td><strong>GOLD STAY 名古屋大须</strong><br><span style="font-size:0.75rem; color:#047857;">★ 回国前全部洗净打包</span></td>
                             <td><strong style="color:#15803d;">🌟 房内独立洗烘机</strong></td>
                             <td>取回大箱子展开打包 + 大须扫货极便</td>
-                            <td><strong>27,000 円</strong> / S$223</td>
-                            <td><strong style="color:#047857;">81,000 円</strong><br><span style="font-weight:700; color:#0369a1;">S$670</span></td>
+                            <td><strong class="tbl-nightly">S$ 222</strong></td>
+                            <td><strong class="tbl-total" style="color:#047857;">S$ 667</strong></td>
                         </tr>
-                        <tr>
+                        <tr data-hotel-id="h4-2">
                             <td>阶段四：都会采买 (3晚)</td>
                             <td>三井花园饭店 名古屋普米尔</td>
                             <td>🔄 18层投币洗衣房 + 大浴场</td>
                             <td>名驿地下街直达 + 高空大浴场</td>
-                            <td><strong>34,000 円</strong> / S$281</td>
-                            <td>102,000 円<br><span style="color:#64748b;">S$840</span></td>
+                            <td><strong class="tbl-nightly">S$ 280</strong></td>
+                            <td><strong class="tbl-total" style="color:#64748b;">S$ 840</strong></td>
                         </tr>
-                        <tr>
+                        <tr data-hotel-id="h4-3">
                             <td>阶段四：都会采买 (3晚)</td>
                             <td>名古屋万豪饭店</td>
                             <td>👔 专业客房送洗服务</td>
                             <td>名驿直上五星地标 / 下楼直搭机场快线</td>
-                            <td><strong>52,000 円</strong> / S$430</td>
-                            <td>156,000 円<br><span style="color:#64748b;">S$1,290</span></td>
+                            <td><strong class="tbl-nightly">S$ 428</strong></td>
+                            <td><strong class="tbl-total" style="color:#64748b;">S$ 1,284</strong></td>
                         </tr>
                     </tbody>
                 </table>
@@ -1667,31 +1667,26 @@
 
             <!-- Best Combo Recommendation Box -->
             <div style="margin-top: 2.5rem; background: linear-gradient(135deg, #ecfdf5, #f0fdf4); border: 2px dashed #059669; border-radius: var(--radius-lg); padding: 1.8rem 2rem;">
-                <h3 style="color: #065f46; font-size: 1.25rem; font-weight: 800; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem;">
+                <h3 style="color: #065f46; font-size: 1.25rem; font-weight: 800; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
                     <span>🏆</span>
-                    <span data-lang="zh">最省心“全房内独立洗衣机”黄金亲子组合预算 (日元 / 新币)</span>
-                    <span data-lang="en">Recommended "In-Room Laundry" Family Combo Budget (JPY / SGD)</span>
+                    <span data-lang="zh">最省心“全房内独立洗衣机”黄金亲子组合预算 (<span class="sum-active-currency">SGD / S$</span>)</span>
+                    <span data-lang="en">Recommended "In-Room Laundry" Family Combo Budget (<span class="sum-active-currency">SGD</span>)</span>
                 </h3>
-                <p style="color: #047857; font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.5rem;">
-                    <span data-lang="zh">
-                    • <strong>阶段一 (4晚)：</strong>GOLD STAY 名古屋大须（房内洗烘机，4床套房）：<strong>104,000 円</strong> (约 S$855)<br>
-                    • <strong>阶段二 (4晚)：</strong>高山车站公寓式酒店（房内洗烘机，厨房煎飞驒牛）：<strong>100,000 円</strong> (约 S$825)<br>
-                    • <strong>阶段三 (1晚)：</strong>下吕温泉 水明馆（馆内带投币洗衣房，一泊二食4人飞驒牛晚宴+朝食）：<strong>78,000 円</strong> (约 S$645)<br>
-                    • <strong>阶段四 (3晚)：</strong>GOLD STAY 名古屋大须（取回大箱打包，回国前全部衣服洗烘干净）：<strong>81,000 円</strong> (约 S$670)<br>
-                    <hr style="margin: 0.8rem 0; border: none; border-top: 1px dashed #a7f3d0;">
-                    <strong style="font-size:1.15rem; color:#065f46;">💰 12晚一家四口总住宿预算： 363,000 円 (日元) ≈ S$ 2,995 新币</strong><br>
-                    <span style="font-size:0.85rem; color:#047857;">（平均每晚仅约 <strong>S$ 250 / 晚</strong>，已包含下吕名汤4人奢华会席早晚餐与全程独立洗烘便利！）</span>
-                    </span>
-                    <span data-lang="en">
-                    • <strong>P1 (4N):</strong> GOLD STAY Nagoya Osu (In-room washer, 4-bed suite): <strong>104,000 JPY</strong> (~S$855)<br>
-                    • <strong>P2 (4N):</strong> Residence Hotel Takayama Station (In-room washer, full kitchen): <strong>100,000 JPY</strong> (~S$825)<br>
-                    • <strong>P3 (1N):</strong> Gero Onsen Suimeikan (On-site laundromat, Kaiseki dinner & bfast): <strong>78,000 JPY</strong> (~S$645)<br>
-                    • <strong>P4 (3N):</strong> GOLD STAY Nagoya Osu (Clean all laundry before flight): <strong>81,000 JPY</strong> (~S$670)<br>
-                    <hr style="margin: 0.8rem 0; border: none; border-top: 1px dashed #a7f3d0;">
-                    <strong style="font-size:1.15rem; color:#065f46;">💰 Total 12-Night Budget for Family of 4: 363,000 JPY ≈ S$ 2,995 SGD</strong><br>
-                    <span style="font-size:0.85rem; color:#047857;">(Average ~<strong>S$ 250 / night</strong>, including Gero Onsen luxury 4-pax Kaiseki half-board & in-room laundry throughout!)</span>
-                    </span>
-                </p>
+                <div style="color: #047857; font-size: 0.95rem; line-height: 1.75; margin-bottom: 0.5rem;">
+                    <p>• <strong><span data-lang="zh">阶段一 (4晚)：</span><span data-lang="en">Phase 1 (4N):</span></strong> GOLD STAY 名古屋大须（房内洗烘机，4床套房）：<strong class="sum-p1" style="color:#065f46; font-size:1.05rem;">S$ 856</strong></p>
+                    <p>• <strong><span data-lang="zh">阶段二 (4晚)：</span><span data-lang="en">Phase 2 (4N):</span></strong> 高山车站公寓式酒店（房内洗烘机，厨房煎飞驒牛）：<strong class="sum-p2" style="color:#065f46; font-size:1.05rem;">S$ 823</strong></p>
+                    <p>• <strong><span data-lang="zh">阶段三 (1晚)：</span><span data-lang="en">Phase 3 (1N):</span></strong> 下吕温泉 水明馆（馆内带投币洗衣房，一泊二食4人飞驒牛晚宴+朝食）：<strong class="sum-p3" style="color:#065f46; font-size:1.05rem;">S$ 642</strong></p>
+                    <p>• <strong><span data-lang="zh">阶段四 (3晚)：</span><span data-lang="en">Phase 4 (3N):</span></strong> GOLD STAY 名古屋大须（取回大箱打包，回国前全部衣服洗烘干净）：<strong class="sum-p4" style="color:#065f46; font-size:1.05rem;">S$ 667</strong></p>
+                    <hr style="margin: 0.9rem 0; border: none; border-top: 1px dashed #a7f3d0;">
+                    <div style="font-size:1.25rem; color:#065f46; font-weight:800; margin-bottom:0.35rem;">
+                        💰 <span data-lang="zh">12晚一家四口总住宿预算：</span><span data-lang="en">Total 12-Night 4-Pax Budget:</span>
+                        <span class="sum-grand-total" style="color:#c92a2a; font-size:1.45rem; font-weight:900;">S$ 2,988</span>
+                    </div>
+                    <div style="font-size:0.88rem; color:#047857;">
+                        <span data-lang="zh">（平均每晚约 <strong class="sum-avg-nightly" style="font-size:1rem;">S$ 249</strong> / 晚，已包含下吕名汤4人奢华会席早晚餐与全程独立洗烘便利！）</span>
+                        <span data-lang="en">(Average ~<strong class="sum-avg-nightly" style="font-size:1rem;">S$ 249</strong> / night, including Gero Onsen luxury 4-pax Kaiseki half-board & in-room laundry throughout!)</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -1768,31 +1763,183 @@
             });
         }
 
-        // Currency Toggle
-        let currentCurrency = 'CNY';
+        // Comprehensive Currency Engine
+        const hotelPricing = {
+            "h1-1": { nights: 4, isHalfBoard: false,
+                SGD: { nightly: "S$ 214", total: "S$ 856" },
+                JPY: { nightly: "26,000 円", total: "104,000 円" },
+                CNY: { nightly: "¥ 1,238", total: "¥ 4,952" },
+                USD: { nightly: "$ 169", total: "$ 678" }
+            },
+            "h1-2": { nights: 4, isHalfBoard: false,
+                SGD: { nightly: "S$ 313", total: "S$ 1,251" },
+                JPY: { nightly: "38,000 円", total: "152,000 円" },
+                CNY: { nightly: "¥ 1,810", total: "¥ 7,238" },
+                USD: { nightly: "$ 248", total: "$ 990" }
+            },
+            "h1-3": { nights: 4, isHalfBoard: false,
+                SGD: { nightly: "S$ 181", total: "S$ 724" },
+                JPY: { nightly: "22,000 円", total: "88,000 円" },
+                CNY: { nightly: "¥ 1,048", total: "¥ 4,190" },
+                USD: { nightly: "$ 143", total: "$ 573" }
+            },
+            "h2-1": { nights: 4, isHalfBoard: false,
+                SGD: { nightly: "S$ 206", total: "S$ 823" },
+                JPY: { nightly: "25,000 円", total: "100,000 円" },
+                CNY: { nightly: "¥ 1,190", total: "¥ 4,762" },
+                USD: { nightly: "$ 163", total: "$ 651" }
+            },
+            "h2-2": { nights: 4, isHalfBoard: false,
+                SGD: { nightly: "S$ 263", total: "S$ 1,053" },
+                JPY: { nightly: "32,000 円", total: "128,000 円" },
+                CNY: { nightly: "¥ 1,524", total: "¥ 6,095" },
+                USD: { nightly: "$ 208", total: "$ 834" }
+            },
+            "h2-3": { nights: 4, isHalfBoard: false,
+                SGD: { nightly: "S$ 280", total: "S$ 1,119" },
+                JPY: { nightly: "34,000 円", total: "136,000 円" },
+                CNY: { nightly: "¥ 1,619", total: "¥ 6,476" },
+                USD: { nightly: "$ 221", total: "$ 886" }
+            },
+            "h3-1": { nights: 1, isHalfBoard: true,
+                SGD: { nightly: "S$ 642", total: "S$ 642 (全包)" },
+                JPY: { nightly: "78,000 円", total: "78,000 円 (全包)" },
+                CNY: { nightly: "¥ 3,714", total: "¥ 3,714 (全包)" },
+                USD: { nightly: "$ 508", total: "$ 508 (All-inc)" }
+            },
+            "h3-2": { nights: 1, isHalfBoard: true,
+                SGD: { nightly: "S$ 560", total: "S$ 560 (全包)" },
+                JPY: { nightly: "68,000 円", total: "68,000 円 (全包)" },
+                CNY: { nightly: "¥ 3,238", total: "¥ 3,238 (全包)" },
+                USD: { nightly: "$ 443", total: "$ 443 (All-inc)" }
+            },
+            "h4-1": { nights: 3, isHalfBoard: false,
+                SGD: { nightly: "S$ 222", total: "S$ 667" },
+                JPY: { nightly: "27,000 円", total: "81,000 円" },
+                CNY: { nightly: "¥ 1,286", total: "¥ 3,857" },
+                USD: { nightly: "$ 176", total: "$ 528" }
+            },
+            "h4-2": { nights: 3, isHalfBoard: false,
+                SGD: { nightly: "S$ 280", total: "S$ 840" },
+                JPY: { nightly: "34,000 円", total: "102,000 円" },
+                CNY: { nightly: "¥ 1,619", total: "¥ 4,857" },
+                USD: { nightly: "$ 221", total: "$ 664" }
+            },
+            "h4-3": { nights: 3, isHalfBoard: false,
+                SGD: { nightly: "S$ 428", total: "S$ 1,284" },
+                JPY: { nightly: "52,000 円", total: "156,000 円" },
+                CNY: { nightly: "¥ 2,476", total: "¥ 7,429" },
+                USD: { nightly: "$ 339", total: "$ 1,016" }
+            }
+        };
+
+        const comboSummary = {
+            SGD: {
+                curName: "SGD (S$)",
+                p1: "S$ 856",
+                p2: "S$ 823",
+                p3: "S$ 642",
+                p4: "S$ 667",
+                grandTotal: "S$ 2,988",
+                avgNightly: "S$ 249"
+            },
+            JPY: {
+                curName: "JPY (円)",
+                p1: "104,000 円",
+                p2: "100,000 円",
+                p3: "78,000 円",
+                p4: "81,000 円",
+                grandTotal: "363,000 円",
+                avgNightly: "30,250 円"
+            },
+            CNY: {
+                curName: "CNY (¥)",
+                p1: "¥ 4,952",
+                p2: "¥ 4,762",
+                p3: "¥ 3,714",
+                p4: "¥ 3,857",
+                grandTotal: "¥ 17,285",
+                avgNightly: "¥ 1,440"
+            },
+            USD: {
+                curName: "USD ($)",
+                p1: "$ 678",
+                p2: "$ 651",
+                p3: "$ 508",
+                p4: "$ 528",
+                grandTotal: "$ 2,365",
+                avgNightly: "$ 197"
+            }
+        };
+
+        let currentCurrency = localStorage.getItem('family_hotel_cur') || 'SGD';
+
         function setCurrency(cur) {
             currentCurrency = cur;
+            localStorage.setItem('family_hotel_cur', cur);
+
+            // 1. Update button states
             document.querySelectorAll('.cur-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.innerText.startsWith(cur));
+                btn.classList.toggle('active', btn.id === 'cur-' + cur.toLowerCase());
             });
 
-            document.querySelectorAll('.price-amount').forEach(el => {
-                const cny = el.getAttribute('data-cny');
-                const jpy = el.getAttribute('data-jpy');
-                const sgd = el.getAttribute('data-sgd');
-                const usd = el.getAttribute('data-usd');
+            // 2. Update hotel cards
+            document.querySelectorAll('.price-display').forEach(el => {
+                const hid = el.getAttribute('data-hotel-id');
+                if (!hid || !hotelPricing[hid]) return;
+                const info = hotelPricing[hid];
+                const priceObj = info[cur] || info.SGD;
 
-                if (cur === 'CNY') {
-                    el.innerText = '¥' + parseInt(cny).toLocaleString();
-                } else if (cur === 'JPY') {
-                    el.innerText = parseInt(jpy).toLocaleString() + ' 円';
-                } else if (cur === 'SGD') {
-                    el.innerText = 'S$' + parseInt(sgd).toLocaleString();
-                } else if (cur === 'USD') {
-                    el.innerText = '$' + parseInt(usd).toLocaleString();
+                const amountEl = el.querySelector('.price-amount');
+                const unitEl = el.querySelector('.price-unit');
+
+                if (amountEl) amountEl.innerText = priceObj.nightly;
+                if (unitEl) {
+                    if (info.isHalfBoard) {
+                        unitEl.innerHTML = `<span data-lang="zh">一泊二食4人全包总价 (早晚两餐)</span><span data-lang="en">4-Pax Half-Board (Dinner & Bfast)</span>`;
+                    } else {
+                        unitEl.innerHTML = `<span data-lang="zh">${info.nights}晚总计约 ${priceObj.total} (~${priceObj.nightly}/晚)</span><span data-lang="en">${info.nights}N Total: ${priceObj.total} (~${priceObj.nightly}/n)</span>`;
+                    }
                 }
             });
+
+            // 3. Update table rows
+            document.querySelectorAll('tr[data-hotel-id]').forEach(row => {
+                const hid = row.getAttribute('data-hotel-id');
+                if (!hid || !hotelPricing[hid]) return;
+                const info = hotelPricing[hid];
+                const priceObj = info[cur] || info.SGD;
+
+                const tblNightly = row.querySelector('.tbl-nightly');
+                const tblTotal = row.querySelector('.tbl-total');
+
+                if (tblNightly) tblNightly.innerText = priceObj.nightly;
+                if (tblTotal) tblTotal.innerText = priceObj.total;
+            });
+
+            // 4. Update the bottom summary box
+            const sum = comboSummary[cur] || comboSummary.SGD;
+            document.querySelectorAll('.sum-active-currency').forEach(el => el.innerText = sum.curName);
+            
+            const p1El = document.querySelector('.sum-p1');
+            const p2El = document.querySelector('.sum-p2');
+            const p3El = document.querySelector('.sum-p3');
+            const p4El = document.querySelector('.sum-p4');
+            const grandEl = document.querySelector('.sum-grand-total');
+            const avgEl = document.querySelectorAll('.sum-avg-nightly');
+
+            if (p1El) p1El.innerText = sum.p1;
+            if (p2El) p2El.innerText = sum.p2;
+            if (p3El) p3El.innerText = sum.p3;
+            if (p4El) p4El.innerText = sum.p4;
+            if (grandEl) grandEl.innerText = sum.grandTotal;
+            avgEl.forEach(el => el.innerText = sum.avgNightly);
         }
+
+        // Initialize currency on load
+        window.addEventListener('DOMContentLoaded', () => {
+            setCurrency(currentCurrency);
+        });
     </script>
 </body>
 </html>

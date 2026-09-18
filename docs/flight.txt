@@ -1,0 +1,8 @@
+SIN->NGO SQ672 Boeing 787-10
+26/11/2026 01:20 Singapore Terminal 2 
+26/11/2026 08:30 Chubu Centrair Intl Terminal 1
+
+
+NGO->SIN SQ 671 Boeing 787-10
+8/12/2026 10:20 Chubu Centrair Intl Terminal 1
+8/12/2026 16:15 Singapore
