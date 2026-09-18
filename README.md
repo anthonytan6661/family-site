@@ -1,8 +1,11 @@
 # 🇯🇵 日本中部 13天12晚 舒心家庭度假手册
 ### Central Japan 13-Day 12-Night Family Travel Handbook & Detailed Itinerary
 
-> **📅 日期：** 2026年11月26日 — 12月8日  
+> **📅 日期：** 2026年11月26日 — 12月8日 (13天12晚)  
 > **👨‍👩‍👦‍👦 适用：** 一家四口（深度、舒适、松弛不赶场）  
+> **✈️ 确认航班：** 新加坡航空 (SIA) 波音 787-10 宽体客机往返直飞  
+> &nbsp;&nbsp;&nbsp;&nbsp;• **去程 SQ672**：2026.11.26 01:20 (新加坡樟宜 T2) ➔ 08:30 (中部国际空港 T1)  
+> &nbsp;&nbsp;&nbsp;&nbsp;• **返程 SQ671**：2026.12.08 10:20 (中部国际空港 T1) ➔ 16:15 (新加坡樟宜)  
 > **🗺️ 核心路线：** 名古屋 · 犬山古城 · 飞驒高山 · 白川乡合掌村 · 飞驒古川 · 下吕名泉 · 大须商圈  
 > **🌐 在线预览：** [https://anthonytan6661.github.io/family-site/](https://anthonytan6661.github.io/family-site/)
 
@@ -51,6 +54,7 @@
 ```text
 family-site/
 ├── docs/
+│   ├── flight.txt                        # 新加坡航空往返确认航班时刻明细
 │   └── japan_family_travel_handbook.pdf  # 完整 6 页原版家庭度假手册 PDF
 ├── hotels.html                          # 家庭精选住宿与洗衣指南 (含房内洗烘机核验、价格与对比表)
 ├── index.html                           # 站点主页 (日本中部 13天12晚 完整度假网页)
