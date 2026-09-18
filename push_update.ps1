@@ -3,8 +3,8 @@
 
 $commitMessage = "Update itinerary - " + (Get-Date -Format "yyyy-MM-dd HH:mm:ss")
 
-Write-Host "Staging index.html..." -ForegroundColor Cyan
-git add index.html
+Write-Host "Staging updated files..." -ForegroundColor Cyan
+git add -A
 
 Write-Host "Committing changes..." -ForegroundColor Cyan
 git commit -m $commitMessage

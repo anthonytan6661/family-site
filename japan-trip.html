@@ -1,393 +1,2696 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japan Autumn Adventure 2026 | 日本秋季之旅</title>
+    <title>日本中部 13天12晚 舒心家庭度假手册 | Central Japan Family Vacation 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Outfit:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --autumn-red: #b91c1c;
-            --autumn-orange: #f97316;
-            --autumn-gold: #fbbf24;
+            --japan-red: #c92a2a;
+            --japan-crimson: #991b1b;
             --deep-slate: #0f172a;
-            --slate: #334155;
-            --light-slate: #f8fafc;
-            --white: #ffffff;
-            --shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --slate-card: #1e293b;
+            --charcoal: #334155;
+            --light-bg: #f8fafc;
+            --surface-white: #ffffff;
+            --card-border: rgba(15, 23, 42, 0.08);
+            --gold-amber: #d97706;
+            --gold-light: #fef3c7;
+            --pine-green: #047857;
+            --pine-light: #ecfdf5;
+            --indigo: #4338ca;
+            --indigo-light: #e0e7ff;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --shadow-md: 0 12px 24px -6px rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 20px 35px -8px rgba(15, 23, 42, 0.12);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
         body {
-            font-family: 'Outfit', 'Noto Sans SC', sans-serif;
-            background-color: var(--light-slate);
+            font-family: 'Outfit', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--light-bg);
             color: var(--deep-slate);
-            line-height: 1.6;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .lang-switch {
-            position: fixed; top: 20px; right: 20px; z-index: 1000;
-            background: var(--white); padding: 5px; border-radius: 30px;
-            box-shadow: var(--shadow); display: flex; gap: 5px;
+        /* Language Toggle System */
+        [data-lang="en"] { display: none; }
+        [data-lang="zh"] { display: block; }
+        span[data-lang="zh"], strong[data-lang="zh"], a[data-lang="zh"], em[data-lang="zh"] { display: inline; }
+        
+        body.lang-en [data-lang="zh"] { display: none !important; }
+        body.lang-en [data-lang="en"] { display: block !important; }
+        body.lang-en span[data-lang="en"], 
+        body.lang-en strong[data-lang="en"], 
+        body.lang-en a[data-lang="en"], 
+        body.lang-en em[data-lang="en"] { display: inline !important; }
+
+        /* Top Header Navbar */
+        .top-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.88);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .nav-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            color: var(--deep-slate);
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: -0.01em;
+        }
+
+        .brand-badge {
+            background: linear-gradient(135deg, var(--japan-red), var(--japan-crimson));
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--japan-red);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .lang-toggle {
+            display: flex;
+            background: #f1f5f9;
+            border-radius: 999px;
+            padding: 3px;
+            border: 1px solid #e2e8f0;
         }
 
         .lang-btn {
-            border: none; background: none; padding: 8px 15px;
-            border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.875rem;
+            border: none;
+            background: transparent;
+            padding: 5px 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border-radius: 999px;
+            cursor: pointer;
+            color: var(--charcoal);
+            transition: all 0.2s ease;
         }
 
-        .lang-btn.active { background: var(--autumn-red); color: var(--white); }
-
-        header {
-            height: 50vh; position: relative; display: flex;
-            align-items: center; justify-content: center; color: var(--white);
-            text-align: center; background: var(--deep-slate);
+        .lang-btn.active {
+            background: var(--surface-white);
+            color: var(--japan-red);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
         }
 
-        .hero-img {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            object-fit: cover; opacity: 0.5; z-index: 1;
+        .btn-portal {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--deep-slate);
+            color: white;
+            padding: 0.45rem 0.9rem;
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 600;
+            transition: background 0.2s ease;
         }
 
-        .hero-content { position: relative; z-index: 2; padding: 2rem; }
-        h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; }
+        .btn-portal:hover {
+            background: #334155;
+        }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #090e17 0%, #172033 60%, #2a1b1d 100%);
+            color: white;
+            padding: 5rem 1.5rem 4rem;
+            overflow: hidden;
+        }
 
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 80% 20%, rgba(220, 38, 38, 0.18) 0%, transparent 50%),
+                              radial-gradient(circle at 20% 80%, rgba(217, 119, 6, 0.15) 0%, transparent 45%);
+            pointer-events: none;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.07;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 1140px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-pill-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-pill {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-pill.gold {
+            background: rgba(217, 119, 6, 0.25);
+            border-color: rgba(251, 191, 36, 0.4);
+            color: #fde68a;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', 'Noto Serif SC', serif;
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 800;
+            line-height: 1.18;
+            margin-bottom: 1.2rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.05rem, 2vw, 1.35rem);
+            color: #cbd5e1;
+            max-width: 840px;
+            margin: 0 auto 2rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .hero-highlights-strip {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+            max-width: 980px;
+            margin: 2rem auto 2.5rem;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(10px);
+        }
+
+        .strip-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            text-align: center;
+        }
+
+        .strip-icon {
+            font-size: 1.6rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .strip-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        .strip-val {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--japan-red), #e11d48);
+            color: white;
+            padding: 0.85rem 1.8rem;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: 0 10px 25px -5px rgba(201, 42, 42, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(201, 42, 42, 0.65);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 0.85rem 1.6rem;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Container & Sections */
+        .page-container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 6rem;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            color: var(--japan-red);
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', 'Noto Serif SC', serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            color: var(--deep-slate);
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 0.8rem;
+        }
+
+        .section-desc {
+            color: #64748b;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        /* Master Strategy 4-Phase Grid */
+        .strategy-banner {
+            background: linear-gradient(135deg, #ffffff 0%, #fef2f2 100%);
+            border: 1px solid #fee2e2;
+            border-radius: var(--radius-xl);
+            padding: 2.5rem 2rem;
+            margin-bottom: 3.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .philosophy-quote {
+            background: var(--surface-white);
+            border-left: 5px solid var(--japan-red);
+            padding: 1.2rem 1.5rem;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .philosophy-quote p {
+            font-size: 1.05rem;
+            color: var(--charcoal);
+            font-weight: 500;
+        }
+
+        .phases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .phase-card {
+            background: var(--surface-white);
+            border-radius: var(--radius-lg);
+            padding: 1.6rem;
+            border: 1px solid var(--card-border);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .phase-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .phase-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .phase-1::before { background: #3b82f6; }
+        .phase-2::before { background: #10b981; }
+        .phase-3::before { background: #f59e0b; }
+        .phase-4::before { background: #8b5cf6; }
+
+        .phase-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .phase-badge {
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            letter-spacing: 0.05em;
+        }
+
+        .phase-1 .phase-badge { background: #eff6ff; color: #1d4ed8; }
+        .phase-2 .phase-badge { background: #ecfdf5; color: #047857; }
+        .phase-3 .phase-badge { background: #fef3c7; color: #b45309; }
+        .phase-4 .phase-badge { background: #f5f3ff; color: #6d28d9; }
+
+        .phase-dates {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #64748b;
+        }
+
+        .phase-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 0.4rem;
+            color: var(--deep-slate);
+        }
+
+        .phase-stay {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .phase-desc {
+            font-size: 0.92rem;
+            color: var(--charcoal);
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        /* Luggage Strategy Box */
+        .luggage-box {
+            margin-top: 2rem;
+            background: #fffbeb;
+            border: 1px dashed #f59e0b;
+            border-radius: var(--radius-md);
+            padding: 1.2rem 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .luggage-icon {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .luggage-text h4 {
+            color: #92400e;
+            font-size: 1rem;
+            font-weight: 800;
+            margin-bottom: 0.25rem;
+        }
+
+        .luggage-text p {
+            color: #78350f;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Pre-departure Checklist / Bookings */
+        .booking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .booking-card {
+            background: var(--surface-white);
+            border-radius: var(--radius-lg);
+            padding: 1.8rem;
+            border: 1px solid var(--card-border);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .booking-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .booking-name {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--deep-slate);
+        }
+
+        .booking-alert-badge {
+            background: #fee2e2;
+            color: var(--japan-red);
+            font-size: 0.72rem;
+            font-weight: 800;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+        .booking-row {
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        .booking-row strong {
+            color: var(--deep-slate);
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .booking-row span {
+            color: #475569;
+        }
+
+        /* Daily Itinerary Filter Bar */
+        .filter-sticky-bar {
+            position: sticky;
+            top: 59px;
+            z-index: 900;
+            background: rgba(248, 250, 252, 0.94);
+            backdrop-filter: blur(12px);
+            padding: 0.9rem 0;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .filter-pills-container {
+            display: flex;
+            gap: 0.6rem;
+            overflow-x: auto;
+            padding-bottom: 4px;
+            scrollbar-width: thin;
+        }
+
+        .filter-btn {
+            border: 1px solid #e2e8f0;
+            background: var(--surface-white);
+            color: var(--charcoal);
+            padding: 0.5rem 1.1rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+        }
+
+        .filter-btn:hover {
+            border-color: #cbd5e1;
+            background: #f8fafc;
+        }
+
+        .filter-btn.active {
+            background: var(--deep-slate);
+            color: white;
+            border-color: var(--deep-slate);
+        }
+
+        /* Day Nodes */
         .day-node {
-            background: var(--white); border-radius: 1.5rem; margin-bottom: 4rem;
-            overflow: hidden; box-shadow: var(--shadow); display: grid;
-            grid-template-columns: 1fr 1.2fr;
+            background: var(--surface-white);
+            border-radius: var(--radius-xl);
+            margin-bottom: 3.5rem;
+            border: 1px solid var(--card-border);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
-        @media (max-width: 850px) {
-            .day-node { grid-template-columns: 1fr; }
-            .node-images { grid-template-rows: 150px 150px !important; }
-            h1 { font-size: 2.5rem; }
+        .day-node:hover {
+            box-shadow: var(--shadow-md);
         }
 
-        .node-images {
-            display: grid; grid-template-columns: 1.2fr 1fr;
-            grid-template-rows: 250px 250px; gap: 4px; background: #eee;
+        .day-hero-img-wrap {
+            position: relative;
+            height: 280px;
+            width: 100%;
+            overflow: hidden;
         }
 
-        .node-images img { width: 100%; height: 100%; object-fit: cover; }
-        .node-images img:first-child { grid-row: span 2; }
-
-        .node-content { padding: 2.5rem; display: flex; flex-direction: column; }
-        .day-label { color: var(--autumn-red); font-weight: 800; font-size: 1.25rem; margin-bottom: 0.5rem; }
-        .node-title { font-size: 1.75rem; margin-bottom: 1rem; line-height: 1.2; }
-        
-        .logistics {
-            background: #fef2f2; border-left: 4px solid var(--autumn-red);
-            padding: 1.2rem; margin: 1.5rem 0; font-size: 0.95rem;
-            border-radius: 0 0.5rem 0.5rem 0;
+        .day-hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
         }
 
-        .map-btn {
-            display: inline-flex; align-items: center; gap: 0.5rem;
-            background: var(--deep-slate); color: var(--white);
-            padding: 0.6rem 1.2rem; border-radius: 0.5rem;
-            text-decoration: none; font-weight: 600; font-size: 0.9rem;
-            margin-top: 1rem; align-self: flex-start; transition: 0.3s;
+        .day-node:hover .day-hero-img {
+            transform: scale(1.03);
         }
 
-        .map-btn:hover { background: var(--autumn-red); }
+        .day-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(15,23,42,0.85) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.8rem 2rem;
+            color: white;
+        }
 
-        .desc-text { color: var(--slate); margin-bottom: 1.5rem; font-size: 1rem; }
+        .day-header-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
 
-        footer { text-align: center; padding: 4rem 0; color: var(--slate); opacity: 0.7; }
+        .day-badge {
+            background: var(--japan-red);
+            color: white;
+            font-weight: 800;
+            font-size: 0.85rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 999px;
+            letter-spacing: 0.04em;
+        }
 
-        [data-lang="zh"] { display: none; }
-        body.lang-zh [data-lang="en"] { display: none; }
-        body.lang-zh [data-lang="zh"] { display: block; }
+        .day-date-str {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #e2e8f0;
+        }
+
+        .day-hero-title {
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            font-weight: 800;
+            line-height: 1.25;
+            color: white;
+        }
+
+        .day-body {
+            padding: 2.2rem 2.2rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+        }
+
+        /* Timeline block */
+        .timeline-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-md);
+            padding: 1.4rem 1.6rem;
+        }
+
+        .card-label {
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #64748b;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .timeline-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .timeline-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            font-size: 0.94rem;
+            line-height: 1.5;
+        }
+
+        .step-time {
+            background: #e2e8f0;
+            color: var(--deep-slate);
+            font-weight: 800;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.55rem;
+            border-radius: 6px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .step-desc {
+            color: var(--charcoal);
+        }
+
+        /* Info Grid: Transport & Accommodation */
+        .info-two-col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .info-pill-box {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-md);
+            padding: 1.2rem 1.4rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .info-pill-box.transport {
+            border-left: 4px solid #0284c7;
+            background: #f0f9ff;
+        }
+
+        .info-pill-box.stay {
+            border-left: 4px solid #8b5cf6;
+            background: #faf5ff;
+        }
+
+        .info-pill-box.food {
+            border-left: 4px solid #ea580c;
+            background: #fff7ed;
+        }
+
+        .info-box-title {
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .transport .info-box-title { color: #0369a1; }
+        .stay .info-box-title { color: #6d28d9; }
+        .food .info-box-title { color: #c2410c; }
+
+        .info-box-text {
+            font-size: 0.92rem;
+            color: var(--charcoal);
+            line-height: 1.5;
+        }
+
+        /* Highlights & Details */
+        .highlight-box {
+            background: #f8fafc;
+            border-radius: var(--radius-md);
+            border: 1px solid #e2e8f0;
+            padding: 1.4rem 1.6rem;
+        }
+
+        .highlight-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--deep-slate);
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .highlight-text {
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+        /* Family Pro Tips */
+        .tips-callout {
+            background: linear-gradient(135deg, #fffbeb, #fef3c7);
+            border: 1px solid #fde68a;
+            border-radius: var(--radius-md);
+            padding: 1.2rem 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        .tip-icon {
+            font-size: 1.3rem;
+            line-height: 1;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .tip-content {
+            font-size: 0.92rem;
+            color: #92400e;
+            line-height: 1.55;
+        }
+
+        .tip-content strong {
+            color: #78350f;
+            font-weight: 700;
+        }
+
+        /* Map Button Group */
+        .day-footer-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .map-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--deep-slate);
+            color: white;
+            padding: 0.55rem 1.1rem;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.86rem;
+            transition: all 0.2s ease;
+        }
+
+        .map-link-btn:hover {
+            background: var(--japan-red);
+            transform: translateY(-1px);
+        }
+
+        .mark-visited-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #64748b;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .mark-visited-label input[type="checkbox"] {
+            width: 17px;
+            height: 17px;
+            cursor: pointer;
+            accent-color: var(--japan-red);
+        }
+
+        /* Packing & Equipment Section */
+        .gear-section {
+            background: linear-gradient(135deg, #ffffff, #f1f5f9);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--card-border);
+            padding: 3rem 2.5rem;
+            margin-top: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .gear-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .gear-category {
+            background: var(--surface-white);
+            border-radius: var(--radius-lg);
+            padding: 1.8rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .gear-cat-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--deep-slate);
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 2px solid #f1f5f9;
+        }
+
+        .gear-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .gear-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--charcoal);
+        }
+
+        .gear-checkbox {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--japan-red);
+            cursor: pointer;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-slate);
+            color: white;
+            padding: 4rem 1.5rem 3rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-copy {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        /* Print Optimization */
+        @media print {
+            .top-nav, .filter-sticky-bar, .hero-cta-group, .day-footer-actions, .lang-switch {
+                display: none !important;
+            }
+            body { background: white; color: black; }
+            .day-node { break-inside: avoid; border: 1px solid #ccc; box-shadow: none; margin-bottom: 2rem; }
+            .day-hero-img-wrap { height: 160px; }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero { padding: 4rem 1rem 3rem; }
+            .day-body { padding: 1.5rem 1.2rem; }
+            .day-hero-img-wrap { height: 210px; }
+            .hero-highlights-strip { grid-template-columns: repeat(2, 1fr); }
+            .strategy-banner { padding: 1.8rem 1.2rem; }
+            .gear-section { padding: 2rem 1.2rem; }
+        }
     </style>
 </head>
-<body class="lang-en">
+<body class="lang-zh">
 
-    <div class="lang-switch">
-        <button class="lang-btn active" onclick="setLang('en')">EN</button>
-        <button class="lang-btn" onclick="setLang('zh')">中文</button>
-    </div>
+    <!-- Top Sticky Navigation -->
+    <header class="top-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="brand-link">
+                <span class="brand-badge">2026 TRIP</span>
+                <span data-lang="zh">我们的家庭旅行</span>
+                <span data-lang="en">Our Family Portal</span>
+            </a>
 
-    <header>
-        <img src="https://loremflickr.com/1920/1080/kyoto,temple,autumn" alt="Japan" class="hero-img">
-        <div class="hero-content">
-            <h1>
-                <span data-lang="en">10-Day Japan Adventure</span>
-                <span data-lang="zh">10天日本赏枫深度之旅</span>
-            </h1>
+            <ul class="nav-links">
+                <li><a href="#strategy" data-lang="zh">行程策略</a><a href="#strategy" data-lang="en">Strategy</a></li>
+                <li><a href="#bookings" data-lang="zh">抢票预约</a><a href="#bookings" data-lang="en">Key Bookings</a></li>
+                <li><a href="#itinerary" data-lang="zh">每日游程</a><a href="#itinerary" data-lang="en">Itinerary</a></li>
+                <li><a href="#gear" data-lang="zh">装备备忘</a><a href="#gear" data-lang="en">Gear & Packing</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="lang-toggle">
+                    <button class="lang-btn active" id="btn-zh" onclick="setLanguage('zh')">中文</button>
+                    <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+                </div>
+                <a href="index.html" class="btn-portal">
+                    <span>←</span>
+                    <span data-lang="zh">返回主页</span>
+                    <span data-lang="en">Family Hub</span>
+                </a>
+            </div>
         </div>
     </header>
 
-    <div class="container">
-        
-        <!-- Day 1 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/gion,kyoto" alt="Gion">
-                <img src="https://loremflickr.com/400/300/pontocho" alt="Pontocho">
-                <img src="https://loremflickr.com/400/300/kyoto,yasaka" alt="Yasaka">
+    <!-- Hero Header -->
+    <section class="hero">
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <div class="hero-pill-group">
+                <span class="hero-pill">📅 2026.11.26 — 12.08</span>
+                <span class="hero-pill gold">👨‍👩‍👦‍👦 <span data-lang="zh">一家四口 · 舒适度假</span><span data-lang="en">Family of Four · Comfort Vacation</span></span>
+                <span class="hero-pill">🍁 13 Days / 12 Nights</span>
             </div>
-            <div class="node-content">
-                <span class="day-label">Day 01</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Arrival & Geisha District</span>
-                    <span data-lang="zh">抵达与祗园古风</span>
-                </h2>
-                <div class="logistics">
-                    <p data-lang="en"><strong>Transport:</strong> KIX Airport → Kyoto via <strong>Haruka Express</strong> (75m).<br><strong>Evening:</strong> Walk to Yasaka Shrine & Pontocho Alley.</p>
-                    <p data-lang="zh"><strong>交通:</strong> 关西机场 → 京都站 乘坐 <strong>Haruka特快</strong> (75分钟)。<br><strong>晚上:</strong> 步行游览八坂神社与先斗町美食街。</p>
+
+            <h1 class="hero-title">
+                <span data-lang="zh">日本中部 13天12晚<br>舒心家庭度假手册</span>
+                <span data-lang="en">Central Japan 13-Day<br>Family Adventure Handbook</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                <span data-lang="zh">名古屋 · 犬山古城 · 飞驒高山 · 白川乡合掌村 · 下吕名泉 · 大须商圈<br>以深度、舒适、松弛为核心，三段定点稳固，拒绝天天搬行李赶场。</span>
+                <span data-lang="en">Nagoya · Inuyama Castle · Hida Takayama · Shirakawa-go · Gero Onsen · Osu Arcade<br>An unhurried, strategic journey designed for maximum family joy without daily suitcase packing.</span>
+            </p>
+
+            <div class="hero-highlights-strip">
+                <div class="strip-item">
+                    <div class="strip-icon">🏯</div>
+                    <div class="strip-label"><span data-lang="zh">国宝与名城</span><span data-lang="en">Heritage</span></div>
+                    <div class="strip-val"><span data-lang="zh">犬山城 & 高山阵屋</span><span data-lang="en">Inuyama & Jinya</span></div>
                 </div>
-                <p class="desc-text">
-                    <span data-lang="en">Experience the historic atmosphere of Gion. Spot geishas in Hanami-koji and enjoy a traditional dinner in a narrow alleyway.</span>
-                    <span data-lang="zh">感受祗园的历史氛围。在花见小路寻找艺伎的身影，并在狭窄的先斗町小巷享用传统晚餐。</span>
-                </p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Gion+District+Kyoto" class="map-btn" target="_blank">📍 Open in Google Maps</a>
+                <div class="strip-item">
+                    <div class="strip-icon">❄️</div>
+                    <div class="strip-label"><span data-lang="zh">世界文化遗产</span><span data-lang="en">World Wonder</span></div>
+                    <div class="strip-val"><span data-lang="zh">白川乡合掌造</span><span data-lang="en">Shirakawa-go</span></div>
+                </div>
+                <div class="strip-item">
+                    <div class="strip-icon">♨️</div>
+                    <div class="strip-label"><span data-lang="zh">日本三名泉</span><span data-lang="en">Top Onsen</span></div>
+                    <div class="strip-val"><span data-lang="zh">下吕美人汤温泉</span><span data-lang="en">Gero Hot Springs</span></div>
+                </div>
+                <div class="strip-item">
+                    <div class="strip-icon">🥩</div>
+                    <div class="strip-label"><span data-lang="zh">味蕾盛宴</span><span data-lang="en">Gourmet</span></div>
+                    <div class="strip-val"><span data-lang="zh">A5飞驒牛 & 备长鳗鱼</span><span data-lang="en">A5 Beef & Eel</span></div>
+                </div>
+                <div class="strip-item">
+                    <div class="strip-icon">🎪</div>
+                    <div class="strip-label"><span data-lang="zh">童心与潮流</span><span data-lang="en">Family Fun</span></div>
+                    <div class="strip-val"><span data-lang="zh">吉卜力 & Toyota馆</span><span data-lang="en">Ghibli & Toyota</span></div>
+                </div>
+            </div>
+
+            <div class="hero-cta-group">
+                <a href="#itinerary" class="btn-primary">
+                    <span>🗓️</span>
+                    <span data-lang="zh">浏览每日详细游程</span>
+                    <span data-lang="en">Explore Daily Itinerary</span>
+                </a>
+                <a href="docs/japan_family_travel_handbook.pdf" class="btn-secondary" target="_blank" download>
+                    <span>📄</span>
+                    <span data-lang="zh">下载完整 PDF 手册</span>
+                    <span data-lang="en">Download Original PDF</span>
+                </a>
             </div>
         </div>
+    </section>
 
-        <!-- Day 2 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/kiyomizudera" alt="Kiyomizu">
-                <img src="https://loremflickr.com/400/300/sannenzaka" alt="Sannenzaka">
-                <img src="https://loremflickr.com/400/300/samurai,museum" alt="Samurai">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 02</span>
-                <h2 class="node-title">
-                    <span data-lang="en">The "Instagram" Classics</span>
-                    <span data-lang="zh">京都经典打卡</span>
+    <!-- Main Container -->
+    <main class="page-container">
+
+        <!-- Strategy & Lodging Section -->
+        <section id="strategy">
+            <div class="section-header">
+                <span class="section-tag"><span data-lang="zh">核心战略</span><span data-lang="en">Core Strategy</span></span>
+                <h2 class="section-title">
+                    <span data-lang="zh">总体路线图与住宿基地示意</span>
+                    <span data-lang="en">Master Route & Lodging Base Strategy</span>
                 </h2>
-                <div class="logistics">
-                    <p data-lang="en"><strong>Target:</strong> Arrive at Kiyomizu-dera by 8:00 AM to beat crowds.<br><strong>Afternoon:</strong> Samurai & Ninja Museum visit.</p>
-                    <p data-lang="zh"><strong>目标:</strong> 早上8点前抵达清水寺以避开人潮。<br><strong>下午:</strong> 参观武士忍者博物馆进行互动体验。</p>
-                </div>
-                <p class="desc-text">
-                    <span data-lang="en">Explore the massive wooden stage of Kiyomizu-dera. Walk the historic slopes of Sannenzaka and try on armor at the Samurai Museum.</span>
-                    <span data-lang="zh">游览清水寺宏伟的木质舞台。漫步三年坂历史坡道，并在武士博物馆体验试穿盔甲。</span>
+                <p class="section-desc">
+                    <span data-lang="zh">针对家庭出行特点，“两战略中心辐射 + 一泊二食名泉修整”，全行程大件行李黑猫直寄，步履轻盈。</span>
+                    <span data-lang="en">Two anchored strategic hubs with seamless luggage forwarding and a therapeutic onsen night in between.</span>
                 </p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Kiyomizu-dera+Temple" class="map-btn" target="_blank">📍 Open in Google Maps</a>
             </div>
-        </div>
 
-        <!-- Day 3 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/arashiyama,bamboo" alt="Bamboo">
-                <img src="https://loremflickr.com/400/300/monkey,park" alt="Monkey">
-                <img src="https://loremflickr.com/400/300/teamlab,kyoto" alt="teamLab">
+            <div class="strategy-banner">
+                <div class="philosophy-quote">
+                    <p>
+                        <span data-lang="zh">💡 <strong>设计核心：</strong>针对家庭出行拒绝“每天收行李搬家”，全行程以<strong>名古屋</strong>与<strong>高山</strong>为两大战略辐射中心，中间衔接1晚下吕纯日式温泉修整。全线车程适中，大件行李使用黑猫宅急便寄存回送。</span>
+                        <span data-lang="en">💡 <strong>Design Philosophy:</strong> Eliminate daily packing stress. The trip centers around two strategic hubs (Nagoya & Takayama) connected by an authentic ryokan soak in Gero, with heavy luggage delivered directly by Yamato Black Cat.</span>
+                    </p>
+                </div>
+
+                <div class="phases-grid">
+                    <!-- Phase 1 -->
+                    <div class="phase-card phase-1">
+                        <div class="phase-header">
+                            <span class="phase-badge"><span data-lang="zh">阶段一 · 名古屋枢纽</span><span data-lang="en">Phase 1 · Nagoya Hub</span></span>
+                            <span class="phase-dates">11/26 - 11/30 (4晚)</span>
+                        </div>
+                        <h3 class="phase-title"><span data-lang="zh">都会科技与国宝名城</span><span data-lang="en">Tech, Magic & Castle</span></h3>
+                        <div class="phase-stay">
+                            <span>🏨</span>
+                            <span data-lang="zh">宿：名古屋站周边 (连住4晚)</span>
+                            <span data-lang="en">Base: Nagoya Station Area</span>
+                        </div>
+                        <p class="phase-desc">
+                            <span data-lang="zh">以名驿为中心，轻松打卡Toyota产业技术纪念馆、吉卜力公园（大仓库+魔女之谷）及犬山城城下町。</span>
+                            <span data-lang="en">Station base: easy access to Toyota Commemorative Museum, Ghibli Park, and Inuyama National Treasure Castle.</span>
+                        </p>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="phase-card phase-2">
+                        <div class="phase-header">
+                            <span class="phase-badge"><span data-lang="zh">阶段二 · 高山腹地</span><span data-lang="en">Phase 2 · Takayama Heartland</span></span>
+                            <span class="phase-dates">11/30 - 12/04 (4晚)</span>
+                        </div>
+                        <h3 class="phase-title"><span data-lang="zh">雪境童话与古街烟火</span><span data-lang="en">Snow Village & Heritage</span></h3>
+                        <div class="phase-stay">
+                            <span>🏨</span>
+                            <span data-lang="zh">宿：高山市区温泉饭店 (连住4晚)</span>
+                            <span data-lang="en">Base: Takayama Onsen Hotels</span>
+                        </div>
+                        <p class="phase-desc">
+                            <span data-lang="zh">以高山古街为大本营，辐射白川乡合掌村、飞驒古川锦鲤街、宫川朝市，尽享A5飞驒牛盛宴。</span>
+                            <span data-lang="en">Takayama base: radiating out to Shirakawa-go Gassho Village, Hida Furukawa koi canals, and morning markets.</span>
+                        </p>
+                    </div>
+
+                    <!-- Phase 3 -->
+                    <div class="phase-card phase-3">
+                        <div class="phase-header">
+                            <span class="phase-badge"><span data-lang="zh">阶段三 · 名汤休整</span><span data-lang="en">Phase 3 · Onsen Retreat</span></span>
+                            <span class="phase-dates">12/04 - 12/05 (1晚)</span>
+                        </div>
+                        <h3 class="phase-title"><span data-lang="zh">日本三大名泉疗愈</span><span data-lang="en">Top 3 Healing Springs</span></h3>
+                        <div class="phase-stay">
+                            <span>🏨</span>
+                            <span data-lang="zh">宿：下吕温泉顶级日式旅馆</span>
+                            <span data-lang="en">Base: Gero Ryokan (1 Night)</span>
+                        </div>
+                        <p class="phase-desc">
+                            <span data-lang="zh">入住下吕温泉名宿，体验传统纯正榻榻米家庭房、美人汤三汤私享与一泊二食飞驒牛会席晚宴。</span>
+                            <span data-lang="en">Relax in historic tatami rooms, soothing alkaline mineral baths, and authentic Kaiseki dining.</span>
+                        </p>
+                    </div>
+
+                    <!-- Phase 4 -->
+                    <div class="phase-card phase-4">
+                        <div class="phase-header">
+                            <span class="phase-badge"><span data-lang="zh">阶段四 · 都会采买</span><span data-lang="en">Phase 4 · Urban Finale</span></span>
+                            <span class="phase-dates">12/05 - 12/08 (3晚)</span>
+                        </div>
+                        <h3 class="phase-title"><span data-lang="zh">潮流二次元与完满返程</span><span data-lang="en">Arcades, Culture & Departure</span></h3>
+                        <div class="phase-stay">
+                            <span>🏨</span>
+                            <span data-lang="zh">宿：荣商圈 / 名驿 (连住3晚)</span>
+                            <span data-lang="en">Base: Sakae / Nagoya Central</span>
+                        </div>
+                        <p class="phase-desc">
+                            <span data-lang="zh">大须商店街淘二次元模型古着、热田神宫祈福、荣商圈百货大扫货，回程打卡机场波音787乐园。</span>
+                            <span data-lang="en">Osu anime & vintage treasure hunting, Atsuta Shrine, duty-free shopping, and Centrair Flight of Dreams.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Yamato Luggage Transfer Strategy -->
+                <div class="luggage-box">
+                    <div class="luggage-icon">🚚</div>
+                    <div class="luggage-text">
+                        <h4>
+                            <span data-lang="zh">黑猫宅急便（大件行李跨城直寄）战略备忘</span>
+                            <span data-lang="en">Yamato Luggage Forwarding Master Strategy</span>
+                        </h4>
+                        <p>
+                            <span data-lang="zh"><strong>操作要点：</strong>D5（11月30日）早晨在名古屋酒店前台办理行李跨城直寄，将2个大行李箱直接送到Day 10回程入住的名古屋酒店。全家<strong>仅带2个随身登机箱及背包</strong>前往高山与下吕。省去拖大箱挤特急列车与雪地古街石板路的烦劳，全家步履轻盈！</span>
+                            <span data-lang="en"><strong>Execution:</strong> On D5 morning, send the 2 large suitcases from your Nagoya hotel directly to your Day 10 Nagoya return hotel. Take only 2 small carry-ons to Takayama & Gero. No lugging heavy bags through snowy streets or train aisles!</span>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="node-content">
-                <span class="day-label">Day 03</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Bamboo Forests & Digital Art</span>
-                    <span data-lang="zh">岚山竹林与数字艺术</span>
+        </section>
+
+        <!-- Bookings & Timeline Preparation Section -->
+        <section id="bookings">
+            <div class="section-header">
+                <span class="section-tag"><span data-lang="zh">行前抢票与预约</span><span data-lang="en">Key Pre-Departure Bookings</span></span>
+                <h2 class="section-title">
+                    <span data-lang="zh">出发前关键筹备与预约清单</span>
+                    <span data-lang="en">Crucial Reservation Timeline</span>
                 </h2>
-                <div class="logistics">
-                    <p data-lang="en"><strong>Morning:</strong> Arashiyama Bamboo Grove & Monkey Park.<br><strong>Evening:</strong> teamLab Biovortex Kyoto.</p>
-                    <p data-lang="zh"><strong>早上:</strong> 岚山竹林与猴子公园。<br><strong>晚上:</strong> 参观 teamLab Biovortex 数字艺术展。</p>
-                </div>
-                <p class="desc-text">
-                    <span data-lang="en">Hike with monkeys in the morning, then immerse yourselves in the futuristic digital art of teamLab's latest Kyoto installation.</span>
-                    <span data-lang="zh">上午与猴子一起远足，晚上沉浸在 teamLab 最新京都展的未来派数字艺术中。</span>
+                <p class="section-desc">
+                    <span data-lang="zh">热门门票与特急班次必须严格把控时间节点，提前锁定席位。</span>
+                    <span data-lang="en">Secure high-demand museum tickets, bus seats, and rail passes in advance.</span>
                 </p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Arashiyama+Bamboo+Grove" class="map-btn" target="_blank">📍 Open in Google Maps</a>
             </div>
-        </div>
 
-        <!-- Day 4 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/fushimi,inari" alt="Fushimi">
-                <img src="https://loremflickr.com/400/300/nara,deer" alt="Nara">
-                <img src="https://loremflickr.com/400/300/todaiji" alt="Todaiji">
+            <div class="booking-grid">
+                <!-- Ghibli Park -->
+                <div class="booking-card">
+                    <div class="booking-top">
+                        <h3 class="booking-name">🎪 <span data-lang="zh">吉卜力公园门票</span><span data-lang="en">Ghibli Park Tickets</span></h3>
+                        <span class="booking-alert-badge"><span data-lang="zh">每月10日准时抢</span><span data-lang="en">Monthly 10th</span></span>
+                    </div>
+                    <div class="booking-row">
+                        <strong><span data-lang="zh">抢票时间：</span><span data-lang="en">Booking Date:</span></strong>
+                        <span><span data-lang="zh">每月10日开放两个月后全月门票（9月10日或10月10日系统开放）</span><span data-lang="en">Opens 2 months prior on the 10th (Sept 10 / Oct 10 at 14:00 JST).</span></span>
+                    </div>
+                    <div class="booking-row">
+                        <strong><span data-lang="zh">票种推荐：</span><span data-lang="en">Ticket Type:</span></strong>
+                        <span><span data-lang="zh">必买“<strong>大散步豪华券 (Grand Pass Premium)</strong>”，方可进入哈尔移动城堡、霍尔宅邸、魔女之谷欧琪诺邸等建筑内部。</span><span data-lang="en">Must buy "<strong>Grand Pass Premium</strong>" to enter interior buildings like Howl's Castle and Okino Residence.</span></span>
+                    </div>
+                    <div class="booking-row">
+                        <strong><span data-lang="zh">入场建议：</span><span data-lang="en">Tip:</span></strong>
+                        <span><span data-lang="zh">优先选10:00入场吉卜力大仓库，先室内游玩拍照，下午转户外魔女之谷。</span><span data-lang="en">Select 10:00 entry for the Grand Warehouse first, then explore outdoors.</span></span>
+                    </div>
+                </div>
+
+                <!-- JR Pass -->
+                <div class="booking-card">
+                    <div class="booking-top">
+                        <h3 class="booking-name">🚄 <span data-lang="zh">JR高山北陆周游券</span><span data-lang="en">JR Takayama-Hokuriku Pass</span></h3>
+                        <span class="booking-alert-badge"><span data-lang="zh">出境前购买MCO</span><span data-lang="en">Buy Online MCO</span></span>
+                    </div>
+                    <div class="booking-row">
+                        <strong><span data-lang="zh">购票与兑换：</span><span data-lang="en">Purchase:</span></strong>
+                        <span><span data-lang="zh">国内平台提前购买兑换券（MCO），落地中部国际机场或名驿绿色窗口兑换实物票。</span><span data-lang="en">Purchase exchange voucher beforehand, redeem at Centrair Airport or Nagoya Station JR ticket office.</span></span>
+                    </div>
+                    <div class="booking-row">
+                        <strong><span data-lang="zh">涵盖范围：</span><span data-lang="en">Coverage:</span></strong>
+                        <span><span data-lang="zh">涵盖JR特急飞驒号指定席（最多可划4次指定席）及高山往返白川乡浓飞巴士。</span><span data-lang="en">Covers JR Ltd Exp Hida reserved seats (up to 4 bookings) and Nohi buses to Shirakawa-go.</span></span>
+                    </div>
+                    <div class="booking-row">
+                        <strong><span data-lang="zh">家庭捷径：</span><span data-lang="en">Pro Tip:</span></strong>
+                        <span><span data-lang="zh">换票时直接在JR绿色窗口一次性把名古屋➔高山、下吕➔名古屋的特急车票指定席全部划好。</span><span data-lang="en">Reserve both Nagoya➔Takayama and Gero➔Nagoya seats in one go upon arrival!</span></span>
+                    </div>
+                </div>
+
+                <!-- Nohi Bus -->
+                <div class="booking-card">
+                    <div class="booking-top">
+                        <h3 class="booking-name">🚌 <span data-lang="zh">白川乡浓飞巴士</span><span data-lang="en">Shirakawa-go Nohi Bus</span></h3>
+                        <span class="booking-alert-badge"><span data-lang="zh">提前1个月预约</span><span data-lang="en">1 Month Ahead</span></span>
+                    </div>
+                    <div class="booking-row">
+                        <strong><span data-lang="zh">开放时间：</span><span data-lang="en">Reservation:</span></strong>
+                        <span><span data-lang="zh">出发前1个月开放（约11月1日早上9点在 Japan Bus Online 预约）。</span><span data-lang="en">Opens 1 month prior (~Nov 1 at 09:00 JST via Japan Bus Online).</span></span>
+                    </div>
+                    <div class="booking-row">
+                        <strong><span data-lang="zh">操作要点：</span><span data-lang="en">Key Note:</span></strong>
+                        <span><span data-lang="zh">持有JR Pass亦需提前在官网锁定指定班次预留座位，避免现场客满无法上车。</span><span data-lang="en">Even with JR Pass, designated seats on peak buses must be locked online early.</span></span>
+                    </div>
+                    <div class="booking-row">
+                        <strong><span data-lang="zh">推荐黄金班次：</span><span data-lang="en">Recommended Times:</span></strong>
+                        <span><span data-lang="zh">上午08:50或09:20高山发车；下午13:30或14:00回程，体验从容。</span><span data-lang="en">Dep 08:50 or 09:20 from Takayama; Ret 13:30 or 14:00 back.</span></span>
+                    </div>
+                </div>
+
+                <!-- Luggage -->
+                <div class="booking-card">
+                    <div class="booking-top">
+                        <h3 class="booking-name">🧳 <span data-lang="zh">黑猫跨城大件行李</span><span data-lang="en">Yamato Luggage Forward</span></h3>
+                        <span class="booking-alert-badge"><span data-lang="zh">D5 早晨前台办理</span><span data-lang="en">D5 Morning Hotel</span></span>
+                    </div>
+                    <div class="booking-row">
+                        <strong><span data-lang="zh">执行时间：</span><span data-lang="en">Date:</span></strong>
+                        <span><span data-lang="zh">Day 5 (11月30日) 早晨退房时在名古屋酒店前台办理。</span><span data-lang="en">Day 5 morning at hotel checkout in Nagoya.</span></span>
+                    </div>
+                    <div class="booking-row">
+                        <strong><span data-lang="zh">直寄目的地：</span><span data-lang="en">Destination:</span></strong>
+                        <span><span data-lang="zh">将2个大行李箱直接寄往Day 10 (12月5日) 预订的名古屋酒店前台。</span><span data-lang="en">Deliver directly to Day 10 Nagoya return hotel front desk.</span></span>
+                    </div>
+                    <div class="booking-row">
+                        <strong><span data-lang="zh">随行配置：</span><span data-lang="en">Travel Light:</span></strong>
+                        <span><span data-lang="zh">全家仅携带2个20寸小登机箱与随身背包，高山温泉轻松漫步。</span><span data-lang="en">Carry only 2 small carry-ons and daypacks into Takayama & Gero.</span></span>
+                    </div>
+                </div>
             </div>
-            <div class="node-content">
-                <span class="day-label">Day 04</span>
-                <h2 class="node-title">
-                    <span data-lang="en">10,000 Gates & Nara Deer</span>
-                    <span data-lang="zh">万本鸟居与奈良小鹿</span>
+        </section>
+
+        <!-- Day-by-Day Itinerary -->
+        <section id="itinerary">
+            <div class="section-header">
+                <span class="section-tag"><span data-lang="zh">每日完整游程</span><span data-lang="en">Full Itinerary</span></span>
+                <h2 class="section-title">
+                    <span data-lang="zh">13天12晚 每日详细执行指南</span>
+                    <span data-lang="en">Day-by-Day Execution Guide</span>
                 </h2>
-                <div class="logistics">
-                    <p data-lang="en"><strong>Morning:</strong> Fushimi Inari Gates.<br><strong>Afternoon:</strong> JR Line to Nara Park (45m).</p>
-                    <p data-lang="zh"><strong>早上:</strong> 伏见稻荷大社。<br><strong>下午:</strong> 乘坐JR前往奈良公园 (45分钟)。</p>
-                </div>
-                <p class="desc-text">
-                    <span data-lang="en">Walk the vermilion gates of Fushimi Inari, then feed the bowing deer in Nara and see the world's largest bronze Buddha.</span>
-                    <span data-lang="zh">漫步伏见稻荷的朱红鸟居，随后去奈良喂食会鞠躬的小鹿，参观世界上最大的青铜大佛。</span>
+                <p class="section-desc">
+                    <span data-lang="zh">含建议时间表、交通路线、住宿建议、亮点游玩秘籍与家庭实用贴士。</span>
+                    <span data-lang="en">Timelines, transit routes, hotel choices, secret photo spots, and practical family tips.</span>
                 </p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Nara+Park" class="map-btn" target="_blank">📍 Open in Google Maps</a>
             </div>
-        </div>
 
-        <!-- Day 5 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/kinkakuji" alt="Kinkakuji">
-                <img src="https://loremflickr.com/400/300/nishiki,market" alt="Nishiki">
-                <img src="https://loremflickr.com/400/300/manga,museum" alt="Manga">
+            <!-- Sticky Filter Navigator -->
+            <div class="filter-sticky-bar">
+                <div class="filter-pills-container">
+                    <button class="filter-btn active" onclick="filterDays('all')"><span data-lang="zh">全部行程 (13天)</span><span data-lang="en">All Days (1-13)</span></button>
+                    <button class="filter-btn" onclick="filterDays('p1')"><span data-lang="zh">阶段一：名古屋与犬山 (D1-D4)</span><span data-lang="en">Phase 1: Nagoya (D1-D4)</span></button>
+                    <button class="filter-btn" onclick="filterDays('p2')"><span data-lang="zh">阶段二：飞驒高山与白川乡 (D5-D8)</span><span data-lang="en">Phase 2: Takayama (D5-D8)</span></button>
+                    <button class="filter-btn" onclick="filterDays('p3')"><span data-lang="zh">阶段三：下吕名泉 (D9)</span><span data-lang="en">Phase 3: Gero Onsen (D9)</span></button>
+                    <button class="filter-btn" onclick="filterDays('p4')"><span data-lang="zh">阶段四：都会采买与返程 (D10-D13)</span><span data-lang="en">Phase 4: Shopping (D10-D13)</span></button>
+                </div>
             </div>
-            <div class="node-content">
-                <span class="day-label">Day 05</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Golden Pavilion & Manga</span>
-                    <span data-lang="zh">金阁寺与漫画世界</span>
+
+            <!-- DAY 1 -->
+            <div class="day-node" data-phase="p1" id="day1">
+                <div class="day-hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=1200&auto=format&fit=crop&q=80" alt="Nagoya Station" class="day-hero-img">
+                    <div class="day-hero-overlay">
+                        <div>
+                            <div class="day-header-meta">
+                                <span class="day-badge">DAY 01</span>
+                                <span class="day-date-str"><span data-lang="zh">11月26日 (周三) · 抵达成田中部 ➔ 名古屋初体验</span><span data-lang="en">Wed, Nov 26 · Arrival at Centrair ➔ Nagoya Check-in</span></span>
+                            </div>
+                            <h3 class="day-hero-title">
+                                <span data-lang="zh">开启舒心之旅：名铁特急与名驿初印象</span>
+                                <span data-lang="en">Touchdown Chubu: μ-SKY Express & Station Exploration</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-body">
+                    <!-- Timeline -->
+                    <div class="timeline-card">
+                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="timeline-steps">
+                            <div class="timeline-step">
+                                <span class="step-time">14:30</span>
+                                <span class="step-desc"><span data-lang="zh">航班落地中部国际机场 (NGO)，办理入境与提取行李。</span><span data-lang="en">Flight lands at Chubu Centrair Airport (NGO), pass immigration & baggage.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">15:30</span>
+                                <span class="step-desc"><span data-lang="zh">机场交通广场兑换JR Pass，并在名铁售票处购买名铁特急 μ-SKY 车票。</span><span data-lang="en">Redeem JR Pass at transport plaza, purchase Meitetsu μ-SKY Ltd Exp tickets.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">16:30</span>
+                                <span class="step-desc"><span data-lang="zh">抵达名铁名古屋站，步行前往酒店办理入住，洗漱休整。</span><span data-lang="en">Arrive at Meitetsu Nagoya Station, walk to hotel, check-in and refresh.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">18:00</span>
+                                <span class="step-desc"><span data-lang="zh">名驿名店街晚餐，熟悉周边环境，购买随身热饮零食。</span><span data-lang="en">Dinner at Meieki gourmet avenue; explore underground walkways.</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transport & Stay -->
+                    <div class="info-two-col">
+                        <div class="info-pill-box transport">
+                            <div class="info-box-title">🚇 <span data-lang="zh">交通方式</span><span data-lang="en">Transportation</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh"><strong>名铁特急 μ-SKY (ミュースカイ)：</strong>中部国际空港 ➔ 名铁名古屋，仅需28分钟。全车指定席，车厢宽敞并配有专用大行李架，平稳快捷。</span>
+                                <span data-lang="en"><strong>Meitetsu μ-SKY:</strong> Centrair ➔ Nagoya Station in just 28 minutes. All-reserved seating, luggage racks, ultra-smooth transit.</span>
+                            </div>
+                        </div>
+                        <div class="info-pill-box stay">
+                            <div class="info-box-title">🏨 <span data-lang="zh">住宿建议 (连住4晚)</span><span data-lang="en">Hotel (4 Nights Base)</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh"><strong>名古屋站周边：</strong>推荐 名古屋JR Gate Tower饭店、三井花园饭店名古屋普米尔，或大和Roynet酒店新干线口。直连商场与地下街，带娃出行极度从容。</span>
+                                <span data-lang="en"><strong>Nagoya Station Area:</strong> JR Gate Tower Hotel, Mitsui Garden Premier, or Daiwa Roynet Shinkansenguchi. Direct mall/subway access.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Food & Highlights -->
+                    <div class="info-pill-box food">
+                        <div class="info-box-title">🍜 <span data-lang="zh">晚餐推荐</span><span data-lang="en">Dinner Recommendations</span></div>
+                        <div class="info-box-text">
+                            <span data-lang="zh"><strong>矢场町猪排 (矢場とん)：</strong>名驿名铁百货9楼，品尝正宗名古屋特制红味噌香酥炸猪排；或前往<strong>备长鳗鱼饭 (ひつまぶし備長)</strong>，开启香脆炭烤鳗鱼三吃。</span>
+                            <span data-lang="en"><strong>Yabaton Miso Katsu (矢場とん):</strong> Signature Nagoya red-miso breaded pork cutlet at Meitetsu Dept Store; or <strong>Hitsumabushi Bincho</strong> for charcoal-grilled eel 3-ways.</span>
+                        </div>
+                    </div>
+
+                    <!-- Tips -->
+                    <div class="tips-callout">
+                        <div class="tip-icon">💡</div>
+                        <div class="tip-content">
+                            <span data-lang="zh"><strong>家庭贴士：</strong>刚落地下榻第一晚不安排消耗体力的景点，可陪孩子在名驿Bic Camera或高岛屋周边轻松逛逛，购买后续几天的随身热饮、保湿用品与日本零食。</span>
+                            <span data-lang="en"><strong>Family Comfort Tip:</strong> Keep the arrival evening relaxed. Browse Bic Camera or Takashimaya station mall to stock up on hot drinks and snacks for the kids.</span>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="day-footer-actions">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Nagoya+Station" target="_blank" class="map-link-btn">
+                            <span>📍</span> <span data-lang="zh">在 Google 地图查看名驿</span><span data-lang="en">Open Nagoya Station in Maps</span>
+                        </a>
+                        <label class="mark-visited-label">
+                            <input type="checkbox" onchange="saveDayProgress('d1', this.checked)">
+                            <span data-lang="zh">标记此日为已完成</span><span data-lang="en">Mark Day 1 Completed</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 2 -->
+            <div class="day-node" data-phase="p1" id="day2">
+                <div class="day-hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=1200&auto=format&fit=crop&q=80" alt="Toyota Museum & Oasis 21" class="day-hero-img">
+                    <div class="day-hero-overlay">
+                        <div>
+                            <div class="day-header-meta">
+                                <span class="day-badge">DAY 02</span>
+                                <span class="day-date-str"><span data-lang="zh">11月27日 (周四) · 机械与工业之美 ➔ 荣商圈漫游</span><span data-lang="en">Thu, Nov 27 · Toyota Commemorative Museum ➔ Sakae District</span></span>
+                            </div>
+                            <h3 class="day-hero-title">
+                                <span data-lang="zh">丰田工业奇迹互动体验与绿洲21星空漫步</span>
+                                <span data-lang="en">Toyota Innovation Hands-on & Oasis 21 Skyline Sunset</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-body">
+                    <div class="timeline-card">
+                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="timeline-steps">
+                            <div class="timeline-step">
+                                <span class="step-time">09:30</span>
+                                <span class="step-desc"><span data-lang="zh">出发前往 Toyota 产业技术纪念馆。</span><span data-lang="en">Depart Nagoya Station for Toyota Commemorative Museum.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">10:00</span>
+                                <span class="step-desc"><span data-lang="zh">纤维机械馆与汽车工业馆深度互动，体验儿童科技乐园 (Technoland)。</span><span data-lang="en">Explore Textile & Automotive Machinery halls; kids play in Technoland.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">13:30</span>
+                                <span class="step-desc"><span data-lang="zh">纪念馆内红砖西餐厅 Brick Age 享用家庭午餐。</span><span data-lang="en">Lunch at Brick Age restaurant inside the historic red-brick museum.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">15:30</span>
+                                <span class="step-desc"><span data-lang="zh">地铁至荣商圈散步，登“水之宇宙船”绿洲21与电视塔俯瞰绝美夜景。</span><span data-lang="en">Subway to Sakae; walk Oasis 21 glass roof & view Chubu MIRAI TOWER lights.</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-two-col">
+                        <div class="info-pill-box transport">
+                            <div class="info-box-title">🚇 <span data-lang="zh">交通方式</span><span data-lang="en">Transportation</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh">名铁名古屋站搭乘名铁名古屋本线1站至“荣生站”，步行3分钟即达纪念馆。下午搭地铁东山线直达“荣站”。</span>
+                                <span data-lang="en">Meitetsu Line from Nagoya 1 stop to Sako Station (3 min walk to museum). Afternoon: Higashiyama Subway line to Sakae.</span>
+                            </div>
+                        </div>
+                        <div class="info-pill-box food">
+                            <div class="info-box-title">🍜 <span data-lang="zh">特色美食</span><span data-lang="en">Dining</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh">午餐：纪念馆 Brick Age 西餐厅。晚餐：山本屋总本家（浓厚红味噌煮乌冬）或松坂屋南馆蓬莱轩鳗鱼饭。</span>
+                                <span data-lang="en">Lunch: Brick Age Western Cuisine. Dinner: Yamamotoya Sohonke (rich miso nikomi udon) or Matsuzakaya Houraiken.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <div class="highlight-title">🎯 <span data-lang="zh">亮点重点：Toyota产业技术纪念馆</span><span data-lang="en">Highlight: Toyota Commemorative Museum</span></div>
+                        <p class="highlight-text">
+                            <span data-lang="zh">绝非枯燥的陈列馆！馆内有巨型自动化纺织机轰鸣运转、千吨汽车冲压机实况作业、工程师手工敲打车身外壳金属铸造展示，以及专门为孩子们设计的科技乐园（Technoland），科技感与日本匠人精神并存，极具启发性。</span>
+                            <span data-lang="en">Not an ordinary museum! Features real running loom machines, 1,000-ton stamping presses, live car chassis casting demonstrations, and the Technoland interactive playground for kids.</span>
+                        </p>
+                    </div>
+
+                    <div class="tips-callout">
+                        <div class="tip-icon">💡</div>
+                        <div class="tip-content">
+                            <span data-lang="zh"><strong>互动技巧：</strong>汽车馆内定时有注塑机制作并现场派发“迷你玩具小车”的活动，入馆购票时务必先查看当天的活动排期表！</span>
+                            <span data-lang="en"><strong>Interactive Tip:</strong> Technicians periodically produce miniature toy cars on live plastic injection machines to gift to children. Check the daily schedule at the reception!</span>
+                        </div>
+                    </div>
+
+                    <div class="day-footer-actions">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Toyota+Commemorative+Museum+of+Industry+and+Technology" target="_blank" class="map-link-btn">
+                            <span>📍</span> <span data-lang="zh">导航至 Toyota 纪念馆</span><span data-lang="en">Open Toyota Museum in Maps</span>
+                        </a>
+                        <label class="mark-visited-label">
+                            <input type="checkbox" onchange="saveDayProgress('d2', this.checked)">
+                            <span data-lang="zh">标记此日为已完成</span><span data-lang="en">Mark Day 2 Completed</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 3 -->
+            <div class="day-node" data-phase="p1" id="day3">
+                <div class="day-hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1578637387939-43c525550085?w=1200&auto=format&fit=crop&q=80" alt="Ghibli Park" class="day-hero-img">
+                    <div class="day-hero-overlay">
+                        <div>
+                            <div class="day-header-meta">
+                                <span class="day-badge">DAY 03</span>
+                                <span class="day-date-str"><span data-lang="zh">11月28日 (周五) · 童年童梦奇旅：吉卜力公园</span><span data-lang="en">Fri, Nov 28 · Ghibli Park Fantasy Wonderland</span></span>
+                            </div>
+                            <h3 class="day-hero-title">
+                                <span data-lang="zh">爱·地球博纪念公园：吉卜力大仓库与魔女之谷</span>
+                                <span data-lang="en">Ghibli's Grand Warehouse & Valley of Witches Magic</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-body">
+                    <div class="timeline-card">
+                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="timeline-steps">
+                            <div class="timeline-step">
+                                <span class="step-time">08:30</span>
+                                <span class="step-desc"><span data-lang="zh">名古屋站出发，搭地铁东山线至“藤之丘”，换乘磁浮Linimo电车。</span><span data-lang="en">Depart Nagoya via Higashiyama Subway to Fujigaoka, transfer to Linimo maglev.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">09:40</span>
+                                <span class="step-desc"><span data-lang="zh">抵达“爱·地球博纪念公园站”，穿过电梯塔前往大仓库排队。</span><span data-lang="en">Arrive at Expo 2005 Park station; walk past Clock Tower elevator to Warehouse.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">10:00</span>
+                                <span class="step-desc"><span data-lang="zh"><strong>吉卜力大仓库：</strong>名场面拍照（无脸男电车）、猎户座微影院短片、龙猫天地。</span><span data-lang="en"><strong>Grand Warehouse:</strong> No-Face train photo exhibit, Cinema Orion short film, Totoro zone.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">14:00</span>
+                                <span class="step-desc"><span data-lang="zh"><strong>魔女之谷与幽灵之里：</strong>哈尔移动城堡、魔女宅急便面包房现烤点心。</span><span data-lang="en"><strong>Valley of Witches:</strong> Enter Howl's Moving Castle, Kiki's bakery, Mononoke Village.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">17:30</span>
+                                <span class="step-desc"><span data-lang="zh">“冒险飞行团”纪念品商店选购限定玩偶伴手礼，随后启程返程。</span><span data-lang="en">Exclusive souvenirs at Adventurous Flying Squadron shop, then return to Nagoya.</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-two-col">
+                        <div class="info-pill-box transport">
+                            <div class="info-box-title">🚇 <span data-lang="zh">交通换乘</span><span data-lang="en">Transit Route</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh">地铁东山线（往藤之丘方向）至终点站“藤之丘”，站内换乘爱知高速交通东部丘陵线（磁浮Linimo）至“爱·地球博纪念公园站”，全程约45-50分钟。</span>
+                                <span data-lang="en">Subway Higashiyama Line to "Fujigaoka", transfer to Linimo Maglev Line to "Ai-Chikyuhaku Kinen Koen", approx 45-50 mins.</span>
+                            </div>
+                        </div>
+                        <div class="info-pill-box food">
+                            <div class="info-box-title">🥐 <span data-lang="zh">园内餐饮推荐</span><span data-lang="en">Park Food</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh">大仓库旁“大陆风横断飞行”咖啡厅品尝红豆三明治与特色苏打水；魔女之谷喷水池边热狗小吃摊品尝现烤香草面包。</span>
+                                <span data-lang="en">"Transcontinental Flight" Cafe (red-bean sandwich & cream soda); warm herb bread & hot dogs by the witch valley fountain.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <div class="highlight-title">🎯 <span data-lang="zh">游玩秘笈与拍照机位</span><span data-lang="en">Pro Tips for Ghibli Park</span></div>
+                        <p class="highlight-text">
+                            <span data-lang="zh">持“大散步豪华券”进大仓库后，第一时间直奔“吉卜力名场面体验馆”排队（与千寻一起坐在海原电铁无脸男身边拍照），随后从容游览猎户座剧场放映的未公开吉卜力动画短片，以及借物少女阿丽埃蒂的巨大微缩花园。</span>
+                            <span data-lang="en">Head straight to the "Famous Scenes Exhibition" upon entering the Warehouse to take the iconic photo sitting next to No-Face on the train. Later, catch the short animated film at Cinema Orion and walk inside Arrietty's giant garden.</span>
+                        </p>
+                    </div>
+
+                    <div class="tips-callout">
+                        <div class="tip-icon">💡</div>
+                        <div class="tip-content">
+                            <span data-lang="zh"><strong>特别提醒：</strong>公园面积庞大且依山而建，请全家穿着舒适平底运动鞋。大仓库内的纪念品店“冒险飞行团”部分限定玩偶非常热门，建议下午尽早选购，备好充足体力。</span>
+                            <span data-lang="en"><strong>Comfort Notice:</strong> The park spans rolling hills—wear comfortable walking sneakers. Souvenirs at "Adventurous Flying Squadron" sell out fast; pick items before late afternoon!</span>
+                        </div>
+                    </div>
+
+                    <div class="day-footer-actions">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Ghibli+Park+Nagoya" target="_blank" class="map-link-btn">
+                            <span>📍</span> <span data-lang="zh">导航至吉卜力公园</span><span data-lang="en">Open Ghibli Park in Maps</span>
+                        </a>
+                        <label class="mark-visited-label">
+                            <input type="checkbox" onchange="saveDayProgress('d3', this.checked)">
+                            <span data-lang="zh">标记此日为已完成</span><span data-lang="en">Mark Day 3 Completed</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 4 -->
+            <div class="day-node" data-phase="p1" id="day4">
+                <div class="day-hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1576675466969-38eeae4b41f6?w=1200&auto=format&fit=crop&q=80" alt="Inuyama Castle" class="day-hero-img">
+                    <div class="day-hero-overlay">
+                        <div>
+                            <div class="day-header-meta">
+                                <span class="day-badge">DAY 04</span>
+                                <span class="day-date-str"><span data-lang="zh">11月29日 (周六) · 国宝现存天守：犬山城 ➔ 城下町美食</span><span data-lang="en">Sat, Nov 29 · National Treasure Inuyama Castle & Castle Town</span></span>
+                            </div>
+                            <h3 class="day-hero-title">
+                                <span data-lang="zh">登崖顶古天守览北阿尔卑斯，洗钱祈福与边走边吃</span>
+                                <span data-lang="en">Climbing the Cliffside Keep, Money Washing & Street Eats</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-body">
+                    <div class="timeline-card">
+                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="timeline-steps">
+                            <div class="timeline-step">
+                                <span class="step-time">09:30</span>
+                                <span class="step-desc"><span data-lang="zh">名铁名古屋站搭乘快速特急前往犬山（约25分钟）。</span><span data-lang="en">Meitetsu Rapid Ltd Exp from Nagoya to Inuyama (25 mins).</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">10:15</span>
+                                <span class="step-desc"><span data-lang="zh">登国宝犬山城天守阁，360度远眺木曾川与群山。</span><span data-lang="en">Climb National Treasure Inuyama Castle Keep for 360-degree panorama.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">11:45</span>
+                                <span class="step-desc"><span data-lang="zh">三光稻荷神社祈福（洗钱祈愿开运，看满墙粉红心形绘马）。</span><span data-lang="en">Sanko Inari Shrine: wash money for prosperity & see pink heart ema tablets.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">12:30</span>
+                                <span class="step-desc"><span data-lang="zh">犬山城下町古街漫步边走边吃午餐，品尝五平饼与飞驒牛寿司。</span><span data-lang="en">Street food lunch in Inuyama Castle Town: Gohei mochi & beef nigiri.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">15:30</span>
+                                <span class="step-desc"><span data-lang="zh">漫步至木曾川河畔赏景，乘名铁列车返回名古屋。</span><span data-lang="en">Stroll the serene banks of Kiso River; take Meitetsu train back to Nagoya.</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-two-col">
+                        <div class="info-pill-box transport">
+                            <div class="info-box-title">🚇 <span data-lang="zh">交通方式</span><span data-lang="en">Transportation</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh">名铁名古屋站搭乘名铁犬山线快速特急/特急，至“犬山站”或“犬山游园站”下车（仅约25分钟），出站步行15分钟穿过古街即到。</span>
+                                <span data-lang="en">Meitetsu Inuyama Line Ltd Exp to Inuyama or Inuyama-Yuen Station (25 min). Walk 15 mins through historic streets to castle.</span>
+                            </div>
+                        </div>
+                        <div class="info-pill-box food">
+                            <div class="info-box-title">🍡 <span data-lang="zh">城下町必吃小吃</span><span data-lang="en">Castle Town Street Eats</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh">山田五平饼（烤核桃芝麻酱米串）、丸明犬山店炙烤飞驒牛握寿司、本町茶寮的草莓抹茶冰淇淋与金箔布丁。</span>
+                                <span data-lang="en">Yamada Gohei-mochi (charcoal walnut sauce rice skewer), Maruaki grilled Hida beef sushi, Honmachi Saryo strawberry matcha soft serve.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <div class="highlight-title">🏯 <span data-lang="zh">重点亮点：国宝犬山城</span><span data-lang="en">Highlight: Inuyama Castle</span></div>
+                        <p class="highlight-text">
+                            <span data-lang="zh">日本现存仅有的五座国宝天守之一，建于木曾川旁的绝壁断崖之上。天守阁保留着数百年前纯木质陡峭楼梯，原汁原味。登上最高层回廊，清澈的木曾川江景与北阿尔卑斯连峰尽收眼底，清风徐来，心旷神怡。</span>
+                            <span data-lang="en">One of only five designated National Treasure castle keeps in Japan, perched atop a cliff overlooking the Kiso River. The wooden steep stairways are original and authentic. The top balcony affords breathtaking views of the Northern Alps.</span>
+                        </p>
+                    </div>
+
+                    <div class="tips-callout">
+                        <div class="tip-icon">💡</div>
+                        <div class="tip-content">
+                            <span data-lang="zh"><strong>家庭贴士：</strong>犬山城天守内部梯级陡达50-60度，需脱鞋入内，建议给孩子穿好防滑棉袜。下午返回名古屋后稍作休息，晚间整理大行李箱，准备次日早晨办理黑猫宅急便托运！</span>
+                            <span data-lang="en"><strong>Family Notice:</strong> Wooden castle stairs are very steep (50-60 degrees) and require removing shoes. Wear non-slip socks. Tonight, pack large suitcases for tomorrow's Yamato forwarding!</span>
+                        </div>
+                    </div>
+
+                    <div class="day-footer-actions">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Inuyama+Castle" target="_blank" class="map-link-btn">
+                            <span>📍</span> <span data-lang="zh">导航至犬山城</span><span data-lang="en">Open Inuyama Castle in Maps</span>
+                        </a>
+                        <label class="mark-visited-label">
+                            <input type="checkbox" onchange="saveDayProgress('d4', this.checked)">
+                            <span data-lang="zh">标记此日为已完成</span><span data-lang="en">Mark Day 4 Completed</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 5 -->
+            <div class="day-node" data-phase="p2" id="day5">
+                <div class="day-hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1200&auto=format&fit=crop&q=80" alt="Takayama Sanmachi Suji" class="day-hero-img">
+                    <div class="day-hero-overlay">
+                        <div>
+                            <div class="day-header-meta">
+                                <span class="day-badge">DAY 05</span>
+                                <span class="day-date-str"><span data-lang="zh">11月30日 (周日) · 穿越飞驒山水：特急飞驒号 ➔ 高山老街</span><span data-lang="en">Sun, Nov 30 · Scenic Hida Train ➔ Takayama Old Town</span></span>
+                            </div>
+                            <h3 class="day-hero-title">
+                                <span data-lang="zh">大件行李直寄名古屋，轻装穿行飞驒峡谷与三町老街</span>
+                                <span data-lang="en">Luggage Forwarded, Scenic Alpine Train & Sanmachi Suji Stroll</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-body">
+                    <div class="timeline-card">
+                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="timeline-steps">
+                            <div class="timeline-step">
+                                <span class="step-time">08:00</span>
+                                <span class="step-desc"><span data-lang="zh">名古屋酒店前台办理黑猫大件行李直寄（2大箱直达D10名古屋酒店）。</span><span data-lang="en">Hotel front desk: forward 2 large suitcases directly to Day 10 Nagoya hotel.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">08:43</span>
+                                <span class="step-desc"><span data-lang="zh">名古屋站搭乘 JR 特急飞驒(Hida) 3号新型混动全景列车。</span><span data-lang="en">Board JR Ltd Exp Hida 3 (HC85 hybrid panoramic car) from Nagoya Station.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">11:15</span>
+                                <span class="step-desc"><span data-lang="zh">抵达飞驒高山站，步行至酒店寄存背包小箱。</span><span data-lang="en">Arrive at Takayama Station; drop daypacks at hotel front desk.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">12:30</span>
+                                <span class="step-desc"><span data-lang="zh">味藏天国或丸明品尝正宗 A5 级飞驒牛牛排与寿喜烧午餐。</span><span data-lang="en">Feast on A5 Hida Beef steak & sukiyaki at Ajikura Tengoku or Maruaki.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">14:00</span>
+                                <span class="step-desc"><span data-lang="zh">漫步江户风貌三町筋古街、朱红中桥拍照，品尝坂口屋飞驒牛仙贝寿司。</span><span data-lang="en">Wander Sanmachi Suji wooden merchant streets, Nakabashi Red Bridge.</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-two-col">
+                        <div class="info-pill-box transport">
+                            <div class="info-box-title">🚆 <span data-lang="zh">交通路线</span><span data-lang="en">Scenic Transit</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh"><strong>JR特急飞驒号 (Hida HC85系)：</strong>新型油电混合动力列车，配有超大观景车窗，全程约2小时25分，穿行于飞驒川峡谷奇石与雪松林间，景色美不胜收。</span>
+                                <span data-lang="en"><strong>JR Ltd Exp Hida (HC85):</strong> New hybrid train with panoramic picture windows. 2h 25m scenic ride through rocky river gorges and cedar forests.</span>
+                            </div>
+                        </div>
+                        <div class="info-pill-box stay">
+                            <div class="info-box-title">🏨 <span data-lang="zh">高山住宿建议 (连住4晚)</span><span data-lang="en">Takayama Hotels (4 Nights)</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh">推荐 <strong>高山樱庵 (Takayama Ouan)</strong>（全馆榻榻米、顶楼露天汤）、<strong>Residence Hotel Takayama Station</strong>（公寓式带小厨房家庭房），或 <strong>御宿野乃高山</strong>。</span>
+                                <span data-lang="en"><strong>Takayama Ouan</strong> (full tatami interior & rooftop onsen), <strong>Residence Hotel Station</strong> (family apartment with kitchenette), or <strong>Onyado Nono</strong>.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-pill-box food">
+                        <div class="info-box-title">🥩 <span data-lang="zh">飞驒牛美食大赏</span><span data-lang="en">Hida Beef Gastronomy</span></div>
+                        <div class="info-box-text">
+                            <span data-lang="zh"><strong>味藏天国 (Ajikura Tengoku) / 丸明 (Maruaki)：</strong>JA农协直营，高品质A5飞驒牛肉质细腻、油脂香醇入口即化。老街老字号“坂口屋”飞驒牛握寿司配仙贝底更是绝妙滋味。</span>
+                            <span data-lang="en"><strong>Ajikura Tengoku & Maruaki:</strong> JA-certified melt-in-mouth A5 Hida beef cuts. In the old town, try "Sakaguchiya" beef sushi served on a crisp rice cracker!</span>
+                        </div>
+                    </div>
+
+                    <div class="tips-callout">
+                        <div class="tip-icon">💡</div>
+                        <div class="tip-content">
+                            <span data-lang="zh"><strong>轻松秘诀：</strong>把笨重大行李箱寄送回名古屋后，全家仅携带背包或轻便登机箱，走出高山站步履轻盈，完全不用在古街石板路上吃力拖行李，省心省力！</span>
+                            <span data-lang="en"><strong>Light Travel Secret:</strong> With 2 large suitcases already forwarded back to Nagoya, you can freely walk through cobblestone streets and boarding trains with light carry-ons!</span>
+                        </div>
+                    </div>
+
+                    <div class="day-footer-actions">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Sanmachi+Suji+Takayama" target="_blank" class="map-link-btn">
+                            <span>📍</span> <span data-lang="zh">导航至高山三町筋古街</span><span data-lang="en">Open Sanmachi Suji in Maps</span>
+                        </a>
+                        <label class="mark-visited-label">
+                            <input type="checkbox" onchange="saveDayProgress('d5', this.checked)">
+                            <span data-lang="zh">标记此日为已完成</span><span data-lang="en">Mark Day 5 Completed</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 6 -->
+            <div class="day-node" data-phase="p2" id="day6">
+                <div class="day-hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&auto=format&fit=crop&q=80" alt="Shirakawa-go Gassho Village" class="day-hero-img">
+                    <div class="day-hero-overlay">
+                        <div>
+                            <div class="day-header-meta">
+                                <span class="day-badge">DAY 06</span>
+                                <span class="day-date-str"><span data-lang="zh">12月01日 (周一) · 童话雪境漫游：世界遗产白川乡一日游</span><span data-lang="en">Mon, Dec 1 · World Heritage Shirakawa-go Winter Day Trip</span></span>
+                            </div>
+                            <h3 class="day-hero-title">
+                                <span data-lang="zh">荻町合掌造村落、俯瞰童话全景与地炉温暖红豆汤</span>
+                                <span data-lang="en">Gassho Thatched Roofs, Shiroyama Outlook & Hearthside Sweets</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-body">
+                    <div class="timeline-card">
+                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="timeline-steps">
+                            <div class="timeline-step">
+                                <span class="step-time">08:50</span>
+                                <span class="step-desc"><span data-lang="zh">高山浓飞巴士中心搭乘预订班次前往白川乡。</span><span data-lang="en">Board reserved Nohi Bus from Takayama Bus Center to Shirakawa-go.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">09:40</span>
+                                <span class="step-desc"><span data-lang="zh">抵达白川乡荻町巴士总站，寄存随身小包。</span><span data-lang="en">Arrive at Shirakawa-go Ogimachi bus terminal.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">10:00</span>
+                                <span class="step-desc"><span data-lang="zh">搭穿梭小巴登荻町城迹展望台，俯瞰如童话一般的茅草屋村落全景。</span><span data-lang="en">Shuttle bus up to Shiroyama Viewpoint for classic postcard panorama.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">11:30</span>
+                                <span class="step-desc"><span data-lang="zh">漫步下山，入内参观最大规模合掌造“和田家”或“神田家”。</span><span data-lang="en">Walk down to visit interior of historic Wada House or Kanda House.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">12:30</span>
+                                <span class="step-desc"><span data-lang="zh">享用围炉里朴叶味噌飞驒牛定食与炭火盐烤岩鱼。</span><span data-lang="en">Hearthside lunch: Hida beef on hoba leaf with miso & salt-grilled char.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">14:00</span>
+                                <span class="step-desc"><span data-lang="zh">相逢桥散步、明善寺打卡，或在“落人”咖啡馆围炉取暖。</span><span data-lang="en">Stroll Deai Suspension Bridge & Myozenji; coffee at Ochiudo.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">15:00</span>
+                                <span class="step-desc"><span data-lang="zh">搭乘浓飞巴士返回高山，下午在酒店温泉放松。</span><span data-lang="en">Board Nohi Bus return to Takayama; soak in hotel hot spring.</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-two-col">
+                        <div class="info-pill-box transport">
+                            <div class="info-box-title">🚌 <span data-lang="zh">巴士交通</span><span data-lang="en">Bus Logistics</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh"><strong>浓飞巴士 (高山 ➔ 白川乡)：</strong>单程约50分钟，走东海北陆自动车道穿山隧道，平稳舒适。建议提前在 Japan Bus Online 锁定指定座。</span>
+                                <span data-lang="en"><strong>Nohi Bus:</strong> 50 mins via expressway tunnels. Smooth and scenic. Book seats in advance via Japan Bus Online.</span>
+                            </div>
+                        </div>
+                        <div class="info-pill-box food">
+                            <div class="info-box-title">🍲 <span data-lang="zh">特色饮食推荐</span><span data-lang="en">Village Treats</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh"><strong>“落人” (Ochiudo) 咖啡馆：</strong>老爷爷经营的合掌屋，地炉炭火烤热面包吐司，红豆年糕汤无限续碗！</span>
+                                <span data-lang="en"><strong>Ochiudo Cafe:</strong> Classic thatched cafe with an open irori hearth; unlimited sweet red-bean soup with toasted bread.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <div class="highlight-title">❄️ <span data-lang="zh">初冬合掌村与和田家</span><span data-lang="en">Highlight: Wada House</span></div>
+                        <p class="highlight-text">
+                            <span data-lang="zh">12月初的白川乡常常迎来初冬薄雪，三角形茅草屋顶仿佛铺着白糖霜。“和田家”为村内现存最大规模的合掌造建筑，三层纯木榫卯构架坚固壮观，三楼可近距离触摸粗大的树藤绑木工艺与古代养蚕工具，极具视觉冲击。</span>
+                            <span data-lang="en">Early December often brings the first delicate dustings of snow. Wada House is the largest authentic thatched house in Ogimachi. Ascend to the third attic level to inspect massive timber trusses bound purely by rope and natural vine.</span>
+                        </p>
+                    </div>
+
+                    <div class="tips-callout">
+                        <div class="tip-icon">💡</div>
+                        <div class="tip-content">
+                            <span data-lang="zh"><strong>保暖防滑装备：</strong>12月的合掌村地面容易有结冰微滑路面，务必给孩子与长辈备好<strong>防水防滑保暖运动鞋及防风手套</strong>，鞋底纹路深者为佳。</span>
+                            <span data-lang="en"><strong>Safety Note:</strong> December village footpaths can be icy and slick. Ensure kids and parents wear waterproof warm boots with non-slip grooved soles.</span>
+                        </div>
+                    </div>
+
+                    <div class="day-footer-actions">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Shirakawa-go+Village" target="_blank" class="map-link-btn">
+                            <span>📍</span> <span data-lang="zh">导航至白川乡合掌村</span><span data-lang="en">Open Shirakawa-go in Maps</span>
+                        </a>
+                        <label class="mark-visited-label">
+                            <input type="checkbox" onchange="saveDayProgress('d6', this.checked)">
+                            <span data-lang="zh">标记此日为已完成</span><span data-lang="en">Mark Day 6 Completed</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 7 -->
+            <div class="day-node" data-phase="p2" id="day7">
+                <div class="day-hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?w=1200&auto=format&fit=crop&q=80" alt="Hida Furukawa Koi & Morning Market" class="day-hero-img">
+                    <div class="day-hero-overlay">
+                        <div>
+                            <div class="day-header-meta">
+                                <span class="day-badge">DAY 07</span>
+                                <span class="day-date-str"><span data-lang="zh">12月02日 (周二) · 宫川朝市 ➔ 飞驒古川《你的名字》圣地巡礼</span><span data-lang="en">Tue, Dec 2 · Miyagawa Morning Market ➔ Hida Furukawa Anime Pilgrimage</span></span>
+                            </div>
+                            <h3 class="day-hero-title">
+                                <span data-lang="zh">朝市烟火、白壁土藏渠喂千条锦鲤与古川天桥</span>
+                                <span data-lang="en">Riverside Markets, White Storehouse Koi & Cinematic Overpass</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-body">
+                    <div class="timeline-card">
+                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="timeline-steps">
+                            <div class="timeline-step">
+                                <span class="step-time">08:30</span>
+                                <span class="step-desc"><span data-lang="zh">漫步高山宫川朝市，品尝晨间新鲜飞驒苹果、手工艺品与烤串。</span><span data-lang="en">Explore Miyagawa Morning Market: fresh Hida apples, snacks, craft stalls.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">10:15</span>
+                                <span class="step-desc"><span data-lang="zh">高山站搭乘 JR 高山本线列车（仅需15分钟抵达飞驒古川）。</span><span data-lang="en">Take JR Takayama Line train from Takayama to Hida Furukawa (15 mins).</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">11:00</span>
+                                <span class="step-desc"><span data-lang="zh">濑户川与白壁土藏街散步，孩子在清澈流水渠喂食千条肥美锦鲤。</span><span data-lang="en">Seto River canal: feed thousands of giant koi along whitewashed walls.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">12:30</span>
+                                <span class="step-desc"><span data-lang="zh">古川老字号“荞麦正 甚一郎”或“福全寺”享用纯手工手打荞麦面。</span><span data-lang="en">Handmade buckwheat soba at "Soba-sho Jinichiro" or "Fukuzenji".</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">13:30</span>
+                                <span class="step-desc"><span data-lang="zh">打卡新海诚《你的名字》圣地：飞驒古川车站跨线天桥与气多若宫神社。</span><span data-lang="en">Anime pilgrimage: Furukawa Station bridge and Keta Wakamiya Shrine.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">15:30</span>
+                                <span class="step-desc"><span data-lang="zh">返回高山，宫川河畔日式昭和喫茶店悠闲品尝手冲咖啡与甜点。</span><span data-lang="en">Return to Takayama for a relaxing riverside pour-over coffee.</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-two-col">
+                        <div class="info-pill-box transport">
+                            <div class="info-box-title">🚆 <span data-lang="zh">交通提示</span><span data-lang="en">Train Route</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh">JR高山本线普通或特急列车（高山 ➔ 飞驒古川，仅15分钟）。<strong>因班次较少，出发前请务必确认好往返时刻表。</strong></span>
+                                <span data-lang="en">JR Takayama Line (15 mins). Trains run on an hourly cadence—check return timetable beforehand.</span>
+                            </div>
+                        </div>
+                        <div class="info-pill-box food">
+                            <div class="info-box-title">🍜 <span data-lang="zh">晚餐推荐</span><span data-lang="en">Dinner</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh"><strong>Menya Shirakawa (麺屋しらかわ)：</strong>高山超人气排队名店，品尝热气腾腾、汤头醇厚的大葱飞驒高山高汤酱油拉面。</span>
+                                <span data-lang="en"><strong>Menya Shirakawa:</strong> Famous local ramen shop with deeply savory soy-dashi broth and tender chashu pork.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <div class="highlight-title">🎏 <span data-lang="zh">深度趣味：白壁土藏与千条锦鲤</span><span data-lang="en">Highlight: Furukawa Charm</span></div>
+                        <p class="highlight-text">
+                            <span data-lang="zh">飞驒古川比起高山更为静谧秀雅。白壁土藏的黑白建筑倒映在潺潺溪渠中，渠边设有售卖鱼饲料的自助小木盒（100日元一袋）。将饲料洒入水中，成百上千条巨大的五彩锦鲤欢腾拥簇，孩子们能在此乐此不疲玩上大半天！</span>
+                            <span data-lang="en">Furukawa is wonderfully uncrowded. Along the Seto canal beside historic white storehouses, honor-system wooden boxes sell koi feed pellets for 100 yen. Kids will be enthralled feeding the enormous vibrant carp swimming right at their feet.</span>
+                        </p>
+                    </div>
+
+                    <div class="tips-callout">
+                        <div class="tip-icon">💡</div>
+                        <div class="tip-content">
+                            <span data-lang="zh"><strong>摄影机位：</strong>飞驒古川跨线天桥的专用拍照窗口具有极强的故事感，可提前对准列车进站时刻捕捉经典电影分镜！</span>
+                            <span data-lang="en"><strong>Photo Spot:</strong> The Furukawa station overpass has a dedicated photo window facing the tracks to recreate the famous scene from Makoto Shinkai's "Your Name".</span>
+                        </div>
+                    </div>
+
+                    <div class="day-footer-actions">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Seto+River+and+White-walled+Storehouses" target="_blank" class="map-link-btn">
+                            <span>📍</span> <span data-lang="zh">导航至濑户川白壁土藏</span><span data-lang="en">Open Seto River in Maps</span>
+                        </a>
+                        <label class="mark-visited-label">
+                            <input type="checkbox" onchange="saveDayProgress('d7', this.checked)">
+                            <span data-lang="zh">标记此日为已完成</span><span data-lang="en">Mark Day 7 Completed</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 8 -->
+            <div class="day-node" data-phase="p2" id="day8">
+                <div class="day-hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1200&auto=format&fit=crop&q=80" alt="Takayama Jinya & Folk Village" class="day-hero-img">
+                    <div class="day-hero-overlay">
+                        <div>
+                            <div class="day-header-meta">
+                                <span class="day-badge">DAY 08</span>
+                                <span class="day-date-str"><span data-lang="zh">12月03日 (周三) · 江户代官所秘辛 ➔ 飞驒之里或温泉休整</span><span data-lang="en">Wed, Dec 3 · Takayama Jinya Historical Office ➔ Folk Village or Spa</span></span>
+                            </div>
+                            <h3 class="day-hero-title">
+                                <span data-lang="zh">探索唯一现存幕府代官所、昭和怀旧街景与从容泡汤</span>
+                                <span data-lang="en">Edo Period Magistrate Secrets, Showa Nostalgia & Onsen Recharge</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-body">
+                    <div class="timeline-card">
+                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="timeline-steps">
+                            <div class="timeline-step">
+                                <span class="step-time">09:30</span>
+                                <span class="step-desc"><span data-lang="zh">参观高山阵屋，顺道在阵屋前朝市品尝当地阿婆制作的朴叶酱菜。</span><span data-lang="en">Visit Takayama Jinya and stroll the Jinya-mae morning stalls.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">11:30</span>
+                                <span class="step-desc"><span data-lang="zh">高山昭和馆：穿梭于1950年代复古昭和店铺、游戏机与杂货店。</span><span data-lang="en">Takayama Showa-kan: step into 1950s retro retro arcades and shops.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">13:00</span>
+                                <span class="step-desc"><span data-lang="zh">高山市内品尝热腾腾的飞驒牛寿喜烧锅物午餐。</span><span data-lang="en">Savory Hida beef sukiyaki hotpot lunch in town.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">14:30</span>
+                                <span class="step-desc"><span data-lang="zh"><strong>选游方案：</strong>乘猿宝宝巴士前往“飞驒之里”手作体验，或在酒店露天温泉彻底放松。</span><span data-lang="en"><strong>Choice:</strong> Sarubobo bus to Hida Folk Village or relax in hotel rooftop onsen.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">18:30</span>
+                                <span class="step-desc"><span data-lang="zh">高山老字号“飞驒琢磨”享用特色乡土会席料理。</span><span data-lang="en">Authentic regional dinner at Takayama heritage restaurant "Hida Takuma".</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-two-col">
+                        <div class="info-pill-box transport">
+                            <div class="info-box-title">🚶 <span data-lang="zh">市内交通</span><span data-lang="en">Getting Around</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh">全天以高山市内步行为主；若前往飞驒之里，可在高山浓飞巴士站搭乘“猿宝宝巴士 (Sarubobo Bus)”，约10分钟直达。</span>
+                                <span data-lang="en">Mostly on foot around Takayama center. Take the cute Sarubobo Bus (10 mins) from the bus station if visiting Hida Folk Village.</span>
+                            </div>
+                        </div>
+                        <div class="info-pill-box food">
+                            <div class="info-box-title">🍱 <span data-lang="zh">特色乡土料理</span><span data-lang="en">Cuisine Highlight</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh"><strong>飞驒琢磨 (Hida Takuma)：</strong>品尝地道炭火岩鱼盐烤、高山山菜朴叶烧与自家制浓香手工豆腐，清雅舒心。</span>
+                                <span data-lang="en"><strong>Hida Takuma:</strong> Charcoal-grilled mountain trout, wild vegetables sizzling over hoba leaf, and artisanal house-made silken tofu.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <div class="highlight-title">🏯 <span data-lang="zh">高山阵屋：日本唯一现存江户代官所</span><span data-lang="en">Highlight: Takayama Jinya</span></div>
+                        <p class="highlight-text">
+                            <span data-lang="zh">日本全国仅存的江户时代幕府直辖行政代官所。这里完好保留了古代法庭（御白洲）、巨型米仓、审讯拷问室以及代官起居官邸。配合生动的图文讲解，让孩子直观感受江户武士与平民的治理历史。</span>
+                            <span data-lang="en">The only surviving Edo-period magistrate's government office in Japan. Walk through original courtrooms, ancient interrogation chambers, vast rice granaries, and the magistrate's elegant residential quarters.</span>
+                        </p>
+                    </div>
+
+                    <div class="tips-callout">
+                        <div class="tip-icon">💡</div>
+                        <div class="tip-content">
+                            <span data-lang="zh"><strong>节奏调控建议：</strong>连续游览数天后，本日特意预留半日松弛轻节奏。下午在酒店泡泡汤、睡个午觉，为次日开启下吕名泉养精蓄锐。</span>
+                            <span data-lang="en"><strong>Pacing Advice:</strong> After several active days, this afternoon is intentionally relaxed. Take a nap or soak in the onsen to recharge for Gero tomorrow!</span>
+                        </div>
+                    </div>
+
+                    <div class="day-footer-actions">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Takayama+Jinya" target="_blank" class="map-link-btn">
+                            <span>📍</span> <span data-lang="zh">导航至高山阵屋</span><span data-lang="en">Open Takayama Jinya in Maps</span>
+                        </a>
+                        <label class="mark-visited-label">
+                            <input type="checkbox" onchange="saveDayProgress('d8', this.checked)">
+                            <span data-lang="zh">标记此日为已完成</span><span data-lang="en">Mark Day 8 Completed</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 9 -->
+            <div class="day-node" data-phase="p3" id="day9">
+                <div class="day-hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&auto=format&fit=crop&q=80" alt="Gero Onsen Ryokan" class="day-hero-img">
+                    <div class="day-hero-overlay">
+                        <div>
+                            <div class="day-header-meta">
+                                <span class="day-badge">DAY 09</span>
+                                <span class="day-date-str"><span data-lang="zh">12月04日 (周四) · 日本三大名泉私享：高山 ➔ 下吕温泉</span><span data-lang="en">Thu, Dec 4 · Top 3 Onsen Springs: Takayama ➔ Gero Onsen</span></span>
+                            </div>
+                            <h3 class="day-hero-title">
+                                <span data-lang="zh">一泊二食疗愈之夜：榻榻米家庭房与飞驒牛会席晚宴</span>
+                                <span data-lang="en">Pure Ryokan Healing: Alkaline Beauty Baths & Kaiseki Banquet</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-body">
+                    <div class="timeline-card">
+                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="timeline-steps">
+                            <div class="timeline-step">
+                                <span class="step-time">10:30</span>
+                                <span class="step-desc"><span data-lang="zh">高山酒店悠闲退房，前往高山车站。</span><span data-lang="en">Leisurely checkout in Takayama; head to Takayama Station.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">11:00</span>
+                                <span class="step-desc"><span data-lang="zh">搭乘 JR 特急飞驒号列车前往下吕（约43分钟）。</span><span data-lang="en">Board JR Ltd Exp Hida to Gero (approx. 43 mins).</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">11:45</span>
+                                <span class="step-desc"><span data-lang="zh">抵达下吕站，温泉旅馆迎宾专车接送至大堂寄存行李。</span><span data-lang="en">Arrive at Gero Station; ryokan private shuttle greets and transfers bags.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">12:30</span>
+                                <span class="step-desc"><span data-lang="zh">温泉街悠闲散步，体验路边免费足汤、品尝“温玉冰淇淋”。</span><span data-lang="en">Stroll charming onsen alleys, soak feet in warm public footbaths, try onsen-egg ice cream.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">15:00</span>
+                                <span class="step-desc"><span data-lang="zh">入住日式旅馆，换上传统浴衣，全家享受“美人之汤”初泡。</span><span data-lang="en">Check-in, wear yukata robes, enjoy afternoon soak in silky mineral springs.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">18:30</span>
+                                <span class="step-desc"><span data-lang="zh">尊享客房或专属料亭<strong>一泊二食“飞驒牛会席晚宴”</strong>。</span><span data-lang="en">Luxurious Kaiseki Dinner: sizzling Hida beef toban-yaki, sashimi & local sake.</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-two-col">
+                        <div class="info-pill-box transport">
+                            <div class="info-box-title">🚆 <span data-lang="zh">交通与接驳</span><span data-lang="en">Transit & Shuttle</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh">JR特急飞驒号（高山 ➔ 下吕，约43分钟）。抵达下吕站后，各大知名温泉旅馆均有专门穿梭小巴在出站口迎候，直达旅馆大堂。</span>
+                                <span data-lang="en">JR Ltd Exp Hida (Takayama ➔ Gero, 43 mins). Complimentary hotel shuttle buses await outside Gero Station ticket gate.</span>
+                            </div>
+                        </div>
+                        <div class="info-pill-box stay">
+                            <div class="info-box-title">♨️ <span data-lang="zh">顶级/名宿推荐 (1晚)</span><span data-lang="en">Ryokan Recommendations</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh"><strong>水明馆 (Suimeikan)</strong>（大型日式庭园、三大风格温泉浴场）、<strong>小川屋 (Ogawaya)</strong>（以100叠榻榻米浴场闻名）、或 <strong>汤之岛馆</strong>（昭和风雅文化财）。</span>
+                                <span data-lang="en"><strong>Suimeikan</strong> (classic riverside garden, 3 grand bath complexes), <strong>Ogawaya</strong> (famous 100-tatami mat hot bath), or <strong>Yunoshimakan</strong>.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <div class="highlight-title">♨️ <span data-lang="zh">名泉小知识：纯正天然“美人之汤”</span><span data-lang="en">Lore: Japan's Top 3 Springs</span></div>
+                        <p class="highlight-text">
+                            <span data-lang="zh">下吕温泉与有马温泉、草津温泉并称为“日本三名泉”。泉质为极高品质的天然弱碱性单纯泉（pH 9.1），无色无味、清澈透明，触感宛如天鹅绒般丝滑，浸润后皮肤光洁滑嫩。推荐全家体验传统<strong>“三汤节奏”</strong>：傍晚抵达泡一次、睡前泡一次、次日清晨泡一次，身心彻底唤醒！</span>
+                            <span data-lang="en">Renowned alongside Kusatsu and Arima as one of Japan's Three Great Hot Springs. Its alkaline spring water (pH 9.1) is crystal-clear with a velvety texture that leaves skin glowing. Embrace the traditional 3-soak ritual: upon arrival, before bed, and at dawn.</span>
+                        </p>
+                    </div>
+
+                    <div class="tips-callout">
+                        <div class="tip-icon">💡</div>
+                        <div class="tip-content">
+                            <span data-lang="zh"><strong>一泊二食礼仪：</strong>温泉旅馆晚宴时间通常在入住时与前台确认（建议选18:30或19:00）。会席料理道数丰富、讲究时令，全家穿上合身日式浴衣用餐，仪式感满满。</span>
+                            <span data-lang="en"><strong>Ryokan Etiquette:</strong> Confirm your Kaiseki dining time at check-in (18:30 recommended). Relax in your yukata robes for a memorable, multi-course feast!</span>
+                        </div>
+                    </div>
+
+                    <div class="day-footer-actions">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Gero+Onsen+Station" target="_blank" class="map-link-btn">
+                            <span>📍</span> <span data-lang="zh">导航至下吕温泉</span><span data-lang="en">Open Gero Onsen in Maps</span>
+                        </a>
+                        <label class="mark-visited-label">
+                            <input type="checkbox" onchange="saveDayProgress('d9', this.checked)">
+                            <span data-lang="zh">标记此日为已完成</span><span data-lang="en">Mark Day 9 Completed</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 10 -->
+            <div class="day-node" data-phase="p4" id="day10">
+                <div class="day-hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80" alt="Nagoya Sakae & Sekai no Yamachan" class="day-hero-img">
+                    <div class="day-hero-overlay">
+                        <div>
+                            <div class="day-header-meta">
+                                <span class="day-badge">DAY 10</span>
+                                <span class="day-date-str"><span data-lang="zh">12月05日 (周五) · 挥别温泉乡返回都市：下吕 ➔ 名古屋</span><span data-lang="en">Fri, Dec 5 · Return to City: Gero ➔ Nagoya Sakae District</span></span>
+                            </div>
+                            <h3 class="day-hero-title">
+                                <span data-lang="zh">取回直寄大行李，入住荣商圈与品尝“世界的山将”幻之鸡翅</span>
+                                <span data-lang="en">Reunited with Big Suitcases, Sakae Base & Famous Tebasaki Wings</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-body">
+                    <div class="timeline-card">
+                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="timeline-steps">
+                            <div class="timeline-step">
+                                <span class="step-time">09:00</span>
+                                <span class="step-desc"><span data-lang="zh">旅馆享用丰盛精致日式朝食，泡清晨醒神汤。</span><span data-lang="en">Traditional Japanese breakfast at ryokan; final morning soak.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">10:30</span>
+                                <span class="step-desc"><span data-lang="zh">悠闲退房，前往下吕合掌村或白鹭之汤河畔小憩漫步。</span><span data-lang="en">Checkout; stroll by Shirasagi-no-yu riverside before the train.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">12:15</span>
+                                <span class="step-desc"><span data-lang="zh">搭乘 JR 特急飞驒号返回名古屋（直达约1小时35分）。</span><span data-lang="en">Board JR Ltd Exp Hida direct back to Nagoya (1h 35m).</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">14:00</span>
+                                <span class="step-desc"><span data-lang="zh">抵达名古屋酒店入住，凭单向酒店前台认领 Day 5 托运的大行李箱！</span><span data-lang="en">Check-in at Nagoya hotel; reclaim your 2 big suitcases seamlessly!</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">16:00</span>
+                                <span class="step-desc"><span data-lang="zh">荣商圈百货百货初步探路，逛三越与松坂屋。</span><span data-lang="en">Explore Sakae shopping zone: Mitsukoshi & Matsuzakaya malls.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">18:30</span>
+                                <span class="step-desc"><span data-lang="zh">晚餐：“世界的山将 (世界の山ちゃん)”享用招牌香辣幻之手羽先。</span><span data-lang="en">Dinner: Sekai no Yamachan's legendary peppery crispy chicken wings.</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-two-col">
+                        <div class="info-pill-box transport">
+                            <div class="info-box-title">🚆 <span data-lang="zh">交通方式</span><span data-lang="en">Transportation</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh"><strong>JR特急飞驒号 (下吕 ➔ 名古屋)：</strong>约1小时35分直达名驿，无缝接驳市区地铁。</span>
+                                <span data-lang="en"><strong>JR Ltd Exp Hida:</strong> Direct 1h 35m train to Nagoya Station, with smooth transfer to city subway lines.</span>
+                            </div>
+                        </div>
+                        <div class="info-pill-box stay">
+                            <div class="info-box-title">🏨 <span data-lang="zh">名古屋最后3晚住宿建议</span><span data-lang="en">Nagoya Finale (3 Nights)</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh"><strong>名驿或荣商圈：</strong>如 名古屋万豪饭店、TIAD傲途格精选、三井花园饭店，或皇家花园CANVAS名古屋。</span>
+                                <span data-lang="en"><strong>Nagoya Marriott Associa</strong>, <strong>TIAD Autograph Collection</strong>, <strong>Mitsui Garden</strong>, or <strong>Royal Park CANVAS</strong>.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-pill-box food">
+                        <div class="info-box-title">🍗 <span data-lang="zh">晚餐推荐：幻之手羽先</span><span data-lang="en">Dinner: Tebasaki Chicken Wings</span></div>
+                        <div class="info-box-text">
+                            <span data-lang="zh"><strong>世界的山将 (世界の山ちゃん)：</strong>名古屋家喻户晓的平民美食代表。特调秘制胡椒粉洒在炸至焦香酥脆的鸡翅上，外酥里嫩、香气扑鼻，搭配炒面与炸串，家庭欢聚氛围极佳。</span>
+                            <span data-lang="en"><strong>Sekai no Yamachan:</strong> Nagoya's iconic chicken wings dusted with fragrant black pepper and secret spices. Crispy, addictive, and perfect for family fun.</span>
+                        </div>
+                    </div>
+
+                    <div class="tips-callout">
+                        <div class="tip-icon">💡</div>
+                        <div class="tip-content">
+                            <span data-lang="zh"><strong>行李无缝交接：</strong>下午在名古屋酒店办理入住时，直接向前台出示Day 5保存的黑猫宅急便提单号。大箱子早已稳稳放在酒店行李房，开箱换洗衣物毫不耽搁！</span>
+                            <span data-lang="en"><strong>Seamless Luggage Pickup:</strong> Present your Yamato receipt at check-in. Your suitcases will be waiting safely in the hotel storeroom!</span>
+                        </div>
+                    </div>
+
+                    <div class="day-footer-actions">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Sekai+no+Yamachan+Sakae" target="_blank" class="map-link-btn">
+                            <span>📍</span> <span data-lang="zh">导航至世界的山将</span><span data-lang="en">Open Sekai no Yamachan in Maps</span>
+                        </a>
+                        <label class="mark-visited-label">
+                            <input type="checkbox" onchange="saveDayProgress('d10', this.checked)">
+                            <span data-lang="zh">标记此日为已完成</span><span data-lang="en">Mark Day 10 Completed</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 11 -->
+            <div class="day-node" data-phase="p4" id="day11">
+                <div class="day-hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&auto=format&fit=crop&q=80" alt="Osu Shopping District" class="day-hero-img">
+                    <div class="day-hero-overlay">
+                        <div>
+                            <div class="day-header-meta">
+                                <span class="day-badge">DAY 11</span>
+                                <span class="day-date-str"><span data-lang="zh">12月06日 (周六) · 潮流市井与二次元宝库：大须商店街</span><span data-lang="en">Sat, Dec 6 · Osu Arcade: Pop Culture, Anime & Vintage Retro</span></span>
+                            </div>
+                            <h3 class="day-hero-title">
+                                <span data-lang="zh">大须观音参拜、Mandarake与骏河屋淘手办、街头美食集锦</span>
+                                <span data-lang="en">Osu Kannon Temple, Mandarake Treasure Hunt & Street Snacks</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-body">
+                    <div class="timeline-card">
+                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="timeline-steps">
+                            <div class="timeline-step">
+                                <span class="step-time">10:00</span>
+                                <span class="step-desc"><span data-lang="zh">搭乘地铁前往大须商业街区。</span><span data-lang="en">Subway ride to Osu commercial district.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">10:30</span>
+                                <span class="step-desc"><span data-lang="zh">大须观音寺参拜祈福，广场上与白鸽合影。</span><span data-lang="en">Visit Osu Kannon Temple; feed pigeons in the temple courtyard.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">11:00</span>
+                                <span class="step-desc"><span data-lang="zh">大须万松寺通、仁王门通漫步，淘动漫模型手办、中古相机电器。</span><span data-lang="en">Explore covered arcades: Mandarake, Surugaya, retro gaming & vintage shops.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">13:00</span>
+                                <span class="step-desc"><span data-lang="zh">大须街头边走边吃：李先生香辣鸡排、银章鱼烧、新垣烤包子。</span><span data-lang="en">Street food crawl: Lee's fried chicken cutlet, Gindaco takoyaki, steamed buns.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">17:30</span>
+                                <span class="step-desc"><span data-lang="zh">白川公园漫步，仰望名古屋市科学馆世界最大的巨型天象仪球体。</span><span data-lang="en">Shirakawa Park; admire the world's largest planetarium sphere exterior.</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-two-col">
+                        <div class="info-pill-box transport">
+                            <div class="info-box-title">🚇 <span data-lang="zh">交通方式</span><span data-lang="en">Transit</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh">地铁鹤舞线至“大须观音站”2号出口；或乘名城线至“上前津站”，两站之间即为全长超过1700米的巨型连通拱顶步行街，雨雪无忧。</span>
+                                <span data-lang="en">Subway Tsurumai Line to "Osu Kannon" (Exit 2) or Meijo Line to "Kamimaezu". The entire 1,700m weather-proof covered arcade connects both.</span>
+                            </div>
+                        </div>
+                        <div class="info-pill-box food">
+                            <div class="info-box-title">🥟 <span data-lang="zh">大须必尝小吃</span><span data-lang="en">Street Treats</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh">“李先生的台湾名物屋台”台式超大多汁炸鸡排、“银章鱼烧”现做爆浆章鱼丸子、“大须文之助茶屋”浓郁抹茶白玉甜品。</span>
+                                <span data-lang="en">Lee's Taiwanese giant fried chicken steak, Gindaco sizzling takoyaki balls, and Osu Fuminosuke Chaya matcha shiratama sundae.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <div class="highlight-title">🛍️ <span data-lang="zh">探索亮点：二次元与中古宝库</span><span data-lang="en">Highlight: Osu Anime & Vintage</span></div>
+                        <p class="highlight-text">
+                            <span data-lang="zh">大须商店街拥有400余年历史，是将传统寺社与现代流行文化完美融合的神奇街区。聚集了<strong>Mandarake (まんだらけ)</strong>（动漫模型与漫画神殿）、<strong>Surugaya (骏河屋)</strong>（二手绝版玩具游戏王国）以及 <strong>Komehyo (米兵)</strong>（日本最大规模二手奢品、手表与中古相机总店）。</span>
+                            <span data-lang="en">A vibrant 400-year-old covered arcade merging Edo roots with modern subculture. Highlights include <strong>Mandarake</strong> (anime and manga holy ground), <strong>Surugaya</strong> (retro video games & rare figures), and <strong>Komehyo</strong> (flagship luxury watch, camera & fashion department).</span>
+                        </p>
+                    </div>
+
+                    <div class="tips-callout">
+                        <div class="tip-icon">💡</div>
+                        <div class="tip-content">
+                            <span data-lang="zh"><strong>淘货指南：</strong>大须多数中古手办店品相极佳且支持即时免税（记得随身携带护照）。若家里孩子或大人喜欢宝可梦、高达、海贼王，这里能逛足大半天！</span>
+                            <span data-lang="en"><strong>Shopping Advice:</strong> Most anime hobby shops offer on-the-spot tax-free processing with your passport. Perfect for Pokemon, Gundam, and One Piece fans!</span>
+                        </div>
+                    </div>
+
+                    <div class="day-footer-actions">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Osu+Shopping+District+Nagoya" target="_blank" class="map-link-btn">
+                            <span>📍</span> <span data-lang="zh">导航至大须商店街</span><span data-lang="en">Open Osu Shopping District in Maps</span>
+                        </a>
+                        <label class="mark-visited-label">
+                            <input type="checkbox" onchange="saveDayProgress('d11', this.checked)">
+                            <span data-lang="zh">标记此日为已完成</span><span data-lang="en">Mark Day 11 Completed</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 12 -->
+            <div class="day-node" data-phase="p4" id="day12">
+                <div class="day-hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1528164344705-475426879c0d?w=1200&auto=format&fit=crop&q=80" alt="Atsuta Jingu & Matsuzakaya" class="day-hero-img">
+                    <div class="day-hero-overlay">
+                        <div>
+                            <div class="day-header-meta">
+                                <span class="day-badge">DAY 12</span>
+                                <span class="day-date-str"><span data-lang="zh">12月07日 (周日) · 城市绿洲与战利品大采购：热田神宫 ➔ 荣/名驿百货</span><span data-lang="en">Sun, Dec 7 · Sacred Cedar Groves & Grand Finale Shopping</span></span>
+                            </div>
+                            <h3 class="day-hero-title">
+                                <span data-lang="zh">参拜三大神社古杉林道、免税全采购与飞驒牛庆功告别宴</span>
+                                <span data-lang="en">Atsuta Shrine Swords, Tax-Free Haul & Bakuro Ichidai Celebration Feast</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-body">
+                    <div class="timeline-card">
+                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="timeline-steps">
+                            <div class="timeline-step">
+                                <span class="step-time">09:30</span>
+                                <span class="step-desc"><span data-lang="zh">名铁列车直达“神宫前站”，漫步参拜三大神社之一的热田神宫。</span><span data-lang="en">Train to Jingu-mae Station; serene walk beneath millennia-old cedars at Atsuta.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">11:30</span>
+                                <span class="step-desc"><span data-lang="zh">参观神宫内“草薙馆”，近距离欣赏日本国宝级古代名刀与太刀。</span><span data-lang="en">Visit Kusanagi-kan inside shrine grounds to view historic Japanese swords.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">12:30</span>
+                                <span class="step-desc"><span data-lang="zh">神宫森林庭园内享用名古屋名物“宫棊子面 (Miya Kishimen)”。</span><span data-lang="en">Lunch inside the shrine gardens: silky flat udon noodles (Miya Kishimen).</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">14:00</span>
+                                <span class="step-desc"><span data-lang="zh">松坂屋、高岛屋或名驿电器街展开终极大扫货，选购伴手礼与药妆。</span><span data-lang="en">Finale shopping spree at Matsuzakaya, Takashimaya, Bic Camera, cosmetics.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">19:00</span>
+                                <span class="step-desc"><span data-lang="zh"><strong>家庭庆功告别晚宴：</strong>飞驒牛一头家 (马喰一代) 顶级炭火烤肉。</span><span data-lang="en"><strong>Celebration Farewell Dinner:</strong> Hida Gyu Ittouya Bakuro Ichidai (charcoal A5 feast).</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-two-col">
+                        <div class="info-pill-box transport">
+                            <div class="info-box-title">🚇 <span data-lang="zh">交通方式</span><span data-lang="en">Transit Route</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh">名铁名古屋本线至“神宫前站”，步行3分钟即达热田神宫；下午搭乘地铁名城线返回荣商圈或名驿。</span>
+                                <span data-lang="en">Meitetsu Line to Jingu-mae Station (3 min walk to Atsuta Shrine). Afternoon: Meijo subway line to Sakae / Meieki.</span>
+                            </div>
+                        </div>
+                        <div class="info-pill-box food">
+                            <div class="info-box-title">🎁 <span data-lang="zh">必买名品伴手礼</span><span data-lang="en">Must-Buy Souvenirs</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh">坂角总本铺“海老仙贝”香脆鲜虾饼、青柳总本家青蛙馒头、两口屋是清日式和果子、小仓红豆吐司抹酱、松本清家庭常备药妆。</span>
+                                <span data-lang="en">Bankaku Ebi Senbei shrimp crackers, Aoyagi frog manju cakes, Ryoguchiya Korekiyo wagashi, Ogura red bean spread jars.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <div class="highlight-title">🥩 <span data-lang="zh">告别盛宴：飞驒牛一头家 (马喰一代) 名古屋西口店</span><span data-lang="en">Highlight: Bakuro Ichidai Feast</span></div>
+                        <p class="highlight-text">
+                            <span data-lang="zh">特选一整头飞驒牛的高级料亭。招牌顶级炭火烧肉拼盘囊括特上牛肋条、稀少雪花霜降部位以及厚切牛舌，肉香四溢；亦可选择温润鲜美的飞驒牛涮涮锅（Shabu-Shabu），为全家整趟日本中部之旅画上完美句号。</span>
+                            <span data-lang="en">The ultimate celebratory restaurant specializing in whole-cow A5 Hida beef. Premium charcoal-grilled cuts of marbled sirloin, rare short ribs, and thick-cut tongue, or exquisite shabu-shabu fondue to conclude your trip.</span>
+                        </p>
+                    </div>
+
+                    <div class="tips-callout">
+                        <div class="tip-icon">💡</div>
+                        <div class="tip-content">
+                            <span data-lang="zh"><strong>打包整理：</strong>今晚将所有采购战利品分门别类装箱，液体化妆品、小刀剪类务必放入托运行李箱；护照、随身移动电源与贵重物品放入随身背包。</span>
+                            <span data-lang="en"><strong>Packing Reminder:</strong> Pack all liquids and creams over 100ml into checked baggage. Keep portable power banks and passports in your personal carry-on.</span>
+                        </div>
+                    </div>
+
+                    <div class="day-footer-actions">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Atsuta+Jingu+Nagoya" target="_blank" class="map-link-btn">
+                            <span>📍</span> <span data-lang="zh">导航至热田神宫</span><span data-lang="en">Open Atsuta Shrine in Maps</span>
+                        </a>
+                        <label class="mark-visited-label">
+                            <input type="checkbox" onchange="saveDayProgress('d12', this.checked)">
+                            <span data-lang="zh">标记此日为已完成</span><span data-lang="en">Mark Day 12 Completed</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 13 -->
+            <div class="day-node" data-phase="p4" id="day13">
+                <div class="day-hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&auto=format&fit=crop&q=80" alt="Chubu Centrair Airport & Boeing 787" class="day-hero-img">
+                    <div class="day-hero-overlay">
+                        <div>
+                            <div class="day-header-meta">
+                                <span class="day-badge">DAY 13</span>
+                                <span class="day-date-str"><span data-lang="zh">12月08日 (周一) · 满载回忆完满返程：名古屋 ➔ 中部机场 ➔ 温馨的家</span><span data-lang="en">Mon, Dec 8 · Homeward Bound: Nagoya ➔ Centrair Airport ➔ Sweet Home</span></span>
+                            </div>
+                            <h3 class="day-hero-title">
+                                <span data-lang="zh">老牌喫茶店小仓吐司早餐、波音787近距离打卡与免税扫货</span>
+                                <span data-lang="en">Classic Komeda Toast, Flight of Dreams Boeing 787 & Fly Home</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-body">
+                    <div class="timeline-card">
+                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="timeline-steps">
+                            <div class="timeline-step">
+                                <span class="step-time">09:00</span>
+                                <span class="step-desc"><span data-lang="zh">名古屋老牌喫茶店（Komeda珈琲）享用特色早餐小仓红豆吐司配水煮蛋。</span><span data-lang="en">Breakfast at heritage cafe (Komeda's Coffee): warm Ogura red-bean toast.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">10:30</span>
+                                <span class="step-desc"><span data-lang="zh">酒店办理退房，步行至名铁名古屋站。</span><span data-lang="en">Hotel checkout; walk to Meitetsu Nagoya Station.</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">11:00</span>
+                                <span class="step-desc"><span data-lang="zh">搭乘名铁特急 μ-SKY 前往中部国际机场（28分钟直达）。</span><span data-lang="en">Board Meitetsu μ-SKY express to Centrair Airport (28 mins).</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">12:00</span>
+                                <span class="step-desc"><span data-lang="zh">机场观景台看飞机起降，游览 FLIGHT OF DREAMS（波音787初号机乐园）。</span><span data-lang="en">Airport Sky Deck & FLIGHT OF DREAMS: view the actual Boeing 787 prototype!</span></span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-time">14:30</span>
+                                <span class="step-desc"><span data-lang="zh">办理托运与出境，机场免税店最后补货，登机起飞返回温馨的家！</span><span data-lang="en">Check-in, security, tax-free souvenir shop, board flight back home!</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-two-col">
+                        <div class="info-pill-box transport">
+                            <div class="info-box-title">🚆 <span data-lang="zh">特急交通</span><span data-lang="en">Airport Train</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh"><strong>名铁特急 μ-SKY：</strong>名铁名古屋 ➔ 中部国际空港，仅需28分钟直达，全车指定席舒适安稳。</span>
+                                <span data-lang="en"><strong>Meitetsu μ-SKY:</strong> Direct 28-minute comfortable airport link with guaranteed reserved seating.</span>
+                            </div>
+                        </div>
+                        <div class="info-pill-box food">
+                            <div class="info-box-title">✈️ <span data-lang="zh">机场免税补货推荐</span><span data-lang="en">Duty-Free Favorites</span></div>
+                            <div class="info-box-text">
+                                <span data-lang="zh">入关后在免税店直接购买白色恋人饼干、Royce生巧克力、伊势赤福饼与东京香蕉蛋糕，不占用托运行李重量。</span>
+                                <span data-lang="en">Pick up Shiroi Koibito, Royce raw chocolate, Ise Akafuku mochi, and Tokyo Banana after security gates.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <div class="highlight-title">✈️ <span data-lang="zh">机场亮点：FLIGHT OF DREAMS 波音787乐园</span><span data-lang="en">Highlight: FLIGHT OF DREAMS</span></div>
+                        <p class="highlight-text">
+                            <span data-lang="zh">中部国际机场是全日本最好玩好逛的机场之一！FLIGHT OF DREAMS 展区在室内完整陈列了真正的波音787客机第一架试飞原型机（ZA001）。机翼下方建有浓郁西雅图风情的餐饮商业街，不仅可以近距离仰望这架工业巨兽，更是全家极佳的打卡合影地。</span>
+                            <span data-lang="en">Centrair is consistently voted among the world's most fun airports. "FLIGHT OF DREAMS" houses the real Boeing 787 prototype (ZA001) indoors. Dine in a Seattle-themed marketplace beneath its wings—a fantastic finale for aviation fans and kids!</span>
+                        </p>
+                    </div>
+
+                    <div class="tips-callout">
+                        <div class="tip-icon">💡</div>
+                        <div class="tip-content">
+                            <span data-lang="zh"><strong>告别寄语：</strong>13天12晚日本中部家庭之旅圆满达成！兼具山水自然、古城名迹、顶级温泉与都会科技，留下一生难忘的亲子温馨回忆。</span>
+                            <span data-lang="en"><strong>Safe Travels:</strong> A 13-day journey blending alpine wonder, feudal heritage, healing hot springs, and modern innovation. Cherished memories for a lifetime!</span>
+                        </div>
+                    </div>
+
+                    <div class="day-footer-actions">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Chubu+Centrair+International+Airport" target="_blank" class="map-link-btn">
+                            <span>📍</span> <span data-lang="zh">在 Google 地图查看中部国际机场</span><span data-lang="en">Open Centrair Airport in Maps</span>
+                        </a>
+                        <label class="mark-visited-label">
+                            <input type="checkbox" onchange="saveDayProgress('d13', this.checked)">
+                            <span data-lang="zh">标记此日为已完成</span><span data-lang="en">Mark Day 13 Completed</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Packing & Gear Checklist Section -->
+        <section id="gear" class="gear-section">
+            <div class="section-header" style="margin-bottom: 1.5rem;">
+                <span class="section-tag"><span data-lang="zh">随身装备速查</span><span data-lang="en">Gear & Packing Checklist</span></span>
+                <h2 class="section-title">
+                    <span data-lang="zh">家庭出行装备与应急实用速查表</span>
+                    <span data-lang="en">Family Packing & Emergency Checklist</span>
                 </h2>
-                <div class="logistics">
-                    <p data-lang="en"><strong>Morning:</strong> Kinkaku-ji.<br><strong>Afternoon:</strong> Nishiki Market & Manga Museum.</p>
-                    <p data-lang="zh"><strong>早上:</strong> 金阁寺。<br><strong>下午:</strong> 锦市场（吃货天堂）与漫画博物馆。</p>
-                </div>
-                <p class="desc-text">
-                    <span data-lang="en">See the gold-leaf pavilion reflected in the water. Grab street food at Nishiki Market and read from 300,000 manga at the museum.</span>
-                    <span data-lang="zh">欣赏水中倒映的金色楼阁。在锦市场品尝街头美食，并在漫画博物馆阅读三十万册馆藏。</span>
+                <p class="section-desc">
+                    <span data-lang="zh">初冬高原山区温差大，防寒、防滑与通讯支付是三大关键保障。可直接在此打勾备忘（数据自动保存在本机）。</span>
+                    <span data-lang="en">Early winter mountain weather requires smart layering and non-slip boots. Check off items as you pack!</span>
                 </p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Kyoto+International+Manga+Museum" class="map-btn" target="_blank">📍 Open in Google Maps</a>
             </div>
-        </div>
 
-        <!-- Day 6 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/osaka,castle" alt="Osaka Castle">
-                <img src="https://loremflickr.com/400/300/dotonbori" alt="Dotonbori">
-                <img src="https://loremflickr.com/400/300/amerikamura" alt="Amemura">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 06</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Castle & Neon Lights</span>
-                    <span data-lang="zh">城堡与霓虹美食</span>
-                </h2>
-                <div class="logistics">
-                    <p data-lang="en"><strong>Transfer:</strong> Kyoto → Osaka via JR Special Rapid (30m).<br><strong>Stay:</strong> Namba area.</p>
-                    <p data-lang="zh"><strong>转移:</strong> 京都 → 大阪 乘坐JR新快速 (30分钟)。<br><strong>入住:</strong> 难波区域。</p>
+            <div class="gear-grid">
+                <!-- Clothing & Winter -->
+                <div class="gear-category">
+                    <h3 class="gear-cat-title">
+                        <span>🧥</span>
+                        <span data-lang="zh">衣着与高地防寒</span>
+                        <span data-lang="en">Clothing & Cold Protection</span>
+                    </h3>
+                    <ul class="gear-list">
+                        <li class="gear-item">
+                            <input type="checkbox" id="g1" class="gear-checkbox" onchange="saveChecklist('g1', this.checked)">
+                            <label for="g1">
+                                <span data-lang="zh"><strong>分层叠穿：</strong>发热保暖内衣 + 抓绒/针织衫 + 防风防泼水轻羽绒外套（早晚温差达10℃以上）。</span>
+                                <span data-lang="en"><strong>Layering:</strong> Thermal innerwear + fleece/wool knit + windproof waterproof down jacket (10°C+ daily swing).</span>
+                            </label>
+                        </li>
+                        <li class="gear-item">
+                            <input type="checkbox" id="g2" class="gear-checkbox" onchange="saveChecklist('g2', this.checked)">
+                            <label for="g2">
+                                <span data-lang="zh"><strong>防滑保暖鞋：</strong>白川乡与高山12月初路面易湿滑冰冷，需备防滑底雪地靴或厚底登山鞋。</span>
+                                <span data-lang="en"><strong>Non-slip Footwear:</strong> Deep-tread waterproof snow boots or hiking sneakers for icy village paths.</span>
+                            </label>
+                        </li>
+                        <li class="gear-item">
+                            <input type="checkbox" id="g3" class="gear-checkbox" onchange="saveChecklist('g3', this.checked)">
+                            <label for="g3">
+                                <span data-lang="zh"><strong>保暖配件：</strong>羊毛针织帽、围巾、触屏保暖手套及足底暖宝宝贴片。</span>
+                                <span data-lang="en"><strong>Winter Accessories:</strong> Wool beanies, warm scarves, touchscreen gloves, adhesive foot warmers.</span>
+                            </label>
+                        </li>
+                    </ul>
                 </div>
-                <p class="desc-text">
-                    <span data-lang="en">Tour Osaka Castle, explore the quirky shops of Amerikamura, and eat your way through Dotonbori's neon food stalls.</span>
-                    <span data-lang="zh">参观大阪城，探索美利坚村的奇特商店，并在霓虹闪烁的道顿堀开启美食之旅。</span>
-                </p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Dotonbori+Osaka" class="map-btn" target="_blank">📍 Open in Google Maps</a>
-            </div>
-        </div>
 
-        <!-- Day 7 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/usj,nintendo" alt="USJ">
-                <img src="https://loremflickr.com/400/300/mario,kart" alt="Mario">
-                <img src="https://loremflickr.com/400/300/harry,potter" alt="Potter">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 07</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Universal Studios Japan</span>
-                    <span data-lang="zh">日本环球影城</span>
-                </h2>
-                <div class="logistics">
-                    <p data-lang="en"><strong>Pro Tip:</strong> Buy Express Passes 2 months early!<br><strong>Highlights:</strong> Nintendo World & Harry Potter.</p>
-                    <p data-lang="zh"><strong>提示:</strong> 提前2个月购买快速通行证！<br><strong>亮点:</strong> 任天堂世界与哈利波特。</p>
+                <!-- Connectivity & Payment -->
+                <div class="gear-category">
+                    <h3 class="gear-cat-title">
+                        <span>📱</span>
+                        <span data-lang="zh">电子、支付与通讯</span>
+                        <span data-lang="en">Tech & Payment Essentials</span>
+                    </h3>
+                    <ul class="gear-list">
+                        <li class="gear-item">
+                            <input type="checkbox" id="g4" class="gear-checkbox" onchange="saveChecklist('g4', this.checked)">
+                            <label for="g4">
+                                <span data-lang="zh"><strong>随身Wi-Fi / 日本eSIM：</strong>每台大人手机开通无缝高速网络，备老街走散联系、查列车与翻译。</span>
+                                <span data-lang="en"><strong>Pocket Wi-Fi / Japan eSIM:</strong> High-speed data on all phones for navigation, train schedules and translation.</span>
+                            </label>
+                        </li>
+                        <li class="gear-item">
+                            <input type="checkbox" id="g5" class="gear-checkbox" onchange="saveChecklist('g5', this.checked)">
+                            <label for="g5">
+                                <span data-lang="zh"><strong>交通卡 (Suica / ICOCA)：</strong>绑定至手机 Apple Wallet，市内地铁与便利店随刷随付。</span>
+                                <span data-lang="en"><strong>Transit Card (Suica/ICOCA):</strong> Loaded into Apple Wallet for subways, convenience stores and vending machines.</span>
+                            </label>
+                        </li>
+                        <li class="gear-item">
+                            <input type="checkbox" id="g6" class="gear-checkbox" onchange="saveChecklist('g6', this.checked)">
+                            <label for="g6">
+                                <span data-lang="zh"><strong>日元现钞准备：</strong>准备5-8万日元现金（高山朝市、老街小摊与神社洗钱投币仅收现金）。</span>
+                                <span data-lang="en"><strong>Cash in Yen:</strong> 50,000–80,000 JPY in cash for morning markets, temple coin offerings and small food stalls.</span>
+                            </label>
+                        </li>
+                    </ul>
                 </div>
-                <p class="desc-text">
-                    <span data-lang="en">A high-energy day of rides. Race in Mario Kart and explore Hogwarts Castle. A top priority for the boys.</span>
-                    <span data-lang="zh">充满活力的一天。在马里奥赛车中竞速，探索霍格沃茨城堡。男孩们的首选。</span>
-                </p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan" class="map-btn" target="_blank">📍 Open in Google Maps</a>
             </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html" data-lang="zh">旅行主页</a><a href="index.html" data-lang="en">Home Portal</a>
+                <a href="#strategy" data-lang="zh">行程策略</a><a href="#strategy" data-lang="en">Strategy</a>
+                <a href="#bookings" data-lang="zh">预约清单</a><a href="#bookings" data-lang="en">Bookings</a>
+                <a href="#itinerary" data-lang="zh">完整13天游程</a><a href="#itinerary" data-lang="en">13-Day Itinerary</a>
+                <a href="#gear" data-lang="zh">行前备忘</a><a href="#gear" data-lang="en">Packing List</a>
+                <a href="docs/japan_family_travel_handbook.pdf" target="_blank" data-lang="zh">查看原版 PDF</a><a href="docs/japan_family_travel_handbook.pdf" target="_blank" data-lang="en">Original PDF</a>
+            </div>
+            <p class="footer-copy">
+                &copy; 2026 Family Trip Portal · 日本中部 13天12晚 舒心家庭度假手册 (11.26 - 12.08)
+            </p>
         </div>
+    </footer>
 
-        <!-- Day 8 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/kaiyukan" alt="Aquarium">
-                <img src="https://loremflickr.com/400/300/umeda,sky" alt="Sky Building">
-                <img src="https://loremflickr.com/400/300/ferris,wheel" alt="Wheel">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 08</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Whale Sharks & Sky Views</span>
-                    <span data-lang="zh">鲸鲨与天空之镜</span>
-                </h2>
-                <div class="logistics">
-                    <p data-lang="en"><strong>Morning:</strong> Osaka Aquarium Kaiyukan.<br><strong>Evening:</strong> Umeda Sky Building Sunset.</p>
-                    <p data-lang="zh"><strong>早上:</strong> 大阪海游馆。<br><strong>晚上:</strong> 梅田蓝天大厦赏日落。</p>
-                </div>
-                <p class="desc-text">
-                    <span data-lang="en">See the whale sharks at one of the world's largest aquariums, then enjoy 360-degree sunset views from the Floating Garden.</span>
-                    <span data-lang="zh">在世界最大的水族馆之一观赏鲸鲨，随后在空中庭园享受360度日落美景。</span>
-                </p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Osaka+Aquarium+Kaiyukan" class="map-btn" target="_blank">📍 Open in Google Maps</a>
-            </div>
-        </div>
-
-        <!-- Day 9 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/minoo,falls" alt="Minoo">
-                <img src="https://loremflickr.com/400/300/dendentown" alt="Anime Shop">
-                <img src="https://loremflickr.com/400/300/shinsekai" alt="Shinsekai">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 09</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Nature Hike & Gaming</span>
-                    <span data-lang="zh">自然远足与电竞购物</span>
-                </h2>
-                <div class="logistics">
-                    <p data-lang="en"><strong>Morning:</strong> Minoo Falls Hike (45m).<br><strong>Afternoon:</strong> Den Den Town (Gaming Hub).</p>
-                    <p data-lang="zh"><strong>早上:</strong> 箕面瀑布远足 (45分钟)。<br><strong>下午:</strong> 电电城（动漫游戏天堂）。</p>
-                </div>
-                <p class="desc-text">
-                    <span data-lang="en">Walk to a stunning waterfall and try deep-fried maple leaves. Spend the final budget at Den Den Town's electronics and figure shops.</span>
-                    <span data-lang="zh">步行至壮观的瀑布并尝试炸枫叶。在电电城的电子产品和手办店动用最后的预算。</span>
-                </p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Minoh+Falls" class="map-btn" target="_blank">📍 Open in Google Maps</a>
-            </div>
-        </div>
-
-        <!-- Day 10 -->
-        <div class="day-node">
-            <div class="node-images">
-                <img src="https://loremflickr.com/600/800/cup,noodle,museum" alt="Cup Noodle">
-                <img src="https://loremflickr.com/400/300/donki" alt="Donki">
-                <img src="https://loremflickr.com/400/300/airport" alt="KIX">
-            </div>
-            <div class="node-content">
-                <span class="day-label">Day 10</span>
-                <h2 class="node-title">
-                    <span data-lang="en">Custom Ramen & Farewell</span>
-                    <span data-lang="zh">定制拉面与告别</span>
-                </h2>
-                <div class="logistics">
-                    <p data-lang="en"><strong>Morning:</strong> Cup Noodle Museum (Ikeda).<br><strong>Afternoon:</strong> Last shop at Don Quijote.</p>
-                    <p data-lang="zh"><strong>早上:</strong> 合味道纪念馆 (池田)。<br><strong>下午:</strong> 唐吉诃德最后扫货。</p>
-                </div>
-                <p class="desc-text">
-                    <span data-lang="en">Design your own cup of noodles as a souvenir. Finish with some last-minute gift shopping before heading to KIX for departure.</span>
-                    <span data-lang="zh">亲手设计一杯属于自己的合味道作为纪念。在前往关西机场之前完成最后的伴手礼采购。</span>
-                </p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Cup+Noodles+Museum+Osaka+Ikeda" class="map-btn" target="_blank">📍 Open in Google Maps</a>
-            </div>
-        </div>
-
-        <footer>
-            <p data-lang="en">&copy; 2026 Family Trip Planner - Full Japan Itinerary</p>
-            <p data-lang="zh">&copy; 2026 家庭旅行计划 - 日本完整指南</p>
-        </footer>
-    </div>
-
+    <!-- Interactive Script -->
     <script>
-        function setLang(lang) {
+        // Language system
+        function setLanguage(lang) {
             document.body.className = 'lang-' + lang;
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.innerText.toLowerCase() === lang);
+            document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            localStorage.setItem('family_japan_lang', lang);
+        }
+
+        // Initialize language
+        const savedLang = localStorage.getItem('family_japan_lang') || 'zh';
+        setLanguage(savedLang);
+
+        // Day Filtering
+        function filterDays(phase) {
+            const nodes = document.querySelectorAll('.day-node');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.closest('.filter-btn').classList.add('active');
+
+            nodes.forEach(node => {
+                if (phase === 'all' || node.getAttribute('data-phase') === phase) {
+                    node.style.display = 'block';
+                } else {
+                    node.style.display = 'none';
+                }
             });
         }
+
+        // Checklist persistence
+        function saveChecklist(id, checked) {
+            localStorage.setItem('family_gear_' + id, checked ? 'true' : 'false');
+        }
+
+        function saveDayProgress(dayId, checked) {
+            localStorage.setItem('family_day_' + dayId, checked ? 'true' : 'false');
+        }
+
+        // Load saved state
+        window.addEventListener('DOMContentLoaded', () => {
+            ['g1', 'g2', 'g3', 'g4', 'g5', 'g6'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el && localStorage.getItem('family_gear_' + id) === 'true') {
+                    el.checked = true;
+                }
+            });
+
+            for (let i = 1; i <= 13; i++) {
+                const checked = localStorage.getItem('family_day_d' + i) === 'true';
+                const dayNode = document.getElementById('day' + i);
+                if (dayNode) {
+                    const cb = dayNode.querySelector('input[type="checkbox"]');
+                    if (cb && checked) cb.checked = true;
+                }
+            }
+        });
     </script>
 </body>
 </html>
