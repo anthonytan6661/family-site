@@ -38,6 +38,7 @@
 ## 💻 网页特性 (Web Features)
 
 - **中英双语即时切换 (Bilingual Toggle)**：支持全站中/英文一键切换，并记住用户偏好。
+- **家庭精选酒店与洗衣机指南 (Hotels & Laundry Guide)**：深度核验各阶段房内独立洗烘机、投币洗衣房、4人房型与价格预估。
 - **分阶段快速筛选 (Phase Filtering)**：阶段一至阶段四快速定位。
 - **Google 地图一键导航 (Direct Navigation)**：每个每日行程均配有一键直达 Google Maps 链接。
 - **交互式装备清单与打卡打钩 (Local Storage)**：随身装备、防滑防寒鞋履、通讯支付速查表支持本地勾选记忆。
@@ -51,6 +52,7 @@
 family-site/
 ├── docs/
 │   └── japan_family_travel_handbook.pdf  # 完整 6 页原版家庭度假手册 PDF
+├── hotels.html                          # 家庭精选住宿与洗衣指南 (含房内洗烘机核验、价格与对比表)
 ├── index.html                           # 站点主页 (日本中部 13天12晚 完整度假网页)
 ├── japan-trip.html                      # 日本行程镜像页
 ├── push_update.ps1                      # 自动化 Git 暂存与推送脚本
