@@ -1171,6 +1171,228 @@
             .strategy-banner { padding: 1.8rem 1.2rem; }
             .gear-section { padding: 2rem 1.2rem; }
         }
+    
+        /* Budget & Cost Breakdown Section */
+        #budget {
+            margin-bottom: 3.5rem;
+        }
+
+        .budget-cur-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            background: #f8fafc;
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-md);
+            padding: 0.85rem 1.25rem;
+        }
+
+        .cur-toggle-group {
+            display: flex;
+            gap: 0.4rem;
+            background: #e2e8f0;
+            padding: 0.25rem;
+            border-radius: 999px;
+        }
+
+        .budget-cur-btn {
+            background: transparent;
+            border: none;
+            padding: 0.35rem 0.85rem;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            color: #475569;
+            transition: all 0.2s;
+        }
+
+        .budget-cur-btn.active {
+            background: #059669;
+            color: #ffffff;
+            box-shadow: 0 2px 6px rgba(5, 150, 105, 0.3);
+        }
+
+        .budget-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .budget-stat-card {
+            background: #ffffff;
+            border: 1.5px solid var(--card-border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .budget-stat-card.primary {
+            background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+            border-color: #a7f3d0;
+        }
+
+        .budget-stat-card.accent {
+            background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%);
+            border-color: #bfdbfe;
+        }
+
+        .budget-stat-label {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.35rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .budget-stat-val {
+            font-size: 1.65rem;
+            font-weight: 800;
+            color: #0f172a;
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.25rem;
+        }
+
+        .budget-stat-card.primary .budget-stat-val {
+            color: #065f46;
+        }
+
+        .budget-stat-desc {
+            font-size: 0.78rem;
+            color: #64748b;
+            line-height: 1.4;
+        }
+
+        /* Budget Matrix Table */
+        .budget-table-wrap {
+            overflow-x: auto;
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-md);
+            background: #ffffff;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 2rem;
+        }
+
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            text-align: left;
+        }
+
+        .budget-table th {
+            background: #f8fafc;
+            color: #334155;
+            font-weight: 800;
+            padding: 0.9rem 1.1rem;
+            border-bottom: 2px solid #e2e8f0;
+            font-size: 0.82rem;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+
+        .budget-table td {
+            padding: 1rem 1.1rem;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+            vertical-align: top;
+        }
+
+        .budget-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .budget-table tr.total-row td {
+            background: #f0fdf4;
+            font-weight: 800;
+            color: #065f46;
+            border-top: 2px solid #a7f3d0;
+            font-size: 0.98rem;
+        }
+
+        .budget-table tr.flight-row td {
+            background: #fafafa;
+            color: #475569;
+        }
+
+        .budget-tag {
+            display: inline-block;
+            padding: 0.2rem 0.55rem;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            background: #f1f5f9;
+            color: #475569;
+            margin-top: 0.25rem;
+        }
+
+        .budget-tag.save {
+            background: #dcfce7;
+            color: #15803d;
+        }
+
+        /* Official Ticket Action Buttons */
+        .ticket-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            background: #0284c7;
+            color: #ffffff !important;
+            padding: 0.5rem 0.95rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 700;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 2px 5px rgba(2, 132, 199, 0.25);
+            margin-top: 0.5rem;
+        }
+
+        .ticket-btn:hover {
+            background: #0369a1;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(2, 132, 199, 0.35);
+        }
+
+        .ticket-btn.green {
+            background: #059669;
+            box-shadow: 0 2px 5px rgba(5, 150, 105, 0.25);
+        }
+
+        .ticket-btn.green:hover {
+            background: #047857;
+            box-shadow: 0 4px 10px rgba(5, 150, 105, 0.35);
+        }
+
+        .ticket-btn.amber {
+            background: #d97706;
+            box-shadow: 0 2px 5px rgba(217, 119, 6, 0.25);
+        }
+
+        .ticket-btn.amber:hover {
+            background: #b45309;
+            box-shadow: 0 4px 10px rgba(217, 119, 6, 0.35);
+        }
+
+        .ticket-link-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.65rem;
+        }
+
     </style>
 </head>
 <body class="lang-zh">
@@ -1188,6 +1410,7 @@
                 <li><a href="#flights" style="color:var(--deep-slate); font-weight:700;"><span data-lang="zh">✈️ 航班信息</span><span data-lang="en">✈️ Flights</span></a></li>
                 <li><a href="#strategy" data-lang="zh">行程策略</a><a href="#strategy" data-lang="en">Strategy</a></li>
                 <li><a href="hotels.html" style="color:var(--japan-red); font-weight:700;"><span data-lang="zh">🏨 住宿与洗衣指南</span><span data-lang="en">🏨 Hotels & Laundry</span></a></li>
+                <li><a href="#budget" style="color:#059669; font-weight:700;"><span data-lang="zh">💰 费用预算</span><span data-lang="en">💰 Budget</span></a></li>
                 <li><a href="#bookings" data-lang="zh">抢票预约</a><a href="#bookings" data-lang="en">Key Bookings</a></li>
                 <li><a href="#itinerary" data-lang="zh">每日游程</a><a href="#itinerary" data-lang="en">Itinerary</a></li>
                 <li><a href="#gear" data-lang="zh">装备备忘</a><a href="#gear" data-lang="en">Gear & Packing</a></li>
@@ -1690,97 +1913,459 @@
         </section>
 
         <!-- Key Bookings & Timeline -->
-        <section id="bookings">
+                <!-- Travel Cost & Budget Breakdown Section -->
+        <section id="budget">
             <div class="section-header">
-                <span class="section-tag"><span data-lang="zh">行前抢票与预约</span><span data-lang="en">Key Pre-Departure Bookings</span></span>
+                <span class="section-tag"><span data-lang="zh">全程费用明细</span><span data-lang="en">Comprehensive Budget</span></span>
                 <h2 class="section-title">
-                    <span data-lang="zh">出发前关键筹备与预约清单</span>
-                    <span data-lang="en">Crucial Reservation Timeline</span>
+                    <span data-lang="zh">一家四口 13天12晚 详细旅行开销与预算指南</span>
+                    <span data-lang="en">13-Day 12-Night 4-Pax Travel Cost Breakdown</span>
                 </h2>
                 <p class="section-desc">
-                    <span data-lang="zh">热门门票与特急班次必须严格把控时间节点，提前锁定席位。</span>
-                    <span data-lang="en">Secure high-demand museum tickets, bus seats, and rail passes in advance.</span>
+                    <span data-lang="zh">针对 2位成人 + 15岁少年 + 11岁小学生 真实核算。含12晚住宿、全城际与市内交通、三顿奢华特色名物盛宴、门票及已锁定的战略省钱点。</span>
+                    <span data-lang="en">Accurate breakdown for 2 Adults + 15yo teen + 11yo child. Covers 12 nights lodging, transit, signature feasts, passes & savings.</span>
+                </p>
+            </div>
+
+            <!-- Currency Toggle Bar -->
+            <div class="budget-cur-bar">
+                <div style="display: flex; align-items: center; gap: 0.6rem;">
+                    <span style="font-size: 1.2rem;">💱</span>
+                    <strong style="font-size: 0.92rem; color: #1e293b;">
+                        <span data-lang="zh">计价币种切换：</span>
+                        <span data-lang="en">Switch Currency:</span>
+                    </strong>
+                    <span style="font-size: 0.8rem; color: #64748b;" id="budget-cur-indicator">SGD (S$) · 汇率 1 SGD ≈ 122.5 JPY</span>
+                </div>
+                <div class="cur-toggle-group">
+                    <button class="budget-cur-btn active" id="bcur-sgd" onclick="setBudgetCurrency('SGD')">SGD S$</button>
+                    <button class="budget-cur-btn" id="bcur-jpy" onclick="setBudgetCurrency('JPY')">JPY 円</button>
+                    <button class="budget-cur-btn" id="bcur-cny" onclick="setBudgetCurrency('CNY')">CNY ¥</button>
+                    <button class="budget-cur-btn" id="bcur-usd" onclick="setBudgetCurrency('USD')">USD $</button>
+                </div>
+            </div>
+
+            <!-- 4 Top Stat Cards -->
+            <div class="budget-stats-grid">
+                <div class="budget-stat-card primary">
+                    <div class="budget-stat-label">
+                        <span>💳</span>
+                        <span data-lang="zh">四人全程当地总预算 (不含机票)</span>
+                        <span data-lang="en">4-Pax Total (Excl. Flights)</span>
+                    </div>
+                    <div class="budget-stat-val" id="bstat-ground-total">S$ 7,696</div>
+                    <div class="budget-stat-desc">
+                        <span data-lang="zh">含12晚4床独立洗烘套房、下吕奢华会席半食宿、全行程交通与高阶餐饮</span>
+                        <span data-lang="en">12N 4-bed suites, Gero Kaiseki half-board, all transit & feasts</span>
+                    </div>
+                </div>
+
+                <div class="budget-stat-card accent">
+                    <div class="budget-stat-label">
+                        <span>👤</span>
+                        <span data-lang="zh">四人人均当地开销</span>
+                        <span data-lang="en">Per Person (Excl. Flights)</span>
+                    </div>
+                    <div class="budget-stat-val" id="bstat-per-person">S$ 1,924</div>
+                    <div class="budget-stat-desc">
+                        <span data-lang="zh">13天整程每人人均约 S$ 1,924 / 23.5万日元（含3大顶奢特色大餐）</span>
+                        <span data-lang="en">~S$ 1,924 / 235k JPY per person across the entire 13 days</span>
+                    </div>
+                </div>
+
+                <div class="budget-stat-card">
+                    <div class="budget-stat-label">
+                        <span>📅</span>
+                        <span data-lang="zh">四人家属日均开销</span>
+                        <span data-lang="en">Daily Family Average</span>
+                    </div>
+                    <div class="budget-stat-val" id="bstat-daily-avg">S$ 592</div>
+                    <div class="budget-stat-desc">
+                        <span data-lang="zh">4人全天住宿+早中晚餐+城际/市内交通全部平摊日均</span>
+                        <span data-lang="en">All-inclusive daily average for family hotel, dining & transit</span>
+                    </div>
+                </div>
+
+                <div class="budget-stat-card" style="background: linear-gradient(135deg, #ffffff 0%, #fefce8 100%); border-color: #fde047;">
+                    <div class="budget-stat-label" style="color:#854d0e;">
+                        <span>💡</span>
+                        <span data-lang="zh">已锁定的战略省钱金</span>
+                        <span data-lang="en">Confirmed Strategic Savings</span>
+                    </div>
+                    <div class="budget-stat-val" id="bstat-savings" style="color:#854d0e;">~S$ 410</div>
+                    <div class="budget-stat-desc">
+                        <span data-lang="zh">下吕周一平日省1万円 + 名古屋7晚长住折3.5万円 + 免黑猫运费4,800円</span>
+                        <span data-lang="en">Gero Monday (-10k円) + Nagoya 7N weekly (-35k円) + Zero luggage fee</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Master Category Breakdown Table -->
+            <div class="budget-table-wrap">
+                <table class="budget-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 26%;"><span data-lang="zh">开销类别</span><span data-lang="en">Category</span></th>
+                            <th style="width: 44%;"><span data-lang="zh">具体包含内容与家庭配置</span><span data-lang="en">Items & Family Setup Details</span></th>
+                            <th style="width: 18%; text-align: right;"><span data-lang="zh">四人总计</span><span data-lang="en">4-Pax Total</span></th>
+                            <th style="width: 12%; text-align: right;"><span data-lang="zh">占比</span><span data-lang="en">% Share</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>🏨 <span data-lang="zh">12晚精选住宿</span><span data-lang="en">12-Night Hotels</span></strong><br>
+                                <span class="budget-tag save"><span data-lang="zh">比原方案省 S$ 370</span><span data-lang="en">Saved S$ 370</span></span>
+                            </td>
+                            <td>
+                                <span data-lang="zh">
+                                    • <strong>高山4晚</strong>：高山车站公寓式酒店 (4独立单床·洗烘机·厨房) 137,200円<br>
+                                    • <strong>下吕1晚</strong>：下吕水明馆 (纯正榻榻米·<strong>一泊二食4人飞驒牛会席早晚餐全含</strong>·周一平日省1万) 82,000円<br>
+                                    • <strong>名古屋7晚</strong>：GOLD STAY大须 (4床套房·房内日立洗烘机·连住7晚周长住特惠) 202,000円
+                                </span>
+                                <span data-lang="en">
+                                    • <strong>Takayama 4N</strong>: Residence Hotel (4 beds, washer, kitchen) 137,200 JPY<br>
+                                    • <strong>Gero 1N</strong>: Suimeikan (Tatami, <strong>4-pax Kaiseki half-board included</strong>) 82,000 JPY<br>
+                                    • <strong>Nagoya 7N</strong>: GOLD STAY Osu (4 beds, in-room washer, 7N weekly discount) 202,000 JPY
+                                </span>
+                            </td>
+                            <td style="text-align: right; font-weight: 800; font-size: 0.95rem; color: #065f46;" class="bval-lodging">S$ 3,439</td>
+                            <td style="text-align: right; font-weight: 700; color: #64748b;">36.5%</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>🚄 <span data-lang="zh">全行程城际与市内交通</span><span data-lang="en">Total Transit & Rail</span></strong><br>
+                                <span class="budget-tag"><span data-lang="zh">11岁小学生享50%半价</span><span data-lang="en">11yo Child 50% Off</span></span>
+                            </td>
+                            <td>
+                                <span data-lang="zh">
+                                    • <strong>D1 机场μ-SKY</strong>：全席指定席 5,230円 (3大 1,430×3 + 1小 940)<br>
+                                    • <strong>D1 名古屋➔高山</strong>：JR特急飞驒7号新型车全景席 21,490円 (3大 6,140×3 + 1小 3,070)<br>
+                                    • <strong>D3 高山⇄白川乡</strong>：浓飞高速巴士往返 16,800円 (3大 4,800×3 + 1小 2,400)<br>
+                                    • <strong>D4 高山⇄飞驒古川</strong>：JR地方线往返 1,680円 (3大 480×3 + 1小 240)<br>
+                                    • <strong>D5 高山➔下吕</strong>：JR特急飞驒号 7,840円 (3大 2,240×3 + 1小 1,120)<br>
+                                    • <strong>D6 下吕➔名古屋</strong>：JR特急飞驒号直达 16,450円 (3大 4,700×3 + 1小 2,350)<br>
+                                    • <strong>D8 吉卜力往返</strong>：名铁/地下铁+Linimo磁悬浮 4,700円<br>
+                                    • <strong>D9 犬山城套票</strong>：名铁犬山城下町往返+天守阁入场联票 5,710円<br>
+                                    • <strong>D7-D12 市内交通</strong>：名古屋地下铁24小时乘车券/IC卡 约16,000円<br>
+                                    • <strong>D13 返程机场μ-SKY</strong>：名铁特急 5,230円
+                                </span>
+                                <span data-lang="en">
+                                    • <strong>D1 Airport μ-SKY</strong>: 5,230 JPY (3 Adults + 1 Child)<br>
+                                    • <strong>D1 Ltd Exp Hida 7</strong>: 21,490 JPY (3 Adults + 1 Child reserved)<br>
+                                    • <strong>D3 Shirakawa-go Nohi Bus</strong>: 16,800 JPY round-trip<br>
+                                    • <strong>D4 Hida-Furukawa Local JR</strong>: 1,680 JPY round-trip<br>
+                                    • <strong>D5 Takayama➔Gero Hida</strong>: 7,840 JPY (43 mins)<br>
+                                    • <strong>D6 Gero➔Nagoya Hida</strong>: 16,450 JPY (1h35m direct)<br>
+                                    • <strong>D8 Ghibli Transit</strong>: Subway + Linimo 4,700 JPY<br>
+                                    • <strong>D9 Inuyama Meitetsu Pass</strong>: Train + Castle ticket 5,710 JPY<br>
+                                    • <strong>D7-D12 Nagoya Subways</strong>: 24h passes & IC rides ~16,000 JPY<br>
+                                    • <strong>D13 μ-SKY Airport Express</strong>: 5,230 JPY
+                                </span>
+                            </td>
+                            <td style="text-align: right; font-weight: 800; font-size: 0.95rem;" class="bval-transport">S$ 783</td>
+                            <td style="text-align: right; font-weight: 700; color: #64748b;">8.3%</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>🍱 <span data-lang="zh">餐饮美食与三大盛宴</span><span data-lang="en">Food, Dining & Feasts</span></strong><br>
+                                <span class="budget-tag save"><span data-lang="zh">下吕晚早两餐已免</span><span data-lang="en">Gero Meals Included</span></span>
+                            </td>
+                            <td>
+                                <span data-lang="zh">
+                                    • <strong>三大顶奢特色名物</strong>：高山味藏天国A5飞驒牛顶奢烧肉大餐 (25,000円) + 名古屋热田蓬莱轩炭烤鳗鱼饭三吃 (18,000円) + 名古屋交趾鸡/矢场猪排名物 (9,000円)<br>
+                                    • <strong>11顿早餐</strong>：高山厨房轻自炊/朝市小吃 (10,000円) + 名古屋客美多咖啡名古屋点咖啡送吐司早餐文化 (18,000円)<br>
+                                    • <strong>12顿午餐</strong>：高山拉面、手打荞麦面、电车热便当、吉卜力园区特色简餐等 (约70,000円)<br>
+                                    • <strong>9顿特色晚餐</strong>：居酒屋家庭料理、手羽先鸡翅、回转寿司、百货地下街熟食等 (约80,000円)<br>
+                                    • <strong>街头名物小吃与热饮</strong>：飞驒牛现烤握寿司、五平饼、酱油团子、热饮品等 (约35,000円)
+                                </span>
+                                <span data-lang="en">
+                                    • <strong>3 Splurge Feasts</strong>: A5 Hida Beef Yakiniku at Ajikura Tengoku (~25k円) + Houraiken Hitsumabushi Charcoal Eel (~18k円) + Nagoya Cochin Chicken (~9k円)<br>
+                                    • <strong>11 Breakfasts</strong>: Takayama local bakeries + Nagoya Komeda coffee morning sets (~28k円)<br>
+                                    • <strong>12 Lunches</strong>: Takayama ramen, soba, gourmet station ekiben, Ghibli dining (~70k円)<br>
+                                    • <strong>9 Dinners</strong>: Family izakayas, Yamachan wings, conveyor sushi (~80k円)<br>
+                                    • <strong>Street Snacks & Hot Drinks</strong>: Torched Hida beef sushi, dango, winter drinks (~35k円)
+                                </span>
+                            </td>
+                            <td style="text-align: right; font-weight: 800; font-size: 0.95rem;" class="bval-food">S$ 2,163</td>
+                            <td style="text-align: right; font-weight: 700; color: #64748b;">23.0%</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>🎪 <span data-lang="zh">景点门票与体验活动</span><span data-lang="en">Attractions & Admissions</span></strong><br>
+                                <span class="budget-tag"><span data-lang="zh">中学生以下多处免票</span><span data-lang="en">Kids Free at Multiple Sites</span></span>
+                            </td>
+                            <td>
+                                <span data-lang="zh">
+                                    • <strong>吉卜力公园 (周四工作日错峰)</strong>：五大园区大散步券 12,250円 (3大 3,500×3 + 1小 1,750；若购入内豪华版约2.5万円)<br>
+                                    • <strong>丰田产业技术纪念馆</strong>：机械织布与汽车流水线全景展示 1,500円 (2大 1,000 + 15岁 300 + 11岁 200)<br>
+                                    • <strong>犬山城天守阁</strong>：已包含于名铁犬山套票中 (0円)<br>
+                                    • <strong>名古屋城与本丸御殿</strong>：1,500円 (成人500×3，<strong>11岁小学生免费</strong>)<br>
+                                    • <strong>高山阵屋</strong>：1,320円 (成人440×3，<strong>高中生及以下免费</strong>)<br>
+                                    • <strong>白川乡和田家合掌造内部</strong>：1,400円 (成人400×3 + 11岁 200)<br>
+                                    • <strong>下吕公共足汤 & 机场波音787乐园</strong>：全免费体验 (0円)<br>
+                                    • <strong>亲子传统手作体验</strong>：飞驒猴宝宝或和蜡烛手作 约3,500円
+                                </span>
+                                <span data-lang="en">
+                                    • <strong>Ghibli Park (Thursday)</strong>: O-Sanpo Day Pass 12,250 JPY (3 Adults + 1 Child)<br>
+                                    • <strong>Toyota Industry Museum</strong>: 1,500 JPY (2 Adults + 15yo + 11yo)<br>
+                                    • <strong>Inuyama Castle</strong>: 0 JPY (included in Meitetsu pass)<br>
+                                    • <strong>Nagoya Castle</strong>: 1,500 JPY (3 Adults, 11yo Child free)<br>
+                                    • <strong>Takayama Jinya</strong>: 1,320 JPY (3 Adults, students free)<br>
+                                    • <strong>Shirakawa-go Wada House</strong>: 1,400 JPY (3 Adults + 1 Child)<br>
+                                    • <strong>Gero Footbaths & Flight of Dreams</strong>: Free admission<br>
+                                    • <strong>Hands-on Craft Workshop</strong>: Sarubobo doll or candle making ~3,500 JPY
+                                </span>
+                            </td>
+                            <td style="text-align: right; font-weight: 800; font-size: 0.95rem;" class="bval-attractions">S$ 233</td>
+                            <td style="text-align: right; font-weight: 700; color: #64748b;">2.5%</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>📶 <span data-lang="zh">通讯网络与旅行保险</span><span data-lang="en">eSIM & Travel Insurance</span></strong>
+                            </td>
+                            <td>
+                                <span data-lang="zh">
+                                    • <strong>4人日本上网卡/eSIM</strong>：父母2张15天无限流量eSIM + 孩子2张10GB eSIM (约8,600円 / S$ 70)<br>
+                                    • <strong>13天全家境外综合旅行保险</strong>：涵盖冬季户外意外、紧急医疗、航班延误、行李险 (约22,600円 / S$ 185)<br>
+                                    • <strong>随行车站寄物柜与零散机动金</strong>：(约2,800円 / S$ 23)
+                                </span>
+                                <span data-lang="en">
+                                    • <strong>4x Japan eSIMs</strong>: 2 unlimited data + 2 kids data (~8,600 JPY / S$ 70)<br>
+                                    • <strong>13-Day Family Travel Insurance</strong>: Medical, flight delays, luggage (~22,600 JPY / S$ 185)<br>
+                                    • <strong>Coin Lockers & Incidentals</strong>: (~2,800 JPY / S$ 23)
+                                </span>
+                            </td>
+                            <td style="text-align: right; font-weight: 800; font-size: 0.95rem;" class="bval-insurance">S$ 278</td>
+                            <td style="text-align: right; font-weight: 700; color: #64748b;">3.0%</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>🛍️ <span data-lang="zh">二次元与伴手礼机动金</span><span data-lang="en">Shopping & Souvenir Buffer</span></strong>
+                            </td>
+                            <td>
+                                <span data-lang="zh">
+                                    • <strong>大须二次元中古手办</strong>：Mandarake / K-Books 孩子心仪玩具手办与动漫周边<br>
+                                    • <strong>日本伴手礼与药妆采买</strong>：高山地酒与和果子、名古屋虾饼、松坂屋与唐吉诃德免税采买 (集中在D11与D12)
+                                </span>
+                                <span data-lang="en">
+                                    • <strong>Osu Anime & Figures</strong>: Mandarake & K-Books hobby shopping for kids<br>
+                                    • <strong>Souvenirs & Tax-Free</strong>: Hida crafts, Nagoya shrimp crackers, cosmetics (Days 11-12)
+                                </span>
+                            </td>
+                            <td style="text-align: right; font-weight: 800; font-size: 0.95rem;" class="bval-shopping">S$ 800</td>
+                            <td style="text-align: right; font-weight: 700; color: #64748b;">8.5%</td>
+                        </tr>
+
+                        <!-- Subtotal Row Excl Flights -->
+                        <tr class="total-row">
+                            <td>
+                                <strong>💰 <span data-lang="zh">四人当地总计 (不含机票)</span><span data-lang="en">Ground Total (Excl. Flights)</span></strong>
+                            </td>
+                            <td>
+                                <span data-lang="zh">包含13天全部吃、住、行、游、购机动金，平摊每人仅约 <strong><span class="bval-per-person">S$ 1,924</span></strong></span>
+                                <span data-lang="en">All ground expenses for 13 days; works out to just <strong><span class="bval-per-person">S$ 1,924</span></strong> per person</span>
+                            </td>
+                            <td style="text-align: right; font-size: 1.15rem;" class="bval-ground-total">S$ 7,696</td>
+                            <td style="text-align: right;">100.0%</td>
+                        </tr>
+
+                        <!-- Confirmed Flights Row -->
+                        <tr class="flight-row">
+                            <td>
+                                <strong>✈️ <span data-lang="zh">新航往返机票 (已确认班次)</span><span data-lang="en">SIA Direct Flights (Confirmed)</span></strong>
+                            </td>
+                            <td>
+                                <span data-lang="zh">
+                                    • <strong>去程 SQ672</strong>：11/26 01:20 樟宜T2 ➔ 08:30 中部国际T1 (波音787-10)<br>
+                                    • <strong>返程 SQ671</strong>：12/08 10:20 中部国际T1 ➔ 16:15 樟宜 (波音787-10)<br>
+                                    • <strong>配置</strong>：3张成人机票 (2大+15岁) + 1张儿童机票 (11岁约75折)
+                                </span>
+                                <span data-lang="en">
+                                    • <strong>Outbound SQ672</strong>: Nov 26 01:20 SIN ➔ 08:30 NGO (B787-10)<br>
+                                    • <strong>Inbound SQ671</strong>: Dec 08 10:20 NGO ➔ 16:15 SIN (B787-10)<br>
+                                    • <strong>Setup</strong>: 3 Adult tickets (2 Adults + 15yo) + 1 Child ticket (11yo ~75%)
+                                </span>
+                            </td>
+                            <td style="text-align: right; font-weight: 700;" class="bval-flights">~S$ 3,950</td>
+                            <td style="text-align: right; color: #64748b;">—</td>
+                        </tr>
+
+                        <!-- Grand Total Row -->
+                        <tr class="total-row" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #ffffff;">
+                            <td style="color: #ffffff;">
+                                <strong>🌟 <span data-lang="zh">全包总预算 (含全家机票)</span><span data-lang="en">Grand Total (Incl. Flights)</span></strong>
+                            </td>
+                            <td style="color: #e2e8f0;">
+                                <span data-lang="zh">一家四口 13天12晚 日本中部经典全景深度度假全包总预算（人均约 <strong><span class="bval-grand-per-person">S$ 2,912</span></strong>）</span>
+                                <span data-lang="en">All-inclusive total for 13D12N Central Japan trip (approx. <strong><span class="bval-grand-per-person">S$ 2,912</span></strong> per person)</span>
+                            </td>
+                            <td style="text-align: right; font-size: 1.25rem; color: #34d399;" class="bval-grand-total">S$ 11,646</td>
+                            <td style="text-align: right; color: #a7f3d0;">—</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Key Bookings & Official Ticket Purchase Links -->
+        <section id="bookings">
+            <div class="section-header">
+                <span class="section-tag"><span data-lang="zh">行前抢票与官方入口</span><span data-lang="en">Official Ticket Portals</span></span>
+                <h2 class="section-title">
+                    <span data-lang="zh">核心门票与交通票券 官方直达预约通道</span>
+                    <span data-lang="en">Crucial Reservation & Official Booking Links</span>
+                </h2>
+                <p class="section-desc">
+                    <span data-lang="zh">热门门票（吉卜力）与指定席列车（特急飞驒号、浓飞巴士）必须把控关键时间节点，点击下方按钮直达官方预订通道。</span>
+                    <span data-lang="en">Secure high-demand museum tickets, bus seats, and rail passes with verified official links below.</span>
                 </p>
             </div>
 
             <div class="booking-grid">
                 <!-- Ghibli Park -->
-                <div class="booking-card">
+                <div class="booking-card" style="border: 2px solid #0284c7; background: #f0f9ff;">
                     <div class="booking-top">
-                        <h3 class="booking-name">🎪 <span data-lang="zh">吉卜力公园门票</span><span data-lang="en">Ghibli Park Tickets</span></h3>
-                        <span class="booking-alert-badge"><span data-lang="zh">10月10日准时抢</span><span data-lang="en">Oct 10th 14:00</span></span>
+                        <h3 class="booking-name" style="color: #0369a1;">🎪 <span data-lang="zh">吉卜力公园门票 (必抢)</span><span data-lang="en">Ghibli Park Tickets</span></h3>
+                        <span class="booking-alert-badge" style="background: #0284c7;"><span data-lang="zh">10月10日 14:00准时抢</span><span data-lang="en">Oct 10th 14:00</span></span>
                     </div>
                     <div class="booking-row">
-                        <strong><span data-lang="zh">游玩日期：</span><span data-lang="en">Visit Date:</span></strong>
-                        <span><span data-lang="zh"><strong>2026年12月3日 (周四 · 工作日错峰畅玩)</strong></span><span data-lang="en"><strong>Dec 3, 2026 (Thursday Weekday)</strong></span></span>
+                        <strong><span data-lang="zh">锁定入园日期：</span><span data-lang="en">Target Date:</span></strong>
+                        <span><span data-lang="zh"><strong style="color:#0369a1;">2026年12月3日 (周四 · 工作日错峰入园)</strong></span><span data-lang="en"><strong>Dec 3, 2026 (Thursday Weekday)</strong></span></span>
                     </div>
                     <div class="booking-row">
-                        <strong><span data-lang="zh">抢票时间：</span><span data-lang="en">Booking Date:</span></strong>
-                        <span><span data-lang="zh">出发前两个月开放（<strong>10月10日 14:00 JST</strong> 在 Boo-Woo / Lawson Ticket 抢购）。</span><span data-lang="en">Opens 2 months prior on the 10th (<strong>Oct 10 at 14:00 JST</strong> via Boo-Woo Ticket).</span></span>
+                        <strong><span data-lang="zh">抢票开放日：</span><span data-lang="en">Booking Opens:</span></strong>
+                        <span><span data-lang="zh"><strong>2026年10月10日 日本时间 14:00</strong> (新加坡时间 13:00) 准时放票！</span><span data-lang="en"><strong>Oct 10, 2026 at 14:00 JST</strong> (13:00 SGT). Sells out rapidly!</span></span>
                     </div>
                     <div class="booking-row">
-                        <strong><span data-lang="zh">推荐票种：</span><span data-lang="en">Pass Type:</span></strong>
-                        <span><span data-lang="zh">优先购买“大散步券尊享版” (Premium)，可进入草壁家与霍尔移动城堡内部。</span><span data-lang="en">Target "O-Sanpo Day Pass Premium" for internal building access (Satsuki & Mei's House).</span></span>
+                        <strong><span data-lang="zh">推荐票种：</span><span data-lang="en">Pass Choice:</span></strong>
+                        <span><span data-lang="zh">“大散步券尊享版” (Premium)，可进入龙猫草壁家与霍尔移动城堡内部。</span><span data-lang="en">O-Sanpo Day Pass Premium (internal access to Satsuki & Mei's House).</span></span>
                     </div>
                     <div class="booking-row">
-                        <strong><span data-lang="zh">入场建议：</span><span data-lang="en">Tip:</span></strong>
-                        <span><span data-lang="zh">优先选10:00入场吉卜力大仓库，先室内游玩拍照，下午转户外魔女之谷。周四工作日排队时间减半！</span><span data-lang="en">Select 10:00 entry for Grand Warehouse first, then outdoor areas. Weekday queues cut in half!</span></span>
+                        <strong><span data-lang="zh">购票入口：</span><span data-lang="en">Portals:</span></strong>
+                        <div class="ticket-link-group">
+                            <a href="https://l-tike.com/st1/ghibli-pk-en" target="_blank" class="ticket-btn">
+                                <span>🎟️</span> <span data-lang="zh">Lawson海外英文官方购票</span><span data-lang="en">Lawson International Portal</span> ➔
+                            </a>
+                            <a href="https://ghibli-park.jp/en/ticket/" target="_blank" class="ticket-btn" style="background:#475569;">
+                                <span>ℹ️</span> <span data-lang="zh">吉卜力官网票务说明</span><span data-lang="en">Ghibli Official Guide</span> ➔
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- JR Pass -->
+                <!-- JR Train Tickets -->
                 <div class="booking-card">
                     <div class="booking-top">
-                        <h3 class="booking-name">🚄 <span data-lang="zh">JR高山北陆周游券 / 飞驒路票</span><span data-lang="en">JR Takayama-Hokuriku Pass</span></h3>
-                        <span class="booking-alert-badge"><span data-lang="zh">出境前购买MCO</span><span data-lang="en">Buy Online MCO</span></span>
+                        <h3 class="booking-name">🚄 <span data-lang="zh">JR特急飞驒号指定席</span><span data-lang="en">JR Ltd Exp Hida Reserved Seats</span></h3>
+                        <span class="booking-alert-badge"><span data-lang="zh">乘车前1个月开放</span><span data-lang="en">1 Month Ahead</span></span>
                     </div>
                     <div class="booking-row">
-                        <strong><span data-lang="zh">家庭购票配置：</span><span data-lang="en">Family Setup:</span></strong>
-                        <span><span data-lang="zh"><strong>3张大人票</strong> (2位成人 + 15岁长子/女按成人全价) + <strong>1张儿童票</strong> (11岁小学生享受 <strong>50% 半价优惠</strong>)。</span><span data-lang="en"><strong>3 Adult Passes</strong> (2 Adults + 15yo) + <strong>1 Child Pass</strong> (11yo enjoys <strong>50% half-price</strong>).</span></span>
+                        <strong><span data-lang="zh">关键车次：</span><span data-lang="en">Key Trains:</span></strong>
+                        <span><span data-lang="zh">D1 10:48 <strong>特急飞驒7号</strong>(HC85新型车全景席)、D5 高山➔下吕、D6 下吕➔名古屋。</span><span data-lang="en">D1 Ltd Exp Hida 7 (10:48 Nagoya➔Takayama), D5 Takayama➔Gero, D6 Gero➔Nagoya.</span></span>
                     </div>
                     <div class="booking-row">
-                        <strong><span data-lang="zh">涵盖范围：</span><span data-lang="en">Coverage:</span></strong>
-                        <span><span data-lang="zh">前5天（11/26-11/30）完美覆盖：JR特急飞驒号（名古屋➔高山、高山➔下吕）、高山往返白川乡浓飞巴士。换票时在JR绿色窗口划好指定席。</span><span data-lang="en">Covers D1-D5: JR Ltd Exp Hida (Nagoya➔Takayama, Takayama➔Gero) and Nohi bus to Shirakawa-go.</span></span>
+                        <strong><span data-lang="zh">儿童特惠：</span><span data-lang="en">Child Fare:</span></strong>
+                        <span><span data-lang="zh">3位成人按全价，<strong>11岁小学生购票立享 50% 半价优惠</strong>。</span><span data-lang="en">3 Adult fares + <strong>1 Child fare (11yo gets 50% discount)</strong>.</span></span>
+                    </div>
+                    <div class="booking-row">
+                        <strong><span data-lang="zh">订票入口：</span><span data-lang="en">Official Booking:</span></strong>
+                        <div class="ticket-link-group">
+                            <a href="https://www.westjr.co.jp/global/en/ticket/" target="_blank" class="ticket-btn green">
+                                <span>🚄</span> <span data-lang="zh">JR-WEST 官方在线订票划座</span><span data-lang="en">JR-WEST Online Train Booking</span> ➔
+                            </a>
+                            <a href="https://smart-ex.jp/en/" target="_blank" class="ticket-btn" style="background:#334155;">
+                                <span>🚄</span> <span data-lang="zh">JR SmartEX 新干线入口</span><span data-lang="en">SmartEX Shinkansen</span> ➔
+                            </a>
+                            <a href="https://www.westjr.co.jp/global/en/ticket/pass/takayama_hokuriku/" target="_blank" class="ticket-btn" style="background:#64748b;">
+                                <span>🎫</span> <span data-lang="zh">高山北陆周游券说明</span><span data-lang="en">Takayama-Hokuriku Pass</span> ➔
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Nohi Bus -->
                 <div class="booking-card">
                     <div class="booking-top">
-                        <h3 class="booking-name">🚌 <span data-lang="zh">白川乡浓飞巴士</span><span data-lang="en">Shirakawa-go Nohi Bus</span></h3>
-                        <span class="booking-alert-badge"><span data-lang="zh">提前1个月预约</span><span data-lang="en">1 Month Ahead</span></span>
+                        <h3 class="booking-name">🚌 <span data-lang="zh">白川乡浓飞高速巴士</span><span data-lang="en">Shirakawa-go Nohi Bus</span></h3>
+                        <span class="booking-alert-badge"><span data-lang="zh">11月1日 09:00准时预约</span><span data-lang="en">Nov 1st 09:00</span></span>
                     </div>
                     <div class="booking-row">
-                        <strong><span data-lang="zh">执行日期：</span><span data-lang="en">Trip Date:</span></strong>
-                        <span><span data-lang="zh">Day 3 (11月28日 周六) 高山往返白川乡合掌村。</span><span data-lang="en">Day 3 (Nov 28 Sat) Takayama round-trip to Shirakawa-go.</span></span>
+                        <strong><span data-lang="zh">乘车日期：</span><span data-lang="en">Trip Date:</span></strong>
+                        <span><span data-lang="zh"><strong>Day 3 (11月28日 周六)</strong> 高山浓飞巴士总站往返白川乡合掌村。</span><span data-lang="en"><strong>Day 3 (Nov 28 Sat)</strong> Takayama round-trip to Shirakawa-go.</span></span>
                     </div>
                     <div class="booking-row">
-                        <strong><span data-lang="zh">开放时间：</span><span data-lang="en">Reservation:</span></strong>
-                        <span><span data-lang="zh">出发前1个月开放（约11月1日早上9点在 Japan Bus Online 预约）。</span><span data-lang="en">Opens 1 month prior (~Nov 1 at 09:00 JST via Japan Bus Online).</span></span>
+                        <strong><span data-lang="zh">推荐黄金班次：</span><span data-lang="en">Recommended:</span></strong>
+                        <span><span data-lang="zh">去程 08:50 或 09:20 发车；回程 13:30 或 14:00 返程。</span><span data-lang="en">Dep 08:50 or 09:20 from Takayama; Ret 13:30 or 14:00.</span></span>
                     </div>
                     <div class="booking-row">
-                        <strong><span data-lang="zh">推荐黄金班次：</span><span data-lang="en">Recommended Times:</span></strong>
-                        <span><span data-lang="zh">上午08:50或09:20高山发车；下午13:30或14:00回程，体验从容。</span><span data-lang="en">Dep 08:50 or 09:20 from Takayama; Ret 13:30 or 14:00 back.</span></span>
+                        <strong><span data-lang="zh">预约入口：</span><span data-lang="en">Booking Portal:</span></strong>
+                        <div class="ticket-link-group">
+                            <a href="https://japanbusonline.com/en/CourseSearch/11900040001" target="_blank" class="ticket-btn amber">
+                                <span>🚌</span> <span data-lang="zh">Japan Bus Online 官方英文预约</span><span data-lang="en">Japan Bus Online Booking</span> ➔
+                            </a>
+                            <a href="https://www.nouhibus.co.jp/highwaybus/" target="_blank" class="ticket-btn" style="background:#475569;">
+                                <span>📋</span> <span data-lang="zh">浓飞巴士官方时刻表</span><span data-lang="en">Nohi Bus Timetable</span> ➔
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Luggage -->
+                <!-- Meitetsu Airport Express & Inuyama -->
                 <div class="booking-card">
                     <div class="booking-top">
-                        <h3 class="booking-name">🧳 <span data-lang="zh">行李随行与零转运战略</span><span data-lang="en">Zero Luggage Transfer Hassle</span></h3>
-                        <span class="booking-alert-badge" style="background:#059669;"><span data-lang="zh">净省转运费4,800円</span><span data-lang="en">Save 4,800 JPY</span></span>
+                        <h3 class="booking-name">✈️ <span data-lang="zh">名铁特急 μ-SKY & 犬山城套票</span><span data-lang="en">Meitetsu μ-SKY & Inuyama Pass</span></h3>
+                        <span class="booking-alert-badge"><span data-lang="zh">在线订座 / 现场购票</span><span data-lang="en">Online / On-Site</span></span>
                     </div>
                     <div class="booking-row">
-                        <strong><span data-lang="zh">全程随行：</span><span data-lang="en">Direct Transit:</span></strong>
-                        <span><span data-lang="zh">D1 μ-SKY 与 JR特急飞驒号新型车全设专用大件行李架，行李一次性随特急直达高山大本营。</span><span data-lang="en">D1 μ-SKY and JR HC85 features dedicated oversized baggage racks directly to Takayama.</span></span>
+                        <strong><span data-lang="zh">D1 / D13 机场：</span><span data-lang="en">Centrair μ-SKY:</span></strong>
+                        <span><span data-lang="zh">全车指定席（特别车票 μ-ticket 450円/人），28分钟直达名铁名古屋站。</span><span data-lang="en">First-class reserved seat (μ-ticket 450 JPY/pax), 28 mins direct.</span></span>
                     </div>
                     <div class="booking-row">
-                        <strong><span data-lang="zh">下吕轻移：</span><span data-lang="en">Gero 43-min Move:</span></strong>
-                        <span><span data-lang="zh">D5 高山至下吕仅43分钟特急，水明馆出站3分钟即达。</span><span data-lang="en">D5 Takayama to Gero is only 43 mins by train; Suimeikan is 3 mins flat from station.</span></span>
+                        <strong><span data-lang="zh">D9 犬山套票：</span><span data-lang="en">Inuyama Package:</span></strong>
+                        <span><span data-lang="zh">含名铁往返电车票 + 国宝犬山城门票 + 城下町美食优惠券（成人1,630円/儿童820円）。</span><span data-lang="en">Includes round-trip train + Inuyama Castle admission + food vouchers.</span></span>
                     </div>
                     <div class="booking-row">
-                        <strong><span data-lang="zh">名古屋连住：</span><span data-lang="en">7-Night Base:</span></strong>
-                        <span><span data-lang="zh">D6 进驻大须后<strong>整整7天不再打包换房</strong>，免除黑猫跨城快递费（省4,800円）与等待空运的焦虑！</span><span data-lang="en">Once at Osu on D6, enjoy 7 consecutive nights with zero hotel transfers and zero shipping fees.</span></span>
+                        <strong><span data-lang="zh">预订入口：</span><span data-lang="en">Ticket Links:</span></strong>
+                        <div class="ticket-link-group">
+                            <a href="https://reservation.meitetsu.co.jp/" target="_blank" class="ticket-btn" style="background:#0284c7;">
+                                <span>💺</span> <span data-lang="zh">名铁特别车辆券 (μ-ticket) 在线订座</span><span data-lang="en">Meitetsu μ-ticket Booking</span> ➔
+                            </a>
+                            <a href="https://www.meitetsu.co.jp/plan/campaign/detail/1283626_8034.html" target="_blank" class="ticket-btn" style="background:#059669;">
+                                <span>🏯</span> <span data-lang="zh">名铁犬山城下町周游券详情</span><span data-lang="en">Inuyama Castle Pass Info</span> ➔
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Attractions & Fast-Track -->
+                <div class="booking-card">
+                    <div class="booking-top">
+                        <h3 class="booking-name">🏯 <span data-lang="zh">名胜古迹与快速通关</span><span data-lang="en">Museums & Fast-Track Entry</span></h3>
+                        <span class="booking-alert-badge" style="background:#059669;"><span data-lang="zh">出行前填报</span><span data-lang="en">Pre-Arrival</span></span>
+                    </div>
+                    <div class="booking-row">
+                        <strong><span data-lang="zh">日本入境申报：</span><span data-lang="en">Fast-Track Entry:</span></strong>
+                        <span><span data-lang="zh">出发前3天在 Visit Japan Web 登记入境与海关申报，全家生成电子QR码快速通关。</span><span data-lang="en">Register on Visit Japan Web 3 days prior for electronic customs QR codes.</span></span>
+                    </div>
+                    <div class="booking-row">
+                        <strong><span data-lang="zh">景点官方入口：</span><span data-lang="en">Official Sites:</span></strong>
+                        <div class="ticket-link-group">
+                            <a href="https://vjw-lp.digital.go.jp/en/" target="_blank" class="ticket-btn green">
+                                <span>📲</span> <span data-lang="zh">Visit Japan Web 入境快速登记</span><span data-lang="en">Visit Japan Web Fast-Track</span> ➔
+                            </a>
+                            <a href="https://www.tcmit.org/english/" target="_blank" class="ticket-btn" style="background:#475569;">
+                                <span>🚗</span> <span data-lang="zh">丰田产业技术纪念馆官网</span><span data-lang="en">Toyota Museum Official</span> ➔
+                            </a>
+                            <a href="https://www.nagoyajo.city.nagoya.jp/en/" target="_blank" class="ticket-btn" style="background:#475569;">
+                                <span>🏯</span> <span data-lang="zh">名古屋城官方门票指南</span><span data-lang="en">Nagoya Castle Guide</span> ➔
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -1798,9 +2383,9 @@
                         <strong><span data-lang="zh">预算核算：</span><span data-lang="en">Budget:</span></strong>
                         <span><span data-lang="zh">4人全程预算仅约 <strong>S$ 3,439</strong>（421,200円），比原方案净省约 <strong>S$ 370 (45,300円)</strong>，含下吕奢华早晚会席宴！</span><span data-lang="en">4-pax total ~<strong>S$ 3,439</strong> (421,200 JPY), saving ~<strong>S$ 370 (45,300 JPY)</strong>, with luxury Kaiseki meals included!</span></span>
                     </div>
-                    <div style="margin-top:0.4rem;">
-                        <a href="hotels.html" style="display:inline-flex; align-items:center; gap:0.4rem; background:#059669; color:white; padding:0.5rem 1rem; border-radius:999px; text-decoration:none; font-weight:700; font-size:0.85rem;">
-                            <span>🏨</span> <span data-lang="zh">查看住宿与洗衣专页</span><span data-lang="en">View Hotels & Laundry Portal</span> ➔
+                    <div style="margin-top:0.6rem;">
+                        <a href="hotels.html" class="ticket-btn green" style="font-size:0.9rem; padding:0.6rem 1.2rem;">
+                            <span>🏨</span> <span data-lang="zh">前往住宿与洗衣专页比价预订</span><span data-lang="en">View Hotels & Laundry Portal</span> ➔
                         </a>
                     </div>
                 </div>
@@ -3198,6 +3783,7 @@
             document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
             localStorage.setItem('family_japan_lang', lang);
+            if (typeof setBudgetCurrency === 'function') setBudgetCurrency(currentBudgetCur);
         }
 
         // Initialize language
@@ -3234,7 +3820,124 @@
         }
 
         // Load saved state
+        
+        // Budget Currency Engine
+        const budgetCurrencies = {
+            SGD: {
+                rateInfo: "SGD (S$) · 汇率 1 SGD ≈ 122.5 JPY",
+                rateInfoEn: "SGD (S$) · Rate: 1 SGD ≈ 122.5 JPY",
+                groundTotal: "S$ 7,696",
+                perPerson: "S$ 1,924",
+                dailyAvg: "S$ 592",
+                savings: "~S$ 410",
+                lodging: "S$ 3,439",
+                transport: "S$ 783",
+                food: "S$ 2,163",
+                attractions: "S$ 233",
+                insurance: "S$ 278",
+                shopping: "S$ 800",
+                flights: "~S$ 3,950",
+                grandTotal: "S$ 11,646",
+                grandPerPerson: "S$ 2,912"
+            },
+            JPY: {
+                rateInfo: "JPY (円) · 日本当地基准结算价格",
+                rateInfoEn: "JPY (円) · Base local Japanese price",
+                groundTotal: "942,600 円",
+                perPerson: "235,650 円",
+                dailyAvg: "72,500 円",
+                savings: "~50,100 円",
+                lodging: "421,200 円",
+                transport: "95,900 円",
+                food: "265,000 円",
+                attractions: "28,500 円",
+                insurance: "34,000 円",
+                shopping: "98,000 円",
+                flights: "~484,000 円",
+                grandTotal: "1,426,600 円",
+                grandPerPerson: "356,650 円"
+            },
+            CNY: {
+                rateInfo: "CNY (¥) · 汇率 1 SGD ≈ 5.75 CNY",
+                rateInfoEn: "CNY (¥) · Rate: 1 SGD ≈ 5.75 CNY",
+                groundTotal: "¥ 44,253",
+                perPerson: "¥ 11,063",
+                dailyAvg: "¥ 3,404",
+                savings: "~¥ 2,358",
+                lodging: "¥ 19,776",
+                transport: "¥ 4,502",
+                food: "¥ 12,437",
+                attractions: "¥ 1,340",
+                insurance: "¥ 1,598",
+                shopping: "¥ 4,600",
+                flights: "~¥ 22,713",
+                grandTotal: "¥ 66,966",
+                grandPerPerson: "¥ 16,742"
+            },
+            USD: {
+                rateInfo: "USD ($) · 汇率 1 SGD ≈ 0.798 USD",
+                rateInfoEn: "USD ($) · Rate: 1 SGD ≈ 0.798 USD",
+                groundTotal: "$ 6,141",
+                perPerson: "$ 1,535",
+                dailyAvg: "$ 472",
+                savings: "~$ 327",
+                lodging: "$ 2,744",
+                transport: "$ 625",
+                food: "$ 1,726",
+                attractions: "$ 186",
+                insurance: "$ 222",
+                shopping: "$ 638",
+                flights: "~$ 3,152",
+                grandTotal: "$ 9,293",
+                grandPerPerson: "$ 2,323"
+            }
+        };
+
+        let currentBudgetCur = localStorage.getItem('family_budget_cur') || 'SGD';
+
+        function setBudgetCurrency(cur) {
+            currentBudgetCur = cur;
+            localStorage.setItem('family_budget_cur', cur);
+
+            // Toggle active buttons
+            ['sgd', 'jpy', 'cny', 'usd'].forEach(c => {
+                const btn = document.getElementById('bcur-' + c);
+                if (btn) btn.classList.toggle('active', c.toUpperCase() === cur);
+            });
+
+            const data = budgetCurrencies[cur] || budgetCurrencies.SGD;
+            const isZh = (localStorage.getItem('family_japan_lang') || 'zh') === 'zh';
+            
+            const indEl = document.getElementById('budget-cur-indicator');
+            if (indEl) indEl.innerText = isZh ? data.rateInfo : data.rateInfoEn;
+
+            // Update stat cards
+            const gtEl = document.getElementById('bstat-ground-total');
+            const ppEl = document.getElementById('bstat-per-person');
+            const daEl = document.getElementById('bstat-daily-avg');
+            const svEl = document.getElementById('bstat-savings');
+
+            if (gtEl) gtEl.innerText = data.groundTotal;
+            if (ppEl) ppEl.innerText = data.perPerson;
+            if (daEl) daEl.innerText = data.dailyAvg;
+            if (svEl) svEl.innerText = data.savings;
+
+            // Update table values
+            document.querySelectorAll('.bval-lodging').forEach(el => el.innerText = data.lodging);
+            document.querySelectorAll('.bval-transport').forEach(el => el.innerText = data.transport);
+            document.querySelectorAll('.bval-food').forEach(el => el.innerText = data.food);
+            document.querySelectorAll('.bval-attractions').forEach(el => el.innerText = data.attractions);
+            document.querySelectorAll('.bval-insurance').forEach(el => el.innerText = data.insurance);
+            document.querySelectorAll('.bval-shopping').forEach(el => el.innerText = data.shopping);
+            document.querySelectorAll('.bval-ground-total').forEach(el => el.innerText = data.groundTotal);
+            document.querySelectorAll('.bval-flights').forEach(el => el.innerText = data.flights);
+            document.querySelectorAll('.bval-grand-total').forEach(el => el.innerText = data.grandTotal);
+            document.querySelectorAll('.bval-per-person').forEach(el => el.innerText = data.perPerson);
+            document.querySelectorAll('.bval-grand-per-person').forEach(el => el.innerText = data.grandPerPerson);
+        }
+
         window.addEventListener('DOMContentLoaded', () => {
+            setBudgetCurrency(currentBudgetCur);
             ['g1', 'g2', 'g3', 'g4', 'g5', 'g6'].forEach(id => {
                 const el = document.getElementById(id);
                 if (el && localStorage.getItem('family_gear_' + id) === 'true') {
