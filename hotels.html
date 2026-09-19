@@ -628,23 +628,68 @@
             font-weight: 600;
         }
 
+        .price-google-range {
+            font-size: 0.72rem;
+            color: #1d4ed8;
+            font-weight: 700;
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            margin-top: 0.25rem;
+            display: inline-block;
+            width: fit-content;
+        }
+
+        .google-compare-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            color: #1e40af;
+            font-size: 0.74rem;
+            font-weight: 700;
+            padding: 0.22rem 0.65rem;
+            border-radius: 999px;
+            margin-top: 0.3rem;
+            width: fit-content;
+        }
+
+        .google-compare-badge .g-icon {
+            background: #2563eb;
+            color: white;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            font-weight: 900;
+        }
+
         .btn-search-hotel {
             display: inline-flex;
             align-items: center;
             gap: 0.4rem;
-            background: var(--deep-slate);
+            background: #1e293b;
             color: white;
             padding: 0.6rem 1.1rem;
             border-radius: 999px;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 700;
             transition: all 0.2s ease;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         .btn-search-hotel:hover {
-            background: var(--japan-red);
+            background: #2563eb;
+            color: white;
             transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
         }
 
         /* Summary Comparison Matrix */
@@ -814,6 +859,13 @@
                         <p><span data-lang="zh">双大床、4单床、连通房或榻榻米日式和室</span><span data-lang="en">Connecting rooms, suites, or tatami futons</span></p>
                     </div>
                 </div>
+                <div class="callout-item">
+                    <div class="callout-icon">⚖️</div>
+                    <div class="callout-text">
+                        <h4><span data-lang="zh">Google比价核验 (Google Rates)</span><span data-lang="en">Google Rates Comparison</span></h4>
+                        <p><span data-lang="zh">聚合 Booking / Agoda / Trip / 官网 4人实时均价</span><span data-lang="en">Verified across major booking platforms & direct sites</span></p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -873,6 +925,7 @@
                                 <span data-lang="en">GOLD STAY Nagoya Osu</span>
                             </h3>
                             <div class="hotel-location">📍 <span data-lang="zh">中区大须 / 距地铁大须观音站步行约3分钟</span><span data-lang="en">Osu District / 3 mins walk to Osu Kannon Subway</span></div>
+                            <div class="google-compare-badge"><span class="g-icon">G</span><span data-lang="zh">Google比价核验 · 聚合预订平台与官网</span><span data-lang="en">Google Price Comparison Verified</span></div>
                         </div>
 
                         <!-- Laundry Box -->
@@ -910,11 +963,12 @@
                         <div class="card-footer-action">
                             <div class="price-display" data-hotel-id="h1-1">
                                 <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
-                                <span class="price-amount" data-cny="1250" data-jpy="26000" data-sgd="235" data-usd="175">¥1,250</span>
-                                <span class="price-unit"><span data-lang="zh">4晚约 ¥5,000 (约26,000円/晚)</span><span data-lang="en">~26,000 JPY / night</span></span>
+                                <span class="price-amount" data-cny="1620" data-jpy="34500" data-sgd="282" data-usd="225">S$ 282</span>
+                                <span class="price-unit"><span data-lang="zh">4晚约 S$ 1,127 (~34,500円/晚)</span><span data-lang="en">4N Total ~S$ 1,127 (~34,500 JPY/n)</span></span>
+                                <span class="price-google-range"><span data-lang="zh">Google比价区间: 32,000円 ~ 38,000円 / 晚</span><span data-lang="en">Google Range: ~32,000 - 38,000 JPY/n</span></span>
                             </div>
-                            <a href="https://www.google.com/travel/hotels/search?q=GOLD+STAY+Nagoya+Osu" target="_blank" class="btn-search-hotel">
-                                <span>🔍</span> <span data-lang="zh">查实时价格</span><span data-lang="en">Check Rates</span>
+                            <a href="https://www.google.com/search?q=GOLD+STAY+Nagoya+Osu+hotel+price+comparison" target="_blank" class="btn-search-hotel">
+                                <span>⚖️</span> <span data-lang="zh">Google 实时比价</span><span data-lang="en">Google Rates</span>
                             </a>
                         </div>
                     </div>
@@ -933,6 +987,7 @@
                                 <span data-lang="en">Nagoya JR Gate Tower Hotel</span>
                             </h3>
                             <div class="hotel-location">📍 <span data-lang="zh">名古屋站直上 / 电梯直通JR、名铁、近铁与高岛屋</span><span data-lang="en">Directly atop Nagoya Station / Elevators to JR & Malls</span></div>
+                            <div class="google-compare-badge"><span class="g-icon">G</span><span data-lang="zh">Google比价核验 · 聚合预订平台与官网</span><span data-lang="en">Google Price Comparison Verified</span></div>
                         </div>
 
                         <!-- Laundry Box -->
@@ -969,12 +1024,13 @@
                         <!-- Price & Link -->
                         <div class="card-footer-action">
                             <div class="price-display" data-hotel-id="h1-2">
-                                <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
-                                <span class="price-amount" data-cny="1850" data-jpy="38000" data-sgd="345" data-usd="255">¥1,850</span>
-                                <span class="price-unit"><span data-lang="zh">4晚约 ¥7,400 (约38,000円/晚)</span><span data-lang="en">~38,000 JPY / night</span></span>
+                                <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚 (2间房)</span><span data-lang="en">Estimated 4-Pax / Night (2 Rooms)</span></span>
+                                <span class="price-amount" data-cny="2254" data-jpy="48000" data-sgd="392" data-usd="313">S$ 392</span>
+                                <span class="price-unit"><span data-lang="zh">4晚约 S$ 1,567 (~48,000円/晚)</span><span data-lang="en">4N Total ~S$ 1,567 (~48,000 JPY/n)</span></span>
+                                <span class="price-google-range"><span data-lang="zh">Google比价区间: 45,000円 ~ 52,000円 / 晚</span><span data-lang="en">Google Range: ~45,000 - 52,000 JPY/n</span></span>
                             </div>
-                            <a href="https://www.google.com/travel/hotels/search?q=Nagoya+JR+Gate+Tower+Hotel" target="_blank" class="btn-search-hotel">
-                                <span>🔍</span> <span data-lang="zh">查实时价格</span><span data-lang="en">Check Rates</span>
+                            <a href="https://www.google.com/search?q=Nagoya+JR+Gate+Tower+Hotel+price+comparison" target="_blank" class="btn-search-hotel">
+                                <span>⚖️</span> <span data-lang="zh">Google 实时比价</span><span data-lang="en">Google Rates</span>
                             </a>
                         </div>
                     </div>
@@ -993,6 +1049,7 @@
                                 <span data-lang="en">Daiwa Roynet Hotel Taiko dori Side</span>
                             </h3>
                             <div class="hotel-location">📍 <span data-lang="zh">名古屋站太阁通口（新干线口）步行约1分钟</span><span data-lang="en">1 min walk from Nagoya Station Shinkansen exit</span></div>
+                            <div class="google-compare-badge"><span class="g-icon">G</span><span data-lang="zh">Google比价核验 · 聚合预订平台与官网</span><span data-lang="en">Google Price Comparison Verified</span></div>
                         </div>
 
                         <!-- Laundry Box -->
@@ -1008,7 +1065,7 @@
                         <div class="spec-list">
                             <div class="spec-row">
                                 <span class="spec-label"><span data-lang="zh">推荐房型：</span><span data-lang="en">Room Type:</span></span>
-                                <span class="spec-val"><span data-lang="zh">豪华双床房加床 (住3-4人) 或 预订2间相邻房</span><span data-lang="en">Deluxe Twin + Extra Bed or 2 Adjacent Rooms</span></span>
+                                <span class="spec-val"><span data-lang="zh">预订2间双床房 / 豪华双床加床</span><span data-lang="en">2 Twin Rooms / Deluxe Twin + Extra Bed</span></span>
                             </div>
                             <div class="spec-row">
                                 <span class="spec-label"><span data-lang="zh">餐饮配套：</span><span data-lang="en">Convenience:</span></span>
@@ -1025,12 +1082,13 @@
                         <!-- Price & Link -->
                         <div class="card-footer-action">
                             <div class="price-display" data-hotel-id="h1-3">
-                                <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
-                                <span class="price-amount" data-cny="1050" data-jpy="22000" data-sgd="195" data-usd="145">¥1,050</span>
-                                <span class="price-unit"><span data-lang="zh">4晚约 ¥4,200 (约22,000円/晚)</span><span data-lang="en">~22,000 JPY / night</span></span>
+                                <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚 (2间房)</span><span data-lang="en">Estimated 4-Pax / Night (2 Rooms)</span></span>
+                                <span class="price-amount" data-cny="1268" data-jpy="27000" data-sgd="220" data-usd="176">S$ 220</span>
+                                <span class="price-unit"><span data-lang="zh">4晚约 S$ 882 (~27,000円/晚)</span><span data-lang="en">4N Total ~S$ 882 (~27,000 JPY/n)</span></span>
+                                <span class="price-google-range"><span data-lang="zh">Google比价区间: 24,000円 ~ 30,000円 / 晚</span><span data-lang="en">Google Range: ~24,000 - 30,000 JPY/n</span></span>
                             </div>
-                            <a href="https://www.google.com/travel/hotels/search?q=Daiwa+Roynet+Hotel+Nagoya+Taiko+dori+Side" target="_blank" class="btn-search-hotel">
-                                <span>🔍</span> <span data-lang="zh">查实时价格</span><span data-lang="en">Check Rates</span>
+                            <a href="https://www.google.com/search?q=Daiwa+Roynet+Hotel+Nagoya+Taiko+dori+Side+price+comparison" target="_blank" class="btn-search-hotel">
+                                <span>⚖️</span> <span data-lang="zh">Google 实时比价</span><span data-lang="en">Google Rates</span>
                             </a>
                         </div>
                     </div>
@@ -1065,6 +1123,7 @@
                                 <span data-lang="en">Residence Hotel Takayama Station</span>
                             </h3>
                             <div class="hotel-location">📍 <span data-lang="zh">高山站与浓飞巴士总站步行仅约 2 分钟！</span><span data-lang="en">Only 2 mins walk from Takayama Station & Nohi Bus Terminal!</span></div>
+                            <div class="google-compare-badge"><span class="g-icon">G</span><span data-lang="zh">Google比价核验 · 聚合预订平台与官网</span><span data-lang="en">Google Price Comparison Verified</span></div>
                         </div>
 
                         <!-- Laundry Box -->
@@ -1102,11 +1161,12 @@
                         <div class="card-footer-action">
                             <div class="price-display" data-hotel-id="h2-1">
                                 <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
-                                <span class="price-amount" data-cny="1200" data-jpy="25000" data-sgd="225" data-usd="165">¥1,200</span>
-                                <span class="price-unit"><span data-lang="zh">4晚约 ¥4,800 (约25,000円/晚)</span><span data-lang="en">~25,000 JPY / night</span></span>
+                                <span class="price-amount" data-cny="1455" data-jpy="31000" data-sgd="253" data-usd="202">S$ 253</span>
+                                <span class="price-unit"><span data-lang="zh">4晚约 S$ 1,012 (~31,000円/晚)</span><span data-lang="en">4N Total ~S$ 1,012 (~31,000 JPY/n)</span></span>
+                                <span class="price-google-range"><span data-lang="zh">Google比价区间: 28,000円 ~ 35,000円 / 晚</span><span data-lang="en">Google Range: ~28,000 - 35,000 JPY/n</span></span>
                             </div>
-                            <a href="https://www.google.com/travel/hotels/search?q=Residence+Hotel+Takayama+Station" target="_blank" class="btn-search-hotel">
-                                <span>🔍</span> <span data-lang="zh">查实时价格</span><span data-lang="en">Check Rates</span>
+                            <a href="https://www.google.com/search?q=Residence+Hotel+Takayama+Station+price+comparison" target="_blank" class="btn-search-hotel">
+                                <span>⚖️</span> <span data-lang="zh">Google 实时比价</span><span data-lang="en">Google Rates</span>
                             </a>
                         </div>
                     </div>
@@ -1125,6 +1185,7 @@
                                 <span data-lang="en">Tokyu Stay Hida-Takayama Musubi no Yu</span>
                             </h3>
                             <div class="hotel-location">📍 <span data-lang="zh">高山站东口步行约 2 分钟</span><span data-lang="en">2 mins walk from JR Takayama Station East Exit</span></div>
+                            <div class="google-compare-badge"><span class="g-icon">G</span><span data-lang="zh">Google比价核验 · 聚合预订平台与官网</span><span data-lang="en">Google Price Comparison Verified</span></div>
                         </div>
 
                         <!-- Laundry Box -->
@@ -1158,11 +1219,12 @@
                         <div class="card-footer-action">
                             <div class="price-display" data-hotel-id="h2-2">
                                 <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
-                                <span class="price-amount" data-cny="1550" data-jpy="32000" data-sgd="290" data-usd="215">¥1,550</span>
-                                <span class="price-unit"><span data-lang="zh">4晚约 ¥6,200 (约32,000円/晚)</span><span data-lang="en">~32,000 JPY / night</span></span>
+                                <span class="price-amount" data-cny="1784" data-jpy="38000" data-sgd="310" data-usd="248">S$ 310</span>
+                                <span class="price-unit"><span data-lang="zh">4晚约 S$ 1,241 (~38,000円/晚)</span><span data-lang="en">4N Total ~S$ 1,241 (~38,000 JPY/n)</span></span>
+                                <span class="price-google-range"><span data-lang="zh">Google比价区间: 35,000円 ~ 42,000円 / 晚</span><span data-lang="en">Google Range: ~35,000 - 42,000 JPY/n</span></span>
                             </div>
-                            <a href="https://www.google.com/travel/hotels/search?q=Tokyu+Stay+Hida+Takayama+Musubi+no+Yu" target="_blank" class="btn-search-hotel">
-                                <span>🔍</span> <span data-lang="zh">查实时价格</span><span data-lang="en">Check Rates</span>
+                            <a href="https://www.google.com/search?q=Tokyu+Stay+Hida+Takayama+Musubi+no+Yu+price+comparison" target="_blank" class="btn-search-hotel">
+                                <span>⚖️</span> <span data-lang="zh">Google 实时比价</span><span data-lang="en">Google Rates</span>
                             </a>
                         </div>
                     </div>
@@ -1181,6 +1243,7 @@
                                 <span data-lang="en">Takayama Ouan</span>
                             </h3>
                             <div class="hotel-location">📍 <span data-lang="zh">高山站步行约3分钟</span><span data-lang="en">3 mins walk from Takayama Station</span></div>
+                            <div class="google-compare-badge"><span class="g-icon">G</span><span data-lang="zh">Google比价核验 · 聚合预订平台与官网</span><span data-lang="en">Google Price Comparison Verified</span></div>
                         </div>
 
                         <!-- Laundry Box -->
@@ -1214,11 +1277,12 @@
                         <div class="card-footer-action">
                             <div class="price-display" data-hotel-id="h2-3">
                                 <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
-                                <span class="price-amount" data-cny="1650" data-jpy="34000" data-sgd="310" data-usd="230">¥1,650</span>
-                                <span class="price-unit"><span data-lang="zh">4晚约 ¥6,600 (约34,000円/晚)</span><span data-lang="en">~34,000 JPY / night</span></span>
+                                <span class="price-amount" data-cny="1925" data-jpy="41000" data-sgd="335" data-usd="267">S$ 335</span>
+                                <span class="price-unit"><span data-lang="zh">4晚约 S$ 1,339 (~41,000円/晚)</span><span data-lang="en">4N Total ~S$ 1,339 (~41,000 JPY/n)</span></span>
+                                <span class="price-google-range"><span data-lang="zh">Google比价区间: 38,000円 ~ 45,000円 / 晚</span><span data-lang="en">Google Range: ~38,000 - 45,000 JPY/n</span></span>
                             </div>
-                            <a href="https://www.google.com/travel/hotels/search?q=Takayama+Ouan" target="_blank" class="btn-search-hotel">
-                                <span>🔍</span> <span data-lang="zh">查实时价格</span><span data-lang="en">Check Rates</span>
+                            <a href="https://www.google.com/search?q=Takayama+Ouan+hotel+price+comparison" target="_blank" class="btn-search-hotel">
+                                <span>⚖️</span> <span data-lang="zh">Google 实时比价</span><span data-lang="en">Google Rates</span>
                             </a>
                         </div>
                     </div>
@@ -1253,6 +1317,7 @@
                                 <span data-lang="en">Gero Onsen Suimeikan</span>
                             </h3>
                             <div class="hotel-location">📍 <span data-lang="zh">下吕站步行约3分钟 / 车站出站口专属巴士接送</span><span data-lang="en">3 mins walk from Gero Station / Free shuttle bus</span></div>
+                            <div class="google-compare-badge"><span class="g-icon">G</span><span data-lang="zh">Google比价核验 · 聚合预订平台与官网</span><span data-lang="en">Google Price Comparison Verified</span></div>
                         </div>
 
                         <!-- Laundry Box -->
@@ -1290,11 +1355,12 @@
                         <div class="card-footer-action">
                             <div class="price-display" data-hotel-id="h3-1">
                                 <span class="price-label"><span data-lang="zh">4人一泊二食总价（含早晚餐）</span><span data-lang="en">4-Pax Total (Dinner & Bfast)</span></span>
-                                <span class="price-amount" data-cny="3800" data-jpy="78000" data-sgd="710" data-usd="525">¥3,800</span>
-                                <span class="price-unit"><span data-lang="zh">4人含双餐总价 (约78,000円)</span><span data-lang="en">Total for 4 pax with Kaiseki</span></span>
+                                <span class="price-amount" data-cny="4319" data-jpy="92000" data-sgd="751" data-usd="599">S$ 751</span>
+                                <span class="price-unit"><span data-lang="zh">4人一泊二食早晚全包 (约92,000円)</span><span data-lang="en">Total for 4 pax with Kaiseki (~92,000 JPY)</span></span>
+                                <span class="price-google-range"><span data-lang="zh">Google比价区间: 88,000円 ~ 98,000円 (含4人晚宴+早餐)</span><span data-lang="en">Google Range: ~88,000 - 98,000 JPY (Half-board)</span></span>
                             </div>
-                            <a href="https://www.google.com/travel/hotels/search?q=Gero+Onsen+Suimeikan" target="_blank" class="btn-search-hotel">
-                                <span>🔍</span> <span data-lang="zh">查实时价格</span><span data-lang="en">Check Rates</span>
+                            <a href="https://www.google.com/search?q=Gero+Onsen+Suimeikan+ryokan+price+comparison" target="_blank" class="btn-search-hotel">
+                                <span>⚖️</span> <span data-lang="zh">Google 实时比价</span><span data-lang="en">Google Rates</span>
                             </a>
                         </div>
                     </div>
@@ -1313,6 +1379,7 @@
                                 <span data-lang="en">Gero Onsen Ogawaya</span>
                             </h3>
                             <div class="hotel-location">📍 <span data-lang="zh">下吕温泉街中心 / 距下吕站步行约8分钟</span><span data-lang="en">Central onsen town / 8 mins walk to station</span></div>
+                            <div class="google-compare-badge"><span class="g-icon">G</span><span data-lang="zh">Google比价核验 · 聚合预订平台与官网</span><span data-lang="en">Google Price Comparison Verified</span></div>
                         </div>
 
                         <!-- Laundry Box -->
@@ -1346,11 +1413,12 @@
                         <div class="card-footer-action">
                             <div class="price-display" data-hotel-id="h3-2">
                                 <span class="price-label"><span data-lang="zh">4人一泊二食总价（含早晚餐）</span><span data-lang="en">4-Pax Total (Dinner & Bfast)</span></span>
-                                <span class="price-amount" data-cny="3300" data-jpy="68000" data-sgd="620" data-usd="460">¥3,300</span>
-                                <span class="price-unit"><span data-lang="zh">4人含双餐总价 (约68,000円)</span><span data-lang="en">Total for 4 pax with Kaiseki</span></span>
+                                <span class="price-amount" data-cny="3850" data-jpy="82000" data-sgd="669" data-usd="534">S$ 669</span>
+                                <span class="price-unit"><span data-lang="zh">4人一泊二食早晚全包 (约82,000円)</span><span data-lang="en">Total for 4 pax with Kaiseki (~82,000 JPY)</span></span>
+                                <span class="price-google-range"><span data-lang="zh">Google比价区间: 78,000円 ~ 86,000円 (含4人料理)</span><span data-lang="en">Google Range: ~78,000 - 86,000 JPY (Half-board)</span></span>
                             </div>
-                            <a href="https://www.google.com/travel/hotels/search?q=Gero+Onsen+Ogawaya" target="_blank" class="btn-search-hotel">
-                                <span>🔍</span> <span data-lang="zh">查实时价格</span><span data-lang="en">Check Rates</span>
+                            <a href="https://www.google.com/search?q=Gero+Onsen+Ogawaya+price+comparison" target="_blank" class="btn-search-hotel">
+                                <span>⚖️</span> <span data-lang="zh">Google 实时比价</span><span data-lang="en">Google Rates</span>
                             </a>
                         </div>
                     </div>
@@ -1385,6 +1453,7 @@
                                 <span data-lang="en">GOLD STAY Nagoya Osu (Return Stay)</span>
                             </h3>
                             <div class="hotel-location">📍 <span data-lang="zh">大须商业街核心 / 取回Day 5寄回的大箱子</span><span data-lang="en">Heart of Osu Arcade / Reclaim forwarded luggage here</span></div>
+                            <div class="google-compare-badge"><span class="g-icon">G</span><span data-lang="zh">Google比价核验 · 聚合预订平台与官网</span><span data-lang="en">Google Price Comparison Verified</span></div>
                         </div>
 
                         <!-- Laundry Box -->
@@ -1417,12 +1486,13 @@
                         <!-- Price & Link -->
                         <div class="card-footer-action">
                             <div class="price-display" data-hotel-id="h4-1">
-                                <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
-                                <span class="price-amount" data-cny="1300" data-jpy="27000" data-sgd="245" data-usd="180">¥1,300</span>
-                                <span class="price-unit"><span data-lang="zh">3晚约 ¥3,900 (约27,000円/晚)</span><span data-lang="en">~27,000 JPY / night</span></span>
+                                <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚 (含周末)</span><span data-lang="en">Estimated 4-Pax / Night (Weekend)</span></span>
+                                <span class="price-amount" data-cny="1761" data-jpy="37500" data-sgd="306" data-usd="244">S$ 306</span>
+                                <span class="price-unit"><span data-lang="zh">3晚约 S$ 918 (~37,500円/晚)</span><span data-lang="en">3N Total ~S$ 918 (~37,500 JPY/n)</span></span>
+                                <span class="price-google-range"><span data-lang="zh">Google比价区间: 35,000円 ~ 42,000円 / 晚</span><span data-lang="en">Google Range: ~35,000 - 42,000 JPY/n</span></span>
                             </div>
-                            <a href="https://www.google.com/travel/hotels/search?q=GOLD+STAY+Nagoya+Osu" target="_blank" class="btn-search-hotel">
-                                <span>🔍</span> <span data-lang="zh">查实时价格</span><span data-lang="en">Check Rates</span>
+                            <a href="https://www.google.com/search?q=GOLD+STAY+Nagoya+Osu+hotel+price+comparison" target="_blank" class="btn-search-hotel">
+                                <span>⚖️</span> <span data-lang="zh">Google 实时比价</span><span data-lang="en">Google Rates</span>
                             </a>
                         </div>
                     </div>
@@ -1441,6 +1511,7 @@
                                 <span data-lang="en">Mitsui Garden Hotel Nagoya Premier</span>
                             </h3>
                             <div class="hotel-location">📍 <span data-lang="zh">名驿地下通道直达步行5分钟 / 18-25层高空视野</span><span data-lang="en">5 mins via underground mall from Nagoya Station</span></div>
+                            <div class="google-compare-badge"><span class="g-icon">G</span><span data-lang="zh">Google比价核验 · 聚合预订平台与官网</span><span data-lang="en">Google Price Comparison Verified</span></div>
                         </div>
 
                         <!-- Laundry Box -->
@@ -1456,7 +1527,7 @@
                         <div class="spec-list">
                             <div class="spec-row">
                                 <span class="spec-label"><span data-lang="zh">推荐房型：</span><span data-lang="en">Room Type:</span></span>
-                                <span class="spec-val"><span data-lang="zh">高级转角双床房 (Superior Corner Twin) 预订两间</span><span data-lang="en">Superior Corner Twin (2 Rooms)</span></span>
+                                <span class="spec-val"><span data-lang="zh">预订2间高级转角双床房 (4人入住)</span><span data-lang="en">Superior Corner Twin (2 Rooms)</span></span>
                             </div>
                             <div class="spec-row">
                                 <span class="spec-label"><span data-lang="zh">机场交通：</span><span data-lang="en">Airport Transit:</span></span>
@@ -1473,12 +1544,13 @@
                         <!-- Price & Link -->
                         <div class="card-footer-action">
                             <div class="price-display" data-hotel-id="h4-2">
-                                <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
-                                <span class="price-amount" data-cny="1650" data-jpy="34000" data-sgd="310" data-usd="230">¥1,650</span>
-                                <span class="price-unit"><span data-lang="zh">3晚约 ¥4,950 (约34,000円/晚)</span><span data-lang="en">~34,000 JPY / night</span></span>
+                                <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚 (2间房)</span><span data-lang="en">Estimated 4-Pax / Night (2 Rooms)</span></span>
+                                <span class="price-amount" data-cny="1972" data-jpy="42000" data-sgd="343" data-usd="274">S$ 343</span>
+                                <span class="price-unit"><span data-lang="zh">3晚约 S$ 1,029 (~42,000円/晚)</span><span data-lang="en">3N Total ~S$ 1,029 (~42,000 JPY/n)</span></span>
+                                <span class="price-google-range"><span data-lang="zh">Google比价区间: 38,000円 ~ 45,000円 / 晚</span><span data-lang="en">Google Range: ~38,000 - 45,000 JPY/n</span></span>
                             </div>
-                            <a href="https://www.google.com/travel/hotels/search?q=Mitsui+Garden+Hotel+Nagoya+Premier" target="_blank" class="btn-search-hotel">
-                                <span>🔍</span> <span data-lang="zh">查实时价格</span><span data-lang="en">Check Rates</span>
+                            <a href="https://www.google.com/search?q=Mitsui+Garden+Hotel+Nagoya+Premier+price+comparison" target="_blank" class="btn-search-hotel">
+                                <span>⚖️</span> <span data-lang="zh">Google 实时比价</span><span data-lang="en">Google Rates</span>
                             </a>
                         </div>
                     </div>
@@ -1497,6 +1569,7 @@
                                 <span data-lang="en">Nagoya Marriott Associa Hotel</span>
                             </h3>
                             <div class="hotel-location">📍 <span data-lang="zh">名古屋站正上方 JR Central Towers 20-49层</span><span data-lang="en">Nagoya Station Tower 20-49F / Directly atop station</span></div>
+                            <div class="google-compare-badge"><span class="g-icon">G</span><span data-lang="zh">Google比价核验 · 聚合预订平台与官网</span><span data-lang="en">Google Price Comparison Verified</span></div>
                         </div>
 
                         <!-- Laundry Box -->
@@ -1512,7 +1585,7 @@
                         <div class="spec-list">
                             <div class="spec-row">
                                 <span class="spec-label"><span data-lang="zh">推荐房型：</span><span data-lang="en">Room Type:</span></span>
-                                <span class="spec-val"><span data-lang="zh">豪华双床双大床房 (Deluxe Twin / 38㎡)</span><span data-lang="en">Deluxe Twin / 38 sqm</span></span>
+                                <span class="spec-val"><span data-lang="zh">预订2间豪华双床房 (4人入住 / 38㎡×2)</span><span data-lang="en">2 Deluxe Twin Rooms (4 Pax / 38sqm x 2)</span></span>
                             </div>
                             <div class="spec-row">
                                 <span class="spec-label"><span data-lang="zh">终极返程便利：</span><span data-lang="en">Departure Ease:</span></span>
@@ -1529,12 +1602,13 @@
                         <!-- Price & Link -->
                         <div class="card-footer-action">
                             <div class="price-display" data-hotel-id="h4-3">
-                                <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚</span><span data-lang="en">Estimated 4-Pax / Night</span></span>
-                                <span class="price-amount" data-cny="2500" data-jpy="52000" data-sgd="470" data-usd="350">¥2,500</span>
-                                <span class="price-unit"><span data-lang="zh">3晚约 ¥7,500 (约52,000円/晚)</span><span data-lang="en">~52,000 JPY / night</span></span>
+                                <span class="price-label"><span data-lang="zh">4人总价参考 / 每晚 (2间房)</span><span data-lang="en">Estimated 4-Pax / Night (2 Rooms)</span></span>
+                                <span class="price-amount" data-cny="3099" data-jpy="66000" data-sgd="539" data-usd="430">S$ 539</span>
+                                <span class="price-unit"><span data-lang="zh">3晚约 S$ 1,616 (~66,000円/晚)</span><span data-lang="en">3N Total ~S$ 1,616 (~66,000 JPY/n)</span></span>
+                                <span class="price-google-range"><span data-lang="zh">Google比价区间: 60,000円 ~ 72,000円 / 晚</span><span data-lang="en">Google Range: ~60,000 - 72,000 JPY/n</span></span>
                             </div>
-                            <a href="https://www.google.com/travel/hotels/search?q=Nagoya+Marriott+Associa+Hotel" target="_blank" class="btn-search-hotel">
-                                <span>🔍</span> <span data-lang="zh">查实时价格</span><span data-lang="en">Check Rates</span>
+                            <a href="https://www.google.com/search?q=Nagoya+Marriott+Associa+Hotel+price+comparison" target="_blank" class="btn-search-hotel">
+                                <span>⚖️</span> <span data-lang="zh">Google 实时比价</span><span data-lang="en">Google Rates</span>
                             </a>
                         </div>
                     </div>
@@ -1569,98 +1643,98 @@
                     <tbody>
                         <!-- P1 -->
                         <tr data-hotel-id="h1-1" style="background: #f0fdf4;">
-                            <td><strong>阶段一：名古屋 (4晚)</strong><br><span style="font-size:0.75rem; color:#64748b;">11/26 - 11/30</span></td>
-                            <td><strong>GOLD STAY 名古屋大须</strong><br><span style="font-size:0.75rem; color:#047857;">★ 最推荐亲子家庭</span></td>
-                            <td><strong style="color:#15803d;">🌟 房内独立洗烘机</strong> (免费含洗剂)</td>
-                            <td>45-50㎡ 4床套房 + 全套厨房</td>
-                            <td><strong class="tbl-nightly">S$ 214</strong></td>
-                            <td><strong class="tbl-total" style="color:#047857;">S$ 856</strong></td>
+                            <td><strong><span data-lang="zh">阶段一：名古屋 (4晚)</span><span data-lang="en">Phase 1: Nagoya (4N)</span></strong><br><span style="font-size:0.75rem; color:#64748b;">11/26 - 11/30</span></td>
+                            <td><strong><span data-lang="zh">GOLD STAY 名古屋大须</span><span data-lang="en">GOLD STAY Nagoya Osu</span></strong><br><span style="font-size:0.75rem; color:#047857;"><span data-lang="zh">★ 最推荐亲子家庭</span><span data-lang="en">★ Best Family Pick</span></span></td>
+                            <td><strong style="color:#15803d;"><span data-lang="zh">🌟 房内独立洗烘机</span><span data-lang="en">🌟 In-Room Washer/Dryer</span></strong> <span data-lang="zh">(免费含洗剂)</span><span data-lang="en">(Free detergent)</span></td>
+                            <td><span data-lang="zh">45-50㎡ 4床套房 + 全套厨房</span><span data-lang="en">45-50㎡ 4-Bed Suite + Full Kitchen</span></td>
+                            <td><strong class="tbl-nightly">S$ 282</strong></td>
+                            <td><strong class="tbl-total" style="color:#047857;">S$ 1,127</strong></td>
                         </tr>
                         <tr data-hotel-id="h1-2">
-                            <td>阶段一：名古屋 (4晚)</td>
-                            <td>名古屋 JR Gate Tower 饭店</td>
-                            <td>🔄 20层 24小时投币机 (电视查空位)</td>
-                            <td>名驿直连高空双房 / 加床</td>
-                            <td><strong class="tbl-nightly">S$ 313</strong></td>
-                            <td><strong class="tbl-total" style="color:#64748b;">S$ 1,251</strong></td>
+                            <td><span data-lang="zh">阶段一：名古屋 (4晚)</span><span data-lang="en">Phase 1: Nagoya (4N)</span></td>
+                            <td><span data-lang="zh">名古屋 JR Gate Tower 饭店</span><span data-lang="en">Nagoya JR Gate Tower Hotel</span></td>
+                            <td><span data-lang="zh">🔄 20层 24小时投币机 (电视查空位)</span><span data-lang="en">🔄 20F 24h Coin Laundry (TV status)</span></td>
+                            <td><span data-lang="zh">名驿直连高空双房 (2间房)</span><span data-lang="en">Station Direct 2 Rooms</span></td>
+                            <td><strong class="tbl-nightly">S$ 392</strong></td>
+                            <td><strong class="tbl-total" style="color:#64748b;">S$ 1,567</strong></td>
                         </tr>
                         <tr data-hotel-id="h1-3">
-                            <td>阶段一：名古屋 (4晚)</td>
-                            <td>大和 Roynet 名古屋太阁通口</td>
-                            <td>🔄 馆内投币洗衣机房</td>
-                            <td>新干线口1分钟 / 双床加床</td>
-                            <td><strong class="tbl-nightly">S$ 181</strong></td>
-                            <td><strong class="tbl-total" style="color:#64748b;">S$ 724</strong></td>
+                            <td><span data-lang="zh">阶段一：名古屋 (4晚)</span><span data-lang="en">Phase 1: Nagoya (4N)</span></td>
+                            <td><span data-lang="zh">大和 Roynet 名古屋太阁通口</span><span data-lang="en">Daiwa Roynet Taiko-dori Side</span></td>
+                            <td><span data-lang="zh">🔄 馆内投币洗衣机房</span><span data-lang="en">🔄 On-site Coin Laundry Room</span></td>
+                            <td><span data-lang="zh">新干线口1分钟 (2间双床房)</span><span data-lang="en">1-min Shinkansen Exit (2 Rooms)</span></td>
+                            <td><strong class="tbl-nightly">S$ 220</strong></td>
+                            <td><strong class="tbl-total" style="color:#64748b;">S$ 882</strong></td>
                         </tr>
 
                         <!-- P2 -->
                         <tr data-hotel-id="h2-1" style="background: #f0fdf4;">
-                            <td><strong>阶段二：高山 (4晚)</strong><br><span style="font-size:0.75rem; color:#64748b;">11/30 - 12/04</span></td>
-                            <td><strong>高山车站公寓式酒店</strong><br><span style="font-size:0.75rem; color:#047857;">★ 最推荐亲子家庭</span></td>
-                            <td><strong style="color:#15803d;">🌟 全房型独立洗烘机</strong> (含洗粉)</td>
-                            <td>超大豪华套房 + 全厨房 + 赠免费温泉</td>
-                            <td><strong class="tbl-nightly">S$ 206</strong></td>
-                            <td><strong class="tbl-total" style="color:#047857;">S$ 823</strong></td>
+                            <td><strong><span data-lang="zh">阶段二：高山 (4晚)</span><span data-lang="en">Phase 2: Takayama (4N)</span></strong><br><span style="font-size:0.75rem; color:#64748b;">11/30 - 12/04</span></td>
+                            <td><strong><span data-lang="zh">高山车站公寓式酒店</span><span data-lang="en">Residence Hotel Takayama Station</span></strong><br><span style="font-size:0.75rem; color:#047857;"><span data-lang="zh">★ 最推荐亲子家庭</span><span data-lang="en">★ Best Family Pick</span></span></td>
+                            <td><strong style="color:#15803d;"><span data-lang="zh">🌟 全房型独立洗烘机</span><span data-lang="en">🌟 In-Room Washer/Dryer</span></strong> <span data-lang="zh">(含洗粉)</span><span data-lang="en">(Free soap)</span></td>
+                            <td><span data-lang="zh">超大豪华套房 + 全厨房 + 赠免费温泉</span><span data-lang="en">Spacious Family Suite + Kitchen + Free Onsen</span></td>
+                            <td><strong class="tbl-nightly">S$ 253</strong></td>
+                            <td><strong class="tbl-total" style="color:#047857;">S$ 1,012</strong></td>
                         </tr>
                         <tr data-hotel-id="h2-2">
-                            <td>阶段二：高山 (4晚)</td>
-                            <td>东急 STAY 飞驒高山 结之汤</td>
-                            <td><strong style="color:#15803d;">🌟 房内独立洗烘机</strong> + 微波炉</td>
-                            <td>现代和风4人房 + 馆内天然温泉</td>
-                            <td><strong class="tbl-nightly">S$ 263</strong></td>
-                            <td><strong class="tbl-total" style="color:#64748b;">S$ 1,053</strong></td>
+                            <td><span data-lang="zh">阶段二：高山 (4晚)</span><span data-lang="en">Phase 2: Takayama (4N)</span></td>
+                            <td><span data-lang="zh">东急 STAY 飞驒高山 结之汤</span><span data-lang="en">Tokyu Stay Hida Takayama Musubi no Yu</span></td>
+                            <td><strong style="color:#15803d;"><span data-lang="zh">🌟 房内独立洗烘机</span><span data-lang="en">🌟 In-Room Washer/Dryer</span></strong> + <span data-lang="zh">微波炉</span><span data-lang="en">Microwave</span></td>
+                            <td><span data-lang="zh">现代和风4人房 + 馆内天然温泉</span><span data-lang="en">Modern Japanese 4-Pax Room + Onsen</span></td>
+                            <td><strong class="tbl-nightly">S$ 310</strong></td>
+                            <td><strong class="tbl-total" style="color:#64748b;">S$ 1,241</strong></td>
                         </tr>
                         <tr data-hotel-id="h2-3">
-                            <td>阶段二：高山 (4晚)</td>
-                            <td>飞驒高山温泉 高山樱庵</td>
-                            <td>🔄 馆内自助投币洗衣机</td>
-                            <td>全馆榻榻米和室 + 顶楼露天风吕</td>
-                            <td><strong class="tbl-nightly">S$ 280</strong></td>
-                            <td><strong class="tbl-total" style="color:#64748b;">S$ 1,119</strong></td>
+                            <td><span data-lang="zh">阶段二：高山 (4晚)</span><span data-lang="en">Phase 2: Takayama (4N)</span></td>
+                            <td><span data-lang="zh">飞驒高山温泉 高山樱庵</span><span data-lang="en">Takayama Ouan</span></td>
+                            <td><span data-lang="zh">🔄 馆内自助投币洗衣机</span><span data-lang="en">🔄 On-site Coin Laundry</span></td>
+                            <td><span data-lang="zh">全馆榻榻米和室 + 顶楼露天风吕</span><span data-lang="en">Tatami Japanese Room + Rooftop Onsen</span></td>
+                            <td><strong class="tbl-nightly">S$ 335</strong></td>
+                            <td><strong class="tbl-total" style="color:#64748b;">S$ 1,339</strong></td>
                         </tr>
 
                         <!-- P3 -->
                         <tr data-hotel-id="h3-1" style="background: #fffbeb;">
-                            <td><strong>阶段三：下吕名汤 (1晚)</strong><br><span style="font-size:0.75rem; color:#64748b;">12/04 - 12/05</span></td>
-                            <td><strong>下吕温泉 水明馆</strong><br><span style="font-size:0.75rem; color:#b45309;">★ 传统名宿中罕见带洗衣房</span></td>
-                            <td><strong style="color:#0369a1;">🔄 馆内自设客人投币洗衣房</strong></td>
-                            <td>日式和室榻榻米 + 4人飞驒牛晚宴+早餐</td>
-                            <td><span style="font-size:0.8rem; color:#64748b;">一泊二食早晚两餐</span></td>
-                            <td><strong class="tbl-total" style="color:#b45309;">S$ 642 (全包)</strong></td>
+                            <td><strong><span data-lang="zh">阶段三：下吕名汤 (1晚)</span><span data-lang="en">Phase 3: Gero Onsen (1N)</span></strong><br><span style="font-size:0.75rem; color:#64748b;">12/04 - 12/05</span></td>
+                            <td><strong><span data-lang="zh">下吕温泉 水明馆</span><span data-lang="en">Gero Onsen Suimeikan</span></strong><br><span style="font-size:0.75rem; color:#b45309;"><span data-lang="zh">★ 传统名宿中罕见带洗衣房</span><span data-lang="en">★ Rare Coin Laundry in Ryokan</span></span></td>
+                            <td><strong style="color:#0369a1;"><span data-lang="zh">🔄 馆内自设客人投币洗衣房</span><span data-lang="en">🔄 On-site Coin Laundry</span></strong></td>
+                            <td><span data-lang="zh">日式和室榻榻米 + 4人飞驒牛晚宴+早餐</span><span data-lang="en">Japanese Tatami + 4-Pax Kaiseki & Breakfast</span></td>
+                            <td><span style="font-size:0.8rem; color:#64748b;"><span data-lang="zh">一泊二食早晚两餐</span><span data-lang="en">Half-board Dinner & Bfast</span></span></td>
+                            <td><strong class="tbl-total" style="color:#b45309;">S$ 751 (全包)</strong></td>
                         </tr>
                         <tr data-hotel-id="h3-2">
-                            <td>阶段三：下吕名汤 (1晚)</td>
-                            <td>下吕温泉 小川屋</td>
-                            <td>⚠️ 馆内无自助洗衣机</td>
-                            <td>100叠榻榻米防滑池 + 会席早晚餐</td>
-                            <td><span style="font-size:0.8rem; color:#64748b;">一泊二食早晚两餐</span></td>
-                            <td><strong class="tbl-total" style="color:#64748b;">S$ 560 (全包)</strong></td>
+                            <td><span data-lang="zh">阶段三：下吕名汤 (1晚)</span><span data-lang="en">Phase 3: Gero Onsen (1N)</span></td>
+                            <td><span data-lang="zh">下吕温泉 小川屋</span><span data-lang="en">Gero Onsen Ogawaya</span></td>
+                            <td><span data-lang="zh">⚠️ 馆内无自助洗衣机</span><span data-lang="en">⚠️ No Laundry Machine on-site</span></td>
+                            <td><span data-lang="zh">100叠榻榻米防滑池 + 会席早晚餐</span><span data-lang="en">100-Tatami Bath + Kaiseki Dinner & Bfast</span></td>
+                            <td><span style="font-size:0.8rem; color:#64748b;"><span data-lang="zh">一泊二食早晚两餐</span><span data-lang="en">Half-board Dinner & Bfast</span></span></td>
+                            <td><strong class="tbl-total" style="color:#64748b;">S$ 669 (全包)</strong></td>
                         </tr>
 
                         <!-- P4 -->
                         <tr data-hotel-id="h4-1" style="background: #f0fdf4;">
-                            <td><strong>阶段四：都会采买 (3晚)</strong><br><span style="font-size:0.75rem; color:#64748b;">12/05 - 12/08</span></td>
-                            <td><strong>GOLD STAY 名古屋大须</strong><br><span style="font-size:0.75rem; color:#047857;">★ 回国前全部洗净打包</span></td>
-                            <td><strong style="color:#15803d;">🌟 房内独立洗烘机</strong></td>
-                            <td>取回大箱子展开打包 + 大须扫货极便</td>
-                            <td><strong class="tbl-nightly">S$ 222</strong></td>
-                            <td><strong class="tbl-total" style="color:#047857;">S$ 667</strong></td>
+                            <td><strong><span data-lang="zh">阶段四：都会采买 (3晚)</span><span data-lang="en">Phase 4: Nagoya Return (3N)</span></strong><br><span style="font-size:0.75rem; color:#64748b;">12/05 - 12/08</span></td>
+                            <td><strong><span data-lang="zh">GOLD STAY 名古屋大须</span><span data-lang="en">GOLD STAY Nagoya Osu</span></strong><br><span style="font-size:0.75rem; color:#047857;"><span data-lang="zh">★ 回国前全部洗净打包</span><span data-lang="en">★ Pack Clean Clothes Before Flight</span></span></td>
+                            <td><strong style="color:#15803d;"><span data-lang="zh">🌟 房内独立洗烘机</span><span data-lang="en">🌟 In-Room Washer/Dryer</span></strong></td>
+                            <td><span data-lang="zh">取回大箱子展开打包 + 大须扫货极便</span><span data-lang="en">Luggage Space + Shopping Convenience</span></td>
+                            <td><strong class="tbl-nightly">S$ 306</strong></td>
+                            <td><strong class="tbl-total" style="color:#047857;">S$ 918</strong></td>
                         </tr>
                         <tr data-hotel-id="h4-2">
-                            <td>阶段四：都会采买 (3晚)</td>
-                            <td>三井花园饭店 名古屋普米尔</td>
-                            <td>🔄 18层投币洗衣房 + 大浴场</td>
-                            <td>名驿地下街直达 + 高空大浴场</td>
-                            <td><strong class="tbl-nightly">S$ 280</strong></td>
-                            <td><strong class="tbl-total" style="color:#64748b;">S$ 840</strong></td>
+                            <td><span data-lang="zh">阶段四：都会采买 (3晚)</span><span data-lang="en">Phase 4: Nagoya Return (3N)</span></td>
+                            <td><span data-lang="zh">三井花园饭店 名古屋普米尔</span><span data-lang="en">Mitsui Garden Hotel Nagoya Premier</span></td>
+                            <td><span data-lang="zh">🔄 18层投币洗衣房 + 大浴场</span><span data-lang="en">🔄 18F Coin Laundry + Sky Bath</span></td>
+                            <td><span data-lang="zh">名驿地下街直达 (2间大床/双床)</span><span data-lang="en">Direct Underground Walkway (2 Rooms)</span></td>
+                            <td><strong class="tbl-nightly">S$ 343</strong></td>
+                            <td><strong class="tbl-total" style="color:#64748b;">S$ 1,029</strong></td>
                         </tr>
                         <tr data-hotel-id="h4-3">
-                            <td>阶段四：都会采买 (3晚)</td>
-                            <td>名古屋万豪饭店</td>
-                            <td>👔 专业客房送洗服务</td>
-                            <td>名驿直上五星地标 / 下楼直搭机场快线</td>
-                            <td><strong class="tbl-nightly">S$ 428</strong></td>
-                            <td><strong class="tbl-total" style="color:#64748b;">S$ 1,284</strong></td>
+                            <td><span data-lang="zh">阶段四：都会采买 (3晚)</span><span data-lang="en">Phase 4: Nagoya Return (3N)</span></td>
+                            <td><span data-lang="zh">名古屋万豪饭店</span><span data-lang="en">Nagoya Marriott Associa Hotel</span></td>
+                            <td><span data-lang="zh">👔 专业客房送洗服务</span><span data-lang="en">👔 Valet Dry Cleaning Service</span></td>
+                            <td><span data-lang="zh">名驿直上五星地标 / 下楼直搭机场快线</span><span data-lang="en">5-Star Landmark / Elevator to Airport Express</span></td>
+                            <td><strong class="tbl-nightly">S$ 539</strong></td>
+                            <td><strong class="tbl-total" style="color:#64748b;">S$ 1,616</strong></td>
                         </tr>
                     </tbody>
                 </table>
@@ -1674,18 +1748,18 @@
                     <span data-lang="en">Recommended "In-Room Laundry" Family Combo Budget (<span class="sum-active-currency">SGD</span>)</span>
                 </h3>
                 <div style="color: #047857; font-size: 0.95rem; line-height: 1.75; margin-bottom: 0.5rem;">
-                    <p>• <strong><span data-lang="zh">阶段一 (4晚)：</span><span data-lang="en">Phase 1 (4N):</span></strong> GOLD STAY 名古屋大须（房内洗烘机，4床套房）：<strong class="sum-p1" style="color:#065f46; font-size:1.05rem;">S$ 856</strong></p>
-                    <p>• <strong><span data-lang="zh">阶段二 (4晚)：</span><span data-lang="en">Phase 2 (4N):</span></strong> 高山车站公寓式酒店（房内洗烘机，厨房煎飞驒牛）：<strong class="sum-p2" style="color:#065f46; font-size:1.05rem;">S$ 823</strong></p>
-                    <p>• <strong><span data-lang="zh">阶段三 (1晚)：</span><span data-lang="en">Phase 3 (1N):</span></strong> 下吕温泉 水明馆（馆内带投币洗衣房，一泊二食4人飞驒牛晚宴+朝食）：<strong class="sum-p3" style="color:#065f46; font-size:1.05rem;">S$ 642</strong></p>
-                    <p>• <strong><span data-lang="zh">阶段四 (3晚)：</span><span data-lang="en">Phase 4 (3N):</span></strong> GOLD STAY 名古屋大须（取回大箱打包，回国前全部衣服洗烘干净）：<strong class="sum-p4" style="color:#065f46; font-size:1.05rem;">S$ 667</strong></p>
+                    <p>• <strong><span data-lang="zh">阶段一 (4晚)：</span><span data-lang="en">Phase 1 (4N):</span></strong> <span data-lang="zh">GOLD STAY 名古屋大须（房内洗烘机，4床套房）：</span><span data-lang="en">GOLD STAY Nagoya Osu (In-room washer/dryer, 4-bed suite): </span><strong class="sum-p1" style="color:#065f46; font-size:1.05rem;">S$ 1,127</strong></p>
+                    <p>• <strong><span data-lang="zh">阶段二 (4晚)：</span><span data-lang="en">Phase 2 (4N):</span></strong> <span data-lang="zh">高山车站公寓式酒店（房内洗烘机，厨房煎飞驒牛）：</span><span data-lang="en">Residence Hotel Takayama Station (In-room washer, kitchen): </span><strong class="sum-p2" style="color:#065f46; font-size:1.05rem;">S$ 1,012</strong></p>
+                    <p>• <strong><span data-lang="zh">阶段三 (1晚)：</span><span data-lang="en">Phase 3 (1N):</span></strong> <span data-lang="zh">下吕温泉 水明馆（馆内带投币洗衣房，一泊二食4人飞驒牛晚宴+朝食）：</span><span data-lang="en">Gero Suimeikan (Coin laundry on-site, 4-pax Kaiseki dinner + bfast): </span><strong class="sum-p3" style="color:#065f46; font-size:1.05rem;">S$ 751</strong></p>
+                    <p>• <strong><span data-lang="zh">阶段四 (3晚)：</span><span data-lang="en">Phase 4 (3N):</span></strong> <span data-lang="zh">GOLD STAY 名古屋大须（取回大箱打包，回国前全部衣服洗烘干净）：</span><span data-lang="en">GOLD STAY Nagoya Osu (Retrieve luggage, wash all clothes before flying): </span><strong class="sum-p4" style="color:#065f46; font-size:1.05rem;">S$ 918</strong></p>
                     <hr style="margin: 0.9rem 0; border: none; border-top: 1px dashed #a7f3d0;">
                     <div style="font-size:1.25rem; color:#065f46; font-weight:800; margin-bottom:0.35rem;">
                         💰 <span data-lang="zh">12晚一家四口总住宿预算：</span><span data-lang="en">Total 12-Night 4-Pax Budget:</span>
-                        <span class="sum-grand-total" style="color:#c92a2a; font-size:1.45rem; font-weight:900;">S$ 2,988</span>
+                        <span class="sum-grand-total" style="color:#c92a2a; font-size:1.45rem; font-weight:900;">S$ 3,808</span>
                     </div>
                     <div style="font-size:0.88rem; color:#047857;">
-                        <span data-lang="zh">（平均每晚约 <strong class="sum-avg-nightly" style="font-size:1rem;">S$ 249</strong> / 晚，已包含下吕名汤4人奢华会席早晚餐与全程独立洗烘便利！）</span>
-                        <span data-lang="en">(Average ~<strong class="sum-avg-nightly" style="font-size:1rem;">S$ 249</strong> / night, including Gero Onsen luxury 4-pax Kaiseki half-board & in-room laundry throughout!)</span>
+                        <span data-lang="zh">（平均每晚约 <strong class="sum-avg-nightly" style="font-size:1rem;">S$ 317</strong> / 晚，已包含下吕名汤4人奢华会席早晚餐与全程独立洗烘便利！）</span>
+                        <span data-lang="en">(Average ~<strong class="sum-avg-nightly" style="font-size:1rem;">S$ 317</strong> / night, including Gero Onsen luxury 4-pax Kaiseki half-board & in-room laundry throughout!)</span>
                     </div>
                 </div>
             </div>
@@ -1764,112 +1838,113 @@
             });
         }
 
-        // Comprehensive Currency Engine
+        // Comprehensive Currency Engine calibrated against Google Rates Comparison
+        // Base Rates: 1 SGD ≈ 122.5 JPY | 1 CNY ≈ 21.3 JPY | 1 USD ≈ 153.5 JPY
         const hotelPricing = {
             "h1-1": { nights: 4, isHalfBoard: false,
-                SGD: { nightly: "S$ 214", total: "S$ 856" },
-                JPY: { nightly: "26,000 円", total: "104,000 円" },
-                CNY: { nightly: "¥ 1,238", total: "¥ 4,952" },
-                USD: { nightly: "$ 169", total: "$ 678" }
+                SGD: { nightly: "S$ 282", total: "S$ 1,127" },
+                JPY: { nightly: "34,500 円", total: "138,000 円" },
+                CNY: { nightly: "¥ 1,620", total: "¥ 6,479" },
+                USD: { nightly: "$ 225", total: "$ 899" }
             },
             "h1-2": { nights: 4, isHalfBoard: false,
-                SGD: { nightly: "S$ 313", total: "S$ 1,251" },
-                JPY: { nightly: "38,000 円", total: "152,000 円" },
-                CNY: { nightly: "¥ 1,810", total: "¥ 7,238" },
-                USD: { nightly: "$ 248", total: "$ 990" }
+                SGD: { nightly: "S$ 392", total: "S$ 1,567" },
+                JPY: { nightly: "48,000 円", total: "192,000 円" },
+                CNY: { nightly: "¥ 2,254", total: "¥ 9,014" },
+                USD: { nightly: "$ 313", total: "$ 1,251" }
             },
             "h1-3": { nights: 4, isHalfBoard: false,
-                SGD: { nightly: "S$ 181", total: "S$ 724" },
-                JPY: { nightly: "22,000 円", total: "88,000 円" },
-                CNY: { nightly: "¥ 1,048", total: "¥ 4,190" },
-                USD: { nightly: "$ 143", total: "$ 573" }
+                SGD: { nightly: "S$ 220", total: "S$ 882" },
+                JPY: { nightly: "27,000 円", total: "108,000 円" },
+                CNY: { nightly: "¥ 1,268", total: "¥ 5,070" },
+                USD: { nightly: "$ 176", total: "$ 704" }
             },
             "h2-1": { nights: 4, isHalfBoard: false,
-                SGD: { nightly: "S$ 206", total: "S$ 823" },
-                JPY: { nightly: "25,000 円", total: "100,000 円" },
-                CNY: { nightly: "¥ 1,190", total: "¥ 4,762" },
-                USD: { nightly: "$ 163", total: "$ 651" }
+                SGD: { nightly: "S$ 253", total: "S$ 1,012" },
+                JPY: { nightly: "31,000 円", total: "124,000 円" },
+                CNY: { nightly: "¥ 1,455", total: "¥ 5,822" },
+                USD: { nightly: "$ 202", total: "$ 808" }
             },
             "h2-2": { nights: 4, isHalfBoard: false,
-                SGD: { nightly: "S$ 263", total: "S$ 1,053" },
-                JPY: { nightly: "32,000 円", total: "128,000 円" },
-                CNY: { nightly: "¥ 1,524", total: "¥ 6,095" },
-                USD: { nightly: "$ 208", total: "$ 834" }
+                SGD: { nightly: "S$ 310", total: "S$ 1,241" },
+                JPY: { nightly: "38,000 円", total: "152,000 円" },
+                CNY: { nightly: "¥ 1,784", total: "¥ 7,136" },
+                USD: { nightly: "$ 248", total: "$ 990" }
             },
             "h2-3": { nights: 4, isHalfBoard: false,
-                SGD: { nightly: "S$ 280", total: "S$ 1,119" },
-                JPY: { nightly: "34,000 円", total: "136,000 円" },
-                CNY: { nightly: "¥ 1,619", total: "¥ 6,476" },
-                USD: { nightly: "$ 221", total: "$ 886" }
+                SGD: { nightly: "S$ 335", total: "S$ 1,339" },
+                JPY: { nightly: "41,000 円", total: "164,000 円" },
+                CNY: { nightly: "¥ 1,925", total: "¥ 7,699" },
+                USD: { nightly: "$ 267", total: "$ 1,068" }
             },
             "h3-1": { nights: 1, isHalfBoard: true,
-                SGD: { nightly: "S$ 642", total: "S$ 642 (全包)" },
-                JPY: { nightly: "78,000 円", total: "78,000 円 (全包)" },
-                CNY: { nightly: "¥ 3,714", total: "¥ 3,714 (全包)" },
-                USD: { nightly: "$ 508", total: "$ 508 (All-inc)" }
+                SGD: { nightly: "S$ 751", total: "S$ 751 (全包)" },
+                JPY: { nightly: "92,000 円", total: "92,000 円 (全包)" },
+                CNY: { nightly: "¥ 4,319", total: "¥ 4,319 (全包)" },
+                USD: { nightly: "$ 599", total: "$ 599 (All-inc)" }
             },
             "h3-2": { nights: 1, isHalfBoard: true,
-                SGD: { nightly: "S$ 560", total: "S$ 560 (全包)" },
-                JPY: { nightly: "68,000 円", total: "68,000 円 (全包)" },
-                CNY: { nightly: "¥ 3,238", total: "¥ 3,238 (全包)" },
-                USD: { nightly: "$ 443", total: "$ 443 (All-inc)" }
+                SGD: { nightly: "S$ 669", total: "S$ 669 (全包)" },
+                JPY: { nightly: "82,000 円", total: "82,000 円 (全包)" },
+                CNY: { nightly: "¥ 3,850", total: "¥ 3,850 (全包)" },
+                USD: { nightly: "$ 534", total: "$ 534 (All-inc)" }
             },
             "h4-1": { nights: 3, isHalfBoard: false,
-                SGD: { nightly: "S$ 222", total: "S$ 667" },
-                JPY: { nightly: "27,000 円", total: "81,000 円" },
-                CNY: { nightly: "¥ 1,286", total: "¥ 3,857" },
-                USD: { nightly: "$ 176", total: "$ 528" }
+                SGD: { nightly: "S$ 306", total: "S$ 918" },
+                JPY: { nightly: "37,500 円", total: "112,500 円" },
+                CNY: { nightly: "¥ 1,761", total: "¥ 5,282" },
+                USD: { nightly: "$ 244", total: "$ 733" }
             },
             "h4-2": { nights: 3, isHalfBoard: false,
-                SGD: { nightly: "S$ 280", total: "S$ 840" },
-                JPY: { nightly: "34,000 円", total: "102,000 円" },
-                CNY: { nightly: "¥ 1,619", total: "¥ 4,857" },
-                USD: { nightly: "$ 221", total: "$ 664" }
+                SGD: { nightly: "S$ 343", total: "S$ 1,029" },
+                JPY: { nightly: "42,000 円", total: "126,000 円" },
+                CNY: { nightly: "¥ 1,972", total: "¥ 5,915" },
+                USD: { nightly: "$ 274", total: "$ 821" }
             },
             "h4-3": { nights: 3, isHalfBoard: false,
-                SGD: { nightly: "S$ 428", total: "S$ 1,284" },
-                JPY: { nightly: "52,000 円", total: "156,000 円" },
-                CNY: { nightly: "¥ 2,476", total: "¥ 7,429" },
-                USD: { nightly: "$ 339", total: "$ 1,016" }
+                SGD: { nightly: "S$ 539", total: "S$ 1,616" },
+                JPY: { nightly: "66,000 円", total: "198,000 円" },
+                CNY: { nightly: "¥ 3,099", total: "¥ 9,296" },
+                USD: { nightly: "$ 430", total: "$ 1,290" }
             }
         };
 
         const comboSummary = {
             SGD: {
                 curName: "SGD (S$)",
-                p1: "S$ 856",
-                p2: "S$ 823",
-                p3: "S$ 642",
-                p4: "S$ 667",
-                grandTotal: "S$ 2,988",
-                avgNightly: "S$ 249"
+                p1: "S$ 1,127",
+                p2: "S$ 1,012",
+                p3: "S$ 751",
+                p4: "S$ 918",
+                grandTotal: "S$ 3,808",
+                avgNightly: "S$ 317"
             },
             JPY: {
                 curName: "JPY (円)",
-                p1: "104,000 円",
-                p2: "100,000 円",
-                p3: "78,000 円",
-                p4: "81,000 円",
-                grandTotal: "363,000 円",
-                avgNightly: "30,250 円"
+                p1: "138,000 円",
+                p2: "124,000 円",
+                p3: "92,000 円",
+                p4: "112,500 円",
+                grandTotal: "466,500 円",
+                avgNightly: "38,875 円"
             },
             CNY: {
                 curName: "CNY (¥)",
-                p1: "¥ 4,952",
-                p2: "¥ 4,762",
-                p3: "¥ 3,714",
-                p4: "¥ 3,857",
-                grandTotal: "¥ 17,285",
-                avgNightly: "¥ 1,440"
+                p1: "¥ 6,479",
+                p2: "¥ 5,822",
+                p3: "¥ 4,319",
+                p4: "¥ 5,282",
+                grandTotal: "¥ 21,902",
+                avgNightly: "¥ 1,825"
             },
             USD: {
                 curName: "USD ($)",
-                p1: "$ 678",
-                p2: "$ 651",
-                p3: "$ 508",
-                p4: "$ 528",
-                grandTotal: "$ 2,365",
-                avgNightly: "$ 197"
+                p1: "$ 899",
+                p2: "$ 808",
+                p3: "$ 599",
+                p4: "$ 733",
+                grandTotal: "$ 3,039",
+                avgNightly: "$ 253"
             }
         };
 
