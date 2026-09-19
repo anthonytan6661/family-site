@@ -515,6 +515,154 @@
             line-height: 1.5;
         }
 
+        /* Plan Switcher Styles */
+        .plan-switcher-wrap {
+            margin-bottom: 2.2rem;
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: var(--radius-lg);
+            padding: 0.85rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+
+        .plan-switcher-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+            padding: 0 0.4rem;
+        }
+
+        .plan-switcher-title {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--deep-slate);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .plan-switcher-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .plan-switcher-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .plan-tab-card {
+            border: 2px solid #cbd5e1;
+            background: #ffffff;
+            border-radius: var(--radius-md);
+            padding: 1.1rem 1.3rem;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .plan-tab-card:hover {
+            border-color: #94a3b8;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .plan-tab-card.active {
+            border-color: #0284c7;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+            box-shadow: 0 6px 16px -2px rgba(2, 132, 199, 0.18);
+        }
+
+        .plan-tab-card.active.plan-b-active {
+            border-color: #059669;
+            background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 100%);
+            box-shadow: 0 6px 16px -2px rgba(5, 150, 105, 0.2);
+        }
+
+        .plan-card-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-card-name {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--deep-slate);
+            margin-bottom: 0.3rem;
+        }
+
+        .plan-card-route {
+            font-size: 0.85rem;
+            color: #475569;
+            line-height: 1.45;
+        }
+
+        .plan-savings-pill {
+            display: inline-block;
+            background: #dcfce7;
+            color: #065f46;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 0.2rem 0.55rem;
+            border-radius: 4px;
+            margin-top: 0.4rem;
+        }
+
+        .plan-detail-box {
+            animation: fadeInPlan 0.3s ease;
+        }
+
+        @keyframes fadeInPlan {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Plan B schedule table */
+        .plan-b-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            margin-top: 1.5rem;
+            border: 1px solid #e2e8f0;
+            font-size: 0.88rem;
+        }
+
+        .plan-b-table th {
+            background: #f1f5f9;
+            color: #334155;
+            font-weight: 800;
+            padding: 0.85rem 1rem;
+            text-align: left;
+            border-bottom: 2px solid #cbd5e1;
+        }
+
+        .plan-b-table td {
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+        }
+
+        .plan-b-table tr:hover {
+            background: #f8fafc;
+        }
+
+        .plan-b-table tr:last-child td {
+            border-bottom: none;
+        }
+
         /* Pre-departure Checklist / Bookings */
         .booking-grid {
             display: grid;
@@ -1266,101 +1414,441 @@
                 </p>
             </div>
 
-            <div class="strategy-banner">
-                <div class="philosophy-quote">
-                    <p>
-                        <span data-lang="zh">💡 <strong>设计核心：</strong>针对家庭出行拒绝“每天收行李搬家”，全行程以<strong>名古屋</strong>与<strong>高山</strong>为两大战略辐射中心，中间衔接1晚下吕纯日式温泉修整。全线车程适中，大件行李使用黑猫宅急便寄存回送。</span>
-                        <span data-lang="en">💡 <strong>Design Philosophy:</strong> Eliminate daily packing stress. The trip centers around two strategic hubs (Nagoya & Takayama) connected by an authentic ryokan soak in Gero, with heavy luggage delivered directly by Yamato Black Cat.</span>
-                    </p>
-                </div>
-
-                <div class="phases-grid">
-                    <!-- Phase 1 -->
-                    <div class="phase-card phase-1">
-                        <div class="phase-header">
-                            <span class="phase-badge"><span data-lang="zh">阶段一 · 名古屋枢纽</span><span data-lang="en">Phase 1 · Nagoya Hub</span></span>
-                            <span class="phase-dates">11/26 (周四) - 11/30 (周一) · 4晚</span>
-                        </div>
-                        <h3 class="phase-title"><span data-lang="zh">都会科技与国宝名城</span><span data-lang="en">Tech, Magic & Castle</span></h3>
-                        <div class="phase-stay">
-                            <span>🏨</span>
-                            <span data-lang="zh">宿：<a href="hotels.html#h1-1" style="color:inherit; text-decoration:underline;">GOLD STAY 名古屋大须</a> (房内洗烘套房) / 名驿周边 (4晚)</span>
-                            <span data-lang="en">Base: <a href="hotels.html#h1-1" style="color:inherit; text-decoration:underline;">GOLD STAY Nagoya Osu</a> (In-Room Washer) / Nagoya Stn (4N)</span>
-                        </div>
-                        <p class="phase-desc">
-                            <span data-lang="zh">以名驿为中心，轻松打卡Toyota产业技术纪念馆、吉卜力公园（大仓库+魔女之谷）及犬山城城下町。</span>
-                            <span data-lang="en">Station base: easy access to Toyota Commemorative Museum, Ghibli Park, and Inuyama National Treasure Castle.</span>
-                        </p>
+            <!-- Plan Switcher Controls -->
+            <div class="plan-switcher-wrap">
+                <div class="plan-switcher-header">
+                    <div class="plan-switcher-title">
+                        <span>🧭</span>
+                        <span data-lang="zh">路线方案切换器（方案对比与灵活选择）</span>
+                        <span data-lang="en">Itinerary Route Switcher (Compare & Select)</span>
                     </div>
-
-                    <!-- Phase 2 -->
-                    <div class="phase-card phase-2">
-                        <div class="phase-header">
-                            <span class="phase-badge"><span data-lang="zh">阶段二 · 高山腹地</span><span data-lang="en">Phase 2 · Takayama Heartland</span></span>
-                            <span class="phase-dates">11/30 (周一) - 12/04 (周五) · 4晚</span>
-                        </div>
-                        <h3 class="phase-title"><span data-lang="zh">雪境童话与古街烟火</span><span data-lang="en">Snow Village & Heritage</span></h3>
-                        <div class="phase-stay">
-                            <span>🏨</span>
-                            <span data-lang="zh">宿：<a href="hotels.html#h2-1" style="color:inherit; text-decoration:underline;">高山车站公寓式酒店</a> (全房型带洗烘机+厨房) / 温泉饭店 (4晚)</span>
-                            <span data-lang="en">Base: <a href="hotels.html#h2-1" style="color:inherit; text-decoration:underline;">Residence Hotel Takayama</a> (In-Room Washer+Kitchen) / Onsen (4N)</span>
-                        </div>
-                        <p class="phase-desc">
-                            <span data-lang="zh">以高山古街为大本营，辐射白川乡合掌村、飞驒古川锦鲤街、宫川朝市，尽享A5飞驒牛盛宴。</span>
-                            <span data-lang="en">Takayama base: radiating out to Shirakawa-go Gassho Village, Hida Furukawa koi canals, and morning markets.</span>
-                        </p>
-                    </div>
-
-                    <!-- Phase 3 -->
-                    <div class="phase-card phase-3">
-                        <div class="phase-header">
-                            <span class="phase-badge"><span data-lang="zh">阶段三 · 名汤休整</span><span data-lang="en">Phase 3 · Onsen Retreat</span></span>
-                            <span class="phase-dates">12/04 (周五) - 12/05 (周六) · 1晚</span>
-                        </div>
-                        <h3 class="phase-title"><span data-lang="zh">日本三大名泉疗愈</span><span data-lang="en">Top 3 Healing Springs</span></h3>
-                        <div class="phase-stay">
-                            <span>🏨</span>
-                            <span data-lang="zh">宿：<a href="hotels.html#h3-1" style="color:inherit; text-decoration:underline;">下吕温泉 水明馆</a> (日式名宿带洗衣房·一泊二食飞驒牛)</span>
-                            <span data-lang="en">Base: <a href="hotels.html#h3-1" style="color:inherit; text-decoration:underline;">Gero Suimeikan</a> (Ryokan with Laundry & 4-Pax Kaiseki)</span>
-                        </div>
-                        <p class="phase-desc">
-                            <span data-lang="zh">入住下吕温泉名宿，体验传统纯正榻榻米家庭房、美人汤三汤私享与一泊二食飞驒牛会席晚宴。</span>
-                            <span data-lang="en">Relax in historic tatami rooms, soothing alkaline mineral baths, and authentic Kaiseki dining.</span>
-                        </p>
-                    </div>
-
-                    <!-- Phase 4 -->
-                    <div class="phase-card phase-4">
-                        <div class="phase-header">
-                            <span class="phase-badge"><span data-lang="zh">阶段四 · 都会采买</span><span data-lang="en">Phase 4 · Urban Finale</span></span>
-                            <span class="phase-dates">12/05 (周六) - 12/08 (周二) · 3晚</span>
-                        </div>
-                        <h3 class="phase-title"><span data-lang="zh">潮流二次元与完满返程</span><span data-lang="en">Arcades, Culture & Departure</span></h3>
-                        <div class="phase-stay">
-                            <span>🏨</span>
-                            <span data-lang="zh">宿：<a href="hotels.html#h4-1" style="color:inherit; text-decoration:underline;">GOLD STAY 名古屋大须</a> (回国前洗烘打包) / 名驿五星 (3晚)</span>
-                            <span data-lang="en">Base: <a href="hotels.html#h4-1" style="color:inherit; text-decoration:underline;">GOLD STAY Nagoya Osu</a> (Wash & Pack) / Station 5-Star (3N)</span>
-                        </div>
-                        <p class="phase-desc">
-                            <span data-lang="zh">大须商店街淘二次元模型古着、热田神宫祈福、荣商圈百货大扫货，回程打卡机场波音787乐园。</span>
-                            <span data-lang="en">Osu anime & vintage treasure hunting, Atsuta Shrine, duty-free shopping, and Centrair Flight of Dreams.</span>
-                        </p>
+                    <div style="font-size: 0.8rem; color: #64748b;">
+                        <span data-lang="zh">可点击下方卡片随时在方案A与方案B之间切换</span>
+                        <span data-lang="en">Click tabs below to switch routes</span>
                     </div>
                 </div>
+                <div class="plan-switcher-grid">
+                    <!-- Tab A -->
+                    <div class="plan-tab-card active" id="tab-plan-a" onclick="switchPlan('a')">
+                        <div class="plan-card-tag" style="background:#e0f2fe; color:#0369a1;">
+                            <span>🏙️</span>
+                            <span data-lang="zh">方案 A · 经典双枢纽版</span>
+                            <span data-lang="en">Plan A · Classic Dual-Hub</span>
+                        </div>
+                        <div class="plan-card-name">
+                            <span data-lang="zh">名古屋起手（4+4+1+3晚）</span>
+                            <span data-lang="en">Nagoya First (4N+4N+1N+3N)</span>
+                        </div>
+                        <div class="plan-card-route">
+                            <span data-lang="zh">名古屋 4晚 ➔ 高山 4晚 ➔ 下吕 1晚 ➔ 名古屋 3晚</span>
+                            <span data-lang="en">Nagoya 4N ➔ Takayama 4N ➔ Gero 1N ➔ Nagoya 3N</span>
+                        </div>
+                        <div style="margin-top: 0.5rem; font-size: 0.8rem; color: #64748b;">
+                            <span data-lang="zh">落地名古屋先适应城市节奏，D5黑猫寄送大箱轻装上山</span>
+                            <span data-lang="en">Settle in Nagoya first, ship heavy luggage on D5</span>
+                        </div>
+                    </div>
 
-                <!-- Yamato Luggage Transfer Strategy -->
-                <div class="luggage-box">
-                    <div class="luggage-icon">🚚</div>
-                    <div class="luggage-text">
-                        <h4>
-                            <span data-lang="zh">黑猫宅急便（大件行李跨城直寄）战略备忘</span>
-                            <span data-lang="en">Yamato Luggage Forwarding Master Strategy</span>
-                        </h4>
+                    <!-- Tab B -->
+                    <div class="plan-tab-card" id="tab-plan-b" onclick="switchPlan('b')">
+                        <div class="plan-card-tag" style="background:#dcfce7; color:#15803d;">
+                            <span>⚡</span>
+                            <span data-lang="zh">方案 B · 逆向省钱大本营版（推荐）</span>
+                            <span data-lang="en">Plan B · Direct-to-Takayama Saver (Recommended)</span>
+                        </div>
+                        <div class="plan-card-name">
+                            <span data-lang="zh">直奔高山（4+1+7晚 · 名古屋连住7晚）</span>
+                            <span data-lang="en">Direct-to-Takayama (4N+1N+7N Consecutive)</span>
+                        </div>
+                        <div class="plan-card-route">
+                            <span data-lang="zh">高山 4晚 ➔ 下吕 1晚 ➔ 名古屋 7晚连住长住</span>
+                            <span data-lang="en">Takayama 4N ➔ Gero 1N ➔ Nagoya 7N Consecutive</span>
+                        </div>
+                        <div>
+                            <span class="plan-savings-pill">
+                                💰 <span data-lang="zh">立省约 S$ 370 (45,300円) · 避开下吕周末溢价 + 名古屋周连住长住折扣</span>
+                                <span data-lang="en">Save ~S$ 370 (45,300 JPY) · Avoids Gero weekend & 7N weekly stay discount</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View for Plan A -->
+            <div id="plan-a-view" class="plan-detail-box">
+                <div class="strategy-banner">
+                    <div class="philosophy-quote">
                         <p>
-                            <span data-lang="zh"><strong>操作要点：</strong>D5（11月30日）早晨在名古屋酒店前台办理行李跨城直寄，将2个大行李箱直接送到Day 10回程入住的名古屋酒店。全家<strong>仅带2个随身登机箱及背包</strong>前往高山与下吕。省去拖大箱挤特急列车与雪地古街石板路的烦劳，全家步履轻盈！</span>
-                            <span data-lang="en"><strong>Execution:</strong> On D5 morning, send the 2 large suitcases from your Nagoya hotel directly to your Day 10 Nagoya return hotel. Take only 2 small carry-ons to Takayama & Gero. No lugging heavy bags through snowy streets or train aisles!</span>
+                            <span data-lang="zh">💡 <strong>方案 A 设计核心：</strong>落地名古屋先休整适应，全行程以<strong>名古屋</strong>与<strong>高山</strong>为两大战略辐射中心，中间衔接1晚下吕纯日式温泉修整。大件行李在D5退房时使用黑猫宅急便直接寄送至第10天回程入住的名古屋酒店。</span>
+                            <span data-lang="en">💡 <strong>Plan A Design Philosophy:</strong> Settle in Nagoya first. Centered around two strategic hubs (Nagoya & Takayama) connected by Gero Ryokan, with heavy bags sent directly by Yamato Black Cat.</span>
                         </p>
                     </div>
+
+                    <div class="phases-grid">
+                        <!-- Phase 1 -->
+                        <div class="phase-card phase-1">
+                            <div class="phase-header">
+                                <span class="phase-badge"><span data-lang="zh">阶段一 · 名古屋枢纽</span><span data-lang="en">Phase 1 · Nagoya Hub</span></span>
+                                <span class="phase-dates">11/26 (周四) - 11/30 (周一) · 4晚</span>
+                            </div>
+                            <h3 class="phase-title"><span data-lang="zh">都会科技与国宝名城</span><span data-lang="en">Tech, Magic & Castle</span></h3>
+                            <div class="phase-stay">
+                                <span>🏨</span>
+                                <span data-lang="zh">宿：<a href="hotels.html#h1-1" style="color:inherit; text-decoration:underline;">GOLD STAY 名古屋大须</a> (房内洗烘套房) / 名驿周边 (4晚)</span>
+                                <span data-lang="en">Base: <a href="hotels.html#h1-1" style="color:inherit; text-decoration:underline;">GOLD STAY Nagoya Osu</a> (In-Room Washer) / Nagoya Stn (4N)</span>
+                            </div>
+                            <p class="phase-desc">
+                                <span data-lang="zh">以名驿为中心，轻松打卡Toyota产业技术纪念馆、吉卜力公园（大仓库+魔女之谷）及犬山城城下町。</span>
+                                <span data-lang="en">Station base: easy access to Toyota Commemorative Museum, Ghibli Park, and Inuyama National Treasure Castle.</span>
+                            </p>
+                        </div>
+
+                        <!-- Phase 2 -->
+                        <div class="phase-card phase-2">
+                            <div class="phase-header">
+                                <span class="phase-badge"><span data-lang="zh">阶段二 · 高山腹地</span><span data-lang="en">Phase 2 · Takayama Heartland</span></span>
+                                <span class="phase-dates">11/30 (周一) - 12/04 (周五) · 4晚</span>
+                            </div>
+                            <h3 class="phase-title"><span data-lang="zh">雪境童话与古街烟火</span><span data-lang="en">Snow Village & Heritage</span></h3>
+                            <div class="phase-stay">
+                                <span>🏨</span>
+                                <span data-lang="zh">宿：<a href="hotels.html#h2-1" style="color:inherit; text-decoration:underline;">高山车站公寓式酒店</a> (全房型带洗烘机+厨房) / 温泉饭店 (4晚)</span>
+                                <span data-lang="en">Base: <a href="hotels.html#h2-1" style="color:inherit; text-decoration:underline;">Residence Hotel Takayama</a> (In-Room Washer+Kitchen) / Onsen (4N)</span>
+                            </div>
+                            <p class="phase-desc">
+                                <span data-lang="zh">以高山古街为大本营，辐射白川乡合掌村、飞驒古川锦鲤街、宫川朝市，尽享A5飞驒牛盛宴。</span>
+                                <span data-lang="en">Takayama base: radiating out to Shirakawa-go Gassho Village, Hida Furukawa koi canals, and morning markets.</span>
+                            </p>
+                        </div>
+
+                        <!-- Phase 3 -->
+                        <div class="phase-card phase-3">
+                            <div class="phase-header">
+                                <span class="phase-badge"><span data-lang="zh">阶段三 · 名汤休整</span><span data-lang="en">Phase 3 · Onsen Retreat</span></span>
+                                <span class="phase-dates">12/04 (周五) - 12/05 (周六) · 1晚</span>
+                            </div>
+                            <h3 class="phase-title"><span data-lang="zh">日本三大名泉疗愈</span><span data-lang="en">Top 3 Healing Springs</span></h3>
+                            <div class="phase-stay">
+                                <span>🏨</span>
+                                <span data-lang="zh">宿：<a href="hotels.html#h3-1" style="color:inherit; text-decoration:underline;">下吕温泉 水明馆</a> (日式名宿带洗衣房·一泊二食飞驒牛)</span>
+                                <span data-lang="en">Base: <a href="hotels.html#h3-1" style="color:inherit; text-decoration:underline;">Gero Suimeikan</a> (Ryokan with Laundry & 4-Pax Kaiseki)</span>
+                            </div>
+                            <p class="phase-desc">
+                                <span data-lang="zh">入住下吕温泉名宿，体验传统纯正榻榻米家庭房、美人汤三汤私享与一泊二食飞驒牛会席晚宴。</span>
+                                <span data-lang="en">Relax in historic tatami rooms, soothing alkaline mineral baths, and authentic Kaiseki dining.</span>
+                            </p>
+                        </div>
+
+                        <!-- Phase 4 -->
+                        <div class="phase-card phase-4">
+                            <div class="phase-header">
+                                <span class="phase-badge"><span data-lang="zh">阶段四 · 都会采买</span><span data-lang="en">Phase 4 · Urban Finale</span></span>
+                                <span class="phase-dates">12/05 (周六) - 12/08 (周二) · 3晚</span>
+                            </div>
+                            <h3 class="phase-title"><span data-lang="zh">潮流二次元与完满返程</span><span data-lang="en">Arcades, Culture & Departure</span></h3>
+                            <div class="phase-stay">
+                                <span>🏨</span>
+                                <span data-lang="zh">宿：<a href="hotels.html#h4-1" style="color:inherit; text-decoration:underline;">GOLD STAY 名古屋大须</a> (回国前洗烘打包) / 名驿五星 (3晚)</span>
+                                <span data-lang="en">Base: <a href="hotels.html#h4-1" style="color:inherit; text-decoration:underline;">GOLD STAY Nagoya Osu</a> (Wash & Pack) / Station 5-Star (3N)</span>
+                            </div>
+                            <p class="phase-desc">
+                                <span data-lang="zh">大须商店街淘二次元模型古着、热田神宫祈福、荣商圈百货大扫货，回程打卡机场波音787乐园。</span>
+                                <span data-lang="en">Osu anime & vintage treasure hunting, Atsuta Shrine, duty-free shopping, and Centrair Flight of Dreams.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Yamato Luggage Transfer Strategy -->
+                    <div class="luggage-box">
+                        <div class="luggage-icon">🚚</div>
+                        <div class="luggage-text">
+                            <h4>
+                                <span data-lang="zh">黑猫宅急便（大件行李跨城直寄）战略备忘</span>
+                                <span data-lang="en">Yamato Luggage Forwarding Master Strategy</span>
+                            </h4>
+                            <p>
+                                <span data-lang="zh"><strong>操作要点：</strong>D5（11月30日）早晨在名古屋酒店前台办理行李跨城直寄，将2个大行李箱直接送到Day 10回程入住的名古屋酒店。全家<strong>仅带2个随身登机箱及背包</strong>前往高山与下吕。省去拖大箱挤特急列车与雪地古街石板路的烦劳，全家步履轻盈！</span>
+                                <span data-lang="en"><strong>Execution:</strong> On D5 morning, send the 2 large suitcases from your Nagoya hotel directly to your Day 10 Nagoya return hotel. Take only 2 small carry-ons to Takayama & Gero. No lugging heavy bags through snowy streets or train aisles!</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View for Plan B -->
+            <div id="plan-b-view" class="plan-detail-box" style="display:none;">
+                <div class="strategy-banner" style="background: linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%); border-color: #a7f3d0;">
+                    
+                    <!-- Top Philosophy Quote -->
+                    <div class="philosophy-quote" style="border-left-color: #059669; background: #ffffff;">
+                        <p>
+                            <span data-lang="zh">💡 <strong>方案 B（逆向省钱大本营版）设计精髓：</strong>落地中部国际机场（08:30）后不进名古屋市区，直接乘坐 μ-SKY 接驳<strong>JR特急飞驒号</strong>直奔飞驒高山大本营（下午13:13即达）。把高山4晚与下吕温泉1晚提前作为行程前半段，<strong>后半段在名古屋一口气连住7晚（12/01-12/08）</strong>。</span>
+                            <span data-lang="en">💡 <strong>Plan B (Direct-to-Takayama Saver) Essence:</strong> Land at Centrair (08:30) and bypass Nagoya downtown immediately on Day 1, riding μ-SKY + JR Ltd Exp Hida direct to Takayama (arrive 13:13). After Takayama (4N) and Gero (1N), settle into Nagoya for <strong>7 uninterrupted consecutive nights (Dec 1-8)</strong>.</span>
+                        </p>
+                    </div>
+
+                    <!-- 4 Core Advantages Cards -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; margin-bottom: 1.8rem;">
+                        <div style="background: #ffffff; border: 1.5px solid #bbf7d0; border-radius: var(--radius-md); padding: 1.1rem; box-shadow: var(--shadow-sm);">
+                            <div style="font-size: 1.3rem; margin-bottom: 0.35rem;">💰</div>
+                            <h4 style="color: #065f46; font-size: 0.98rem; font-weight: 800; margin-bottom: 0.35rem;">
+                                <span data-lang="zh">酒店总预算净省 ~S$ 370</span>
+                                <span data-lang="en">Save ~S$ 370 in Hotels</span>
+                            </h4>
+                            <p style="font-size: 0.85rem; color: #475569; line-height: 1.45;">
+                                <span data-lang="zh">下吕水明馆避开周五周末峰值（改周一入住省约1万円）；名古屋连住7晚享长住周折扣（省约3万円）。</span>
+                                <span data-lang="en">Gero avoids Friday weekend peak; Nagoya 7N weekly stay triggers long-stay discount.</span>
+                            </p>
+                        </div>
+
+                        <div style="background: #ffffff; border: 1.5px solid #bbf7d0; border-radius: var(--radius-md); padding: 1.1rem; box-shadow: var(--shadow-sm);">
+                            <div style="font-size: 1.3rem; margin-bottom: 0.35rem;">🧳</div>
+                            <h4 style="color: #065f46; font-size: 0.98rem; font-weight: 800; margin-bottom: 0.35rem;">
+                                <span data-lang="zh">零行李转运费 · 零二次打包</span>
+                                <span data-lang="en">Zero Luggage Fees & Packing</span>
+                            </h4>
+                            <p style="font-size: 0.85rem; color: #475569; line-height: 1.45;">
+                                <span data-lang="zh">第1天所有行李一次性随特急列车带到高山，第6天入住名古屋后整整7天不搬家，免除黑猫跨城快递费（省4,800円）。</span>
+                                <span data-lang="en">Take luggage directly to Takayama. Once in Nagoya on D6, stay 7 nights without unpacking or shipping fees.</span>
+                            </p>
+                        </div>
+
+                        <div style="background: #ffffff; border: 1.5px solid #bbf7d0; border-radius: var(--radius-md); padding: 1.1rem; box-shadow: var(--shadow-sm);">
+                            <div style="font-size: 1.3rem; margin-bottom: 0.35rem;">🎢</div>
+                            <h4 style="color: #065f46; font-size: 0.98rem; font-weight: 800; margin-bottom: 0.35rem;">
+                                <span data-lang="zh">吉卜力公园体验大幅升级</span>
+                                <span data-lang="en">Ghibli Weekday Experience</span>
+                            </h4>
+                            <p style="font-size: 0.85rem; color: #475569; line-height: 1.45;">
+                                <span data-lang="zh">吉卜力公园从 Plan A 的“周六人山人海”移至 12/03“周四工作日”，排队时间减半，拍照超清爽无遮挡！</span>
+                                <span data-lang="en">Ghibli shifts from crowded Saturday to Thursday (Dec 3). Cut queues by half with pristine photo opportunities.</span>
+                            </p>
+                        </div>
+
+                        <div style="background: #ffffff; border: 1.5px solid #bbf7d0; border-radius: var(--radius-md); padding: 1.1rem; box-shadow: var(--shadow-sm);">
+                            <div style="font-size: 1.3rem; margin-bottom: 0.35rem;">🛍️</div>
+                            <h4 style="color: #065f46; font-size: 0.98rem; font-weight: 800; margin-bottom: 0.35rem;">
+                                <span data-lang="zh">行程末尾集中爆买与打包</span>
+                                <span data-lang="en">End-of-Trip Shopping</span>
+                            </h4>
+                            <p style="font-size: 0.85rem; color: #475569; line-height: 1.45;">
+                                <span data-lang="zh">大须二次元、药妆、荣商圈百货、机场乐园等采买集中在最后一周，不用带着几十公斤战利品翻山越岭。</span>
+                                <span data-lang="en">All shopping concentrated in the final week. No dragging heavy souvenirs and toys across the snow country!</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Day 1 Direct-Transit Schedule Guide Box -->
+                    <div style="background: #ffffff; border: 2px solid #0284c7; border-radius: var(--radius-md); padding: 1.4rem; margin-bottom: 2rem; box-shadow: var(--shadow-sm);">
+                        <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.75rem;">
+                            <span style="font-size: 1.3rem;">🚄</span>
+                            <h4 style="color: #0369a1; font-size: 1.05rem; font-weight: 800; margin: 0;">
+                                <span data-lang="zh">Day 1（11/26 周四）落地无缝换乘实操时刻表（08:30 落地 ➔ 13:13 抵达高山）</span>
+                                <span data-lang="en">Day 1 (Nov 26 Thu) Direct Transit Step-by-Step Guide (08:30 Land ➔ 13:13 Arrive Takayama)</span>
+                            </h4>
+                        </div>
+                        <div style="font-size: 0.88rem; color: #334155; line-height: 1.7;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-top: 0.5rem;">
+                                <div style="background: #f0f9ff; padding: 0.75rem; border-radius: 8px; border-left: 3px solid #0284c7;">
+                                    <strong>08:30 - 09:20</strong><br>
+                                    <span data-lang="zh">SQ672 降落中部国际机场 (NGO) T1，从容入境、取行李、兑换/领取 JR 票券（约 45-50 分钟）。</span>
+                                    <span data-lang="en">SQ672 arrives NGO Centrair T1. Smooth immigration, luggage pickup & JR ticket exchange.</span>
+                                </div>
+                                <div style="background: #f0f9ff; padding: 0.75rem; border-radius: 8px; border-left: 3px solid #0284c7;">
+                                    <strong>09:36 - 10:04</strong><br>
+                                    <span data-lang="zh">搭乘名铁特急 <strong>μ-SKY</strong>（28分钟直达名铁名古屋站，备选10:06班次）。车厢宽敞设大件行李架。</span>
+                                    <span data-lang="en">Ride Meitetsu <strong>μ-SKY</strong> (28 mins direct to Nagoya, backup 10:06). Dedicated luggage racks.</span>
+                                </div>
+                                <div style="background: #f0f9ff; padding: 0.75rem; border-radius: 8px; border-left: 3px solid #0284c7;">
+                                    <strong>10:05 - 10:45</strong><br>
+                                    <span data-lang="zh">名铁站步行 6 分钟至 JR 名古屋站。站内选购当地特色便当（如飞驒牛便当/松阪牛便当）与热饮。</span>
+                                    <span data-lang="en">Walk 6 mins to JR Station. Buy hot drinks and gourmet regional ekiben (Hida beef lunch boxes).</span>
+                                </div>
+                                <div style="background: #f0f9ff; padding: 0.75rem; border-radius: 8px; border-left: 3px solid #0284c7;">
+                                    <strong>10:48 - 13:13</strong><br>
+                                    <span data-lang="zh">搭乘 <strong>JR特急飞驒7号 (HC85新型车)</strong> 直达高山！宽大全景窗、充电插座、车上吃便当午休看飞驒峡谷雪景。</span>
+                                    <span data-lang="en">Board <strong>JR Ltd Exp Hida 7 (HC85)</strong> direct to Takayama! Panoramic windows, lunch & nap with gorge views.</span>
+                                </div>
+                            </div>
+                            <div style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px dashed #bae6fd; font-size: 0.84rem; color: #0369a1;">
+                                <span data-lang="zh">💡 <strong>轻松无压力优势：</strong>由于红眼航班后孩子们已经在飞机上休息，10:48 坐上特急飞驒号后有整整 2 小时 25 分钟可以在舒适的新型列车上吃便当、补觉、看沿途壮丽山景，下午 13:13 抵达高山出站步行 2 分钟即到酒店，下午即可轻装慢步古街！</span>
+                                <span data-lang="en">💡 <strong>Relaxed Advantage:</strong> The 2h25m scenic ride on HC85 allows kids to relax, eat bentos, and nap while traveling through the Hida river valleys. Arrive Takayama at 13:13 with a 2-min walk to your hotel!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plan B 3-Phase Structure Grid -->
+                    <div class="phases-grid">
+                        <!-- Plan B Phase 1 -->
+                        <div class="phase-card phase-2" style="border-top: 4px solid #10b981;">
+                            <div class="phase-header">
+                                <span class="phase-badge" style="background:#dcfce7; color:#15803d;"><span data-lang="zh">方案B · 阶段一 (高山腹地)</span><span data-lang="en">Plan B · Phase 1 (Takayama)</span></span>
+                                <span class="phase-dates">11/26 (周四) - 11/30 (周一) · 4晚</span>
+                            </div>
+                            <h3 class="phase-title"><span data-lang="zh">雪境童话与古街烟火</span><span data-lang="en">Snow Country & Heritage</span></h3>
+                            <div class="phase-stay">
+                                <span>🏨</span>
+                                <span data-lang="zh">宿：<a href="hotels.html#h2-1" style="color:inherit; text-decoration:underline;">高山车站公寓式酒店</a> (房内洗烘机+厨房·4独立单床) (4晚)</span>
+                                <span data-lang="en">Base: <a href="hotels.html#h2-1" style="color:inherit; text-decoration:underline;">Residence Hotel Takayama</a> (In-Room Washer+Kitchen) (4N)</span>
+                            </div>
+                            <p class="phase-desc">
+                                <span data-lang="zh">落地直达高山。以高山古街为大本营，辐射白川乡合掌村、飞驒古川锦鲤街、宫川朝市，尽享A5飞驒牛盛宴。</span>
+                                <span data-lang="en">Direct arrival to Takayama. Radiating out to Shirakawa-go Gassho Village, Hida Furukawa, morning markets and A5 beef.</span>
+                            </p>
+                        </div>
+
+                        <!-- Plan B Phase 2 -->
+                        <div class="phase-card phase-3" style="border-top: 4px solid #f59e0b;">
+                            <div class="phase-header">
+                                <span class="phase-badge" style="background:#fef3c7; color:#b45309;"><span data-lang="zh">方案B · 阶段二 (下吕名汤)</span><span data-lang="en">Plan B · Phase 2 (Gero Onsen)</span></span>
+                                <span class="phase-dates">11/30 (周一) - 12/01 (周二) · 1晚</span>
+                            </div>
+                            <h3 class="phase-title"><span data-lang="zh">日本三大名泉平日疗愈</span><span data-lang="en">Weekday Ryokan Retreat</span></h3>
+                            <div class="phase-stay">
+                                <span>🏨</span>
+                                <span data-lang="zh">宿：<a href="hotels.html#h3-1" style="color:inherit; text-decoration:underline;">下吕温泉 水明馆</a> (日式纯正榻榻米·一泊二食会席) (1晚)</span>
+                                <span data-lang="en">Base: <a href="hotels.html#h3-1" style="color:inherit; text-decoration:underline;">Gero Suimeikan</a> (Tatami 4-Pax Kaiseki Half-Board) (1N)</span>
+                            </div>
+                            <p class="phase-desc">
+                                <span data-lang="zh">从高山乘特急仅43分钟直达下吕。<strong>周一入住享受非周末特惠价格（立省约1万円）</strong>，温泉街游客稀少，悠享三大名汤与精致会席。</span>
+                                <span data-lang="en">Only 43 mins by JR from Takayama. <strong>Monday stay saves ~10,000 JPY</strong> vs weekend rates, quiet baths, and exquisite Kaiseki.</span>
+                            </p>
+                        </div>
+
+                        <!-- Plan B Phase 3 -->
+                        <div class="phase-card phase-1" style="border-top: 4px solid #3b82f6; grid-column: 1 / -1;">
+                            <div class="phase-header">
+                                <span class="phase-badge" style="background:#dbeafe; color:#1d4ed8;"><span data-lang="zh">方案B · 阶段三 (名古屋都会大本营)</span><span data-lang="en">Plan B · Phase 3 (Nagoya Base)</span></span>
+                                <span class="phase-dates">12/01 (周二) - 12/08 (周二) · 7晚连住长住</span>
+                            </div>
+                            <h3 class="phase-title"><span data-lang="zh">都会科技、吉卜力梦幻、全家扫货与从容返程</span><span data-lang="en">7-Night Mega Hub: Ghibli, Tech, Theme Parks & Departure</span></h3>
+                            <div class="phase-stay">
+                                <span>🏨</span>
+                                <span data-lang="zh">宿：<a href="hotels.html#h1-1" style="color:inherit; text-decoration:underline;">GOLD STAY 名古屋大须</a> (4独立单床·房内独立洗烘机·连住7晚周长住特惠) (7晚)</span>
+                                <span data-lang="en">Base: <a href="hotels.html#h1-1" style="color:inherit; text-decoration:underline;">GOLD STAY Nagoya Osu</a> (4 Single Beds, In-Room Washer, 7N Weekly Discount) (7N)</span>
+                            </div>
+                            <p class="phase-desc">
+                                <span data-lang="zh"><strong>整整7天不再收拾行李搬家！</strong>以大须套房为永久基地：D8（周四）畅玩吉卜力公园（工作日错峰免排队）；打卡Toyota产业馆、犬山城下町、热田神宫；行程最后几天在大须商业街和荣商圈肆意采购二次元模型与伴手礼；最后一天（12/08周二）早晨乘 μ-SKY 直达机场无缝搭乘 SQ671 返程。</span>
+                                <span data-lang="en"><strong>Zero hotel transfers for 7 full days!</strong> Base at Osu: Visit Ghibli Park on Thursday Dec 3 (zero weekend queues), Toyota Museum, Inuyama Castle, Atsuta Shrine, mega shopping in Osu & Sakae, and direct μ-SKY departure to SQ671.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Plan B 13-Day Day-by-Day Mapping Table -->
+                    <div style="margin-top: 1.5rem;">
+                        <h4 style="font-size: 1.05rem; font-weight: 800; color: #1e293b; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+                            <span>📅</span>
+                            <span data-lang="zh">方案 B 完整 13 天日程对比映射表 (2026.11.26 - 12.08)</span>
+                            <span data-lang="en">Plan B 13-Day Master Schedule Mapping (2026.11.26 - 12.08)</span>
+                        </h4>
+                        <div style="overflow-x: auto;">
+                            <table class="plan-b-table">
+                                <thead>
+                                    <tr>
+                                        <th><span data-lang="zh">天数 / 日期</span><span data-lang="en">Day / Date</span></th>
+                                        <th><span data-lang="zh">主要驻地</span><span data-lang="en">Base Area</span></th>
+                                        <th><span data-lang="zh">方案 B 当日行程安排</span><span data-lang="en">Plan B Daily Program</span></th>
+                                        <th><span data-lang="zh">当晚住宿</span><span data-lang="en">Lodging</span></th>
+                                        <th><span data-lang="zh">对比方案 A 核心优势</span><span data-lang="en">Key Advantage vs Plan A</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>D1 · 11/26 (四)</strong></td>
+                                        <td>高山</td>
+                                        <td>08:30 SQ672降落中部机场 ➔ μ-SKY至名铁 ➔ 10:48 JR飞驒7号 ➔ 13:13抵高山 ➔ 三町古街散策</td>
+                                        <td>高山车站公寓</td>
+                                        <td><span style="color:#059669; font-weight:700;">特急列车舒适补觉，早入雪国古街</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>D2 · 11/27 (五)</strong></td>
+                                        <td>高山</td>
+                                        <td>宫川朝市 ➔ 高山阵屋 ➔ 飞驒国分寺大银杏 ➔ 味藏天国飞驒牛烧肉大餐</td>
+                                        <td>高山车站公寓</td>
+                                        <td>周五古街游客少，预约飞驒牛不排队</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>D3 · 11/28 (六)</strong></td>
+                                        <td>白川乡</td>
+                                        <td>浓飞浓飞巴士前往白川乡合掌村 ➔ 天守阁展望台 ➔ 和田家 ➔ 宿雪境童话古村</td>
+                                        <td>高山车站公寓</td>
+                                        <td>合掌村雪景初现，全天沉浸体验</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>D4 · 11/29 (日)</strong></td>
+                                        <td>飞驒古川</td>
+                                        <td>JR飞驒古川《你的名字》圣地巡礼 ➔ 濑户川千匹白壁锦鲤 ➔ 和蜡烛手作体验</td>
+                                        <td>高山车站公寓</td>
+                                        <td>周日避开大城市拥堵，山城漫步更幽静</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>D5 · 11/30 (一)</strong></td>
+                                        <td>下吕温泉</td>
+                                        <td>高山睡到自然醒 ➔ 11:30 JR特急飞驒号(43分)直达下吕 ➔ 温泉街散策 ➔ 水明馆三汤疗愈+飞驒牛会席</td>
+                                        <td>下吕水明馆</td>
+                                        <td><span style="color:#059669; font-weight:700;">周一平日价立省 ~10,000円，避开周末人流</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>D6 · 12/01 (二)</strong></td>
+                                        <td>名古屋</td>
+                                        <td>水明馆朝食晨汤 ➔ 10:20 JR飞驒号(1h35m)至名古屋 ➔ 入住大须GOLD STAY ➔ 大须商店街初探</td>
+                                        <td>GOLD STAY大须</td>
+                                        <td><span style="color:#059669; font-weight:700;">开启连续7晚长住，整趟后半程零搬家</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>D7 · 12/02 (三)</strong></td>
+                                        <td>名古屋科技</td>
+                                        <td>丰田产业技术纪念馆（看机械织布与汽车流水线实操演示）➔ 名古屋站百货逛街</td>
+                                        <td>GOLD STAY大须</td>
+                                        <td>大套房带房内独立洗衣机，洗净前半段衣服</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>D8 · 12/03 (四)</strong></td>
+                                        <td>长久手</td>
+                                        <td><strong>吉卜力公园全天沉浸游</strong>（大仓库+魔女之谷+龙猫草壁家）➔ 周四工作日错峰畅玩</td>
+                                        <td>GOLD STAY大须</td>
+                                        <td><span style="color:#059669; font-weight:700;">周四工作日入园！排队比周六减少50%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>D9 · 12/04 (五)</strong></td>
+                                        <td>犬山</td>
+                                        <td>名铁犬山一日游 ➔ 现存国宝犬山城（登天守阁看木曾川绝景）➔ 城下町特色小吃</td>
+                                        <td>GOLD STAY大须</td>
+                                        <td>傍晚返回大须套房，轻松不折腾</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>D10 · 12/05 (六)</strong></td>
+                                        <td>名古屋城下</td>
+                                        <td>名古屋城金鯱巡礼 ➔ 本丸御殿狩野派金箔壁画 ➔ 金鯱横丁品尝名物鳗鱼饭三吃</td>
+                                        <td>GOLD STAY大须</td>
+                                        <td>周六在市区内游玩，不挤城际长途车</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>D11 · 12/06 (日)</strong></td>
+                                        <td>大须&二次元</td>
+                                        <td>大须商店街深度游（Mandarake中古手办、K-Books二次元、古着服饰、电器城）</td>
+                                        <td>GOLD STAY大须</td>
+                                        <td>孩子们最期待的二次元淘宝日，买完直接拎回房间</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>D12 · 12/07 (一)</strong></td>
+                                        <td>热田&荣商圈</td>
+                                        <td>热田神宫祈福 ➔ 蓬莱轩本店鳗鱼饭 ➔ 荣商圈（Parco/松坂屋/Bic Camera大采购）➔ 房内全洗烘打包</td>
+                                        <td>GOLD STAY大须</td>
+                                        <td>最后一天买全所有伴手礼，房间内从容打包行李</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>D13 · 12/08 (二)</strong></td>
+                                        <td>机场返程</td>
+                                        <td>06:45退房 ➔ 07:20名铁μ-SKY ➔ 07:50抵中部机场T1 ➔ Flight of Dreams波音787 ➔ 10:20搭SQ671回新</td>
+                                        <td>返抵新加坡</td>
+                                        <td>行李从大须酒店一趟直达机场，轻松完满收官</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -2795,6 +3283,44 @@
         // Initialize language
         const savedLang = localStorage.getItem('family_japan_lang') || 'zh';
         setLanguage(savedLang);
+
+        // Plan Switcher (Plan A / Plan B)
+        function switchPlan(plan) {
+            const planAView = document.getElementById('plan-a-view');
+            const planBView = document.getElementById('plan-b-view');
+            const tabA = document.getElementById('tab-plan-a');
+            const tabB = document.getElementById('tab-plan-b');
+
+            if (plan === 'b') {
+                if (planAView) planAView.style.display = 'none';
+                if (planBView) planBView.style.display = 'block';
+                if (tabA) {
+                    tabA.classList.remove('active');
+                    tabA.classList.remove('plan-b-active');
+                }
+                if (tabB) {
+                    tabB.classList.add('active');
+                    tabB.classList.add('plan-b-active');
+                }
+                localStorage.setItem('family_japan_plan', 'b');
+            } else {
+                if (planAView) planAView.style.display = 'block';
+                if (planBView) planBView.style.display = 'none';
+                if (tabA) {
+                    tabA.classList.add('active');
+                    tabA.classList.remove('plan-b-active');
+                }
+                if (tabB) {
+                    tabB.classList.remove('active');
+                    tabB.classList.remove('plan-b-active');
+                }
+                localStorage.setItem('family_japan_plan', 'a');
+            }
+        }
+
+        // Initialize Plan on load (Default to recommended Plan B)
+        const savedPlan = localStorage.getItem('family_japan_plan') || 'b';
+        switchPlan(savedPlan);
 
         // Day Filtering
         function filterDays(phase) {
