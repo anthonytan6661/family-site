@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>日本中部家庭精选住宿与洗衣指南 | Central Japan Family Hotels & Laundry Guide</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -781,6 +781,204 @@
             .hotel-grid { grid-template-columns: 1fr; }
             .matrix-section { padding: 1.5rem 1rem; }
         }
+
+        /* Mobile Scroll Cue */
+        .mobile-scroll-cue {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            background: #f1f5f9;
+            color: #475569;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.38rem 0.85rem;
+            border-radius: 999px;
+            margin-bottom: 0.65rem;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        .scroll-cue-icon {
+            display: inline-block;
+            animation: bounceHoriz 1.6s infinite ease-in-out;
+        }
+        @keyframes bounceHoriz {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(4px); }
+        }
+
+        /* Mobile Hamburger Button in Top Nav */
+        .mobile-menu-btn {
+            display: none;
+            background: transparent;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 8px;
+            width: 40px;
+            height: 40px;
+            padding: 8px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            position: relative;
+            z-index: 1002;
+        }
+        .mobile-menu-btn:hover {
+            background: #f1f5f9;
+        }
+        .hamburger-box {
+            width: 20px;
+            height: 14px;
+            position: relative;
+            display: inline-block;
+        }
+        .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+            width: 20px;
+            height: 2px;
+            background-color: var(--deep-slate);
+            border-radius: 2px;
+            position: absolute;
+            transition: transform 0.25s ease, top 0.25s ease, opacity 0.2s ease;
+        }
+        .hamburger-inner { top: 6px; }
+        .hamburger-inner::before { content: ''; top: -6px; }
+        .hamburger-inner::after { content: ''; top: 6px; }
+        .mobile-menu-btn.active .hamburger-inner { transform: rotate(45deg); }
+        .mobile-menu-btn.active .hamburger-inner::before { top: 0; opacity: 0; }
+        .mobile-menu-btn.active .hamburger-inner::after { top: 0; transform: rotate(-90deg); }
+
+        /* Mobile Drawer in Hotels */
+        .mobile-nav-drawer {
+            position: fixed;
+            top: 57px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 999;
+            transform: translateY(-110%);
+            opacity: 0;
+            visibility: hidden;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.35s;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 1.2rem 1rem 3.5rem;
+            color: white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        .mobile-nav-drawer.open {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+        .mobile-nav-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.55);
+            z-index: 998;
+        }
+        .mobile-nav-backdrop.open { display: block; }
+        .mobile-drawer-inner {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .mobile-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 0.85rem 1rem;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: white;
+            transition: all 0.2s ease;
+        }
+        .mobile-nav-item:hover, .mobile-nav-item:active {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(3px);
+        }
+        .mobile-nav-icon { font-size: 1.35rem; flex-shrink: 0; }
+        .mobile-nav-title { font-size: 0.95rem; font-weight: 700; color: #ffffff; }
+        .mobile-nav-sub { font-size: 0.75rem; color: #94a3b8; }
+
+        /* Floating Back to Top on Hotels */
+        .mobile-quick-dock {
+            position: fixed;
+            right: 1rem;
+            bottom: 1.25rem;
+            z-index: 950;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px);
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+        }
+        .mobile-quick-dock.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dock-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: var(--deep-slate);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 999px;
+            padding: 0.6rem 0.95rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: all 0.2s ease;
+        }
+        .dock-btn:hover { background: var(--japan-red); }
+
+        /* Hotels Media Queries */
+        @media (max-width: 768px) {
+            html, body {
+                overflow-x: hidden;
+                width: 100%;
+                -webkit-text-size-adjust: 100%;
+            }
+            .nav-links { display: none !important; }
+            .btn-nav-itinerary { display: none !important; }
+            .mobile-menu-btn { display: flex; }
+            .nav-inner { padding: 0.55rem 0.85rem; }
+            .hero-banner { padding: 3rem 1rem 2.2rem; }
+            .hero-title { font-size: clamp(1.65rem, 6vw, 2.2rem); }
+            .hero-subtitle { font-size: 0.92rem; }
+            .hero-highlights-pills { gap: 0.4rem; }
+            .hero-pill { font-size: 0.78rem; padding: 0.25rem 0.6rem; }
+            .laundry-callout-banner {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.25rem 1rem;
+                gap: 1rem;
+            }
+            .hotel-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .hotel-img-wrap { height: 200px; }
+            .hotel-body { padding: 1.25rem 1rem; }
+            .matrix-section { padding: 1.5rem 0.85rem; }
+            .matrix-table-wrap { -webkit-overflow-scrolling: touch; }
+            .matrix-table { min-width: 680px; font-size: 0.82rem; }
+            .matrix-table th, .matrix-table td { padding: 0.75rem 0.8rem; }
+            .mobile-scroll-cue { display: flex; }
+        }
+
     </style>
 </head>
 <body class="lang-zh">
@@ -817,6 +1015,58 @@
             </div>
         </div>
     </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <div class="mobile-drawer-inner">
+            <a href="index.html" class="mobile-nav-item" style="background: linear-gradient(135deg, #c92a2a, #991b1b); border-color: rgba(255,255,255,0.2);">
+                <span class="mobile-nav-icon">🗓️</span>
+                <div>
+                    <div class="mobile-nav-title"><span data-lang="zh">返回 13天行程手册主页</span><span data-lang="en">Back to 13-Day Itinerary</span></div>
+                    <div class="mobile-nav-sub"><span data-lang="zh">包含航班、每日游程、抢票与预算</span><span data-lang="en">Full handbook & budget</span></div>
+                </div>
+            </a>
+            <nav class="mobile-drawer-nav">
+                <a href="#p1" onclick="closeMobileNav()" class="mobile-nav-item">
+                    <span class="mobile-nav-icon">🏔️</span>
+                    <div>
+                        <div class="mobile-nav-title"><span data-lang="zh">阶段一 · 高山车站公寓 (4晚)</span><span data-lang="en">Phase 1 · Takayama Residence</span></div>
+                        <div class="mobile-nav-sub"><span data-lang="zh">房内独立洗衣机、配备厨房</span><span data-lang="en">In-room washer, kitchen, 4 single beds</span></div>
+                    </div>
+                </a>
+                <a href="#p2" onclick="closeMobileNav()" class="mobile-nav-item">
+                    <span class="mobile-nav-icon">♨️</span>
+                    <div>
+                        <div class="mobile-nav-title"><span data-lang="zh">阶段二 · 下吕水明馆 (1晚)</span><span data-lang="en">Phase 2 · Gero Suimeikan</span></div>
+                        <div class="mobile-nav-sub"><span data-lang="zh">三大名泉、日式榻榻米大房、早晚餐</span><span data-lang="en">Japanese onsen, kaiseki dinner included</span></div>
+                    </div>
+                </a>
+                <a href="#p3" onclick="closeMobileNav()" class="mobile-nav-item">
+                    <span class="mobile-nav-icon">🏙️</span>
+                    <div>
+                        <div class="mobile-nav-title"><span data-lang="zh">阶段三 · GOLD STAY 大须 (7晚)</span><span data-lang="en">Phase 3 · GOLD STAY Nagoya Osu</span></div>
+                        <div class="mobile-nav-sub"><span data-lang="zh">日立洗烘一体机、连住7晚零搬家</span><span data-lang="en">Hitachi washer/dryer, zero packing</span></div>
+                    </div>
+                </a>
+                <a href="#matrix" onclick="closeMobileNav()" class="mobile-nav-item">
+                    <span class="mobile-nav-icon">📊</span>
+                    <div>
+                        <div class="mobile-nav-title"><span data-lang="zh">三大阶段对比矩阵</span><span data-lang="en">Comparison Matrix</span></div>
+                        <div class="mobile-nav-sub"><span data-lang="zh">房型、床位、洗烘配置与全家预算</span><span data-lang="en">Beds, laundry & budget breakdown</span></div>
+                    </div>
+                </a>
+                <a href="docs/japan_family_travel_handbook.pdf" target="_blank" download class="mobile-nav-item">
+                    <span class="mobile-nav-icon">📄</span>
+                    <div>
+                        <div class="mobile-nav-title"><span data-lang="zh">下载原版 PDF 手册</span><span data-lang="en">Download PDF Guide</span></div>
+                        <div class="mobile-nav-sub"><span data-lang="zh">离线随身携带与出行打印</span><span data-lang="en">Offline travel handbook</span></div>
+                    </div>
+                </a>
+            </nav>
+        </div>
+    </div>
+    <div class="mobile-nav-backdrop" id="mobileNavBackdrop" onclick="closeMobileNav()"></div>
+
 
     <!-- Hero Banner -->
     <section class="hero-banner">
@@ -1403,6 +1653,11 @@
                 <span data-lang="en">Direct-to-Takayama Saver Route: Takayama 4N ➔ Gero 1N ➔ Nagoya 7N Consecutive</span>
             </p>
 
+            <div class="mobile-scroll-cue">
+                <span class="scroll-cue-icon">👉</span>
+                <span data-lang="zh">左右滑动查看完整酒店与洗衣机对比矩阵</span>
+                <span data-lang="en">Swipe horizontally to view full matrix table</span>
+            </div>
             <div class="matrix-table-wrap">
                 <table class="matrix-table">
                     <thead>
@@ -1778,6 +2033,64 @@
         window.addEventListener('DOMContentLoaded', () => {
             setCurrency(currentCurrency);
         });
+
+        // Mobile Nav Drawer Toggle
+        function toggleMobileNav() {
+            const drawer = document.getElementById('mobileNavDrawer');
+            const backdrop = document.getElementById('mobileNavBackdrop');
+            const btn = document.getElementById('mobileMenuBtn');
+            const isOpen = drawer && drawer.classList.contains('open');
+
+            if (isOpen) {
+                closeMobileNav();
+            } else {
+                if (drawer) drawer.classList.add('open');
+                if (backdrop) backdrop.classList.add('open');
+                if (btn) btn.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMobileNav() {
+            const drawer = document.getElementById('mobileNavDrawer');
+            const backdrop = document.getElementById('mobileNavBackdrop');
+            const btn = document.getElementById('mobileMenuBtn');
+            if (drawer) drawer.classList.remove('open');
+            if (backdrop) backdrop.classList.remove('open');
+            if (btn) btn.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.addEventListener('scroll', () => {
+            const dock = document.getElementById('mobileQuickDock');
+            if (dock) {
+                if (window.scrollY > 350) {
+                    dock.classList.add('visible');
+                } else {
+                    dock.classList.remove('visible');
+                }
+            }
+        }, { passive: true });
+
     </script>
+
+    <!-- Mobile Floating Quick Dock -->
+    <div class="mobile-quick-dock" id="mobileQuickDock">
+        <a href="index.html" class="dock-btn" style="text-decoration:none;">
+            <span class="dock-icon">🗓️</span>
+            <span class="dock-text" data-lang="zh">主行程</span>
+            <span class="dock-text" data-lang="en">Itinerary</span>
+        </a>
+        <button class="dock-btn" onclick="scrollToTop()" aria-label="回到顶部">
+            <span class="dock-icon">🔝</span>
+            <span class="dock-text" data-lang="zh">顶部</span>
+            <span class="dock-text" data-lang="en">Top</span>
+        </button>
+    </div>
+
 </body>
 </html>

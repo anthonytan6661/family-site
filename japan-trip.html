@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>日本中部 13天12晚 舒心家庭度假手册 | Central Japan Family Vacation 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1161,16 +1161,7 @@
             .day-hero-img-wrap { height: 160px; }
         }
 
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero { padding: 4rem 1rem 3rem; }
-            .day-body { padding: 1.5rem 1.2rem; }
-            .day-hero-img-wrap { height: 210px; }
-            .hero-highlights-strip { grid-template-columns: repeat(2, 1fr); }
-            .strategy-banner { padding: 1.8rem 1.2rem; }
-            .gear-section { padding: 2rem 1.2rem; }
-        }
+        /* Mobile Adjustments consolidated at bottom of stylesheet */
     
         /* Budget & Cost Breakdown Section */
         #budget {
@@ -1393,6 +1384,815 @@
             margin-top: 0.65rem;
         }
 
+
+        /* ===================================================
+           COMPREHENSIVE MOBILE & RESPONSIVE ADAPTATIONS
+           =================================================== */
+
+        /* Base Touch & Overflow Protection */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Mobile Scroll Cue Badge for Wide Tables */
+        .mobile-scroll-cue {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            background: #f1f5f9;
+            color: #475569;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.38rem 0.85rem;
+            border-radius: 999px;
+            margin-bottom: 0.65rem;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+        .scroll-cue-icon {
+            display: inline-block;
+            animation: bounceHoriz 1.6s infinite ease-in-out;
+        }
+        @keyframes bounceHoriz {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(4px); }
+        }
+
+        /* Mobile Hamburger Button in Top Nav */
+        .mobile-menu-btn {
+            display: none;
+            background: transparent;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 8px;
+            width: 40px;
+            height: 40px;
+            padding: 8px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            position: relative;
+            z-index: 1002;
+        }
+        .mobile-menu-btn:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+        .hamburger-box {
+            width: 20px;
+            height: 14px;
+            position: relative;
+            display: inline-block;
+        }
+        .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+            width: 20px;
+            height: 2px;
+            background-color: var(--deep-slate);
+            border-radius: 2px;
+            position: absolute;
+            transition: transform 0.25s ease, top 0.25s ease, opacity 0.2s ease;
+        }
+        .hamburger-inner {
+            top: 6px;
+        }
+        .hamburger-inner::before {
+            content: '';
+            top: -6px;
+        }
+        .hamburger-inner::after {
+            content: '';
+            top: 6px;
+        }
+        .mobile-menu-btn.active .hamburger-inner {
+            transform: rotate(45deg);
+        }
+        .mobile-menu-btn.active .hamburger-inner::before {
+            top: 0;
+            opacity: 0;
+        }
+        .mobile-menu-btn.active .hamburger-inner::after {
+            top: 0;
+            transform: rotate(-90deg);
+        }
+
+        /* Mobile Navigation Drawer */
+        .mobile-nav-drawer {
+            position: fixed;
+            top: 57px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 999;
+            transform: translateY(-110%);
+            opacity: 0;
+            visibility: hidden;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.35s;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 1.2rem 1rem 3.5rem;
+            color: white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        .mobile-nav-drawer.open {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+        .mobile-nav-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.55);
+            z-index: 998;
+        }
+        .mobile-nav-backdrop.open {
+            display: block;
+        }
+
+        .mobile-drawer-inner {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        .mobile-drawer-portals {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+        }
+        .mobile-drawer-portal-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0.85rem;
+            border-radius: var(--radius-md);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .mobile-drawer-portal-btn.hotel {
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+            color: white;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+        }
+        .mobile-drawer-portal-btn.pdf {
+            background: linear-gradient(135deg, #334155, #1e293b);
+            color: #f8fafc;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .mobile-drawer-portal-btn .portal-arrow {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .mobile-drawer-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+        }
+        .mobile-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: white;
+            transition: all 0.2s ease;
+        }
+        .mobile-nav-item:hover, .mobile-nav-item:active {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateX(3px);
+        }
+        .mobile-nav-icon {
+            font-size: 1.35rem;
+            flex-shrink: 0;
+        }
+        .mobile-nav-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        .mobile-nav-sub {
+            font-size: 0.75rem;
+            color: #94a3b8;
+        }
+
+        /* Fast Jump Grid in Drawer */
+        .mobile-day-jump-section {
+            background: rgba(0,0,0,0.35);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: var(--radius-md);
+            padding: 1rem;
+        }
+        .mobile-jump-header {
+            font-size: 0.82rem;
+            font-weight: 800;
+            color: #fde68a;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .mobile-jump-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
+            gap: 0.45rem;
+        }
+        .jump-pill {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: #e2e8f0;
+            font-size: 0.72rem;
+            padding: 0.5rem 0.35rem;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: all 0.2s ease;
+        }
+        .jump-pill:hover, .jump-pill:active {
+            background: var(--japan-red);
+            border-color: var(--japan-red);
+            color: white;
+            transform: scale(1.02);
+        }
+        .jump-pill strong {
+            color: white;
+            font-weight: 800;
+        }
+        .jump-pill.p1 strong { color: #60a5fa; }
+        .jump-pill.p2 strong { color: #34d399; }
+        .jump-pill.p3 strong { color: #fbbf24; }
+
+        /* Mobile Floating Quick Access Dock (FAB) */
+        .mobile-quick-dock {
+            position: fixed;
+            right: 1rem;
+            bottom: 1.25rem;
+            z-index: 950;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px);
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+        }
+        .mobile-quick-dock.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dock-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: var(--deep-slate);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 999px;
+            padding: 0.6rem 0.95rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: all 0.2s ease;
+            backdrop-filter: blur(8px);
+        }
+        .dock-btn:hover, .dock-btn:active {
+            transform: scale(1.05);
+            background: var(--japan-red);
+            border-color: var(--japan-red);
+        }
+        .dock-btn.jump-btn {
+            background: linear-gradient(135deg, var(--japan-red), #b91c1c);
+            border: none;
+        }
+        .dock-icon {
+            font-size: 0.95rem;
+        }
+
+        /* Mobile Quick Day Bottom Sheet Modal */
+        .mobile-day-sheet-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 1050;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.25s ease, visibility 0.25s;
+        }
+        .mobile-day-sheet-modal.open {
+            visibility: visible;
+            opacity: 1;
+        }
+        .sheet-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.65);
+            backdrop-filter: blur(4px);
+        }
+        .sheet-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-height: 82vh;
+            background: #ffffff;
+            border-radius: 22px 22px 0 0;
+            padding: 1.25rem 1rem calc(1.5rem + env(safe-area-inset-bottom));
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            transform: translateY(100%);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.25);
+        }
+        .mobile-day-sheet-modal.open .sheet-content {
+            transform: translateY(0);
+        }
+        .sheet-handle {
+            width: 40px;
+            height: 4px;
+            background: #cbd5e1;
+            border-radius: 999px;
+            margin: 0 auto 0.9rem;
+        }
+        .sheet-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .sheet-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--deep-slate);
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            margin: 0;
+        }
+        .sheet-close-btn {
+            background: #f1f5f9;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #64748b;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .sheet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 0.55rem;
+        }
+        .sheet-day-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-sm);
+            padding: 0.65rem 0.75rem;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+        .sheet-day-card:hover, .sheet-day-card:active {
+            background: #fef2f2;
+            border-color: var(--japan-red);
+            transform: translateY(-2px);
+        }
+        .sd-day {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--japan-red);
+        }
+        .sd-date {
+            font-size: 0.7rem;
+            color: #64748b;
+            font-weight: 600;
+        }
+        .sd-desc {
+            font-size: 0.78rem;
+            color: var(--charcoal);
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Target Day Highlight Flash */
+        @keyframes targetDayFlash {
+            0% { box-shadow: 0 0 0 0 rgba(201, 42, 42, 0.7); }
+            50% { box-shadow: 0 0 0 8px rgba(201, 42, 42, 0.35); }
+            100% { box-shadow: var(--shadow-sm); }
+        }
+        .day-node-highlight {
+            animation: targetDayFlash 1.6s ease-out;
+        }
+
+        /* ----------------------------------------------------
+           MEDIA QUERY: TABLETS & MOBILE (<= 768px)
+           ---------------------------------------------------- */
+        @media (max-width: 768px) {
+            /* General Layout & Spacing */
+            .page-container {
+                padding: 1.5rem 0.9rem 4.5rem;
+                max-width: 100%;
+            }
+            .section-header {
+                margin-bottom: 2rem;
+            }
+            .section-title {
+                font-size: clamp(1.45rem, 5.5vw, 1.95rem);
+            }
+            .section-desc {
+                font-size: 0.92rem;
+                line-height: 1.55;
+            }
+
+            /* Navbar Adjustments */
+            .nav-inner {
+                padding: 0.55rem 0.85rem;
+            }
+            .brand-link {
+                font-size: 0.92rem;
+                gap: 0.45rem;
+            }
+            .brand-badge {
+                font-size: 0.7rem;
+                padding: 0.15rem 0.5rem;
+            }
+            .nav-links {
+                display: none !important;
+            }
+            .top-nav .btn-portal {
+                display: none !important;
+            }
+            .mobile-menu-btn {
+                display: flex;
+            }
+            .lang-toggle {
+                padding: 2px;
+            }
+            .lang-btn {
+                padding: 4px 9px;
+                font-size: 0.75rem;
+            }
+
+            /* Hero Adjustments */
+            .hero {
+                padding: 3.2rem 1rem 2.8rem;
+            }
+            .hero-title {
+                font-size: clamp(1.75rem, 6.5vw, 2.4rem);
+                line-height: 1.22;
+            }
+            .hero-subtitle {
+                font-size: 0.92rem;
+                margin-bottom: 1.4rem;
+            }
+            .hero-pill-group {
+                gap: 0.35rem;
+                margin-bottom: 1.2rem;
+            }
+            .hero-pill {
+                font-size: 0.78rem;
+                padding: 0.28rem 0.65rem;
+            }
+            .hero-highlights-strip {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.65rem;
+                padding: 0.85rem 0.75rem;
+                margin: 1.4rem auto 2rem;
+            }
+            .strip-icon {
+                font-size: 1.35rem;
+            }
+            .strip-val {
+                font-size: 0.85rem;
+            }
+            .hero-cta-group {
+                flex-direction: column;
+                width: 100%;
+                gap: 0.75rem;
+            }
+            .hero-cta-group .btn-primary,
+            .hero-cta-group .btn-secondary {
+                width: 100%;
+                justify-content: center;
+                min-height: 46px;
+                font-size: 0.92rem;
+                padding: 0.75rem 1.2rem;
+            }
+
+            /* Flights Section */
+            .flights-card-wrap {
+                padding: 1.25rem 1rem !important;
+                border-radius: var(--radius-md) !important;
+            }
+            .flights-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            .flight-arrow-line {
+                width: 44px !important;
+            }
+            .family-spec-bar {
+                flex-direction: column !important;
+                align-items: stretch !important;
+                gap: 0.85rem !important;
+                padding: 1rem !important;
+            }
+            .family-spec-bar a {
+                width: 100% !important;
+                text-align: center !important;
+                justify-content: center !important;
+                display: flex !important;
+                min-height: 42px !important;
+                align-items: center !important;
+            }
+
+            /* Strategy Section */
+            .strategy-banner {
+                padding: 1.35rem 1rem;
+                border-radius: var(--radius-lg);
+                margin-bottom: 2.5rem;
+            }
+            .philosophy-quote {
+                padding: 0.95rem 1rem;
+                margin-bottom: 1.4rem;
+            }
+            .philosophy-quote p {
+                font-size: 0.92rem;
+            }
+            .phases-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .phase-card {
+                padding: 1.25rem 1.1rem;
+            }
+            .strategy-advantages-grid {
+                grid-template-columns: 1fr !important;
+                gap: 0.85rem !important;
+            }
+            .strategy-mini-grid {
+                grid-template-columns: 1fr !important;
+                gap: 0.6rem !important;
+            }
+            .plan-b-table {
+                min-width: 620px;
+                font-size: 0.8rem;
+            }
+            .plan-b-table th, .plan-b-table td {
+                padding: 0.65rem 0.75rem;
+            }
+
+            /* Budget Section */
+            #budget {
+                margin-bottom: 2.8rem;
+            }
+            .budget-cur-bar {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.85rem;
+                padding: 0.95rem 1rem;
+            }
+            .cur-toggle-group {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                width: 100%;
+                gap: 0.25rem;
+            }
+            .budget-cur-btn {
+                padding: 0.55rem 0;
+                font-size: 0.82rem;
+                min-height: 42px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .budget-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+                margin-bottom: 1.5rem;
+            }
+            .budget-stat-card {
+                padding: 1rem 0.85rem;
+            }
+            .budget-stat-val {
+                font-size: 1.35rem;
+            }
+            .budget-stat-label {
+                font-size: 0.72rem;
+            }
+            .budget-stat-desc {
+                font-size: 0.74rem;
+            }
+            .budget-table {
+                min-width: 660px;
+                font-size: 0.82rem;
+            }
+            .budget-table th, .budget-table td {
+                padding: 0.75rem 0.8rem;
+            }
+
+            /* Bookings Section */
+            #bookings {
+                margin-bottom: 2.8rem;
+            }
+            .ticket-btn {
+                min-height: 42px;
+                padding: 0.55rem 0.9rem;
+                font-size: 0.8rem;
+            }
+
+            /* Sticky Filter Bar */
+            .filter-sticky-bar {
+                top: 50px;
+                padding: 0.5rem 0;
+                margin-bottom: 1.8rem;
+            }
+            .filter-pills-container {
+                padding: 0 0.6rem 4px;
+                gap: 0.45rem;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .filter-pills-container::-webkit-scrollbar {
+                display: none;
+            }
+            .filter-btn {
+                padding: 0.45rem 0.85rem;
+                font-size: 0.8rem;
+                min-height: 38px;
+            }
+
+            /* Day Nodes & Timelines */
+            .day-node {
+                border-radius: var(--radius-md);
+                margin-bottom: 1.8rem;
+            }
+            .day-hero-img-wrap {
+                height: 180px;
+            }
+            .day-hero-overlay {
+                padding: 1rem 1.1rem;
+            }
+            .day-hero-title {
+                font-size: clamp(1.15rem, 4.5vw, 1.45rem);
+            }
+            .day-badge {
+                font-size: 0.78rem;
+                padding: 0.2rem 0.65rem;
+            }
+            .day-date-str {
+                font-size: 0.85rem;
+            }
+            .day-body {
+                padding: 1.25rem 1rem;
+                gap: 1.2rem;
+            }
+            .timeline-card {
+                padding: 0.95rem 1rem;
+                border-radius: var(--radius-sm);
+            }
+            .timeline-step {
+                gap: 0.65rem;
+                font-size: 0.9rem;
+            }
+            .step-time {
+                font-size: 0.75rem;
+                padding: 0.2rem 0.45rem;
+            }
+            .info-two-col {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+            .info-pill-box {
+                padding: 0.95rem 1.1rem;
+            }
+            .tips-callout {
+                padding: 0.95rem 1.1rem;
+                gap: 0.6rem;
+            }
+            .day-footer-actions {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.75rem;
+                padding-top: 1rem;
+            }
+            .map-link-btn {
+                width: 100%;
+                justify-content: center;
+                min-height: 44px;
+                font-size: 0.85rem;
+            }
+            .mark-visited-label {
+                width: 100%;
+                justify-content: center;
+                min-height: 44px;
+                background: #f8fafc;
+                border: 1px solid #e2e8f0;
+                border-radius: 999px;
+                padding: 0.45rem 1rem;
+            }
+
+            /* Gear Section */
+            .gear-section {
+                padding: 1.75rem 1rem;
+                border-radius: var(--radius-lg);
+                margin-top: 2rem;
+            }
+            .gear-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+            .gear-item label {
+                font-size: 0.88rem;
+                line-height: 1.55;
+            }
+            .gear-checkbox {
+                width: 22px;
+                height: 22px;
+                margin-top: 2px;
+                flex-shrink: 0;
+            }
+
+            /* Footer */
+            footer {
+                padding: 3rem 1rem 2.5rem;
+            }
+            .footer-links {
+                gap: 0.75rem;
+                font-size: 0.85rem;
+                justify-content: center;
+            }
+            .footer-copy {
+                font-size: 0.78rem;
+            }
+
+            /* Show mobile scroll cue */
+            .mobile-scroll-cue {
+                display: flex;
+            }
+        }
+
+        /* ----------------------------------------------------
+           EXTRA SMALL PHONES (<= 420px)
+           ---------------------------------------------------- */
+        @media (max-width: 420px) {
+            .hero-highlights-strip {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.45rem;
+                padding: 0.7rem 0.5rem;
+            }
+            .strip-icon {
+                font-size: 1.2rem;
+            }
+            .strip-val {
+                font-size: 0.8rem;
+            }
+            .strip-label {
+                font-size: 0.68rem;
+            }
+            .budget-stats-grid {
+                grid-template-columns: 1fr;
+            }
+            .budget-stat-val {
+                font-size: 1.45rem;
+            }
+            .sheet-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
     </style>
 </head>
 <body class="lang-zh">
@@ -1431,9 +2231,104 @@
                     <span data-lang="zh">PDF 手册</span>
                     <span data-lang="en">PDF Guide</span>
                 </a>
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="切换导航菜单" onclick="toggleMobileNav()">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <div class="mobile-drawer-inner">
+            <!-- Fast Action Portals -->
+            <div class="mobile-drawer-portals">
+                <a href="hotels.html" class="mobile-drawer-portal-btn hotel">
+                    <span>🏨 <span data-lang="zh">住宿与洗衣指南</span><span data-lang="en">Hotels Guide</span></span>
+                    <span class="portal-arrow">➔</span>
+                </a>
+                <a href="docs/japan_family_travel_handbook.pdf" class="mobile-drawer-portal-btn pdf" target="_blank" download>
+                    <span>📄 <span data-lang="zh">下载 PDF 手册</span><span data-lang="en">PDF Guide</span></span>
+                    <span class="portal-arrow">➔</span>
+                </a>
+            </div>
+
+            <!-- Primary Section Navigation -->
+            <nav class="mobile-drawer-nav">
+                <a href="#flights" onclick="closeMobileNav()" class="mobile-nav-item">
+                    <span class="mobile-nav-icon">✈️</span>
+                    <div>
+                        <div class="mobile-nav-title"><span data-lang="zh">新航往返航班</span><span data-lang="en">Confirmed Flights</span></div>
+                        <div class="mobile-nav-sub"><span data-lang="zh">SQ 672 / SQ 671 · 波音 787-10 宽体</span><span data-lang="en">Singapore Airlines Boeing 787-10 Non-stop</span></div>
+                    </div>
+                </a>
+                <a href="#strategy" onclick="closeMobileNav()" class="mobile-nav-item">
+                    <span class="mobile-nav-icon">🗺️</span>
+                    <div>
+                        <div class="mobile-nav-title"><span data-lang="zh">三大战略住宿地</span><span data-lang="en">Master Strategy</span></div>
+                        <div class="mobile-nav-sub"><span data-lang="zh">高山 ➔ 下吕名汤 ➔ 名古屋7晚零搬家</span><span data-lang="en">Takayama ➔ Gero ➔ Nagoya Consecutive</span></div>
+                    </div>
+                </a>
+                <a href="#budget" onclick="closeMobileNav()" class="mobile-nav-item">
+                    <span class="mobile-nav-icon">💰</span>
+                    <div>
+                        <div class="mobile-nav-title"><span data-lang="zh">家庭旅行预算引擎</span><span data-lang="en">Budget Estimator</span></div>
+                        <div class="mobile-nav-sub"><span data-lang="zh">SGD / JPY / CNY / USD 四币种换算</span><span data-lang="en">4-Currency Live Converter</span></div>
+                    </div>
+                </a>
+                <a href="#bookings" onclick="closeMobileNav()" class="mobile-nav-item">
+                    <span class="mobile-nav-icon">🎟️</span>
+                    <div>
+                        <div class="mobile-nav-title"><span data-lang="zh">核心门票与交通入口</span><span data-lang="en">Official Ticket Portals</span></div>
+                        <div class="mobile-nav-sub"><span data-lang="zh">吉卜力、JR特急飞驒、浓飞巴士</span><span data-lang="en">Ghibli, JR Hida, Nohi Bus</span></div>
+                    </div>
+                </a>
+                <a href="#itinerary" onclick="closeMobileNav()" class="mobile-nav-item">
+                    <span class="mobile-nav-icon">📅</span>
+                    <div>
+                        <div class="mobile-nav-title"><span data-lang="zh">13天每日游程执行</span><span data-lang="en">13-Day Daily Guide</span></div>
+                        <div class="mobile-nav-sub"><span data-lang="zh">地图打卡、活动建议、松弛亲子节奏</span><span data-lang="en">Maps, schedules, attractions</span></div>
+                    </div>
+                </a>
+                <a href="#gear" onclick="closeMobileNav()" class="mobile-nav-item">
+                    <span class="mobile-nav-icon">🎒</span>
+                    <div>
+                        <div class="mobile-nav-title"><span data-lang="zh">装备防寒与备忘</span><span data-lang="en">Gear & Packing</span></div>
+                        <div class="mobile-nav-sub"><span data-lang="zh">分层保暖、防滑雪地靴、eSIM与现金</span><span data-lang="en">Winter layers, snow boots, eSIM</span></div>
+                    </div>
+                </a>
+            </nav>
+
+            <!-- Fast Jump to Day Grid -->
+            <div class="mobile-day-jump-section">
+                <div class="mobile-jump-header">
+                    <span>⚡</span>
+                    <span data-lang="zh">快速直达具体天数 (D1 - D13)</span>
+                    <span data-lang="en">Fast Jump to Specific Day</span>
+                </div>
+                <div class="mobile-jump-grid">
+                    <button class="jump-pill p1" onclick="jumpToDay('day1')"><strong>D1</strong> 11/26 ✈️高山</button>
+                    <button class="jump-pill p1" onclick="jumpToDay('day2')"><strong>D2</strong> 11/27 🏯老街</button>
+                    <button class="jump-pill p1" onclick="jumpToDay('day3')"><strong>D3</strong> 11/28 ❄️白川乡</button>
+                    <button class="jump-pill p1" onclick="jumpToDay('day4')"><strong>D4</strong> 11/29 🎬古川</button>
+                    <button class="jump-pill p2" onclick="jumpToDay('day5')"><strong>D5</strong> 11/30 ♨️下吕</button>
+                    <button class="jump-pill p3" onclick="jumpToDay('day6')"><strong>D6</strong> 12/01 🏙️名古屋</button>
+                    <button class="jump-pill p3" onclick="jumpToDay('day7')"><strong>D7</strong> 12/02 🚗丰田</button>
+                    <button class="jump-pill p3" onclick="jumpToDay('day8')"><strong>D8</strong> 12/03 🎪吉卜力</button>
+                    <button class="jump-pill p3" onclick="jumpToDay('day9')"><strong>D9</strong> 12/04 🏯犬山</button>
+                    <button class="jump-pill p3" onclick="jumpToDay('day10')"><strong>D10</strong> 12/05 🏯名城</button>
+                    <button class="jump-pill p3" onclick="jumpToDay('day11')"><strong>D11</strong> 12/06 ⛩️热田</button>
+                    <button class="jump-pill p3" onclick="jumpToDay('day12')"><strong>D12</strong> 12/07 🛍️大须</button>
+                    <button class="jump-pill p3" onclick="jumpToDay('day13')"><strong>D13</strong> 12/08 ✈️返程</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-nav-backdrop" id="mobileNavBackdrop" onclick="closeMobileNav()"></div>
+
 
     <!-- Hero Header -->
     <section class="hero">
@@ -1508,7 +2403,7 @@
 
         <!-- Confirmed Flight Details Banner -->
         <section id="flights" style="margin-bottom: 3.5rem;">
-            <div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: var(--radius-lg); padding: 1.8rem 2.2rem; color: white; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3); border: 1px solid rgba(255,255,255,0.1);">
+            <div class="flights-card-wrap" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: var(--radius-lg); padding: 1.8rem 2.2rem; color: white; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3); border: 1px solid rgba(255,255,255,0.1);">
                 <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 1.2rem; margin-bottom: 1.5rem;">
                     <div style="display: flex; align-items: center; gap: 0.75rem;">
                         <span style="font-size: 1.8rem;">✈️</span>
@@ -1529,7 +2424,7 @@
                     </div>
                 </div>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+                <div class="flights-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
                     <!-- Outbound Card -->
                     <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-md); padding: 1.4rem; position: relative;">
                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem;">
@@ -1547,7 +2442,7 @@
                             </div>
                             <div style="display: flex; flex-direction: column; align-items: center; padding: 0 0.8rem;">
                                 <span style="font-size: 0.75rem; color: #94a3b8;">~6h 10m</span>
-                                <div style="width: 70px; height: 2px; background: #475569; position: relative; margin: 0.4rem 0;">
+                                <div class="flight-arrow-line" style="width: 70px; height: 2px; background: #475569; position: relative; margin: 0.4rem 0;">
                                     <div style="position: absolute; right: 0; top: -3px; width: 0; height: 0; border-top: 4px solid transparent; border-bottom: 4px solid transparent; border-left: 6px solid #38bdf8;"></div>
                                 </div>
                                 <span style="font-size: 0.72rem; color: #34d399; font-weight: 600;"><span data-lang="zh">红眼夜航·安睡抵埗</span><span data-lang="en">Overnight Sleep</span></span>
@@ -1582,7 +2477,7 @@
                             </div>
                             <div style="display: flex; flex-direction: column; align-items: center; padding: 0 0.8rem;">
                                 <span style="font-size: 0.75rem; color: #94a3b8;">~6h 55m</span>
-                                <div style="width: 70px; height: 2px; background: #475569; position: relative; margin: 0.4rem 0;">
+                                <div class="flight-arrow-line" style="width: 70px; height: 2px; background: #475569; position: relative; margin: 0.4rem 0;">
                                     <div style="position: absolute; right: 0; top: -3px; width: 0; height: 0; border-top: 4px solid transparent; border-bottom: 4px solid transparent; border-left: 6px solid #34d399;"></div>
                                 </div>
                                 <span style="font-size: 0.72rem; color: #38bdf8; font-weight: 600;"><span data-lang="zh">日间直飞·准点舒适</span><span data-lang="en">Day Flight</span></span>
@@ -1602,7 +2497,7 @@
                 </div>
 
                 <!-- Family Composition Spec Bar -->
-                <div style="margin-top: 1.2rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: var(--radius-md); padding: 0.9rem 1.4rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem;">
+                <div class="family-spec-bar" style="margin-top: 1.2rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: var(--radius-md); padding: 0.9rem 1.4rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem;">
                     <div style="display: flex; align-items: center; gap: 0.75rem;">
                         <span style="font-size: 1.6rem;">👨‍👩‍👦‍👦</span>
                         <div>
@@ -1648,7 +2543,7 @@
                 </div>
 
                 <!-- 4 Core Advantages Cards -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; margin-bottom: 1.8rem;">
+                <div class="strategy-advantages-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; margin-bottom: 1.8rem;">
                     <div style="background: #ffffff; border: 1.5px solid #bbf7d0; border-radius: var(--radius-md); padding: 1.1rem; box-shadow: var(--shadow-sm);">
                         <div style="font-size: 1.3rem; margin-bottom: 0.35rem;">💰</div>
                         <h4 style="color: #065f46; font-size: 0.98rem; font-weight: 800; margin-bottom: 0.35rem;">
@@ -1708,7 +2603,7 @@
                         </h4>
                     </div>
                     <div style="font-size: 0.88rem; color: #334155; line-height: 1.7;">
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-top: 0.5rem;">
+                        <div class="strategy-mini-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-top: 0.5rem;">
                             <div style="background: #f0f9ff; padding: 0.75rem; border-radius: 8px; border-left: 3px solid #0284c7;">
                                 <strong>08:30 - 09:20</strong><br>
                                 <span data-lang="zh">SQ672 降落中部机场 (NGO) T1，从容入境、取行李、兑换/领取 JR 票券（约 45-50 分钟）。</span>
@@ -1801,6 +2696,11 @@
                         <span data-lang="zh">完整 13 天日程全景表 (2026.11.26 - 12.08)</span>
                         <span data-lang="en">13-Day Master Schedule Overview (2026.11.26 - 12.08)</span>
                     </h4>
+                    <div class="mobile-scroll-cue">
+                        <span class="scroll-cue-icon">👉</span>
+                        <span data-lang="zh">左右滑动查看完整 13 天排期表</span>
+                        <span data-lang="en">Swipe horizontally for full 13-day schedule</span>
+                    </div>
                     <div style="overflow-x: auto;">
                         <table class="plan-b-table">
                             <thead>
@@ -2241,6 +3141,11 @@
                     </span>
                 </div>
 
+                <div class="mobile-scroll-cue">
+                    <span class="scroll-cue-icon">👉</span>
+                    <span data-lang="zh">左右滑动查看完整官方预约入口</span>
+                    <span data-lang="en">Swipe horizontally for official ticket table</span>
+                </div>
                 <div class="budget-table-wrap">
                     <table class="budget-table">
                         <thead>
@@ -4189,6 +5094,205 @@
                 }
             }
         });
+
+        // Mobile Navigation Drawer Toggle
+        function toggleMobileNav() {
+            const drawer = document.getElementById('mobileNavDrawer');
+            const backdrop = document.getElementById('mobileNavBackdrop');
+            const btn = document.getElementById('mobileMenuBtn');
+            const isOpen = drawer && drawer.classList.contains('open');
+
+            if (isOpen) {
+                closeMobileNav();
+            } else {
+                if (drawer) drawer.classList.add('open');
+                if (backdrop) backdrop.classList.add('open');
+                if (btn) btn.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMobileNav() {
+            const drawer = document.getElementById('mobileNavDrawer');
+            const backdrop = document.getElementById('mobileNavBackdrop');
+            const btn = document.getElementById('mobileMenuBtn');
+            if (drawer) drawer.classList.remove('open');
+            if (backdrop) backdrop.classList.remove('open');
+            if (btn) btn.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Quick Day Bottom Sheet Modal
+        function openQuickDaySheet() {
+            const modal = document.getElementById('mobileDaySheetModal');
+            if (modal) modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeQuickDaySheet() {
+            const modal = document.getElementById('mobileDaySheetModal');
+            if (modal) modal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        // Fast Jump to Day with phase auto-unhide & highlight flash
+        function jumpToDay(dayId) {
+            closeMobileNav();
+            closeQuickDaySheet();
+
+            const targetNode = document.getElementById(dayId);
+            if (targetNode) {
+                // Ensure target day is visible if currently filtered out by phase
+                if (targetNode.style.display === 'none') {
+                    filterDays('all');
+                }
+
+                setTimeout(() => {
+                    const headerOffset = 64;
+                    const elementPosition = targetNode.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Add highlight flash animation
+                    targetNode.classList.remove('day-node-highlight');
+                    void targetNode.offsetWidth; // Trigger DOM reflow
+                    targetNode.classList.add('day-node-highlight');
+                }, 100);
+            }
+        }
+
+        // Scroll to Top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide floating quick dock on scroll
+        window.addEventListener('scroll', () => {
+            const dock = document.getElementById('mobileQuickDock');
+            if (dock) {
+                if (window.scrollY > 350) {
+                    dock.classList.add('visible');
+                } else {
+                    dock.classList.remove('visible');
+                }
+            }
+        }, { passive: true });
+
     </script>
+
+    <!-- Mobile Floating Quick Dock (FAB) -->
+    <div class="mobile-quick-dock" id="mobileQuickDock">
+        <button class="dock-btn jump-btn" onclick="openQuickDaySheet()" aria-label="快速跳天">
+            <span class="dock-icon">📅</span>
+            <span class="dock-text" data-lang="zh">跳天</span>
+            <span class="dock-text" data-lang="en">Days</span>
+        </button>
+        <button class="dock-btn top-btn" onclick="scrollToTop()" aria-label="回到顶部">
+            <span class="dock-icon">🔝</span>
+            <span class="dock-text" data-lang="zh">顶部</span>
+            <span class="dock-text" data-lang="en">Top</span>
+        </button>
+    </div>
+
+    <!-- Mobile Quick Day Bottom Sheet Modal -->
+    <div class="mobile-day-sheet-modal" id="mobileDaySheetModal">
+        <div class="sheet-backdrop" onclick="closeQuickDaySheet()"></div>
+        <div class="sheet-content">
+            <div class="sheet-handle"></div>
+            <div class="sheet-header">
+                <h3 class="sheet-title">
+                    <span>🗓️</span>
+                    <span data-lang="zh">快速跳转具体天数</span>
+                    <span data-lang="en">Quick Jump to Day</span>
+                </h3>
+                <button class="sheet-close-btn" onclick="closeQuickDaySheet()" aria-label="关闭">✕</button>
+            </div>
+            <div class="sheet-grid">
+                <button class="sheet-day-card p1" onclick="jumpToDay('day1')">
+                    <span class="sd-day">D1</span>
+                    <span class="sd-date">11/26 周四</span>
+                    <span class="sd-desc" data-lang="zh">✈️ 抵日·直奔高山</span>
+                    <span class="sd-desc" data-lang="en">✈️ Arrive & Hida</span>
+                </button>
+                <button class="sheet-day-card p1" onclick="jumpToDay('day2')">
+                    <span class="sd-day">D2</span>
+                    <span class="sd-date">11/27 周五</span>
+                    <span class="sd-desc" data-lang="zh">🏯 高山老街·烧肉</span>
+                    <span class="sd-desc" data-lang="en">🏯 Takayama Old Town</span>
+                </button>
+                <button class="sheet-day-card p1" onclick="jumpToDay('day3')">
+                    <span class="sd-day">D3</span>
+                    <span class="sd-date">11/28 周六</span>
+                    <span class="sd-desc" data-lang="zh">❄️ 白川乡合掌村</span>
+                    <span class="sd-desc" data-lang="en">❄️ Shirakawa-go</span>
+                </button>
+                <button class="sheet-day-card p1" onclick="jumpToDay('day4')">
+                    <span class="sd-day">D4</span>
+                    <span class="sd-date">11/29 周日</span>
+                    <span class="sd-desc" data-lang="zh">🎬 飞驒古川巡礼</span>
+                    <span class="sd-desc" data-lang="en">🎬 Hida Furukawa</span>
+                </button>
+                <button class="sheet-day-card p2" onclick="jumpToDay('day5')">
+                    <span class="sd-day">D5</span>
+                    <span class="sd-date">11/30 周一</span>
+                    <span class="sd-desc" data-lang="zh">♨️ 下吕名汤·水明馆</span>
+                    <span class="sd-desc" data-lang="en">♨️ Gero Suimeikan</span>
+                </button>
+                <button class="sheet-day-card p3" onclick="jumpToDay('day6')">
+                    <span class="sd-day">D6</span>
+                    <span class="sd-date">12/01 周二</span>
+                    <span class="sd-desc" data-lang="zh">🏙️ 移师名古屋·大须</span>
+                    <span class="sd-desc" data-lang="en">🏙️ Nagoya Hub</span>
+                </button>
+                <button class="sheet-day-card p3" onclick="jumpToDay('day7')">
+                    <span class="sd-day">D7</span>
+                    <span class="sd-date">12/02 周三</span>
+                    <span class="sd-desc" data-lang="zh">🚗 丰田产业纪念馆</span>
+                    <span class="sd-desc" data-lang="en">🚗 Toyota Tech Museum</span>
+                </button>
+                <button class="sheet-day-card p3" onclick="jumpToDay('day8')">
+                    <span class="sd-day">D8</span>
+                    <span class="sd-date">12/03 周四</span>
+                    <span class="sd-desc" data-lang="zh">🎪 吉卜力大公园</span>
+                    <span class="sd-desc" data-lang="en">🎪 Ghibli Park</span>
+                </button>
+                <button class="sheet-day-card p3" onclick="jumpToDay('day9')">
+                    <span class="sd-day">D9</span>
+                    <span class="sd-date">12/04 周五</span>
+                    <span class="sd-desc" data-lang="zh">🏯 犬山国宝城下町</span>
+                    <span class="sd-desc" data-lang="en">🏯 Inuyama Castle</span>
+                </button>
+                <button class="sheet-day-card p3" onclick="jumpToDay('day10')">
+                    <span class="sd-day">D10</span>
+                    <span class="sd-date">12/05 周六</span>
+                    <span class="sd-desc" data-lang="zh">🏯 名古屋城·绿洲21</span>
+                    <span class="sd-desc" data-lang="en">🏯 Nagoya Castle</span>
+                </button>
+                <button class="sheet-day-card p3" onclick="jumpToDay('day11')">
+                    <span class="sd-day">D11</span>
+                    <span class="sd-date">12/06 周日</span>
+                    <span class="sd-desc" data-lang="zh">⛩️ 热田神宫·白鸟庭园</span>
+                    <span class="sd-desc" data-lang="en">⛩️ Atsuta Shrine</span>
+                </button>
+                <button class="sheet-day-card p3" onclick="jumpToDay('day12')">
+                    <span class="sd-day">D12</span>
+                    <span class="sd-date">12/07 周一</span>
+                    <span class="sd-desc" data-lang="zh">🛍️ 大须二次元·荣商圈</span>
+                    <span class="sd-desc" data-lang="en">🛍️ Osu & Sakae Shop</span>
+                </button>
+                <button class="sheet-day-card p3" onclick="jumpToDay('day13')">
+                    <span class="sd-day">D13</span>
+                    <span class="sd-date">12/08 周二</span>
+                    <span class="sd-desc" data-lang="zh">✈️ 飞机乐园·返程</span>
+                    <span class="sd-desc" data-lang="en">✈️ Flight of Dreams</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
