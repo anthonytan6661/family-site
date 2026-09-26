@@ -2209,7 +2209,6 @@
             <ul class="nav-links">
                 <li><a href="#flights" style="color:var(--deep-slate); font-weight:700;"><span data-lang="zh">✈️ 航班信息</span><span data-lang="en">✈️ Flights</span></a></li>
                 <li><a href="#strategy" data-lang="zh">行程策略</a><a href="#strategy" data-lang="en">Strategy</a></li>
-                <li><a href="hotels.html" style="color:var(--japan-red); font-weight:700;"><span data-lang="zh">🏨 住宿与洗衣指南</span><span data-lang="en">🏨 Hotels & Laundry</span></a></li>
                 <li><a href="#budget" style="color:#059669; font-weight:700;"><span data-lang="zh">💰 费用预算</span><span data-lang="en">💰 Budget</span></a></li>
                 <li><a href="#bookings" data-lang="zh">抢票预约</a><a href="#bookings" data-lang="en">Key Bookings</a></li>
                 <li><a href="#itinerary" data-lang="zh">每日游程</a><a href="#itinerary" data-lang="en">Itinerary</a></li>
@@ -2221,11 +2220,6 @@
                     <button class="lang-btn active" id="btn-zh" onclick="setLanguage('zh')">中文</button>
                     <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
                 </div>
-                <a href="hotels.html" class="btn-portal" style="background:#0284c7;">
-                    <span>🏨</span>
-                    <span data-lang="zh">精选酒店</span>
-                    <span data-lang="en">Hotels</span>
-                </a>
                 <a href="docs/japan_family_travel_handbook.pdf" class="btn-portal" target="_blank" download>
                     <span>📄</span>
                     <span data-lang="zh">PDF 手册</span>
@@ -2246,8 +2240,8 @@
         <div class="mobile-drawer-inner">
             <!-- Fast Action Portals -->
             <div class="mobile-drawer-portals">
-                <a href="hotels.html" class="mobile-drawer-portal-btn hotel">
-                    <span>🏨 <span data-lang="zh">住宿与洗衣指南</span><span data-lang="en">Hotels Guide</span></span>
+                <a href="#strategy" onclick="closeMobileNav()" class="mobile-drawer-portal-btn hotel">
+                    <span>🏨 <span data-lang="zh">三大确认住宿大本营</span><span data-lang="en">3 Confirmed Bases</span></span>
                     <span class="portal-arrow">➔</span>
                 </a>
                 <a href="docs/japan_family_travel_handbook.pdf" class="mobile-drawer-portal-btn pdf" target="_blank" download>
@@ -2276,7 +2270,7 @@
                     <span class="mobile-nav-icon">💰</span>
                     <div>
                         <div class="mobile-nav-title"><span data-lang="zh">家庭旅行预算引擎</span><span data-lang="en">Budget Estimator</span></div>
-                        <div class="mobile-nav-sub"><span data-lang="zh">SGD / JPY / MYR / USD 四币种换算</span><span data-lang="en">4-Currency Live Converter</span></div>
+                        <div class="mobile-nav-sub"><span data-lang="zh">SGD / JPY / MYR 三币种换算</span><span data-lang="en">3-Currency Live Converter</span></div>
                     </div>
                 </a>
                 <a href="#bookings" onclick="closeMobileNav()" class="mobile-nav-item">
@@ -2384,10 +2378,10 @@
                     <span data-lang="zh">浏览每日详细游程</span>
                     <span data-lang="en">Explore Daily Itinerary</span>
                 </a>
-                <a href="hotels.html" class="btn-secondary" style="border-color:#38bdf8; background:rgba(2,132,199,0.25);">
+                <a href="#strategy" class="btn-secondary" style="border-color:#38bdf8; background:rgba(2,132,199,0.25);">
                     <span>🏨</span>
-                    <span data-lang="zh">精选酒店与洗衣机指南</span>
-                    <span data-lang="en">Hotels & Laundry Guide</span>
+                    <span data-lang="zh">三大确认住宿大本营</span>
+                    <span data-lang="en">3 Confirmed Bases</span>
                 </a>
                 <a href="docs/japan_family_travel_handbook.pdf" class="btn-secondary" target="_blank" download>
                     <span>📄</span>
@@ -2511,8 +2505,8 @@
                             </div>
                         </div>
                     </div>
-                    <a href="hotels.html" style="background: #059669; color: white; padding: 0.45rem 1rem; border-radius: 999px; text-decoration: none; font-size: 0.82rem; font-weight: 700; white-space: nowrap;">
-                        🏨 <span data-lang="zh">查看4人独立床位清单</span><span data-lang="en">View 4-Bed Layouts</span> ➔
+                    <a href="#strategy" style="background: #059669; color: white; padding: 0.45rem 1rem; border-radius: 999px; text-decoration: none; font-size: 0.82rem; font-weight: 700; white-space: nowrap;">
+                        🏨 <span data-lang="zh">查看三大确认住宿</span><span data-lang="en">View 3 Confirmed Bases</span> ➔
                     </a>
                 </div>
             </div>
@@ -2643,8 +2637,8 @@
                         <h3 class="phase-title"><span data-lang="zh">雪境童话与古街烟火</span><span data-lang="en">Snow Country & Heritage</span></h3>
                         <div class="phase-stay">
                             <span>🏨</span>
-                            <span data-lang="zh">宿：<a href="hotels.html#h1-1" style="color:inherit; text-decoration:underline;">Wat Hotel & Spa 飞驒高山</a> (7F展望天然温泉·4座免费私汤·自助洗衣·2间双床房4单床) (4晚)</span>
-                            <span data-lang="en">Base: <a href="hotels.html#h1-1" style="color:inherit; text-decoration:underline;">Wat Hotel & Spa Hida Takayama</a> (7F Rooftop Onsen, 4 Free Private Baths, 4 Beds) (4N)</span>
+                            <span data-lang="zh">宿：<strong>Wat Hotel & Spa 飞驒高山 (已确认)</strong> (7F展望天然温泉·4座免费私汤·自助洗衣·2间双床房4单床) (4晚)</span>
+                            <span data-lang="en">Base: <strong>Wat Hotel & Spa Hida Takayama (Confirmed)</strong> (7F Rooftop Onsen, 4 Free Private Baths, 4 Beds) (4N)</span>
                         </div>
                         <p class="phase-desc">
                             <span data-lang="zh">落地直达高山。以高山古街为大本营，辐射白川乡合掌村、飞驒古川锦鲤街、宫川朝市，尽享A5飞驒牛盛宴。</span>
@@ -2661,8 +2655,8 @@
                         <h3 class="phase-title"><span data-lang="zh">日本三大名泉平日疗愈</span><span data-lang="en">Weekday Ryokan Retreat</span></h3>
                         <div class="phase-stay">
                             <span>🏨</span>
-                            <span data-lang="zh">宿：<a href="hotels.html#h2-1" style="color:inherit; text-decoration:underline;">下吕温泉 水明馆</a> (日式纯正榻榻米·一泊二食会席) (1晚)</span>
-                            <span data-lang="en">Base: <a href="hotels.html#h2-1" style="color:inherit; text-decoration:underline;">Gero Suimeikan</a> (Tatami 4-Pax Kaiseki Half-Board) (1N)</span>
+                            <span data-lang="zh">宿：<strong>下吕温泉 水明馆 (已确认)</strong> (日式纯正榻榻米·一泊二食4人奢华会席) (1晚)</span>
+                            <span data-lang="en">Base: <strong>Gero Suimeikan (Confirmed)</strong> (Tatami 4-Pax Kaiseki Half-Board) (1N)</span>
                         </div>
                         <p class="phase-desc">
                             <span data-lang="zh">从高山乘特急仅43分钟直达下吕。<strong>周一入住享受非周末特惠价格（立省约1万円）</strong>，温泉街游客稀少，悠享三大名汤与精致会席。</span>
@@ -2679,8 +2673,8 @@
                         <h3 class="phase-title"><span data-lang="zh">都会科技、吉卜力梦幻、全家扫货与从容返程</span><span data-lang="en">7-Night Mega Hub: Ghibli, Tech, Theme Parks & Departure</span></h3>
                         <div class="phase-stay">
                             <span>🏨</span>
-                            <span data-lang="zh">宿：<a href="hotels.html#h3-1" style="color:inherit; text-decoration:underline;">The Royal Park Hotel Iconic Nagoya</a> (2间高空双床房·4独立单床·26F自助投币洗烘·荣站地下中日大厦直连) (7晚)</span>
-                            <span data-lang="en">Base: <a href="hotels.html#h3-1" style="color:inherit; text-decoration:underline;">The Royal Park Hotel Iconic Nagoya</a> (2 Skyline Twin Rooms, 4 Beds, 26F Coin Laundry, Direct Sakae Subway Link) (7N)</span>
+                            <span data-lang="zh">宿：<strong>The Royal Park Hotel Iconic Nagoya (已确认)</strong> (2间高空双床房·4独立单床·26F自助投币洗烘·荣站地下中日大厦直连) (7晚)</span>
+                            <span data-lang="en">Base: <strong>The Royal Park Hotel Iconic Nagoya (Confirmed)</strong> (2 Skyline Twin Rooms, 4 Beds, 26F Coin Laundry, Direct Sakae Subway Link) (7N)</span>
                         </div>
                         <p class="phase-desc">
                             <span data-lang="zh"><strong>整整7天不再收拾行李搬家！</strong>以2024全新地标中日大厦高空酒店为奢华基地：下楼地下通道直通荣站（东山线与名城线交汇核芯）；D8（周四）乘东山线直达藤之丘转Linimo畅玩吉卜力公园（工作日错峰免排队）；名城线2站直达名古屋城与金鯱横丁；下楼即是中日商场、久屋大通公园、绿洲21水之宇宙飞船与松坂屋、Parco百货；最后一天乘东山线5分钟直通名站转乘 μ-SKY 直达机场无缝搭乘 SQ671 返程。</span>
@@ -2841,7 +2835,6 @@
                     <button class="budget-cur-btn active" id="bcur-sgd" onclick="setBudgetCurrency('SGD')">SGD S$</button>
                     <button class="budget-cur-btn" id="bcur-jpy" onclick="setBudgetCurrency('JPY')">JPY 円</button>
                     <button class="budget-cur-btn" id="bcur-myr" onclick="setBudgetCurrency('MYR')">MYR RM</button>
-                    <button class="budget-cur-btn" id="bcur-usd" onclick="setBudgetCurrency('USD')">USD $</button>
                 </div>
             </div>
 
@@ -2892,7 +2885,7 @@
                         <span data-lang="zh">已锁定的战略省钱金</span>
                         <span data-lang="en">Confirmed Strategic Savings</span>
                     </div>
-                    <div class="budget-stat-val" id="bstat-savings" style="color:#854d0e;">~S$ 410</div>
+                    <div class="budget-stat-val" id="bstat-savings" style="color:#854d0e;">~S$ 370</div>
                     <div class="budget-stat-desc">
                         <span data-lang="zh">下吕周一平日省1万円 + 名古屋7晚长住折3.5万円 + 免黑猫运费4,800円</span>
                         <span data-lang="en">Gero Monday (-10k円) + Nagoya 7N weekly (-35k円) + Zero luggage fee</span>
@@ -3524,8 +3517,8 @@
                         <span><span data-lang="zh">4人全程住宿约 <strong>S$ 4,274</strong>（523,600円），含高山顶楼天然温泉与私汤、下吕奢华早晚会席宴与名古屋全新四星奢华高空双房！</span><span data-lang="en">4-pax total ~<strong>S$ 4,274</strong> (523,600 JPY), including Takayama rooftop onsen & private baths, luxury Gero Kaiseki meals and brand-new Nagoya high-floor twin rooms!</span></span>
                     </div>
                     <div style="margin-top:0.6rem;">
-                        <a href="hotels.html" class="ticket-btn green" style="font-size:0.9rem; padding:0.6rem 1.2rem;">
-                            <span>🏨</span> <span data-lang="zh">前往住宿与洗衣专页查看实景与指南</span><span data-lang="en">View Hotels & Laundry Portal</span> ➔
+                        <a href="#strategy" class="ticket-btn green" style="font-size:0.9rem; padding:0.6rem 1.2rem;">
+                            <span>🏨</span> <span data-lang="zh">查看三大战略住宿大本营规划</span><span data-lang="en">View 3 Confirmed Base Details</span> ➔
                         </a>
                     </div>
                 </div>
@@ -3623,8 +3616,8 @@
                         <div class="info-pill-box stay">
                             <div class="info-box-title">🏨 <span data-lang="zh">住宿基地 (高山连住4晚·已确认)</span><span data-lang="en">Takayama Base (4 Nights · Confirmed)</span></div>
                             <div class="info-box-text">
-                                <span data-lang="zh"><strong>已确认：</strong><a href="hotels.html#h1-1" style="color:#047857; font-weight:700; text-decoration:underline;">Wat Hotel & Spa 飞驒高山</a>（距高山站步行6-7分钟，预订2间高级双床房共4独立单床，<strong>7F顶楼天然温泉+4座免费独立家庭私汤</strong>，馆内24小时自助洗衣）；备选 <a href="hotels.html#h1-residence" style="color:var(--deep-slate); text-decoration:underline;">高山车站公寓式酒店</a>。<br><a href="hotels.html#p1" style="color:var(--japan-red); font-size:0.85rem; font-weight:700;">👉 查看高山住宿详细对比</a></span>
-                                <span data-lang="en"><strong>Confirmed:</strong> <a href="hotels.html#h1-1" style="color:#047857; font-weight:700; text-decoration:underline;">Wat Hotel & Spa Hida Takayama</a> (6-7 mins walk from station, 2 Twin Rooms with 4 beds, <strong>7F rooftop onsen & 4 free private family baths</strong>, on-site 24h coin laundry); alt: <a href="hotels.html#h1-residence" style="color:var(--deep-slate); text-decoration:underline;">Residence Hotel Takayama</a>.<br><a href="hotels.html#p1" style="color:var(--japan-red); font-size:0.85rem; font-weight:700;">👉 View Takayama Hotel Comparison</a></span>
+                                <span data-lang="zh"><strong>已确认入住：</strong><strong>Wat Hotel & Spa 飞驒高山</strong>（距高山站平缓步行约 6-7 分钟，已预订 2 间高级双床房共 4 独立单床，<strong>7F顶楼天然温泉+4座免费独立家庭私汤</strong>，馆内24小时自助投币洗衣机，附赠免费冰棒与漫画角）。</span>
+                                <span data-lang="en"><strong>Confirmed Booking:</strong> <strong>Wat Hotel & Spa Hida Takayama</strong> (6-7 mins flat walk from station, 2 Twin Rooms with 4 real beds, <strong>7F rooftop natural onsen & 4 free private family baths</strong>, on-site 24h coin laundry, complimentary ice pops & manga corner).</span>
                             </div>
                         </div>
                     </div>
@@ -4009,10 +4002,10 @@
                             </div>
                         </div>
                         <div class="info-pill-box stay">
-                            <div class="info-box-title">♨️ <span data-lang="zh">名汤住宿 (一泊二食)</span><span data-lang="en">Ryokan Base (1 Night)</span></div>
+                            <div class="info-box-title">♨️ <span data-lang="zh">名汤住宿 (一泊二食·已确认)</span><span data-lang="en">Ryokan Base (1 Night · Confirmed)</span></div>
                             <div class="info-box-text">
-                                <span data-lang="zh"><strong>首选推荐：</strong><a href="hotels.html#h2-1" style="color:#047857; font-weight:700; text-decoration:underline;">下吕温泉 水明馆</a>（皇室级纯正日式名宿，带馆内投币洗衣房，一泊二食包含4人顶级飞驒牛会席晚宴+丰盛朝食）。<br><a href="hotels.html#p2" style="color:var(--japan-red); font-size:0.85rem; font-weight:700;">👉 查看下吕水明馆详情与比价</a></span>
-                                <span data-lang="en"><strong>Top Pick:</strong> <a href="hotels.html#h2-1" style="color:#047857; font-weight:700; text-decoration:underline;">Gero Suimeikan</a> (Historic ryokan, coin laundry, 4-pax Hida beef Kaiseki half-board included).<br><a href="hotels.html#p2" style="color:var(--japan-red); font-size:0.85rem; font-weight:700;">👉 View Gero Suimeikan Details & Pricing</a></span>
+                                <span data-lang="zh"><strong>已确认入住：</strong><strong>下吕温泉 水明馆</strong>（日本皇室曾下榻名宿，下吕三大名汤大浴场巡礼，馆内备投币洗衣房，一泊二食包含 4 人顶级飞驒牛会席晚宴 + 丰盛朝食，周一平日特惠避开拥挤）。</span>
+                                <span data-lang="en"><strong>Confirmed Booking:</strong> <strong>Gero Suimeikan</strong> (Imperial-grade historic ryokan, 3 magnificent hot spring pavilions, coin laundry, 4-pax premium Hida beef Kaiseki dinner & breakfast included).</span>
                             </div>
                         </div>
                     </div>
@@ -4114,10 +4107,10 @@
                             </div>
                         </div>
                         <div class="info-pill-box stay">
-                            <div class="info-box-title">🏨 <span data-lang="zh">终极住宿基地 (连住7晚)</span><span data-lang="en">Nagoya Mega Hub (7 Nights)</span></div>
+                            <div class="info-box-title">🏨 <span data-lang="zh">终极住宿基地 (连住7晚·已确认)</span><span data-lang="en">Nagoya Mega Hub (7 Nights · Confirmed)</span></div>
                             <div class="info-box-text">
-                                <span data-lang="zh"><strong>已确认入住：</strong><a href="hotels.html#h3-1" style="color:#047857; font-weight:700; text-decoration:underline;">The Royal Park Hotel Iconic Nagoya</a>（2024全新开业地标中日大厦24-32层，荣站双地铁地下直连，26F配24小时住客自助洗衣房，7晚连住零搬家）。<br><a href="hotels.html#p3" style="color:var(--japan-red); font-size:0.85rem; font-weight:700;">👉 查看 Iconic 酒店实景与设施</a></span>
-                                <span data-lang="en"><strong>Confirmed Booking:</strong> <a href="hotels.html#h3-1" style="color:#047857; font-weight:700; text-decoration:underline;">The Royal Park Hotel Iconic Nagoya</a> (24F-32F Chunichi Bldg, direct Sakae subway link, 26F coin laundry, zero luggage packing for 7 nights).<br><a href="hotels.html#p3" style="color:var(--japan-red); font-size:0.85rem; font-weight:700;">👉 View Iconic Hotel Details</a></span>
+                                <span data-lang="zh"><strong>已确认入住：</strong><strong>The Royal Park Hotel Iconic Nagoya</strong>（2024全新开业地标中日大厦24-32层，荣站双地铁地下直连，26F配24小时住客自助洗衣房，7晚连住零搬家）。</span>
+                                <span data-lang="en"><strong>Confirmed Booking:</strong> <strong>The Royal Park Hotel Iconic Nagoya</strong> (24F-32F Chunichi Bldg landmark, direct Sakae subway link, 26F coin laundry, zero luggage packing for 7 nights).</span>
                             </div>
                         </div>
                     </div>
@@ -5013,35 +5006,18 @@
                 flights: "~RM 12,640",
                 grandTotal: "RM 39,941",
                 grandPerPerson: "RM 9,985"
-            },
-            USD: {
-                rateInfo: "USD ($) · 汇率 1 SGD ≈ 0.798 USD",
-                rateInfoEn: "USD ($) · Rate: 1 SGD ≈ 0.798 USD",
-                groundTotal: "$ 6,808",
-                perPerson: "$ 1,702",
-                dailyAvg: "$ 524",
-                savings: "~$ 295",
-                lodging: "$ 3,411",
-                transport: "$ 625",
-                food: "$ 1,726",
-                attractions: "$ 186",
-                insurance: "$ 222",
-                shopping: "$ 638",
-                flights: "~$ 3,152",
-                grandTotal: "$ 9,960",
-                grandPerPerson: "$ 2,490"
             }
         };
 
         let currentBudgetCur = localStorage.getItem('family_budget_cur') || 'SGD';
-        if (currentBudgetCur === 'CNY') currentBudgetCur = 'MYR';
+        if (currentBudgetCur === 'CNY' || currentBudgetCur === 'USD') currentBudgetCur = 'SGD';
 
         function setBudgetCurrency(cur) {
             currentBudgetCur = cur;
             localStorage.setItem('family_budget_cur', cur);
 
             // Toggle active buttons
-            ['sgd', 'jpy', 'myr', 'usd'].forEach(c => {
+            ['sgd', 'jpy', 'myr'].forEach(c => {
                 const btn = document.getElementById('bcur-' + c);
                 if (btn) btn.classList.toggle('active', c.toUpperCase() === cur);
             });
