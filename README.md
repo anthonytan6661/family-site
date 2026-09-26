@@ -75,7 +75,7 @@
 ## 💻 网页特性 (Web Features)
 
 - **中英双语即时切换 (Bilingual Toggle)**：全站中/英文一键无缝切换，并记住用户偏好。
-- **全动态四币种预算引擎 (Interactive 4-Currency Estimator)**：支持 SGD (S$)、JPY (円)、CNY (¥)、USD ($) 即时换算全程各项目开销。
+- **全动态四币种预算引擎 (Interactive 4-Currency Estimator)**：支持 SGD (S$)、JPY (円)、MYR (RM)、USD ($) 即时换算全程各项目开销。
 - **官方票券直达枢纽 (Official Ticket Portals Hub)**：每项重点票券均配备官方直达通道与操作指引。
 - **家庭精选酒店与洗衣机专页 ([`hotels.html`](hotels.html))**：三大阶段房型比价、房内独立洗烘机深度核验与对比矩阵。
 - **分阶段快速筛选 (Phase Filtering)**：阶段一高山、阶段二下吕、阶段三名古屋快速导航定位。

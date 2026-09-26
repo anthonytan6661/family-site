@@ -1153,7 +1153,7 @@
                 <div class="currency-switch">
                     <button class="cur-btn active" id="cur-sgd" onclick="setCurrency('SGD')">SGD (S$)</button>
                     <button class="cur-btn" id="cur-jpy" onclick="setCurrency('JPY')">JPY (円)</button>
-                    <button class="cur-btn" id="cur-cny" onclick="setCurrency('CNY')">CNY (¥)</button>
+                    <button class="cur-btn" id="cur-myr" onclick="setCurrency('MYR')">MYR (RM)</button>
                     <button class="cur-btn" id="cur-usd" onclick="setCurrency('USD')">USD ($)</button>
                 </div>
             </div>
@@ -1916,75 +1916,75 @@
         }
 
         // Comprehensive Currency Engine calibrated against Google Rates Comparison
-        // Base Rates: 1 SGD ≈ 122.5 JPY | 1 CNY ≈ 21.3 JPY | 1 USD ≈ 153.5 JPY
+        // Base Rates: 1 SGD ≈ 122.5 JPY | 1 MYR ≈ 38.3 JPY (1 SGD ≈ 3.20 MYR) | 1 USD ≈ 153.5 JPY
         const hotelPricing = {
             // Phase 1: Takayama (4 Nights)
             "h1-1": { nights: 4, isHalfBoard: false,
                 SGD: { nightly: "S$ 253", total: "S$ 1,012" },
                 JPY: { nightly: "31,000 円", total: "124,000 円" },
-                CNY: { nightly: "¥ 1,455", total: "¥ 5,822" },
+                MYR: { nightly: "RM 810", total: "RM 3,238" },
                 USD: { nightly: "$ 202", total: "$ 808" }
             },
             "h1-2": { nights: 4, isHalfBoard: false,
                 SGD: { nightly: "S$ 310", total: "S$ 1,241" },
                 JPY: { nightly: "38,000 円", total: "152,000 円" },
-                CNY: { nightly: "¥ 1,784", total: "¥ 7,136" },
+                MYR: { nightly: "RM 992", total: "RM 3,971" },
                 USD: { nightly: "$ 248", total: "$ 990" }
             },
             "h1-3": { nights: 4, isHalfBoard: false,
                 SGD: { nightly: "S$ 335", total: "S$ 1,339" },
                 JPY: { nightly: "41,000 円", total: "164,000 円" },
-                CNY: { nightly: "¥ 1,925", total: "¥ 7,699" },
+                MYR: { nightly: "RM 1,072", total: "RM 4,285" },
                 USD: { nightly: "$ 267", total: "$ 1,068" }
             },
             // Phase 2: Gero Onsen (1 Night Half-Board Monday)
             "h2-1": { nights: 1, isHalfBoard: true,
                 SGD: { nightly: "S$ 670", total: "S$ 670" },
                 JPY: { nightly: "82,000 円", total: "82,000 円" },
-                CNY: { nightly: "¥ 3,850", total: "¥ 3,850" },
+                MYR: { nightly: "RM 2,144", total: "RM 2,144" },
                 USD: { nightly: "$ 535", total: "$ 535" }
             },
             "h2-2": { nights: 1, isHalfBoard: true,
                 SGD: { nightly: "S$ 816", total: "S$ 816" },
                 JPY: { nightly: "100,000 円", total: "100,000 円" },
-                CNY: { nightly: "¥ 4,695", total: "¥ 4,695" },
+                MYR: { nightly: "RM 2,611", total: "RM 2,611" },
                 USD: { nightly: "$ 651", total: "$ 651" }
             },
             "h2-3": { nights: 1, isHalfBoard: true,
                 SGD: { nightly: "S$ 604", total: "S$ 604" },
                 JPY: { nightly: "74,000 円", total: "74,000 円" },
-                CNY: { nightly: "¥ 3,474", total: "¥ 3,474" },
+                MYR: { nightly: "RM 1,933", total: "RM 1,933" },
                 USD: { nightly: "$ 482", total: "$ 482" }
             },
             // Phase 3: Nagoya (7 Consecutive Nights Long-Stay - Confirmed at Iconic Nagoya)
             "h3-1": { nights: 7, isHalfBoard: false,
                 SGD: { nightly: "S$ 365", total: "S$ 2,555" },
                 JPY: { nightly: "44,800 円", total: "313,600 円" },
-                CNY: { nightly: "¥ 2,100", total: "¥ 14,700" },
+                MYR: { nightly: "RM 1,168", total: "RM 8,176" },
                 USD: { nightly: "$ 292", total: "$ 2,044" }
             },
             "h3-goldstay": { nights: 7, isHalfBoard: false,
                 SGD: { nightly: "S$ 251", total: "S$ 1,757" },
                 JPY: { nightly: "30,740 円", total: "215,200 円" },
-                CNY: { nightly: "¥ 1,443", total: "¥ 10,104" },
+                MYR: { nightly: "RM 803", total: "RM 5,622" },
                 USD: { nightly: "$ 200", total: "$ 1,401" }
             },
             "h3-2": { nights: 7, isHalfBoard: false,
                 SGD: { nightly: "S$ 375", total: "S$ 2,629" },
                 JPY: { nightly: "46,000 円", total: "322,000 円" },
-                CNY: { nightly: "¥ 2,160", total: "¥ 15,117" },
+                MYR: { nightly: "RM 1,200", total: "RM 8,413" },
                 USD: { nightly: "$ 300", total: "$ 2,098" }
             },
             "h3-3": { nights: 7, isHalfBoard: false,
                 SGD: { nightly: "S$ 212", total: "S$ 1,486" },
                 JPY: { nightly: "26,000 円", total: "182,000 円" },
-                CNY: { nightly: "¥ 1,221", total: "¥ 8,545" },
+                MYR: { nightly: "RM 678", total: "RM 4,755" },
                 USD: { nightly: "$ 169", total: "$ 1,186" }
             },
             "h3-4": { nights: 7, isHalfBoard: false,
                 SGD: { nightly: "S$ 515", total: "S$ 3,605" },
                 JPY: { nightly: "63,000 円", total: "441,000 円" },
-                CNY: { nightly: "¥ 2,958", total: "¥ 20,704" },
+                MYR: { nightly: "RM 1,648", total: "RM 11,536" },
                 USD: { nightly: "$ 410", total: "$ 2,873" }
             }
         };
@@ -2006,13 +2006,13 @@
                 grandTotal: "519,600 円",
                 avgNightly: "43,300 円"
             },
-            CNY: {
-                curName: "CNY (¥)",
-                p1: "¥ 5,822",
-                p2: "¥ 3,850",
-                p3: "¥ 14,700",
-                grandTotal: "¥ 24,372",
-                avgNightly: "¥ 2,031"
+            MYR: {
+                curName: "MYR (RM)",
+                p1: "RM 3,238",
+                p2: "RM 2,144",
+                p3: "RM 8,176",
+                grandTotal: "RM 13,558",
+                avgNightly: "RM 1,130"
             },
             USD: {
                 curName: "USD ($)",
@@ -2025,6 +2025,7 @@
         };
 
         let currentCurrency = localStorage.getItem('family_hotel_cur') || 'SGD';
+        if (currentCurrency === 'CNY') currentCurrency = 'MYR';
 
         function setCurrency(cur) {
             currentCurrency = cur;

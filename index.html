@@ -2276,7 +2276,7 @@
                     <span class="mobile-nav-icon">💰</span>
                     <div>
                         <div class="mobile-nav-title"><span data-lang="zh">家庭旅行预算引擎</span><span data-lang="en">Budget Estimator</span></div>
-                        <div class="mobile-nav-sub"><span data-lang="zh">SGD / JPY / CNY / USD 四币种换算</span><span data-lang="en">4-Currency Live Converter</span></div>
+                        <div class="mobile-nav-sub"><span data-lang="zh">SGD / JPY / MYR / USD 四币种换算</span><span data-lang="en">4-Currency Live Converter</span></div>
                     </div>
                 </a>
                 <a href="#bookings" onclick="closeMobileNav()" class="mobile-nav-item">
@@ -2840,7 +2840,7 @@
                 <div class="cur-toggle-group">
                     <button class="budget-cur-btn active" id="bcur-sgd" onclick="setBudgetCurrency('SGD')">SGD S$</button>
                     <button class="budget-cur-btn" id="bcur-jpy" onclick="setBudgetCurrency('JPY')">JPY 円</button>
-                    <button class="budget-cur-btn" id="bcur-cny" onclick="setBudgetCurrency('CNY')">CNY ¥</button>
+                    <button class="budget-cur-btn" id="bcur-myr" onclick="setBudgetCurrency('MYR')">MYR RM</button>
                     <button class="budget-cur-btn" id="bcur-usd" onclick="setBudgetCurrency('USD')">USD $</button>
                 </div>
             </div>
@@ -4997,22 +4997,22 @@
                 grandTotal: "1,538,200 円",
                 grandPerPerson: "384,550 円"
             },
-            CNY: {
-                rateInfo: "CNY (¥) · 汇率 1 SGD ≈ 5.75 CNY",
-                rateInfoEn: "CNY (¥) · Rate: 1 SGD ≈ 5.75 CNY",
-                groundTotal: "¥ 49,444",
-                perPerson: "¥ 12,361",
-                dailyAvg: "¥ 3,803",
-                savings: "~¥ 2,128",
-                lodging: "¥ 24,967",
-                transport: "¥ 4,502",
-                food: "¥ 12,437",
-                attractions: "¥ 1,340",
-                insurance: "¥ 1,598",
-                shopping: "¥ 4,600",
-                flights: "~¥ 22,713",
-                grandTotal: "¥ 72,157",
-                grandPerPerson: "¥ 18,039"
+            MYR: {
+                rateInfo: "MYR (RM) · 汇率 1 SGD ≈ 3.20 MYR",
+                rateInfoEn: "MYR (RM) · Rate: 1 SGD ≈ 3.20 MYR",
+                groundTotal: "RM 27,517",
+                perPerson: "RM 6,880",
+                dailyAvg: "RM 2,115",
+                savings: "~RM 1,184",
+                lodging: "RM 13,894",
+                transport: "RM 2,506",
+                food: "RM 6,922",
+                attractions: "RM 746",
+                insurance: "RM 890",
+                shopping: "RM 2,560",
+                flights: "~RM 12,640",
+                grandTotal: "RM 40,157",
+                grandPerPerson: "RM 10,039"
             },
             USD: {
                 rateInfo: "USD ($) · 汇率 1 SGD ≈ 0.798 USD",
@@ -5034,13 +5034,14 @@
         };
 
         let currentBudgetCur = localStorage.getItem('family_budget_cur') || 'SGD';
+        if (currentBudgetCur === 'CNY') currentBudgetCur = 'MYR';
 
         function setBudgetCurrency(cur) {
             currentBudgetCur = cur;
             localStorage.setItem('family_budget_cur', cur);
 
             // Toggle active buttons
-            ['sgd', 'jpy', 'cny', 'usd'].forEach(c => {
+            ['sgd', 'jpy', 'myr', 'usd'].forEach(c => {
                 const btn = document.getElementById('bcur-' + c);
                 if (btn) btn.classList.toggle('active', c.toUpperCase() === cur);
             });
