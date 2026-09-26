@@ -877,7 +877,35 @@
             margin-bottom: 0.8rem;
             display: flex;
             align-items: center;
-            gap: 0.4rem;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .timeline-route-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: #e0f2fe;
+            color: #0369a1 !important;
+            padding: 0.28rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: none;
+            letter-spacing: normal;
+            transition: all 0.2s ease;
+            border: 1px solid #bae6fd;
+            box-shadow: 0 1px 2px rgba(2, 132, 199, 0.08);
+        }
+
+        .timeline-route-link:hover {
+            background: #0284c7;
+            color: #ffffff !important;
+            border-color: #0284c7;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(2, 132, 199, 0.22);
         }
 
         .timeline-steps {
@@ -1029,19 +1057,21 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: var(--deep-slate);
-            color: white;
-            padding: 0.55rem 1.1rem;
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            color: #ffffff !important;
+            padding: 0.58rem 1.15rem;
             border-radius: 999px;
             text-decoration: none;
             font-weight: 700;
             font-size: 0.86rem;
-            transition: all 0.2s ease;
+            box-shadow: 0 2px 6px rgba(2, 132, 199, 0.28);
+            transition: all 0.25s ease;
         }
 
         .map-link-btn:hover {
-            background: var(--japan-red);
-            transform: translateY(-1px);
+            background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.38);
         }
 
         .mark-visited-label {
@@ -3593,7 +3623,7 @@
 <!-- DAY 1 -->
             <div class="day-node" data-phase="p1" id="day1">
                 <div class="day-hero-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=1200&auto=format&fit=crop&q=80" alt="Takayama Alpine" class="day-hero-img">
+                    <img src="https://images.unsplash.com/photo-1675725322721-f4dbf3ce6c97?w=1200&auto=format&fit=crop&q=80" alt="Takayama Nakabashi Red Bridge" class="day-hero-img">
                     <div class="day-hero-overlay">
                         <div>
                             <div class="day-header-meta">
@@ -3609,7 +3639,12 @@
                 </div>
                 <div class="day-body">
                     <div class="timeline-card">
-                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="card-label">
+                        <span>⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></span>
+                        <a href="https://www.google.com/maps/dir/Chubu+Centrair+International+Airport/Nagoya+Station/Takayama+Station/Wat+Hotel+%26+Spa+Hida+Takayama/Sanmachi+Suji" target="_blank" class="timeline-route-link" title="Open Route in Google Maps">
+                            <span>🗺️</span> <span data-lang="zh">Google 路线全景</span><span data-lang="en">Full Route Map</span> ↗
+                        </a>
+                    </div>
                         <div class="timeline-steps">
                             <div class="timeline-step">
                                 <span class="step-time">01:20</span>
@@ -3680,8 +3715,8 @@
                     </div>
 
                     <div class="day-footer-actions">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Takayama+Station" target="_blank" class="map-link-btn">
-                            <span>📍</span> <span data-lang="zh">在 Google 地图查看高山站周边</span><span data-lang="en">Open Takayama Station in Maps</span>
+                        <a href="https://www.google.com/maps/dir/Chubu+Centrair+International+Airport/Nagoya+Station/Takayama+Station/Wat+Hotel+%26+Spa+Hida+Takayama/Sanmachi+Suji" target="_blank" class="map-link-btn">
+                            <span>🗺️</span> <span data-lang="zh">在 Google 地图查看 Day 1 完整路线导航规划</span><span data-lang="en">View Day 1 Full Route on Google Maps</span>
                         </a>
                         <label class="mark-visited-label">
                             <input type="checkbox" onchange="saveDayProgress('d1', this.checked)">
@@ -3694,7 +3729,7 @@
             <!-- DAY 2 -->
             <div class="day-node" data-phase="p1" id="day2">
                 <div class="day-hero-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1200&auto=format&fit=crop&q=80" alt="Takayama Jinya" class="day-hero-img">
+                    <img src="https://images.unsplash.com/photo-1567696911980-2eed69a46042?w=1200&auto=format&fit=crop&q=80" alt="Takayama Sanmachi Suji Old Town" class="day-hero-img">
                     <div class="day-hero-overlay">
                         <div>
                             <div class="day-header-meta">
@@ -3710,7 +3745,12 @@
                 </div>
                 <div class="day-body">
                     <div class="timeline-card">
-                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="card-label">
+                        <span>⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></span>
+                        <a href="https://www.google.com/maps/dir/Wat+Hotel+%26+Spa+Hida+Takayama/Miyagawa+Morning+Market/Takayama+Jinya/Hida+Kokubunji+Temple/Ajikura+Tengoku/Wat+Hotel+%26+Spa+Hida+Takayama" target="_blank" class="timeline-route-link" title="Open Route in Google Maps">
+                            <span>🗺️</span> <span data-lang="zh">Google 路线全景</span><span data-lang="en">Full Route Map</span> ↗
+                        </a>
+                    </div>
                         <div class="timeline-steps">
                             <div class="timeline-step">
                                 <span class="step-time">08:30</span>
@@ -3773,8 +3813,8 @@
                     </div>
 
                     <div class="day-footer-actions">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Miyagawa+Morning+Market" target="_blank" class="map-link-btn">
-                            <span>📍</span> <span data-lang="zh">在 Google 地图查看宫川朝市</span><span data-lang="en">Open Morning Market in Maps</span>
+                        <a href="https://www.google.com/maps/dir/Wat+Hotel+%26+Spa+Hida+Takayama/Miyagawa+Morning+Market/Takayama+Jinya/Hida+Kokubunji+Temple/Ajikura+Tengoku/Wat+Hotel+%26+Spa+Hida+Takayama" target="_blank" class="map-link-btn">
+                            <span>🗺️</span> <span data-lang="zh">在 Google 地图查看 Day 2 完整路线导航规划</span><span data-lang="en">View Day 2 Full Route on Google Maps</span>
                         </a>
                         <label class="mark-visited-label">
                             <input type="checkbox" onchange="saveDayProgress('d2', this.checked)">
@@ -3787,7 +3827,7 @@
             <!-- DAY 3 -->
             <div class="day-node" data-phase="p1" id="day3">
                 <div class="day-hero-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1200&auto=format&fit=crop&q=80" alt="Shirakawa-go" class="day-hero-img">
+                    <img src="https://images.unsplash.com/photo-1646198660878-075e51ff7c49?w=1200&auto=format&fit=crop&q=80" alt="Shirakawa-go Gassho Historic Village" class="day-hero-img">
                     <div class="day-hero-overlay">
                         <div>
                             <div class="day-header-meta">
@@ -3803,7 +3843,12 @@
                 </div>
                 <div class="day-body">
                     <div class="timeline-card">
-                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="card-label">
+                        <span>⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></span>
+                        <a href="https://www.google.com/maps/dir/Wat+Hotel+%26+Spa+Hida+Takayama/Takayama+Nohi+Bus+Center/Shirakawa-go+Bus+Terminal/Shiroyama+Viewpoint/Wada+House/Wat+Hotel+%26+Spa+Hida+Takayama" target="_blank" class="timeline-route-link" title="Open Route in Google Maps">
+                            <span>🗺️</span> <span data-lang="zh">Google 路线全景</span><span data-lang="en">Full Route Map</span> ↗
+                        </a>
+                    </div>
                         <div class="timeline-steps">
                             <div class="timeline-step">
                                 <span class="step-time">08:50</span>
@@ -3874,8 +3919,8 @@
                     </div>
 
                     <div class="day-footer-actions">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Shirakawa-go+Ogimachi" target="_blank" class="map-link-btn">
-                            <span>📍</span> <span data-lang="zh">在 Google 地图查看白川乡</span><span data-lang="en">Open Shirakawa-go in Maps</span>
+                        <a href="https://www.google.com/maps/dir/Wat+Hotel+%26+Spa+Hida+Takayama/Takayama+Nohi+Bus+Center/Shirakawa-go+Bus+Terminal/Shiroyama+Viewpoint/Wada+House/Wat+Hotel+%26+Spa+Hida+Takayama" target="_blank" class="map-link-btn">
+                            <span>🗺️</span> <span data-lang="zh">在 Google 地图查看 Day 3 完整路线导航规划</span><span data-lang="en">View Day 3 Full Route on Google Maps</span>
                         </a>
                         <label class="mark-visited-label">
                             <input type="checkbox" onchange="saveDayProgress('d3', this.checked)">
@@ -3888,7 +3933,7 @@
             <!-- DAY 4 -->
             <div class="day-node" data-phase="p1" id="day4">
                 <div class="day-hero-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=1200&auto=format&fit=crop&q=80" alt="Hida Furukawa" class="day-hero-img">
+                    <img src="https://images.unsplash.com/photo-1562887059-f11cd4f5e989?w=1200&auto=format&fit=crop&q=80" alt="Hida Furukawa Historic Canal Town" class="day-hero-img">
                     <div class="day-hero-overlay">
                         <div>
                             <div class="day-header-meta">
@@ -3904,7 +3949,12 @@
                 </div>
                 <div class="day-body">
                     <div class="timeline-card">
-                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="card-label">
+                        <span>⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></span>
+                        <a href="https://www.google.com/maps/dir/Wat+Hotel+%26+Spa+Hida+Takayama/Takayama+Station/Hida-Furukawa+Station/Seto+River+and+White-walled+Storehouse/Mishima+Candle+Shop/Wat+Hotel+%26+Spa+Hida+Takayama" target="_blank" class="timeline-route-link" title="Open Route in Google Maps">
+                            <span>🗺️</span> <span data-lang="zh">Google 路线全景</span><span data-lang="en">Full Route Map</span> ↗
+                        </a>
+                    </div>
                         <div class="timeline-steps">
                             <div class="timeline-step">
                                 <span class="step-time">09:30</span>
@@ -3971,8 +4021,8 @@
                     </div>
 
                     <div class="day-footer-actions">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Hida+Furukawa+Station" target="_blank" class="map-link-btn">
-                            <span>📍</span> <span data-lang="zh">在 Google 地图查看飞驒古川</span><span data-lang="en">Open Hida Furukawa in Maps</span>
+                        <a href="https://www.google.com/maps/dir/Wat+Hotel+%26+Spa+Hida+Takayama/Takayama+Station/Hida-Furukawa+Station/Seto+River+and+White-walled+Storehouse/Mishima+Candle+Shop/Wat+Hotel+%26+Spa+Hida+Takayama" target="_blank" class="map-link-btn">
+                            <span>🗺️</span> <span data-lang="zh">在 Google 地图查看 Day 4 完整路线导航规划</span><span data-lang="en">View Day 4 Full Route on Google Maps</span>
                         </a>
                         <label class="mark-visited-label">
                             <input type="checkbox" onchange="saveDayProgress('d4', this.checked)">
@@ -3985,7 +4035,7 @@
             <!-- DAY 5 -->
             <div class="day-node" data-phase="p2" id="day5">
                 <div class="day-hero-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&auto=format&fit=crop&q=80" alt="Gero Onsen" class="day-hero-img">
+                    <img src="https://images.unsplash.com/photo-1559650656-5d1d361ad10e?w=1200&auto=format&fit=crop&q=80" alt="Gero Onsen Japanese Hot Spring" class="day-hero-img">
                     <div class="day-hero-overlay">
                         <div>
                             <div class="day-header-meta">
@@ -4001,7 +4051,12 @@
                 </div>
                 <div class="day-body">
                     <div class="timeline-card">
-                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="card-label">
+                        <span>⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></span>
+                        <a href="https://www.google.com/maps/dir/Wat+Hotel+%26+Spa+Hida+Takayama/Takayama+Station/Gero+Station/Suimeikan,+Gero/Gero+Onsen/Onsenji+Temple/Suimeikan,+Gero" target="_blank" class="timeline-route-link" title="Open Route in Google Maps">
+                            <span>🗺️</span> <span data-lang="zh">Google 路线全景</span><span data-lang="en">Full Route Map</span> ↗
+                        </a>
+                    </div>
                         <div class="timeline-steps">
                             <div class="timeline-step">
                                 <span class="step-time">09:30</span>
@@ -4068,8 +4123,8 @@
                     </div>
 
                     <div class="day-footer-actions">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Gero+Onsen+Suimeikan" target="_blank" class="map-link-btn">
-                            <span>📍</span> <span data-lang="zh">在 Google 地图查看水明馆</span><span data-lang="en">Open Suimeikan in Maps</span>
+                        <a href="https://www.google.com/maps/dir/Wat+Hotel+%26+Spa+Hida+Takayama/Takayama+Station/Gero+Station/Suimeikan,+Gero/Gero+Onsen/Onsenji+Temple/Suimeikan,+Gero" target="_blank" class="map-link-btn">
+                            <span>🗺️</span> <span data-lang="zh">在 Google 地图查看 Day 5 完整路线导航规划</span><span data-lang="en">View Day 5 Full Route on Google Maps</span>
                         </a>
                         <label class="mark-visited-label">
                             <input type="checkbox" onchange="saveDayProgress('d5', this.checked)">
@@ -4082,7 +4137,7 @@
             <!-- DAY 6 -->
             <div class="day-node" data-phase="p3" id="day6">
                 <div class="day-hero-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=1200&auto=format&fit=crop&q=80" alt="Nagoya Osu" class="day-hero-img">
+                    <img src="https://images.unsplash.com/photo-1756541670296-726966caee3c?w=1200&auto=format&fit=crop&q=80" alt="Nagoya Sakae and MIRAI Tower" class="day-hero-img">
                     <div class="day-hero-overlay">
                         <div>
                             <div class="day-header-meta">
@@ -4098,7 +4153,12 @@
                 </div>
                 <div class="day-body">
                     <div class="timeline-card">
-                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="card-label">
+                        <span>⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></span>
+                        <a href="https://www.google.com/maps/dir/Suimeikan,+Gero/Gero+Station/Nagoya+Station/Sakae+Station/The+Royal+Park+Hotel+Iconic+Nagoya/Oasis+21/Chubu+Electric+Power+MIRAI+TOWER/The+Royal+Park+Hotel+Iconic+Nagoya" target="_blank" class="timeline-route-link" title="Open Route in Google Maps">
+                            <span>🗺️</span> <span data-lang="zh">Google 路线全景</span><span data-lang="en">Full Route Map</span> ↗
+                        </a>
+                    </div>
                         <div class="timeline-steps">
                             <div class="timeline-step">
                                 <span class="step-time">07:30</span>
@@ -4173,8 +4233,8 @@
                     </div>
 
                     <div class="day-footer-actions">
-                        <a href="https://www.google.com/maps/search/?api=1&query=The+Royal+Park+Hotel+Iconic+Nagoya" target="_blank" class="map-link-btn">
-                            <span>📍</span> <span data-lang="zh">在 Google 地图查看 Iconic 酒店</span><span data-lang="en">Open Iconic Nagoya in Maps</span>
+                        <a href="https://www.google.com/maps/dir/Suimeikan,+Gero/Gero+Station/Nagoya+Station/Sakae+Station/The+Royal+Park+Hotel+Iconic+Nagoya/Oasis+21/Chubu+Electric+Power+MIRAI+TOWER/The+Royal+Park+Hotel+Iconic+Nagoya" target="_blank" class="map-link-btn">
+                            <span>🗺️</span> <span data-lang="zh">在 Google 地图查看 Day 6 完整路线导航规划</span><span data-lang="en">View Day 6 Full Route on Google Maps</span>
                         </a>
                         <label class="mark-visited-label">
                             <input type="checkbox" onchange="saveDayProgress('d6', this.checked)">
@@ -4187,7 +4247,7 @@
             <!-- DAY 7 -->
             <div class="day-node" data-phase="p3" id="day7">
                 <div class="day-hero-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200&auto=format&fit=crop&q=80" alt="Toyota Museum" class="day-hero-img">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1200&auto=format&fit=crop&q=80" alt="Toyota Commemorative Museum of Industry and Technology" class="day-hero-img">
                     <div class="day-hero-overlay">
                         <div>
                             <div class="day-header-meta">
@@ -4203,7 +4263,12 @@
                 </div>
                 <div class="day-body">
                     <div class="timeline-card">
-                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="card-label">
+                        <span>⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></span>
+                        <a href="https://www.google.com/maps/dir/The+Royal+Park+Hotel+Iconic+Nagoya/Toyota+Commemorative+Museum+of+Industry+and+Technology/Nagoya+Station/Bic+Camera+Nagoya+Station+West/The+Royal+Park+Hotel+Iconic+Nagoya" target="_blank" class="timeline-route-link" title="Open Route in Google Maps">
+                            <span>🗺️</span> <span data-lang="zh">Google 路线全景</span><span data-lang="en">Full Route Map</span> ↗
+                        </a>
+                    </div>
                         <div class="timeline-steps">
                             <div class="timeline-step">
                                 <span class="step-time">09:30</span>
@@ -4270,8 +4335,8 @@
                     </div>
 
                     <div class="day-footer-actions">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Toyota+Commemorative+Museum+of+Industry+and+Technology" target="_blank" class="map-link-btn">
-                            <span>📍</span> <span data-lang="zh">在 Google 地图查看丰田纪念馆</span><span data-lang="en">Open Toyota Museum in Maps</span>
+                        <a href="https://www.google.com/maps/dir/The+Royal+Park+Hotel+Iconic+Nagoya/Toyota+Commemorative+Museum+of+Industry+and+Technology/Nagoya+Station/Bic+Camera+Nagoya+Station+West/The+Royal+Park+Hotel+Iconic+Nagoya" target="_blank" class="map-link-btn">
+                            <span>🗺️</span> <span data-lang="zh">在 Google 地图查看 Day 7 完整路线导航规划</span><span data-lang="en">View Day 7 Full Route on Google Maps</span>
                         </a>
                         <label class="mark-visited-label">
                             <input type="checkbox" onchange="saveDayProgress('d7', this.checked)">
@@ -4284,7 +4349,7 @@
             <!-- DAY 8 -->
             <div class="day-node" data-phase="p3" id="day8">
                 <div class="day-hero-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1200&auto=format&fit=crop&q=80" alt="Ghibli Park" class="day-hero-img">
+                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&auto=format&fit=crop&q=80" alt="Ghibli Park and Aichi Expo Memorial Forest" class="day-hero-img">
                     <div class="day-hero-overlay">
                         <div>
                             <div class="day-header-meta">
@@ -4300,7 +4365,12 @@
                 </div>
                 <div class="day-body">
                     <div class="timeline-card">
-                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="card-label">
+                        <span>⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></span>
+                        <a href="https://www.google.com/maps/dir/The+Royal+Park+Hotel+Iconic+Nagoya/Fujigaoka+Station/Ghibli+Park/The+Royal+Park+Hotel+Iconic+Nagoya" target="_blank" class="timeline-route-link" title="Open Route in Google Maps">
+                            <span>🗺️</span> <span data-lang="zh">Google 路线全景</span><span data-lang="en">Full Route Map</span> ↗
+                        </a>
+                    </div>
                         <div class="timeline-steps">
                             <div class="timeline-step">
                                 <span class="step-time">08:30</span>
@@ -4371,8 +4441,8 @@
                     </div>
 
                     <div class="day-footer-actions">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Ghibli+Park+Aichi" target="_blank" class="map-link-btn">
-                            <span>📍</span> <span data-lang="zh">在 Google 地图查看吉卜力公园</span><span data-lang="en">Open Ghibli Park in Maps</span>
+                        <a href="https://www.google.com/maps/dir/The+Royal+Park+Hotel+Iconic+Nagoya/Fujigaoka+Station/Ghibli+Park/The+Royal+Park+Hotel+Iconic+Nagoya" target="_blank" class="map-link-btn">
+                            <span>🗺️</span> <span data-lang="zh">在 Google 地图查看 Day 8 完整路线导航规划</span><span data-lang="en">View Day 8 Full Route on Google Maps</span>
                         </a>
                         <label class="mark-visited-label">
                             <input type="checkbox" onchange="saveDayProgress('d8', this.checked)">
@@ -4385,7 +4455,7 @@
             <!-- DAY 9 -->
             <div class="day-node" data-phase="p3" id="day9">
                 <div class="day-hero-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=1200&auto=format&fit=crop&q=80" alt="Inuyama Castle" class="day-hero-img">
+                    <img src="https://images.unsplash.com/photo-1769690357414-7d7364556d04?w=1200&auto=format&fit=crop&q=80" alt="Inuyama Castle and Kiso River" class="day-hero-img">
                     <div class="day-hero-overlay">
                         <div>
                             <div class="day-header-meta">
@@ -4401,7 +4471,12 @@
                 </div>
                 <div class="day-body">
                     <div class="timeline-card">
-                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="card-label">
+                        <span>⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></span>
+                        <a href="https://www.google.com/maps/dir/The+Royal+Park+Hotel+Iconic+Nagoya/Meitetsu+Nagoya+Station/Inuyama-Yuen+Station/Inuyama+Castle/Inuyama+Castle+Town/Inuyama+Station/The+Royal+Park+Hotel+Iconic+Nagoya" target="_blank" class="timeline-route-link" title="Open Route in Google Maps">
+                            <span>🗺️</span> <span data-lang="zh">Google 路线全景</span><span data-lang="en">Full Route Map</span> ↗
+                        </a>
+                    </div>
                         <div class="timeline-steps">
                             <div class="timeline-step">
                                 <span class="step-time">09:15</span>
@@ -4468,8 +4543,8 @@
                     </div>
 
                     <div class="day-footer-actions">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Inuyama+Castle" target="_blank" class="map-link-btn">
-                            <span>📍</span> <span data-lang="zh">在 Google 地图查看犬山城</span><span data-lang="en">Open Inuyama Castle in Maps</span>
+                        <a href="https://www.google.com/maps/dir/The+Royal+Park+Hotel+Iconic+Nagoya/Meitetsu+Nagoya+Station/Inuyama-Yuen+Station/Inuyama+Castle/Inuyama+Castle+Town/Inuyama+Station/The+Royal+Park+Hotel+Iconic+Nagoya" target="_blank" class="map-link-btn">
+                            <span>🗺️</span> <span data-lang="zh">在 Google 地图查看 Day 9 完整路线导航规划</span><span data-lang="en">View Day 9 Full Route on Google Maps</span>
                         </a>
                         <label class="mark-visited-label">
                             <input type="checkbox" onchange="saveDayProgress('d9', this.checked)">
@@ -4482,7 +4557,7 @@
             <!-- DAY 10 -->
             <div class="day-node" data-phase="p3" id="day10">
                 <div class="day-hero-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=1200&auto=format&fit=crop&q=80" alt="Nagoya Castle" class="day-hero-img">
+                    <img src="https://images.unsplash.com/photo-1745277834561-4adf79aa0ee6?w=1200&auto=format&fit=crop&q=80" alt="Nagoya Castle Honmaru Palace" class="day-hero-img">
                     <div class="day-hero-overlay">
                         <div>
                             <div class="day-header-meta">
@@ -4498,7 +4573,12 @@
                 </div>
                 <div class="day-body">
                     <div class="timeline-card">
-                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="card-label">
+                        <span>⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></span>
+                        <a href="https://www.google.com/maps/dir/The+Royal+Park+Hotel+Iconic+Nagoya/Nagoya+Castle/Kinshachi+Yokocho/Tokugawa+Garden/Hisaya-odori+Park/The+Royal+Park+Hotel+Iconic+Nagoya" target="_blank" class="timeline-route-link" title="Open Route in Google Maps">
+                            <span>🗺️</span> <span data-lang="zh">Google 路线全景</span><span data-lang="en">Full Route Map</span> ↗
+                        </a>
+                    </div>
                         <div class="timeline-steps">
                             <div class="timeline-step">
                                 <span class="step-time">09:30</span>
@@ -4561,8 +4641,8 @@
                     </div>
 
                     <div class="day-footer-actions">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Nagoya+Castle" target="_blank" class="map-link-btn">
-                            <span>📍</span> <span data-lang="zh">在 Google 地图查看名古屋城</span><span data-lang="en">Open Nagoya Castle in Maps</span>
+                        <a href="https://www.google.com/maps/dir/The+Royal+Park+Hotel+Iconic+Nagoya/Nagoya+Castle/Kinshachi+Yokocho/Tokugawa+Garden/Hisaya-odori+Park/The+Royal+Park+Hotel+Iconic+Nagoya" target="_blank" class="map-link-btn">
+                            <span>🗺️</span> <span data-lang="zh">在 Google 地图查看 Day 10 完整路线导航规划</span><span data-lang="en">View Day 10 Full Route on Google Maps</span>
                         </a>
                         <label class="mark-visited-label">
                             <input type="checkbox" onchange="saveDayProgress('d10', this.checked)">
@@ -4575,7 +4655,7 @@
             <!-- DAY 11 -->
             <div class="day-node" data-phase="p3" id="day11">
                 <div class="day-hero-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=1200&auto=format&fit=crop&q=80" alt="Osu Shopping Arcade" class="day-hero-img">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&auto=format&fit=crop&q=80" alt="Osu Shopping District and Street Arcade" class="day-hero-img">
                     <div class="day-hero-overlay">
                         <div>
                             <div class="day-header-meta">
@@ -4591,7 +4671,12 @@
                 </div>
                 <div class="day-body">
                     <div class="timeline-card">
-                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="card-label">
+                        <span>⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></span>
+                        <a href="https://www.google.com/maps/dir/The+Royal+Park+Hotel+Iconic+Nagoya/Osu+Kannon/Osu+Shopping+District/Mandarake+Nagoya/Yabaton+Yaba-cho+Head+Shop/The+Royal+Park+Hotel+Iconic+Nagoya" target="_blank" class="timeline-route-link" title="Open Route in Google Maps">
+                            <span>🗺️</span> <span data-lang="zh">Google 路线全景</span><span data-lang="en">Full Route Map</span> ↗
+                        </a>
+                    </div>
                         <div class="timeline-steps">
                             <div class="timeline-step">
                                 <span class="step-time">10:00</span>
@@ -4658,8 +4743,8 @@
                     </div>
 
                     <div class="day-footer-actions">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Osu+Shopping+District+Nagoya" target="_blank" class="map-link-btn">
-                            <span>📍</span> <span data-lang="zh">在 Google 地图查看大须商业街</span><span data-lang="en">Open Osu Shopping Arcade in Maps</span>
+                        <a href="https://www.google.com/maps/dir/The+Royal+Park+Hotel+Iconic+Nagoya/Osu+Kannon/Osu+Shopping+District/Mandarake+Nagoya/Yabaton+Yaba-cho+Head+Shop/The+Royal+Park+Hotel+Iconic+Nagoya" target="_blank" class="map-link-btn">
+                            <span>🗺️</span> <span data-lang="zh">在 Google 地图查看 Day 11 完整路线导航规划</span><span data-lang="en">View Day 11 Full Route on Google Maps</span>
                         </a>
                         <label class="mark-visited-label">
                             <input type="checkbox" onchange="saveDayProgress('d11', this.checked)">
@@ -4672,7 +4757,7 @@
             <!-- DAY 12 -->
             <div class="day-node" data-phase="p3" id="day12">
                 <div class="day-hero-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=1200&auto=format&fit=crop&q=80" alt="Atsuta Shrine" class="day-hero-img">
+                    <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1200&auto=format&fit=crop&q=80" alt="Atsuta Jingu Sacred Shrine" class="day-hero-img">
                     <div class="day-hero-overlay">
                         <div>
                             <div class="day-header-meta">
@@ -4688,7 +4773,12 @@
                 </div>
                 <div class="day-body">
                     <div class="timeline-card">
-                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="card-label">
+                        <span>⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></span>
+                        <a href="https://www.google.com/maps/dir/The+Royal+Park+Hotel+Iconic+Nagoya/Atsuta+Jingu/Atsuta+Horaiken+Honten/Lachic,+Nagoya/The+Royal+Park+Hotel+Iconic+Nagoya" target="_blank" class="timeline-route-link" title="Open Route in Google Maps">
+                            <span>🗺️</span> <span data-lang="zh">Google 路线全景</span><span data-lang="en">Full Route Map</span> ↗
+                        </a>
+                    </div>
                         <div class="timeline-steps">
                             <div class="timeline-step">
                                 <span class="step-time">09:30</span>
@@ -4750,8 +4840,8 @@
                     </div>
 
                     <div class="day-footer-actions">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Atsuta+Shrine+Nagoya" target="_blank" class="map-link-btn">
-                            <span>📍</span> <span data-lang="zh">在 Google 地图查看热田神宫</span><span data-lang="en">Open Atsuta Shrine in Maps</span>
+                        <a href="https://www.google.com/maps/dir/The+Royal+Park+Hotel+Iconic+Nagoya/Atsuta+Jingu/Atsuta+Horaiken+Honten/Lachic,+Nagoya/The+Royal+Park+Hotel+Iconic+Nagoya" target="_blank" class="map-link-btn">
+                            <span>🗺️</span> <span data-lang="zh">在 Google 地图查看 Day 12 完整路线导航规划</span><span data-lang="en">View Day 12 Full Route on Google Maps</span>
                         </a>
                         <label class="mark-visited-label">
                             <input type="checkbox" onchange="saveDayProgress('d12', this.checked)">
@@ -4764,7 +4854,7 @@
             <!-- DAY 13 -->
             <div class="day-node" data-phase="p3" id="day13">
                 <div class="day-hero-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&auto=format&fit=crop&q=80" alt="Centrair Flight of Dreams" class="day-hero-img">
+                    <img src="https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&auto=format&fit=crop&q=80" alt="Chubu Centrair Airport and Flight of Dreams" class="day-hero-img">
                     <div class="day-hero-overlay">
                         <div>
                             <div class="day-header-meta">
@@ -4780,7 +4870,12 @@
                 </div>
                 <div class="day-body">
                     <div class="timeline-card">
-                        <div class="card-label">⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></div>
+                        <div class="card-label">
+                        <span>⏱️ <span data-lang="zh">建议时间表</span><span data-lang="en">Suggested Schedule</span></span>
+                        <a href="https://www.google.com/maps/dir/The+Royal+Park+Hotel+Iconic+Nagoya/Meitetsu+Nagoya+Station/Chubu+Centrair+International+Airport/Flight+of+Dreams/Chubu+Centrair+International+Airport" target="_blank" class="timeline-route-link" title="Open Route in Google Maps">
+                            <span>🗺️</span> <span data-lang="zh">Google 路线全景</span><span data-lang="en">Full Route Map</span> ↗
+                        </a>
+                    </div>
                         <div class="timeline-steps">
                             <div class="timeline-step">
                                 <span class="step-time">07:00</span>
@@ -4839,8 +4934,8 @@
                     </div>
 
                     <div class="day-footer-actions">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Chubu+Centrair+International+Airport" target="_blank" class="map-link-btn">
-                            <span>📍</span> <span data-lang="zh">在 Google 地图查看中部国际机场</span><span data-lang="en">Open Centrair Airport in Maps</span>
+                        <a href="https://www.google.com/maps/dir/The+Royal+Park+Hotel+Iconic+Nagoya/Meitetsu+Nagoya+Station/Chubu+Centrair+International+Airport/Flight+of+Dreams/Chubu+Centrair+International+Airport" target="_blank" class="map-link-btn">
+                            <span>🗺️</span> <span data-lang="zh">在 Google 地图查看 Day 13 完整路线导航规划</span><span data-lang="en">View Day 13 Full Route on Google Maps</span>
                         </a>
                         <label class="mark-visited-label">
                             <input type="checkbox" onchange="saveDayProgress('d13', this.checked)">
