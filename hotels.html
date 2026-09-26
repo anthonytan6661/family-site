@@ -995,10 +995,9 @@
             <ul class="nav-links">
                 <li><a href="index.html" data-lang="zh">🗓️ 13天行程</a><a href="index.html" data-lang="en">🗓️ 13-Day Plan</a></li>
                 <li><a href="index.html#flights" style="color:#38bdf8; font-weight:700;"><span data-lang="zh">✈️ 确认航班</span><span data-lang="en">✈️ Flights</span></a></li>
-                <li><a href="#p1" data-lang="zh">阶段一：名古屋 (4晚)</a><a href="#p1" data-lang="en">Phase 1: Nagoya</a></li>
-                <li><a href="#p2" data-lang="zh">阶段二：高山 (4晚)</a><a href="#p2" data-lang="en">Phase 2: Takayama</a></li>
-                <li><a href="#p3" data-lang="zh">阶段三：下吕名汤 (1晚)</a><a href="#p3" data-lang="en">Phase 3: Gero Onsen</a></li>
-                <li><a href="#p4" data-lang="zh">阶段四：名古屋返程 (3晚)</a><a href="#p4" data-lang="en">Phase 4: Nagoya Return</a></li>
+                <li><a href="#p1" data-lang="zh">阶段一：高山 (4晚)</a><a href="#p1" data-lang="en">Phase 1: Takayama (4N)</a></li>
+                <li><a href="#p2" data-lang="zh">阶段二：下吕名汤 (1晚)</a><a href="#p2" data-lang="en">Phase 2: Gero Onsen (1N)</a></li>
+                <li><a href="#p3" data-lang="zh">阶段三：名古屋连住 (7晚)</a><a href="#p3" data-lang="en">Phase 3: Nagoya Hub (7N)</a></li>
                 <li><a href="#matrix" data-lang="zh">对比汇总表</a><a href="#matrix" data-lang="en">Comparison Table</a></li>
             </ul>
 
@@ -1044,8 +1043,8 @@
                 <a href="#p3" onclick="closeMobileNav()" class="mobile-nav-item">
                     <span class="mobile-nav-icon">🏙️</span>
                     <div>
-                        <div class="mobile-nav-title"><span data-lang="zh">阶段三 · GOLD STAY 大须 (7晚)</span><span data-lang="en">Phase 3 · GOLD STAY Nagoya Osu</span></div>
-                        <div class="mobile-nav-sub"><span data-lang="zh">日立洗烘一体机、连住7晚零搬家</span><span data-lang="en">Hitachi washer/dryer, zero packing</span></div>
+                        <div class="mobile-nav-title"><span data-lang="zh">阶段三 · 皇家花园 Iconic (7晚)</span><span data-lang="en">Phase 3 · Iconic Nagoya (7N)</span></div>
+                        <div class="mobile-nav-sub"><span data-lang="zh">荣站地下直连、26F自助洗烘、连住7晚</span><span data-lang="en">Direct Sakae subway link, 26F laundry, 7N stay</span></div>
                     </div>
                 </a>
                 <a href="#matrix" onclick="closeMobileNav()" class="mobile-nav-item">
@@ -1321,7 +1320,7 @@
 
             <div class="hotel-grid">
                 <!-- Hotel 2-1: Gero Suimeikan (Top Pick) -->
-                <div class="hotel-card highlight-recommended" data-laundry="coin" data-stage="p2">
+                <div class="hotel-card highlight-recommended" data-laundry="coin" data-stage="p2" id="h2-1">
                     <span class="ribbon-tag" style="background:#b45309;">🏆 <span data-lang="zh">名宿首选 · 自带洗衣房+一泊二食</span><span data-lang="en">Ryokan Top Pick · With Coin Laundry</span></span>
                     <div class="hotel-img-wrap">
                         <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&auto=format&fit=crop&q=80" alt="Gero Suimeikan" class="hotel-img">
@@ -1462,13 +1461,57 @@
                         <span data-lang="en">Phase 3: Nagoya Mega Hub (Dec 01 Tue – Dec 08 Tue · 7 Consecutive Nights)</span>
                     </h2>
                 </div>
-                <div class="phase-dates-chip"><span data-lang="zh">开启整整7晚零搬家长住大本营！享Weekly周特惠折上折，畅玩丰田科技馆、周四吉卜力公园、犬山城与终极采购</span><span data-lang="en">7-Night Uninterrupted Stay; Weekly Stay Discount; Zero Packing Fatigue</span></div>
+                <div class="phase-dates-chip"><span data-lang="zh">开启整整7晚零搬家长住大本营！入住2024全新地标中日大厦高空酒店，荣站地下双地铁直连，畅玩丰田科技馆、周四吉卜力公园、犬山城与终极采购</span><span data-lang="en">7-Night Uninterrupted Stay; 2024 Chunichi Landmark Hotel; Direct Sakae Subway Link; Zero Packing Fatigue</span></div>
             </div>
 
             <div class="hotel-grid">
-                <!-- Hotel 3-1: GOLD STAY Nagoya Osu (Top Pick) -->
-                <div class="hotel-card highlight-recommended" data-laundry="in-room" data-stage="p3">
-                    <span class="ribbon-tag" style="background:#1d4ed8;">🌟 <span data-lang="zh">长住神级首选 · 房内洗烘+7晚周特惠</span><span data-lang="en">Top Pick · In-Room Laundry & 7N Weekly Rate</span></span>
+                <!-- Hotel 3-1: The Royal Park Hotel Iconic Nagoya (Confirmed Booking) -->
+                <div class="hotel-card highlight-recommended" data-laundry="coin" data-stage="p3" id="h3-1">
+                    <span class="ribbon-tag" style="background:#059669;">✅ <span data-lang="zh">已确认入住 · 荣商圈全新高空地标</span><span data-lang="en">Confirmed Booking · 2024 Iconic Sakae Landmark</span></span>
+                    <div class="hotel-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop&q=80" alt="The Royal Park Hotel Iconic Nagoya" class="hotel-img">
+                    </div>
+                    <div class="hotel-body">
+                        <div class="hotel-header-area">
+                            <h3 class="hotel-name">
+                                <span data-lang="zh">名古屋中日大厦皇家花园 Iconic 酒店</span>
+                                <span data-lang="en">The Royal Park Hotel Iconic Nagoya</span>
+                            </h3>
+                            <div class="hotel-location">📍 <span data-lang="zh">名古屋市中区荣4-1-1 (中日大厦 24F-32F) · 地铁“荣站”地下通道直连（12/13号口方向）</span><span data-lang="en">24F-32F Chunichi Building, 4-1-1 Sakae · Directly Connected to Sakae Subway Station (Exits 12/13)</span></div>
+                            <div class="google-compare-badge"><span class="g-icon">G</span><span data-lang="zh">Google比价核验 · 2间高级双床房7晚</span><span data-lang="en">Google Rates Verified · 2 Superior Twin Rooms (7N)</span></div>
+                        </div>
+
+                        <div class="laundry-feature-box coin">
+                            <div class="laundry-badge-icon">🔄</div>
+                            <div>
+                                <div class="laundry-badge-title"><span data-lang="zh">26层自设 24小时住客自助投币洗烘机房 + 送洗服务</span><span data-lang="en">26F 24h Guest Coin Laundromat & Valet Cleaning</span></div>
+                                <div class="laundry-badge-desc"><span data-lang="zh">配备全自动滚筒式洗烘一体机（自动注入洗剂），随时轻松清洗全家衣物；酒店同时提供专业客房干洗与熨烫服务。</span><span data-lang="en">Equipped with 24h drum washer-dryers with auto-detergent on the 26th floor; professional valet laundry and dry cleaning also available.</span></div>
+                            </div>
+                        </div>
+
+                        <div class="bed-config-box">
+                            <div class="bed-icon">🛏️</div>
+                            <div class="bed-text">
+                                <div class="bed-title"><span data-lang="zh">4人实睡配置：预订2间高级双床房 (共4张独立单人床 · 28-35㎡/间)</span><span data-lang="en">4-Bed Setup: 2 Superior Twin Rooms (4 Beds Total · 28-35㎡/room)</span></div>
+                                <div class="bed-desc"><span data-lang="zh">2024年全新开业奢华地标！客房全部分布于 25-32 层超高空，坐拥久屋大通公园与绿洲21百万城市夜景。电梯直通中日大厦商场（TSUTAYA书店、Blue Bottle咖啡与特色餐厅），下楼即达荣商圈！</span><span data-lang="en">Brand-new luxury hotel opened in 2024. All guest rooms on 25F-32F with panoramic skyline views of Oasis 21 and Mirai Tower. Direct elevator to Chunichi shopping/dining and Sakae station.</span></div>
+                            </div>
+                        </div>
+
+                        <div class="hotel-card-bottom">
+                            <div class="price-display" data-hotel-id="h3-1">
+                                <div class="price-amount">S$ 365</div>
+                                <div class="price-unit"><span data-lang="zh">7晚总计约 S$ 2,555 (~S$ 365/晚 · 2间房)</span><span data-lang="en">7N Total: S$ 2,555 (~S$ 365/n · 2 Rooms)</span></div>
+                            </div>
+                            <a href="https://www.google.com/travel/hotels/search?q=The+Royal+Park+Hotel+Iconic+Nagoya" target="_blank" class="book-btn">
+                                <span>🔍</span> <span data-lang="zh">在 Google 查看实时比价</span><span data-lang="en">Google Comparison</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel 3-Alt: GOLD STAY Nagoya Osu (Alternative Family Suite) -->
+                <div class="hotel-card" data-laundry="in-room" data-stage="p3" id="h3-goldstay">
+                    <span class="ribbon-tag" style="background:#64748b;">💡 <span data-lang="zh">备选方案 · 房内洗烘+4床套房</span><span data-lang="en">Alternative · In-Room Laundry & 4-Bed Suite</span></span>
                     <div class="hotel-img-wrap">
                         <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&auto=format&fit=crop&q=80" alt="GOLD STAY Nagoya Osu" class="hotel-img">
                     </div>
@@ -1486,7 +1529,7 @@
                             <div class="laundry-badge-icon">🌟</div>
                             <div>
                                 <div class="laundry-badge-title"><span data-lang="zh">客房内独享日立洗烘一体机（含免费洗涤剂）</span><span data-lang="en">In-Room Washer/Dryer (Free Detergent)</span></div>
-                                <div class="laundry-badge-desc"><span data-lang="zh">全套房均自带烘干一体洗衣机，随时随地洗涤，免去排队等待烦恼！回国前一晚在房间内洗烘全部衣物，箱内整洁清爽。</span><span data-lang="en">Private washer-dryer in every suite. Wash and pack all clothes clean before flying home.</span></div>
+                                <div class="laundry-badge-desc"><span data-lang="zh">全套房均自带烘干一体洗衣机，随时随地洗涤，免去排队等待烦恼！</span><span data-lang="en">Private washer-dryer in every suite.</span></div>
                             </div>
                         </div>
 
@@ -1494,16 +1537,16 @@
                             <div class="bed-icon">🛏️</div>
                             <div class="bed-text">
                                 <div class="bed-title"><span data-lang="zh">4人实睡配置：45-50㎡ 豪华家庭套房 (4张独立单人床 + 全套厨房)</span><span data-lang="en">4-Bed Setup: 45-50㎡ Family Suite (4 Real Beds + Kitchen)</span></div>
-                                <div class="bed-desc"><span data-lang="zh">4 张标准单人床（保证 15 岁与 11 岁孩子人手一张独立好床），全套厨房冰箱、微波炉、餐具，大空间足以同时完全展开 4 个大行李箱！</span><span data-lang="en">4 real single beds, full kitchen, spacious floor allowing 4 open suitcases at once.</span></div>
+                                <div class="bed-desc"><span data-lang="zh">4 张标准单人床，全套厨房冰箱、微波炉、餐具，大空间可同时展开4个大箱。</span><span data-lang="en">4 real single beds, full kitchen, spacious floor.</span></div>
                             </div>
                         </div>
 
                         <div class="hotel-card-bottom">
-                            <div class="price-display" data-hotel-id="h3-1">
+                            <div class="price-display" data-hotel-id="h3-goldstay">
                                 <div class="price-amount">S$ 251</div>
-                                <div class="price-unit"><span data-lang="zh">7晚连住总计约 S$ 1,757 (~S$ 251/晚 · 享周长住特惠折上折)</span><span data-lang="en">7N Total: S$ 1,757 (~S$ 251/n · Weekly Discount)</span></div>
+                                <div class="price-unit"><span data-lang="zh">7晚连住总计约 S$ 1,757 (~S$ 251/晚)</span><span data-lang="en">7N Total: S$ 1,757 (~S$ 251/n)</span></div>
                             </div>
-                            <a href="https://www.google.com/travel/hotels/Nagoya" target="_blank" class="book-btn">
+                            <a href="https://www.google.com/travel/hotels/search?q=GOLD+STAY+Nagoya+Osu" target="_blank" class="book-btn">
                                 <span>🔍</span> <span data-lang="zh">在 Google 查看实时比价</span><span data-lang="en">Google Comparison</span>
                             </a>
                         </div>
@@ -1726,11 +1769,19 @@
                         <!-- P3: Nagoya (7N) -->
                         <tr data-hotel-id="h3-1" style="background: #f0fdf4;">
                             <td><strong><span data-lang="zh">阶段三：名古屋连住 (7晚)</span><span data-lang="en">Phase 3: Nagoya 7N Hub</span></strong><br><span style="font-size:0.75rem; color:#64748b;">12/01 (周二) - 12/08 (周二)</span></td>
-                            <td><strong><span data-lang="zh">GOLD STAY 名古屋大须</span><span data-lang="en">GOLD STAY Nagoya Osu</span></strong><br><span style="font-size:0.75rem; color:#047857;"><span data-lang="zh">★ 7晚连住长住周特惠 · 零搬家</span><span data-lang="en">★ Weekly Stay Discount · Zero Packing</span></span></td>
+                            <td><strong><span data-lang="zh">The Royal Park Hotel Iconic Nagoya</span><span data-lang="en">The Royal Park Hotel Iconic Nagoya</span></strong><br><span style="font-size:0.75rem; color:#047857;"><span data-lang="zh">✅ 已确认入住 · 荣站中日大厦2024高空地标</span><span data-lang="en">✅ Confirmed Stay · 2024 Chunichi Landmark</span></span></td>
+                            <td><strong style="color:#0369a1;"><span data-lang="zh">🔄 26层24小时投币机 (洗烘一体) + 送洗</span><span data-lang="en">🔄 26F 24h Coin Laundry & Valet</span></strong></td>
+                            <td><span data-lang="zh">25-32层 高空景观双房 (2间高级双床房 · 4张独立单床 · 荣站地下直连)</span><span data-lang="en">25-32F Skyline Rooms (2 Superior Twin Rooms · 4 Beds · Direct Subway Link)</span></td>
+                            <td><strong class="tbl-nightly">S$ 365</strong></td>
+                            <td><strong class="tbl-total" style="color:#047857;">S$ 2,555</strong></td>
+                        </tr>
+                        <tr data-hotel-id="h3-goldstay">
+                            <td><span data-lang="zh">阶段三：备选方案 (7晚)</span><span data-lang="en">Phase 3: Alt Option (7N)</span></td>
+                            <td><span data-lang="zh">GOLD STAY 名古屋大须</span><span data-lang="en">GOLD STAY Nagoya Osu</span><br><span style="font-size:0.75rem; color:#64748b;"><span data-lang="zh">💡 备选公寓套房 · 零搬家</span><span data-lang="en">💡 Apartment Suite Alternative</span></span></td>
                             <td><strong style="color:#15803d;"><span data-lang="zh">🌟 房内独享洗烘机</span><span data-lang="en">🌟 In-Room Washer/Dryer</span></strong></td>
                             <td><span data-lang="zh">45-50㎡ 4单床大套房 + 全套厨房 + 大须扫货极便</span><span data-lang="en">45-50㎡ 4-Bed Suite + Kitchen + Shopping Convenience</span></td>
                             <td><strong class="tbl-nightly">S$ 251</strong></td>
-                            <td><strong class="tbl-total" style="color:#047857;">S$ 1,757</strong></td>
+                            <td><strong class="tbl-total" style="color:#64748b;">S$ 1,757</strong></td>
                         </tr>
                         <tr data-hotel-id="h3-2">
                             <td><span data-lang="zh">阶段三：名古屋连住 (7晚)</span><span data-lang="en">Phase 3: Nagoya 7N Hub</span></td>
@@ -1765,26 +1816,26 @@
                 <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 0.8rem;">
                     <h3 style="color: #065f46; font-size: 1.25rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; margin: 0;">
                         <span>🏆</span>
-                        <span data-lang="zh">最省心“全房内独立洗衣机”黄金亲子组合预算 (<span class="sum-active-currency">SGD / S$</span>)</span>
-                        <span data-lang="en">Recommended "In-Room Laundry" Family Combo Budget (<span class="sum-active-currency">SGD</span>)</span>
+                        <span data-lang="zh">已确认住宿方案 · 12晚一家四口住宿总预算 (<span class="sum-active-currency">SGD / S$</span>)</span>
+                        <span data-lang="en">Confirmed Accommodation Budget · 12-Night 4-Pax Total (<span class="sum-active-currency">SGD</span>)</span>
                     </h3>
                     <span style="background: #059669; color: #ffffff; font-size: 0.82rem; font-weight: 800; padding: 0.3rem 0.75rem; border-radius: 999px;">
-                        <span data-lang="zh">直奔高山省钱大本营版 · 净省 ~S$ 370</span>
-                        <span data-lang="en">Direct-to-Takayama Saver · Net Save ~S$ 370</span>
+                        <span data-lang="zh">2026年全新高空地标 · 后半程零搬家</span>
+                        <span data-lang="en">2024 Landmark Stay · Zero Packing</span>
                     </span>
                 </div>
                 <div style="color: #047857; font-size: 0.95rem; line-height: 1.75; margin-bottom: 0.5rem;">
                     <p>• <strong><span data-lang="zh">阶段一 (4晚 · 11/26周四-11/30周一)：</span><span data-lang="en">Phase 1 (4N · Nov 26-30):</span></strong> <span data-lang="zh">高山车站公寓式酒店（全套房自带洗烘机，厨房煎飞驒牛，4张独立单人床）：</span><span data-lang="en">Residence Hotel Takayama Station (In-room washer, kitchen, 4 single beds): </span><strong class="sum-p1" style="color:#065f46; font-size:1.05rem;">S$ 1,012</strong></p>
                     <p>• <strong><span data-lang="zh">阶段二 (1晚 · 11/30周一-12/01周二)：</span><span data-lang="en">Phase 2 (1N · Nov 30-Dec 1 Mon):</span></strong> <span data-lang="zh">下吕温泉 水明馆（馆内带投币洗衣房，榻榻米4铺被褥，一泊二食4人飞驒牛晚宴+朝食 · <strong>周一平日价立省1万円</strong>）：</span><span data-lang="en">Gero Suimeikan (Coin laundry on-site, 4 tatami futons, 4-pax Kaiseki dinner + bfast · <strong>Monday rate saves ~10k JPY</strong>): </span><strong class="sum-p2" style="color:#065f46; font-size:1.05rem;">S$ 670</strong></p>
-                    <p>• <strong><span data-lang="zh">阶段三 (7晚连住 · 12/01周二-12/08周二)：</span><span data-lang="en">Phase 3 (7N · Dec 1-8):</span></strong> <span data-lang="zh">GOLD STAY 名古屋大须（<strong>7晚连住长住周特惠折上折</strong>，4独立单床，房内独立日立洗烘机，整整一周零搬家，回国前全部衣服洗烘装箱）：</span><span data-lang="en">GOLD STAY Nagoya Osu (<strong>7-night weekly stay discount</strong>, in-room washer, zero packing for 7 full days): </span><strong class="sum-p3" style="color:#065f46; font-size:1.05rem;">S$ 1,757</strong></p>
+                    <p>• <strong><span data-lang="zh">阶段三 (7晚连住 · 12/01周二-12/08周二 · 已确认)：</span><span data-lang="en">Phase 3 (7N · Dec 1-8 · Confirmed):</span></strong> <span data-lang="zh">The Royal Park Hotel Iconic Nagoya（<strong>2024全新地标中日大厦24-32层</strong>，荣站地下双地铁直连，2间高空高级双床房，26F自助投币洗烘机房，连住7晚零搬家）：</span><span data-lang="en">The Royal Park Hotel Iconic Nagoya (<strong>2024 Chunichi Building Landmark</strong>, direct Sakae subway link, 2 skyline twin rooms, 26F coin laundry, zero packing for 7 days): </span><strong class="sum-p3" style="color:#065f46; font-size:1.05rem;">S$ 2,555</strong></p>
                     <hr style="margin: 0.9rem 0; border: none; border-top: 1px dashed #a7f3d0;">
                     <div style="font-size:1.25rem; color:#065f46; font-weight:800; margin-bottom:0.35rem;">
                         💰 <span data-lang="zh">12晚一家四口总住宿预算：</span><span data-lang="en">Total 12-Night 4-Pax Budget:</span>
-                        <span class="sum-grand-total" style="color:#059669; font-size:1.55rem; font-weight:900;">S$ 3,439</span>
+                        <span class="sum-grand-total" style="color:#059669; font-size:1.55rem; font-weight:900;">S$ 4,237</span>
                     </div>
                     <div style="font-size:0.88rem; color:#047857;">
-                        <span data-lang="zh">（平均每晚仅约 <strong class="sum-avg-nightly" style="font-size:1.05rem;">S$ 287</strong> / 晚！已包含下吕名汤4人奢华会席早晚餐与全程独立洗烘便利，较原拆分路线**直省约 S$ 370 (45,300 円)**，且免去大件行李快递费与二次打包搬家折腾！）</span>
-                        <span data-lang="en">(Average ~<strong class="sum-avg-nightly" style="font-size:1.05rem;">S$ 287</strong> / night! Includes Gero Onsen luxury 4-pax Kaiseki half-board & in-room laundry throughout. Saves ~S$ 370 vs split routes with zero secondary packing fatigue!)</span>
+                        <span data-lang="zh">（平均每晚约 <strong class="sum-avg-nightly" style="font-size:1.05rem;">S$ 353</strong> / 晚！包含下吕名汤4人奢华会席早晚餐、高山房内洗烘一体机大套房、以及名古屋2024全新顶级地标高空双房连住，后半程畅享荣商圈地下直连与零搬家极致体验！）</span>
+                        <span data-lang="en">(Average ~<strong class="sum-avg-nightly" style="font-size:1.05rem;">S$ 353</strong> / night! Includes Gero Onsen luxury 4-pax Kaiseki half-board, Takayama in-room washer suite, and 7 nights in Nagoya's 2024 premier high-floor landmark with direct Sakae subway access!)</span>
                     </div>
                 </div>
             </div>
@@ -1905,8 +1956,14 @@
                 CNY: { nightly: "¥ 3,474", total: "¥ 3,474" },
                 USD: { nightly: "$ 482", total: "$ 482" }
             },
-            // Phase 3: Nagoya (7 Consecutive Nights Long-Stay)
+            // Phase 3: Nagoya (7 Consecutive Nights Long-Stay - Confirmed at Iconic Nagoya)
             "h3-1": { nights: 7, isHalfBoard: false,
+                SGD: { nightly: "S$ 365", total: "S$ 2,555" },
+                JPY: { nightly: "44,800 円", total: "313,600 円" },
+                CNY: { nightly: "¥ 2,100", total: "¥ 14,700" },
+                USD: { nightly: "$ 292", total: "$ 2,044" }
+            },
+            "h3-goldstay": { nights: 7, isHalfBoard: false,
                 SGD: { nightly: "S$ 251", total: "S$ 1,757" },
                 JPY: { nightly: "30,740 円", total: "215,200 円" },
                 CNY: { nightly: "¥ 1,443", total: "¥ 10,104" },
@@ -1937,33 +1994,33 @@
                 curName: "SGD (S$)",
                 p1: "S$ 1,012",
                 p2: "S$ 670",
-                p3: "S$ 1,757",
-                grandTotal: "S$ 3,439",
-                avgNightly: "S$ 287"
+                p3: "S$ 2,555",
+                grandTotal: "S$ 4,237",
+                avgNightly: "S$ 353"
             },
             JPY: {
                 curName: "JPY (円)",
                 p1: "124,000 円",
                 p2: "82,000 円",
-                p3: "215,200 円",
-                grandTotal: "421,200 円",
-                avgNightly: "35,100 円"
+                p3: "313,600 円",
+                grandTotal: "519,600 円",
+                avgNightly: "43,300 円"
             },
             CNY: {
                 curName: "CNY (¥)",
                 p1: "¥ 5,822",
                 p2: "¥ 3,850",
-                p3: "¥ 10,104",
-                grandTotal: "¥ 19,776",
-                avgNightly: "¥ 1,648"
+                p3: "¥ 14,700",
+                grandTotal: "¥ 24,372",
+                avgNightly: "¥ 2,031"
             },
             USD: {
                 curName: "USD ($)",
                 p1: "$ 808",
                 p2: "$ 535",
-                p3: "$ 1,401",
-                grandTotal: "$ 2,744",
-                avgNightly: "$ 229"
+                p3: "$ 2,044",
+                grandTotal: "$ 3,387",
+                avgNightly: "$ 282"
             }
         };
 
