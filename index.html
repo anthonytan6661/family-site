@@ -400,8 +400,16 @@
 
         .phases-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
+            align-items: stretch;
+        }
+
+        @media (max-width: 992px) {
+            .phases-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
         }
 
         .phase-card {
@@ -463,25 +471,31 @@
         }
 
         .phase-title {
-            font-size: 1.3rem;
+            font-size: 1.15rem;
             font-weight: 800;
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.65rem;
             color: var(--deep-slate);
+            line-height: 1.35;
         }
 
         .phase-stay {
-            font-size: 0.85rem;
-            color: #64748b;
-            margin-bottom: 0.8rem;
+            font-size: 0.82rem;
+            color: #475569;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-sm);
+            padding: 0.7rem 0.8rem;
+            margin-bottom: 0.85rem;
             display: flex;
-            align-items: center;
-            gap: 0.3rem;
+            align-items: flex-start;
+            gap: 0.5rem;
+            line-height: 1.45;
         }
 
         .phase-desc {
-            font-size: 0.92rem;
+            font-size: 0.88rem;
             color: var(--charcoal);
-            line-height: 1.5;
+            line-height: 1.6;
             flex-grow: 1;
         }
 
@@ -2634,56 +2648,92 @@
                 <!-- 3-Phase Structure Grid -->
                 <div class="phases-grid">
                     <!-- Phase 1 -->
-                    <div class="phase-card phase-2" style="border-top: 4px solid #10b981;">
+                    <div class="phase-card" style="border-top: 4px solid #10b981;">
                         <div class="phase-header">
                             <span class="phase-badge" style="background:#dcfce7; color:#15803d;"><span data-lang="zh">阶段一 · 高山腹地</span><span data-lang="en">Phase 1 · Takayama</span></span>
-                            <span class="phase-dates">11/26 (周四) - 11/30 (周一) · 4晚</span>
+                            <span class="phase-dates">11/26 - 11/30 · 4晚</span>
                         </div>
                         <h3 class="phase-title"><span data-lang="zh">雪境童话与古街烟火</span><span data-lang="en">Snow Country & Heritage</span></h3>
                         <div class="phase-stay">
-                            <span>🏨</span>
-                            <span data-lang="zh">宿：<strong>Wat Hotel & Spa 飞驒高山 (已确认)</strong> (入住 15:00后 · 退房 11:00前 ｜ 7F展望天然温泉·4座免费私汤·自助洗衣·2间双床房4单床) (4晚)</span>
-                            <span data-lang="en">Base: <strong>Wat Hotel & Spa Hida Takayama (Confirmed)</strong> (Check-in after 15:00 · Checkout before 11:00 | 7F Onsen, 4 Free Private Baths, 4 Beds) (4N)</span>
+                            <span style="font-size: 1.15rem; line-height: 1;">🏨</span>
+                            <div>
+                                <div style="font-weight: 700; color: #1e293b;">
+                                    <span data-lang="zh">Wat Hotel & Spa 飞驒高山 (已确认)</span>
+                                    <span data-lang="en">Wat Hotel & Spa Hida Takayama (Confirmed)</span>
+                                </div>
+                                <div style="font-size: 0.76rem; color: #047857; font-weight: 600; margin-top: 2px;">
+                                    <span data-lang="zh">⏰ 入住 15:00后 ｜ 退房 11:00前 (可免费寄存行李)</span>
+                                    <span data-lang="en">⏰ Check-in after 15:00 | Checkout before 11:00</span>
+                                </div>
+                                <div style="font-size: 0.77rem; color: #64748b; margin-top: 2px;">
+                                    <span data-lang="zh">7F展望天然温泉 · 4座免费私汤 · 2间双床房4单床 · 自助洗衣</span>
+                                    <span data-lang="en">7F Rooftop Onsen · 4 Free Private Baths · 4 Beds · Coin Laundry</span>
+                                </div>
+                            </div>
                         </div>
                         <p class="phase-desc">
-                            <span data-lang="zh">落地直达高山。以高山古街为大本营，辐射白川乡合掌村、飞驒古川锦鲤街、宫川朝市，尽享A5飞驒牛盛宴。</span>
-                            <span data-lang="en">Direct arrival to Takayama. Radiating out to Shirakawa-go Gassho Village, Hida Furukawa, morning markets and A5 beef.</span>
+                            <span data-lang="zh">落地直达高山。以古街为大本营，辐射白川乡合掌村初雪、飞驒古川锦鲤街、宫川朝市与高山阵屋，慢节奏品尝A5飞驒牛烧肉盛宴。</span>
+                            <span data-lang="en">Direct scenic express to Takayama. Explore Shirakawa-go winter village, Hida Furukawa canals, morning markets, and feast on A5 Hida beef.</span>
                         </p>
                     </div>
 
                     <!-- Phase 2 -->
-                    <div class="phase-card phase-3" style="border-top: 4px solid #f59e0b;">
+                    <div class="phase-card" style="border-top: 4px solid #f59e0b;">
                         <div class="phase-header">
                             <span class="phase-badge" style="background:#fef3c7; color:#b45309;"><span data-lang="zh">阶段二 · 下吕名汤</span><span data-lang="en">Phase 2 · Gero Onsen</span></span>
-                            <span class="phase-dates">11/30 (周一) - 12/01 (周二) · 1晚</span>
+                            <span class="phase-dates">11/30 - 12/01 · 1晚</span>
                         </div>
-                        <h3 class="phase-title"><span data-lang="zh">日本三大名泉平日疗愈</span><span data-lang="en">Weekday Ryokan Retreat</span></h3>
+                        <h3 class="phase-title"><span data-lang="zh">三大名泉平日疗愈</span><span data-lang="en">Weekday Ryokan Retreat</span></h3>
                         <div class="phase-stay">
-                            <span>🏨</span>
-                            <span data-lang="zh">宿：<strong>下吕温泉 水明馆 (已确认)</strong> (入住 15:00后 · 退房 11:00前 ｜ 日式纯正榻榻米·一泊二食4人奢华会席) (1晚)</span>
-                            <span data-lang="en">Base: <strong>Gero Suimeikan (Confirmed)</strong> (Check-in after 15:00 · Checkout before 11:00 | Tatami 4-Pax Kaiseki Half-Board) (1N)</span>
+                            <span style="font-size: 1.15rem; line-height: 1;">🏨</span>
+                            <div>
+                                <div style="font-weight: 700; color: #1e293b;">
+                                    <span data-lang="zh">下吕温泉 水明馆 (已确认)</span>
+                                    <span data-lang="en">Gero Onsen Suimeikan (Confirmed)</span>
+                                </div>
+                                <div style="font-size: 0.76rem; color: #b45309; font-weight: 600; margin-top: 2px;">
+                                    <span data-lang="zh">⏰ 入住 15:00后 ｜ 退房 11:00前 (可免费寄存行李)</span>
+                                    <span data-lang="en">⏰ Check-in after 15:00 | Checkout before 11:00</span>
+                                </div>
+                                <div style="font-size: 0.77rem; color: #64748b; margin-top: 2px;">
+                                    <span data-lang="zh">日本三大名泉巡礼 · 4人奢华飞驒牛会席早晚餐 · 纯正榻榻米</span>
+                                    <span data-lang="en">Top 3 Healing Onsen · 4-Pax Kaiseki Half-Board · Tatami Suites</span>
+                                </div>
+                            </div>
                         </div>
                         <p class="phase-desc">
-                            <span data-lang="zh">从高山乘特急仅43分钟直达下吕。<strong>周一入住享受非周末特惠价格（立省约1万円）</strong>，温泉街游客稀少，悠享三大名汤与精致会席。</span>
-                            <span data-lang="en">Only 43 mins by JR from Takayama. <strong>Monday stay saves ~10,000 JPY</strong> vs weekend rates, quiet baths, and exquisite Kaiseki.</span>
+                            <span data-lang="zh">高山特急43分钟直达。周一避峰包场级体验水明馆三大名汤（山水阁/临川阁/飞泉阁），漫步温泉街与温泉寺，晚间享用正宗会席料理。</span>
+                            <span data-lang="en">Only 43 mins by express train. Monday weekday escape enjoying tranquil baths across 3 historic pavilions, valley views, and Kaiseki dining.</span>
                         </p>
                     </div>
 
                     <!-- Phase 3 -->
-                    <div class="phase-card phase-1" style="border-top: 4px solid #3b82f6; grid-column: 1 / -1;">
+                    <div class="phase-card" style="border-top: 4px solid #3b82f6;">
                         <div class="phase-header">
                             <span class="phase-badge" style="background:#dbeafe; color:#1d4ed8;"><span data-lang="zh">阶段三 · 名古屋都会大本营</span><span data-lang="en">Phase 3 · Nagoya Hub</span></span>
-                            <span class="phase-dates">12/01 (周二) - 12/08 (周二) · 7晚连住长住</span>
+                            <span class="phase-dates">12/01 - 12/08 · 7晚连住</span>
                         </div>
-                        <h3 class="phase-title"><span data-lang="zh">都会科技、吉卜力梦幻、全家扫货与从容返程</span><span data-lang="en">7-Night Mega Hub: Ghibli, Tech, Theme Parks & Departure</span></h3>
+                        <h3 class="phase-title"><span data-lang="zh">都会科技与童话连住</span><span data-lang="en">7-Night Mega Landmark Hub</span></h3>
                         <div class="phase-stay">
-                            <span>🏨</span>
-                            <span data-lang="zh">宿：<strong>The Royal Park Hotel Iconic Nagoya (已确认)</strong> (入住 15:00后 · 退房 11:00前 ｜ 2间高空双床房·4独立单床·26F自助投币洗烘·荣站地下中日大厦直连) (7晚)</span>
-                            <span data-lang="en">Base: <strong>The Royal Park Hotel Iconic Nagoya (Confirmed)</strong> (Check-in after 15:00 · Checkout before 11:00 | 2 Skyline Twin Rooms, 4 Beds, 26F Coin Laundry, Direct Sakae Subway Link) (7N)</span>
+                            <span style="font-size: 1.15rem; line-height: 1;">🏨</span>
+                            <div>
+                                <div style="font-weight: 700; color: #1e293b;">
+                                    <span data-lang="zh">The Royal Park Hotel Iconic Nagoya (已确认)</span>
+                                    <span data-lang="en">The Royal Park Hotel Iconic Nagoya (Confirmed)</span>
+                                </div>
+                                <div style="font-size: 0.76rem; color: #1d4ed8; font-weight: 600; margin-top: 2px;">
+                                    <span data-lang="zh">⏰ 入住 15:00后 ｜ 退房 11:00前 (可免费寄存行李)</span>
+                                    <span data-lang="en">⏰ Check-in after 15:00 | Checkout before 11:00</span>
+                                </div>
+                                <div style="font-size: 0.77rem; color: #64748b; margin-top: 2px;">
+                                    <span data-lang="zh">2024全新中日大厦24-32F · 荣站地下直连 · 2间高空房 · 26F洗烘机房</span>
+                                    <span data-lang="en">2024 Chunichi Bldg 24-32F · Direct Subway · 2 Twin Rooms · 26F Laundry</span>
+                                </div>
+                            </div>
                         </div>
                         <p class="phase-desc">
-                            <span data-lang="zh"><strong>整整7天不再收拾行李搬家！</strong>以2024全新地标中日大厦高空酒店为奢华基地：下楼地下通道直通荣站（东山线与名城线交汇核芯）；D8（周四）乘东山线直达藤之丘转Linimo畅玩吉卜力公园（工作日错峰免排队）；名城线2站直达名古屋城与金鯱横丁；下楼即是中日商场、久屋大通公园、绿洲21水之宇宙飞船与松坂屋、Parco百货；最后一天乘东山线5分钟直通名站转乘 μ-SKY 直达机场无缝搭乘 SQ671 返程。</span>
-                            <span data-lang="en"><strong>Zero hotel transfers for 7 full days!</strong> Base at 2024 Chunichi Building landmark: direct underground link to Sakae Subway Station (Higashiyama & Meijo lines). Visit Ghibli Park on Thursday Dec 3 (subway direct to Fujigaoka, zero weekend queues), Toyota Museum, Inuyama Castle, Nagoya Castle & Oasis 21 on your doorstep, mega shopping in Sakae & Osu, and seamless direct transit to μ-SKY and flight SQ671.</span>
+                            <span data-lang="zh">整整7晚零搬家！地下通道直连荣站双地铁；畅玩吉卜力公园（周四错峰免排队）、丰田产业馆与犬山城；大须动漫与百货尽情扫货，从容直达机场返程。</span>
+                            <span data-lang="en">Zero luggage packing for 7 full nights! Direct subway hub link to Ghibli Park (Thursday weekday pass), Toyota Museum, Inuyama Castle, shopping & airport μ-SKY.</span>
                         </p>
                     </div>
                 </div>
